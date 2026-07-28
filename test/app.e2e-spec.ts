@@ -4,8 +4,14 @@ import request from 'supertest';
 import { App } from 'supertest/types';
 import { AppModule } from './../src/app.module';
 
-describe('AppController (e2e)', () => {
+const describeIfDb = process.env.DATABASE_URL ? describe : describe.skip;
+
+describeIfDb('AppController (e2e)', () => {
   let app: INestApplication<App>;
+
+  beforeAll(() => {
+    process.env.JWT_SECRET = 'test-secret';
+  });
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
@@ -25,5 +31,9 @@ describe('AppController (e2e)', () => {
 
   afterEach(async () => {
     await app.close();
+  });
+
+  afterAll(() => {
+    delete process.env.JWT_SECRET;
   });
 });
