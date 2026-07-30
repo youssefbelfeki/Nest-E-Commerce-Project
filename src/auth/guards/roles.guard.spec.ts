@@ -5,7 +5,7 @@ import { ROLES_KEY } from '../decorators/roles.decorator';
 
 describe('RolesGuard', () => {
   let guard: RolesGuard;
-  let reflector: Reflector;
+  let reflector: jest.Mocked<Reflector>;
 
   const createContext = (user?: any) =>
     ({
@@ -17,7 +17,7 @@ describe('RolesGuard', () => {
     }) as unknown as ExecutionContext;
 
   beforeEach(() => {
-    reflector = { getAllAndOverride: jest.fn() } as any;
+    reflector = { getAllAndOverride: jest.fn() } as unknown as jest.Mocked<Reflector>;
     guard = new RolesGuard(reflector);
   });
 

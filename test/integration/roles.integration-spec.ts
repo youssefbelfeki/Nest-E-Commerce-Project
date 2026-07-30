@@ -5,10 +5,10 @@ import { Role } from '../../generated/prisma/client';
 
 describe('Roles Integration', () => {
   let guard: RolesGuard;
-  let reflector: Reflector;
+  let reflector: jest.Mocked<Reflector>;
 
   beforeEach(() => {
-    reflector = { getAllAndOverride: jest.fn() } as any;
+    reflector = { getAllAndOverride: jest.fn() } as unknown as jest.Mocked<Reflector>;
     guard = new RolesGuard(reflector);
   });
 

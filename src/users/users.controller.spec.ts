@@ -9,7 +9,18 @@ describe('UsersController', () => {
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UsersController],
-      providers: [UsersService],
+      providers: [
+        {
+          provide: UsersService,
+          useValue: {
+            create: jest.fn(),
+            findAll: jest.fn(),
+            findOne: jest.fn(),
+            update: jest.fn(),
+            remove: jest.fn(),
+          },
+        },
+      ],
     }).compile();
 
     controller = module.get<UsersController>(UsersController);
@@ -39,7 +50,7 @@ describe('UsersController', () => {
   describe('findOne', () => {
     it('should call service.findOne with parsed id', () => {
       const spy = jest.spyOn(service, 'findOne');
-      controller.findOne('5');
+      controller.findOne(5);
       expect(spy).toHaveBeenCalledWith(5);
     });
   });
@@ -47,7 +58,7 @@ describe('UsersController', () => {
   describe('update', () => {
     it('should call service.update with parsed id and dto', () => {
       const spy = jest.spyOn(service, 'update');
-      controller.update('3', { name: 'Updated' });
+      controller.update(3, { name: 'Updated' });
       expect(spy).toHaveBeenCalledWith(3, { name: 'Updated' });
     });
   });
@@ -55,7 +66,7 @@ describe('UsersController', () => {
   describe('remove', () => {
     it('should call service.remove with parsed id', () => {
       const spy = jest.spyOn(service, 'remove');
-      controller.remove('7');
+      controller.remove(7);
       expect(spy).toHaveBeenCalledWith(7);
     });
   });

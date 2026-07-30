@@ -69,7 +69,11 @@ describe('Products Integration', () => {
       const result = await service.update(1, { name: 'Updated' });
 
       expect(result.name).toBe('Updated');
-      expect(prisma.product.findUnique).toHaveBeenCalledBefore(prisma.product.update);
+      expect(prisma.product.findUnique).toHaveBeenCalled();
+      expect(prisma.product.update).toHaveBeenCalled();
+      const findUniqueOrder = prisma.product.findUnique.mock.invocationCallOrder[0];
+      const updateOrder = prisma.product.update.mock.invocationCallOrder[0];
+      expect(findUniqueOrder).toBeLessThan(updateOrder);
     });
 
     it('should delete product after verifying existence', async () => {
