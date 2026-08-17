@@ -1,0 +1,25 @@
+{
+  "id": "9f8e7d6c-5b4a-4321-8fed-cba987654321",
+  "name": "Ecommerce API Environment",
+  "values": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:3002",
+      "type": "default",
+      "enabled": true
+    },
+    {
+      "key": "token",
+      "value": "",
+      "type": "secret",
+      "enabled": true
+    },
+    {
+      "key": "api_key",
+      "value": "",
+      "type": "secret",
+      "enabled": true
+    }
+  ],
+  "_postman_variable_scope": "environment"
+}
