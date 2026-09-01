@@ -5,10 +5,12 @@ import { useRouter } from 'next/navigation';
 import { Product } from '@/types';
 import { apiFetch } from '@/lib/api';
 import { useAuth } from '@/context/AuthContext';
+import { useI18n } from '@/context/I18nContext';
 
 export default function ProductsPage() {
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
+  const { t, localePath } = useI18n();
 
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -19,14 +21,14 @@ export default function ProductsPage() {
 
   useEffect(() => {
     if (!authLoading && !user) {
-      router.push('/login');
+      router.push(localePath('/login'));
       return;
     }
 
     if (user) {
       fetchProducts();
     }
-  }, [user, authLoading, router]);
+  }, [user, authLoading, router, localePath]);
 
   const fetchProducts = async () => {
     setLoading(true);
@@ -41,7 +43,7 @@ export default function ProductsPage() {
       });
       setQuantities(initialQty);
     } catch (err: any) {
-      setError(err.message || 'Failed to fetch products');
+      setError(err.message || t('products.loadFailed'));
     } finally {
       setLoading(false);
     }
@@ -67,10 +69,10 @@ export default function ProductsPage() {
         }),
       });
 
-      setToastMessage(`Added ${quantity} x "${product.name}" to your cart!`);
+      setToastMessage(t('products.addedToCart', { quantity, name: product.name }));
       setTimeout(() => setToastMessage(''), 4000);
     } catch (err: any) {
-      setError(err.message || 'Failed to add item to cart');
+      setError(err.message || t('products.addFailed'));
     } finally {
       setAddingId(null);
     }
@@ -80,7 +82,7 @@ export default function ProductsPage() {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4">
         <div className="w-12 h-12 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin"></div>
-        <p className="text-sm text-slate-400 font-medium">Loading products catalog...</p>
+        <p className="text-sm text-slate-400 font-medium">{t('products.loading')}</p>
       </div>
     );
   }
@@ -90,8 +92,8 @@ export default function ProductsPage() {
       {/* Header Banner */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 glass-panel p-6 sm:p-8 rounded-2xl">
         <div className="space-y-2">
-          <h1 className="text-3xl font-extrabold text-white tracking-tight">Catalog & Products</h1>
-          <p className="text-slate-400 text-sm">Browse our latest collection of premium hardware & electronics</p>
+          <h1 className="text-3xl font-extrabold text-white tracking-tight">{t('products.title')}</h1>
+          <p className="text-slate-400 text-sm">{t('products.subtitle')}</p>
         </div>
         <button
           onClick={fetchProducts}
@@ -100,7 +102,7 @@ export default function ProductsPage() {
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
-          <span>Refresh List</span>
+          <span>{t('products.refresh')}</span>
         </button>
       </div>
 
@@ -114,10 +116,10 @@ export default function ProductsPage() {
             <span>{toastMessage}</span>
           </div>
           <button
-            onClick={() => router.push('/cart')}
+            onClick={() => router.push(localePath('/cart'))}
             className="bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-bold px-3 py-1 rounded-lg text-xs transition-colors"
           >
-            View Cart
+            {t('products.viewCart')}
           </button>
         </div>
       )}
@@ -138,8 +140,8 @@ export default function ProductsPage() {
           <svg className="w-16 h-16 mx-auto text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
           </svg>
-          <h3 className="text-xl font-bold text-slate-300">No products available</h3>
-          <p className="text-sm text-slate-400">Check back later or log in as Admin to add new items to the store.</p>
+          <h3 className="text-xl font-bold text-slate-300">{t('products.noProducts')}</h3>
+          <p className="text-sm text-slate-400">{t('products.noProductsHint')}</p>
         </div>
       ) : (
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -167,7 +169,7 @@ export default function ProductsPage() {
                           : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
                       }`}
                     >
-                      {isOutOfStock ? 'Out of Stock' : `Stock: ${product.stock}`}
+                      {isOutOfStock ? t('products.outOfStock') : t('products.stock', { count: product.stock })}
                     </span>
                   </div>
 
@@ -185,7 +187,7 @@ export default function ProductsPage() {
                 {/* Add to Cart Actions */}
                 <div className="space-y-3 pt-4 border-t border-slate-800/80">
                   <div className="flex items-center space-x-2">
-                    <label className="text-xs font-medium text-slate-400">Qty:</label>
+                    <label className="text-xs font-medium text-slate-400">{t('products.qty')}</label>
                     <input
                       type="number"
                       min={1}
@@ -203,15 +205,15 @@ export default function ProductsPage() {
                     className="btn-primary w-full py-2.5 rounded-xl text-sm font-semibold flex items-center justify-center space-x-2 disabled:opacity-50"
                   >
                     {addingId === product.id ? (
-                      <span>Adding to cart...</span>
+                      <span>{t('products.addingToCart')}</span>
                     ) : isOutOfStock ? (
-                      <span>Unavailable</span>
+                      <span>{t('products.unavailable')}</span>
                     ) : (
                       <>
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
                         </svg>
-                        <span>Add to Cart</span>
+                        <span>{t('products.addToCart')}</span>
                       </>
                     )}
                   </button>

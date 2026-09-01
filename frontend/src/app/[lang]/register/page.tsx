@@ -4,11 +4,14 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
+import { useI18n } from '@/context/I18nContext';
 
-export default function LoginPage() {
-  const { login } = useAuth();
+export default function RegisterPage() {
+  const { register } = useAuth();
   const router = useRouter();
+  const { t, localePath } = useI18n();
 
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -17,14 +20,19 @@ export default function LoginPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    setSubmitting(true);
 
+    if (password.length < 6) {
+      setError(t('register.passwordTooShort'));
+      return;
+    }
+
+    setSubmitting(true);
     try {
-      await login(email, password);
+      await register(name, email, password);
       // REQUIREMENT: Redirect to products page after a successful response
-      router.push('/products');
+      router.push(localePath('/products'));
     } catch (err: any) {
-      setError(err.message || 'Login failed. Please check your credentials.');
+      setError(err.message || t('register.registerFailed'));
     } finally {
       setSubmitting(false);
     }
@@ -36,11 +44,11 @@ export default function LoginPage() {
         <div className="text-center space-y-2">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 mb-2">
             <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 16l-4-4m0 0l4-4m-4 4h14m-5 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h7a3 3 0 013 3v1" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
             </svg>
           </div>
-          <h2 className="text-2xl font-bold text-white tracking-tight">Welcome Back</h2>
-          <p className="text-sm text-slate-400">Sign in to your ApexStore account</p>
+          <h2 className="text-2xl font-bold text-white tracking-tight">{t('register.title')}</h2>
+          <p className="text-sm text-slate-400">{t('register.subtitle')}</p>
         </div>
 
         {error && (
@@ -52,7 +60,21 @@ export default function LoginPage() {
         <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
-              Email Address
+              {t('register.fullName')}
+            </label>
+            <input
+              type="text"
+              required
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              className="input-field w-full"
+              placeholder={t('register.namePlaceholder')}
+            />
+          </div>
+
+          <div>
+            <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
+              {t('register.email')}
             </label>
             <input
               type="email"
@@ -60,17 +82,18 @@ export default function LoginPage() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="input-field w-full"
-              placeholder="user@example.com"
+              placeholder={t('register.emailPlaceholder')}
             />
           </div>
 
           <div>
             <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
-              Password
+              {t('register.password')}
             </label>
             <input
               type="password"
               required
+              minLength={6}
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               className="input-field w-full"
@@ -84,10 +107,10 @@ export default function LoginPage() {
             className="btn-primary w-full py-3 rounded-xl text-sm font-semibold flex items-center justify-center space-x-2"
           >
             {submitting ? (
-              <span>Signing in...</span>
+              <span>{t('register.creating')}</span>
             ) : (
               <>
-                <span>Sign In</span>
+                <span>{t('register.register')}</span>
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -97,9 +120,9 @@ export default function LoginPage() {
         </form>
 
         <div className="text-center text-sm text-slate-400 pt-2 border-t border-slate-800">
-          Don't have an account?{' '}
-          <Link href="/register" className="text-indigo-400 hover:text-indigo-300 font-semibold underline">
-            Register now
+          {t('register.hasAccount')}{' '}
+          <Link href={localePath('/login')} className="text-indigo-400 hover:text-indigo-300 font-semibold underline">
+            {t('register.signIn')}
           </Link>
         </div>
       </div>

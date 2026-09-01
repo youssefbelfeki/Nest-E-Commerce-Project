@@ -6,10 +6,12 @@ import { useRouter } from 'next/navigation';
 import { Order } from '@/types';
 import { apiFetch } from '@/lib/api';
 import { useAuth } from '@/context/AuthContext';
+import { useI18n } from '@/context/I18nContext';
 
 export default function OrdersPage() {
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
+  const { t, localePath } = useI18n();
 
   const [orders, setOrders] = useState<Order[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -18,12 +20,12 @@ export default function OrdersPage() {
   useEffect(() => {
     if (!authLoading) {
       if (!user) {
-        router.push('/login');
+        router.push(localePath('/login'));
         return;
       }
       fetchOrders();
     }
-  }, [user, authLoading, router]);
+  }, [user, authLoading, router, localePath]);
 
   const fetchOrders = async () => {
     setLoading(true);
@@ -32,7 +34,7 @@ export default function OrdersPage() {
       const data = await apiFetch<Order[]>('/orders');
       setOrders(data || []);
     } catch (err: any) {
-      setError(err.message || 'Failed to load past orders');
+      setError(err.message || t('orders.loadFailed'));
     } finally {
       setLoading(false);
     }
@@ -42,7 +44,7 @@ export default function OrdersPage() {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4">
         <div className="w-12 h-12 border-4 border-indigo-500/30 border-t-indigo-500 rounded-full animate-spin"></div>
-        <p className="text-sm text-slate-400 font-medium">Fetching order history...</p>
+        <p className="text-sm text-slate-400 font-medium">{t('orders.loading')}</p>
       </div>
     );
   }
@@ -52,8 +54,8 @@ export default function OrdersPage() {
       {/* Header */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 glass-panel p-6 sm:p-8 rounded-2xl">
         <div>
-          <h1 className="text-3xl font-extrabold text-white tracking-tight">Order History</h1>
-          <p className="text-slate-400 text-sm mt-1">View details and status of all your placed orders</p>
+          <h1 className="text-3xl font-extrabold text-white tracking-tight">{t('orders.title')}</h1>
+          <p className="text-slate-400 text-sm mt-1">{t('orders.subtitle')}</p>
         </div>
         <button
           onClick={fetchOrders}
@@ -62,7 +64,7 @@ export default function OrdersPage() {
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
-          <span>Refresh Orders</span>
+          <span>{t('orders.refresh')}</span>
         </button>
       </div>
 
@@ -83,11 +85,11 @@ export default function OrdersPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
           </div>
-          <h3 className="text-xl font-bold text-white">No past orders found</h3>
-          <p className="text-sm text-slate-400">You haven't placed any orders yet.</p>
+          <h3 className="text-xl font-bold text-white">{t('orders.emptyTitle')}</h3>
+          <p className="text-sm text-slate-400">{t('orders.emptyHint')}</p>
           <div className="pt-2">
-            <Link href="/products" className="btn-primary inline-flex px-6 py-2.5 rounded-xl text-sm font-semibold">
-              Browse & Place First Order
+            <Link href={localePath('/products')} className="btn-primary inline-flex px-6 py-2.5 rounded-xl text-sm font-semibold">
+              {t('orders.browse')}
             </Link>
           </div>
         </div>
@@ -110,16 +112,16 @@ export default function OrdersPage() {
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-slate-800">
                   <div className="flex items-center space-x-3">
                     <span className="bg-indigo-600/20 text-indigo-400 border border-indigo-500/30 px-3 py-1 rounded-lg text-xs font-mono font-bold">
-                      Order #{order.id}
+                      {t('orders.orderNumber', { id: order.id })}
                     </span>
                     <span className="text-xs text-slate-400">{dateStr}</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <span className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 text-xs font-semibold px-2.5 py-0.5 rounded-full">
-                      Completed
+                      {t('orders.completed')}
                     </span>
                     <span className="text-lg font-extrabold text-white sm:ml-4">
-                      Total: ${orderTotal.toFixed(2)}
+                      {t('orders.total', { amount: orderTotal.toFixed(2) })}
                     </span>
                   </div>
                 </div>
@@ -130,7 +132,7 @@ export default function OrdersPage() {
                     <div key={item.id} className="py-3 flex items-center justify-between text-sm">
                       <div className="flex items-center space-x-3">
                         <span className="text-slate-500 font-mono text-xs">#{item.productId}</span>
-                        <span className="font-semibold text-slate-200">{item.product?.name || 'Product'}</span>
+                        <span className="font-semibold text-slate-200">{item.product?.name || t('orders.product')}</span>
                       </div>
 
                       <div className="flex items-center space-x-6">
