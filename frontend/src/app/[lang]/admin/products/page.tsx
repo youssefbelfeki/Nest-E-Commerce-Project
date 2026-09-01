@@ -5,10 +5,12 @@ import { useRouter } from 'next/navigation';
 import { Product } from '@/types';
 import { apiFetch } from '@/lib/api';
 import { useAuth } from '@/context/AuthContext';
+import { useI18n } from '@/context/I18nContext';
 
 export default function AdminProductsPage() {
   const { user, loading: authLoading } = useAuth();
   const router = useRouter();
+  const { t, localePath } = useI18n();
 
   const [products, setProducts] = useState<Product[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -34,12 +36,12 @@ export default function AdminProductsPage() {
   useEffect(() => {
     if (!authLoading) {
       if (!user || user.role !== 'ADMIN') {
-        router.push('/products');
+        router.push(localePath('/products'));
         return;
       }
       fetchProducts();
     }
-  }, [user, authLoading, router]);
+  }, [user, authLoading, router, localePath]);
 
   const fetchProducts = async () => {
     setLoading(true);
@@ -48,7 +50,7 @@ export default function AdminProductsPage() {
       const data = await apiFetch<Product[]>('/products');
       setProducts(data || []);
     } catch (err: any) {
-      setError(err.message || 'Failed to load products');
+      setError(err.message || t('admin.loadFailed'));
     } finally {
       setLoading(false);
     }
@@ -63,12 +65,12 @@ export default function AdminProductsPage() {
     const stockNum = parseInt(createStock, 10);
 
     if (isNaN(priceNum) || priceNum <= 0) {
-      setError('Price must be a positive number');
+      setError(t('admin.priceInvalid'));
       return;
     }
 
     if (isNaN(stockNum) || stockNum < 0) {
-      setError('Stock must be a non-negative integer');
+      setError(t('admin.stockInvalid'));
       return;
     }
 
@@ -84,13 +86,13 @@ export default function AdminProductsPage() {
       });
 
       setProducts((prev) => [...prev, newProduct]);
-      setSuccess(`Successfully created product "${newProduct.name}"!`);
+      setSuccess(t('admin.created', { name: newProduct.name }));
       setCreateName('');
       setCreatePrice('');
       setCreateStock('');
       setTimeout(() => setSuccess(''), 4000);
     } catch (err: any) {
-      setError(err.message || 'Failed to create product');
+      setError(err.message || t('admin.createFailed'));
     } finally {
       setCreating(false);
     }
@@ -115,12 +117,12 @@ export default function AdminProductsPage() {
     const stockNum = parseInt(editStock, 10);
 
     if (isNaN(priceNum) || priceNum <= 0) {
-      setError('Price must be a positive number');
+      setError(t('admin.priceInvalid'));
       return;
     }
 
     if (isNaN(stockNum) || stockNum < 0) {
-      setError('Stock must be a non-negative integer');
+      setError(t('admin.stockInvalid'));
       return;
     }
 
@@ -136,18 +138,18 @@ export default function AdminProductsPage() {
       });
 
       setProducts((prev) => prev.map((p) => (p.id === id ? updated : p)));
-      setSuccess(`Updated product "${updated.name}"`);
+      setSuccess(t('admin.updated', { name: updated.name }));
       setEditingId(null);
       setTimeout(() => setSuccess(''), 4000);
     } catch (err: any) {
-      setError(err.message || 'Failed to update product');
+      setError(err.message || t('admin.updateFailed'));
     } finally {
       setUpdating(false);
     }
   };
 
   const handleDeleteProduct = async (id: number) => {
-    if (!confirm('Are you sure you want to delete this product?')) return;
+    if (!confirm(t('admin.deleteConfirm'))) return;
 
     setDeletingId(id);
     setError('');
@@ -158,10 +160,10 @@ export default function AdminProductsPage() {
       });
 
       setProducts((prev) => prev.filter((p) => p.id !== id));
-      setSuccess('Product deleted successfully');
+      setSuccess(t('admin.deleted'));
       setTimeout(() => setSuccess(''), 4000);
     } catch (err: any) {
-      setError(err.message || 'Failed to delete product');
+      setError(err.message || t('admin.deleteFailed'));
     } finally {
       setDeletingId(null);
     }
@@ -171,7 +173,7 @@ export default function AdminProductsPage() {
     return (
       <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-4">
         <div className="w-12 h-12 border-4 border-amber-500/30 border-t-amber-500 rounded-full animate-spin"></div>
-        <p className="text-sm text-slate-400 font-medium">Verifying admin access & loading data...</p>
+        <p className="text-sm text-slate-400 font-medium">{t('admin.verifying')}</p>
       </div>
     );
   }
@@ -183,13 +185,11 @@ export default function AdminProductsPage() {
         <div>
           <div className="flex items-center space-x-2">
             <span className="badge-admin px-2.5 py-1 rounded text-xs font-bold uppercase tracking-wider">
-              Admin Restricted
+              {t('admin.restricted')}
             </span>
-            <h1 className="text-3xl font-extrabold text-white tracking-tight">Product Management</h1>
+            <h1 className="text-3xl font-extrabold text-white tracking-tight">{t('admin.title')}</h1>
           </div>
-          <p className="text-slate-400 text-sm mt-1">
-            Create, update, or remove items from the catalog inventory
-          </p>
+          <p className="text-slate-400 text-sm mt-1">{t('admin.subtitle')}</p>
         </div>
         <button
           onClick={fetchProducts}
@@ -198,7 +198,7 @@ export default function AdminProductsPage() {
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
           </svg>
-          <span>Refresh Inventory</span>
+          <span>{t('admin.refresh')}</span>
         </button>
       </div>
 
@@ -227,13 +227,13 @@ export default function AdminProductsPage() {
           <svg className="w-5 h-5 text-amber-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
           </svg>
-          <span>Add New Product</span>
+          <span>{t('admin.addNewProduct')}</span>
         </h2>
 
         <form onSubmit={handleCreateProduct} className="grid grid-cols-1 md:grid-cols-4 gap-4">
           <div className="md:col-span-2">
             <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
-              Product Name
+              {t('admin.productName')}
             </label>
             <input
               type="text"
@@ -241,13 +241,13 @@ export default function AdminProductsPage() {
               value={createName}
               onChange={(e) => setCreateName(e.target.value)}
               className="input-field w-full"
-              placeholder="e.g. Wireless Mechanical Keyboard"
+              placeholder={t('admin.namePlaceholder')}
             />
           </div>
 
           <div>
             <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
-              Price ($ USD)
+              {t('admin.price')}
             </label>
             <input
               type="number"
@@ -263,8 +263,17 @@ export default function AdminProductsPage() {
 
           <div>
             <label className="block text-xs font-semibold text-slate-300 uppercase tracking-wider mb-1">
-              Initial Stock Qty
+              {t('admin.initialStock')}
             </label>
+            <input
+              type="number"
+              min="0"
+              required
+              value={createStock}
+              onChange={(e) => setCreateStock(e.target.value)}
+              className="input-field w-full"
+              placeholder="50"
+            />
             <input
               type="number"
               min="0"
@@ -283,10 +292,10 @@ export default function AdminProductsPage() {
               className="btn-primary px-6 py-2.5 rounded-xl text-sm font-semibold flex items-center space-x-2"
             >
               {creating ? (
-                <span>Adding Product...</span>
+                <span>{t('admin.addingProduct')}</span>
               ) : (
                 <>
-                  <span>Create Product</span>
+                  <span>{t('admin.createProduct')}</span>
                   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
@@ -300,23 +309,23 @@ export default function AdminProductsPage() {
       {/* Inventory Table */}
       <div className="glass-panel rounded-2xl overflow-hidden">
         <div className="px-6 py-4 border-b border-slate-800 flex items-center justify-between">
-          <h2 className="text-lg font-bold text-white">Catalog Inventory ({products.length})</h2>
+          <h2 className="text-lg font-bold text-white">{t('admin.inventory', { count: products.length })}</h2>
         </div>
 
         {products.length === 0 ? (
           <div className="p-8 text-center text-slate-400">
-            No products found in inventory. Add your first item above!
+            {t('admin.noProducts')}
           </div>
         ) : (
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm text-slate-300">
               <thead className="bg-slate-900/60 uppercase text-[11px] font-bold text-slate-400 tracking-wider border-b border-slate-800">
                 <tr>
-                  <th className="py-3.5 px-6">ID</th>
-                  <th className="py-3.5 px-6">Product Name</th>
-                  <th className="py-3.5 px-6">Price</th>
-                  <th className="py-3.5 px-6">Stock</th>
-                  <th className="py-3.5 px-6 text-right">Actions</th>
+                  <th className="py-3.5 px-6">{t('admin.thId')}</th>
+                  <th className="py-3.5 px-6">{t('admin.thName')}</th>
+                  <th className="py-3.5 px-6">{t('admin.thPrice')}</th>
+                  <th className="py-3.5 px-6">{t('admin.thStock')}</th>
+                  <th className="py-3.5 px-6 text-right">{t('admin.thActions')}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-800/60">
@@ -372,7 +381,7 @@ export default function AdminProductsPage() {
                                 : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
                             }`}
                           >
-                            {product.stock} units
+                            {t('admin.units', { count: product.stock })}
                           </span>
                         )}
                       </td>
@@ -385,13 +394,13 @@ export default function AdminProductsPage() {
                               disabled={updating}
                               className="btn-primary px-3 py-1 rounded-lg text-xs font-semibold"
                             >
-                              Save
+                              {t('admin.save')}
                             </button>
                             <button
                               onClick={cancelEdit}
                               className="btn-secondary px-3 py-1 rounded-lg text-xs font-semibold"
                             >
-                              Cancel
+                              {t('admin.cancel')}
                             </button>
                           </>
                         ) : (
@@ -400,14 +409,14 @@ export default function AdminProductsPage() {
                               onClick={() => startEdit(product)}
                               className="btn-secondary px-3 py-1 rounded-lg text-xs font-semibold hover:border-indigo-500/40 hover:text-indigo-300"
                             >
-                              Edit
+                              {t('admin.edit')}
                             </button>
                             <button
                               onClick={() => handleDeleteProduct(product.id)}
                               disabled={deletingId === product.id}
                               className="btn-danger px-3 py-1 rounded-lg text-xs font-semibold"
                             >
-                              {deletingId === product.id ? 'Deleting...' : 'Delete'}
+                              {deletingId === product.id ? t('admin.deleting') : t('admin.delete')}
                             </button>
                           </>
                         )}
