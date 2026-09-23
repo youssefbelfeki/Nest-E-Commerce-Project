@@ -1,0 +1,62 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'config:.ua/config.json' has no edges (orphan)",
+    "Node 'config:.ua/fingerprints.json' has no edges (orphan)",
+    "Node 'config:.ua/knowledge-graph.json' has no edges (orphan)",
+    "Node 'config:.ua/meta.json' has no edges (orphan)",
+    "Node 'config:skills-lock.json' has no edges (orphan)",
+    "Node 'document:frontend/AGENTS.md' has no edges (orphan)",
+    "Node 'document:frontend/CLAUDE.md' has no edges (orphan)",
+    "Node 'document:frontend/README.md' has no edges (orphan)",
+    "Node 'config:frontend/package.json' has no edges (orphan)",
+    "Node 'config:frontend/tsconfig.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json' has no edges (orphan)",
+    "Node 'file:.ua/dashboard.log.err' has no edges (orphan)",
+    "Node 'config:.ua/intermediate/scan-result.json' has no edges (orphan)",
+    "Node 'file:eslint.config.mjs' has no edges (orphan)",
+    "Node 'file:frontend/eslint.config.mjs' has no edges (orphan)",
+    "Node 'file:frontend/next.config.ts' has no edges (orphan)",
+    "Node 'file:frontend/postcss.config.mjs' has no edges (orphan)",
+    "Node 'file:graphify-out/.graphify_labels.json.sig' has no edges (orphan)",
+    "Node 'file:graphify-out/.graphify_root' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/stat-index.json' has no edges (orphan)",
+    "Node 'file:prisma.config.ts' has no edges (orphan)",
+    "Node 'config:prisma/migrations/migration_lock.toml' has no edges (orphan)",
+    "Node 'schema:prisma/schema.prisma' has no edges (orphan)",
+    "Node 'file:test/fixtures/test-data.ts' has no edges (orphan)",
+    "Node 'config:test/jest-e2e.json' has no edges (orphan)",
+    "Node 'config:test/jest-integration.json' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 222,
+    "totalEdges": 404,
+    "totalLayers": 9,
+    "tourSteps": 11,
+    "nodeTypes": {
+      "file": 104,
+      "function": 33,
+      "class": 38,
+      "config": 33,
+      "document": 7,
+      "table": 6,
+      "schema": 1
+    },
+    "edgeTypes": {
+      "imports": 183,
+      "contains": 71,
+      "exports": 68,
+      "calls": 37,
+      "tested_by": 22,
+      "depends_on": 6,
+      "related": 14,
+      "documents": 1,
+      "configures": 2
+    }
+  }
+}

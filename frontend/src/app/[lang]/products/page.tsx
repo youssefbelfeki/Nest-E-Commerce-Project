@@ -6,6 +6,7 @@ import { Product } from '@/types';
 import { apiFetch } from '@/lib/api';
 import { useAuth } from '@/context/AuthContext';
 import { useI18n } from '@/context/I18nContext';
+import { addToCartSchema } from '@/lib/schemas';
 
 export default function ProductsPage() {
   const { user, loading: authLoading } = useAuth();
@@ -52,21 +53,28 @@ export default function ProductsPage() {
   const handleQuantityChange = (productId: number, qty: number) => {
     const product = products.find((p) => p.id === productId);
     const max = product ? product.stock : 99;
-    const validQty = Math.max(1, Math.min(max, qty));
+    // Reject non-numeric / fractional typing before clamping into range
+    const parsed = Number.isFinite(qty) && Number.isInteger(qty) ? qty : 1;
+    const validQty = Math.max(1, Math.min(max, parsed));
     setQuantities((prev) => ({ ...prev, [productId]: validQty }));
   };
 
   const handleAddToCart = async (product: Product) => {
-    const quantity = quantities[product.id] || 1;
+    const parsed = addToCartSchema.safeParse({
+      productId: product.id,
+      quantity: quantities[product.id] ?? 1,
+    });
+    if (!parsed.success) {
+      setError(t('validation.quantity'));
+      return;
+    }
+    const { quantity } = parsed.data;
     setAddingId(product.id);
     setError('');
     try {
       await apiFetch('/cart/add', {
         method: 'POST',
-        body: JSON.stringify({
-          productId: product.id,
-          quantity,
-        }),
+        body: JSON.stringify(parsed.data),
       });
 
       setToastMessage(t('products.addedToCart', { quantity, name: product.name }));

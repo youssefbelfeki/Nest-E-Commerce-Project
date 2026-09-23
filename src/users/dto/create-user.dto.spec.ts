@@ -17,7 +17,10 @@ describe('CreateUserDto', () => {
 
   describe('name', () => {
     it('should fail when name is missing', async () => {
-      const dto = plainToInstance(CreateUserDto, { ...validData, name: undefined });
+      const dto = plainToInstance(CreateUserDto, {
+        ...validData,
+        name: undefined,
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });
@@ -37,13 +40,19 @@ describe('CreateUserDto', () => {
 
   describe('email', () => {
     it('should fail when email is missing', async () => {
-      const dto = plainToInstance(CreateUserDto, { ...validData, email: undefined });
+      const dto = plainToInstance(CreateUserDto, {
+        ...validData,
+        email: undefined,
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });
 
     it('should fail with invalid email format', async () => {
-      const dto = plainToInstance(CreateUserDto, { ...validData, email: 'not-an-email' });
+      const dto = plainToInstance(CreateUserDto, {
+        ...validData,
+        email: 'not-an-email',
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });
@@ -51,19 +60,28 @@ describe('CreateUserDto', () => {
 
   describe('password', () => {
     it('should fail when password is missing', async () => {
-      const dto = plainToInstance(CreateUserDto, { ...validData, password: undefined });
+      const dto = plainToInstance(CreateUserDto, {
+        ...validData,
+        password: undefined,
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });
 
     it('should fail when password is less than 6 characters', async () => {
-      const dto = plainToInstance(CreateUserDto, { ...validData, password: '12345' });
+      const dto = plainToInstance(CreateUserDto, {
+        ...validData,
+        password: '12345',
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });
 
     it('should pass with password of exactly 6 characters', async () => {
-      const dto = plainToInstance(CreateUserDto, { ...validData, password: '123456' });
+      const dto = plainToInstance(CreateUserDto, {
+        ...validData,
+        password: '123456',
+      });
       const errors = await validate(dto);
       expect(errors.length).toBe(0);
     });

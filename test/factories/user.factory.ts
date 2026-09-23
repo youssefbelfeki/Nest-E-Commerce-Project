@@ -33,5 +33,8 @@ export async function createTestUser(
 }
 
 export async function createTestAdmin(prisma: PrismaService) {
-  return createTestUser(prisma, { role: Role.ADMIN, email: `admin-${Date.now()}@example.com` });
+  return createTestUser(prisma, {
+    role: Role.ADMIN,
+    email: `admin-${Date.now()}@example.com`,
+  });
 }

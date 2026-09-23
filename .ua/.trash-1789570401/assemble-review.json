@@ -1,0 +1,16 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 1,
+  "edgesRestored": 3,
+  "crossBatchEdgesAdded": 3,
+  "typesRemapped": 34,
+  "complexityRemapped": 0,
+  "notes": [
+    "Fixed section sane: 9 tested_by drops were orphan/test-test pairs, 0 linker edges expected since 24 tested_by already came from batches; 24 production nodes tagged tested is consistent.",
+    "Batch-13 emitted all 34 nodes without type field; inferred type from ID prefix (file/config/function/class/schema/table). Includes 6 table: and 1 schema: nodes for Prisma/SQL artifacts, treated as legitimate domain types.",
+    "3 dropped imports edges were prefix mismatches (file: vs config: for en.json/fr.json locale files); restored as imports to existing config: nodes, verified against importMap and source files.",
+    "Dropped calls cart.controller->User restored by creating missing function node for User decorator (mirrors roles.decorator.ts:Roles pattern with contains+exports); source confirms export const User = createParamDecorator(...).",
+    "Did not add speculative orders.controller->User calls edge (not in batches, calls not covered by importMap) despite both controllers using @User in source.",
+    "No complexity remaps needed; all values already simple/moderate/complex. No nodes with missing id. Final graph: 217 nodes, 429 edges, 0 dangling."
+  ]
+}

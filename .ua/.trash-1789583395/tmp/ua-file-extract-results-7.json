@@ -1,0 +1,331 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 7,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 7,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 7,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/cart/cart.controller.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 126,
+      "nonEmptyLines": 98,
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/cart/cart.controller.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "CartController",
+          "startLine": 10,
+          "endLine": 39,
+          "methods": [
+            "constructor",
+            "addItem",
+            "getCart",
+            "updateItem",
+            "removeItem"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CartController",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "addItem",
+          "callee": "User",
+          "lineNumber": 14
+        },
+        {
+          "caller": "addItem",
+          "callee": "Body",
+          "lineNumber": 14
+        },
+        {
+          "caller": "addItem",
+          "callee": "this.cartService.addItem",
+          "lineNumber": 15
+        },
+        {
+          "caller": "getCart",
+          "callee": "User",
+          "lineNumber": 19
+        },
+        {
+          "caller": "getCart",
+          "callee": "this.cartService.getCart",
+          "lineNumber": 20
+        },
+        {
+          "caller": "updateItem",
+          "callee": "User",
+          "lineNumber": 25
+        },
+        {
+          "caller": "updateItem",
+          "callee": "Param",
+          "lineNumber": 26
+        },
+        {
+          "caller": "updateItem",
+          "callee": "Body",
+          "lineNumber": 27
+        },
+        {
+          "caller": "updateItem",
+          "callee": "this.cartService.updateItem",
+          "lineNumber": 29
+        },
+        {
+          "caller": "removeItem",
+          "callee": "User",
+          "lineNumber": 34
+        },
+        {
+          "caller": "removeItem",
+          "callee": "Param",
+          "lineNumber": 35
+        },
+        {
+          "caller": "removeItem",
+          "callee": "this.cartService.removeItem",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 5,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/cart/cart.module.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "CartModule",
+          "startLine": 11,
+          "endLine": 11,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CartModule",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/cart/cart.service.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 338,
+      "nonEmptyLines": 284,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/cart/cart.service.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 121,
+      "nonEmptyLines": 101,
+      "classes": [
+        {
+          "name": "CartService",
+          "startLine": 7,
+          "endLine": 121,
+          "methods": [
+            "constructor",
+            "addItem",
+            "getCart",
+            "updateItem",
+            "removeItem"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CartService",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "addItem",
+          "callee": "this.prisma.product.findUnique",
+          "lineNumber": 11
+        },
+        {
+          "caller": "addItem",
+          "callee": "this.prisma.$transaction",
+          "lineNumber": 23
+        },
+        {
+          "caller": "addItem",
+          "callee": "tx.cart.findUnique",
+          "lineNumber": 24
+        },
+        {
+          "caller": "addItem",
+          "callee": "tx.cart.create",
+          "lineNumber": 27
+        },
+        {
+          "caller": "addItem",
+          "callee": "tx.cartItem.findUnique",
+          "lineNumber": 30
+        },
+        {
+          "caller": "addItem",
+          "callee": "tx.cartItem.update",
+          "lineNumber": 43
+        },
+        {
+          "caller": "addItem",
+          "callee": "tx.cartItem.create",
+          "lineNumber": 56
+        },
+        {
+          "caller": "getCart",
+          "callee": "this.prisma.cart.findUnique",
+          "lineNumber": 68
+        },
+        {
+          "caller": "updateItem",
+          "callee": "this.prisma.cartItem.findUnique",
+          "lineNumber": 85
+        },
+        {
+          "caller": "updateItem",
+          "callee": "this.prisma.cartItem.update",
+          "lineNumber": 100
+        },
+        {
+          "caller": "removeItem",
+          "callee": "this.prisma.cartItem.findUnique",
+          "lineNumber": 108
+        },
+        {
+          "caller": "removeItem",
+          "callee": "this.prisma.cartItem.delete",
+          "lineNumber": 117
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/cart/dto/add-to-cart.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "AddToCartDto",
+          "startLine": 3,
+          "endLine": 10,
+          "methods": [],
+          "properties": [
+            "productId",
+            "quantity"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "AddToCartDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/cart/dto/update-cart-item.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "classes": [
+        {
+          "name": "UpdateCartItemDto",
+          "startLine": 3,
+          "endLine": 7,
+          "methods": [],
+          "properties": [
+            "quantity"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateCartItemDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

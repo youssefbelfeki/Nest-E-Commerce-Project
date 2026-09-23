@@ -1,0 +1,4838 @@
+{
+  "version": "1.0.0",
+  "gitCommitHash": "704dedbe5f681b403978bed71777fd414c4bac6e",
+  "generatedAt": "2026-09-16T17:29:43.724Z",
+  "files": {
+    ".ua/config.json": {
+      "filePath": ".ua/config.json",
+      "contentHash": "a6a692217d2d03dbfbacee175523f866d24b30ec67638d71170ddb5c826b42dd",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 3,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/dashboard.log.err": {
+      "filePath": ".ua/dashboard.log.err",
+      "contentHash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/fingerprints.json": {
+      "filePath": ".ua/fingerprints.json",
+      "contentHash": "e27d665f6ae169fa5968fec46efdf0fb4d01f6faa1e377dd7be92fd00ccc8f74",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4758,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/intermediate/scan-result.json": {
+      "filePath": ".ua/intermediate/scan-result.json",
+      "contentHash": "858d191a4da90c7c0196190c4bf8d4af2e7bec5e17424a9fa8ad69552d54357b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1319,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/knowledge-graph.json": {
+      "filePath": ".ua/knowledge-graph.json",
+      "contentHash": "b5de8c89358ad77c209d8f056e7e51654c001c35a91ba870ac57297100df302e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6456,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/meta.json": {
+      "filePath": ".ua/meta.json",
+      "contentHash": "c2ed4c171c6d888ad6998ebc6d3fa28b0fab69d22308acbd259c19d8d3998a3c",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 6,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/tmp/ua-import-map-input.json": {
+      "filePath": ".ua/tmp/ua-import-map-input.json",
+      "contentHash": "9fc59cb5ef3de738ed1baf7ff8eb9f96c6d6ecf2e7bfb92a947bded1befeb948",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/tmp/ua-import-map-output.json": {
+      "filePath": ".ua/tmp/ua-import-map-output.json",
+      "contentHash": "82f4076c5d830891cedcd32ff19393258f81523c9a0ab0cb9f6f8847fb806a5d",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 413,
+      "hasStructuralAnalysis": false
+    },
+    ".ua/tmp/ua-scan-files.json": {
+      "filePath": ".ua/tmp/ua-scan-files.json",
+      "contentHash": "eec360fda3cf40180baccf12d7f4d58ed9e99744de96ff74daf99c44c1dc1fcb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 922,
+      "hasStructuralAnalysis": false
+    },
+    "AGENTS.md": {
+      "filePath": "AGENTS.md",
+      "contentHash": "97154fe2aac4bca15e76219af46ba994bb8a8db07e7175dca0e159cebdd0e104",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 77,
+      "hasStructuralAnalysis": false
+    },
+    "BACKEND_RULES.md": {
+      "filePath": "BACKEND_RULES.md",
+      "contentHash": "03aefafa6802bf50e8391d6efd87dfd765e61769a18f414cd82bb87d6353686a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 200,
+      "hasStructuralAnalysis": false
+    },
+    "README.md": {
+      "filePath": "README.md",
+      "contentHash": "82ea5308525ec514b97dfa2e86d0b1b0e9bd0a316f0f9a90b0fabb428681ae58",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 489,
+      "hasStructuralAnalysis": false
+    },
+    "eslint.config.mjs": {
+      "filePath": "eslint.config.mjs",
+      "contentHash": "e94fea27c5d744a435cba627eb7097993c14a66a21f478c3729781bcdf4c8fba",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@eslint/js",
+          "specifiers": [
+            "eslint"
+          ]
+        },
+        {
+          "source": "eslint-plugin-prettier/recommended",
+          "specifiers": [
+            "eslintPluginPrettierRecommended"
+          ]
+        },
+        {
+          "source": "globals",
+          "specifiers": [
+            "globals"
+          ]
+        },
+        {
+          "source": "typescript-eslint",
+          "specifiers": [
+            "tseslint"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 36,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/AGENTS.md": {
+      "filePath": "frontend/AGENTS.md",
+      "contentHash": "e84b860a92e436f735d80915f214724d102059c3023146eb346be1d4ed8bb0cb",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 62,
+      "hasStructuralAnalysis": false
+    },
+    "frontend/CLAUDE.md": {
+      "filePath": "frontend/CLAUDE.md",
+      "contentHash": "d631d88045f74623d568adfb4783b72e3d1b732330d749bc6c72e6648d4581d3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 2,
+      "hasStructuralAnalysis": false
+    },
+    "frontend/README.md": {
+      "filePath": "frontend/README.md",
+      "contentHash": "3b3ed71ebf50e973209bc634f6849e8ecf235a6c0686c285e1f36af5caa1c2cc",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 37,
+      "hasStructuralAnalysis": false
+    },
+    "frontend/eslint.config.mjs": {
+      "filePath": "frontend/eslint.config.mjs",
+      "contentHash": "275a07c13fc7c83a652efcfa9fb6a207c451a2f5088e6793415ce44281285720",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "eslint/config",
+          "specifiers": [
+            "defineConfig",
+            "globalIgnores"
+          ]
+        },
+        {
+          "source": "eslint-config-next/core-web-vitals",
+          "specifiers": [
+            "nextVitals"
+          ]
+        },
+        {
+          "source": "eslint-config-next/typescript",
+          "specifiers": [
+            "nextTs"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 19,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/next.config.ts": {
+      "filePath": "frontend/next.config.ts",
+      "contentHash": "30e3b83b045043aa7a38e80c50393e6c875fecaf20b4f91da1865b1c3159821b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "NextConfig"
+          ]
+        },
+        {
+          "source": "path",
+          "specifiers": [
+            "path"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/package.json": {
+      "filePath": "frontend/package.json",
+      "contentHash": "4d65b5eb276c747c99b9b7d9aad5f7d3cacf31fc803228067a2646110e9c8422",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": false
+    },
+    "frontend/postcss.config.mjs": {
+      "filePath": "frontend/postcss.config.mjs",
+      "contentHash": "7b299d3d3b16699ddda397c0b2373b3af4f25f8fc9ccc9b3d9e64ef083bc1c21",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/admin/products/page.tsx": {
+      "filePath": "frontend/src/app/[lang]/admin/products/page.tsx",
+      "contentHash": "3e7f2311c63cf3025138bdb586cc7b5438849e54260482b54480fadce3be59ff",
+      "functions": [
+        {
+          "name": "AdminProductsPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 425
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "useRouter"
+          ]
+        },
+        {
+          "source": "@/types",
+          "specifiers": [
+            "Product"
+          ]
+        },
+        {
+          "source": "@/lib/api",
+          "specifiers": [
+            "apiFetch"
+          ]
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "useAuth"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        }
+      ],
+      "exports": [
+        "AdminProductsPage"
+      ],
+      "totalLines": 435,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/cart/page.tsx": {
+      "filePath": "frontend/src/app/[lang]/cart/page.tsx",
+      "contentHash": "994e39b5a26a3a9b63d4b7d9b5254cd63ec7c346a3e1bcef6685f10741d9f257",
+      "functions": [
+        {
+          "name": "CartPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 268
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "useRouter"
+          ]
+        },
+        {
+          "source": "@/types",
+          "specifiers": [
+            "Cart"
+          ]
+        },
+        {
+          "source": "@/lib/api",
+          "specifiers": [
+            "apiFetch"
+          ]
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "useAuth"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        }
+      ],
+      "exports": [
+        "CartPage"
+      ],
+      "totalLines": 279,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/dictionaries.ts": {
+      "filePath": "frontend/src/app/[lang]/dictionaries.ts",
+      "contentHash": "eac5b0474ae76fdfdd54a566d71ba1e2d26bbf041da595286398302b4310939f",
+      "functions": [
+        {
+          "name": "hasLocale",
+          "params": [
+            "locale"
+          ],
+          "exported": true,
+          "lineCount": 2
+        },
+        {
+          "name": "getDictionary",
+          "params": [
+            "locale"
+          ],
+          "returnType": "Promise<typeof en>",
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "server-only",
+          "specifiers": []
+        },
+        {
+          "source": "./dictionaries/en.json",
+          "specifiers": [
+            "en"
+          ]
+        },
+        {
+          "source": "./dictionaries/fr.json",
+          "specifiers": [
+            "fr"
+          ]
+        }
+      ],
+      "exports": [
+        "hasLocale",
+        "getDictionary",
+        "defaultDictionary",
+        "frenchDictionary"
+      ],
+      "totalLines": 24,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/dictionaries/en.json": {
+      "filePath": "frontend/src/app/[lang]/dictionaries/en.json",
+      "contentHash": "e735e90fe0dba24918d905c165bb3a4785d7dc8d99ca24e838166c2694ab9831",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 143,
+      "hasStructuralAnalysis": false
+    },
+    "frontend/src/app/[lang]/dictionaries/fr.json": {
+      "filePath": "frontend/src/app/[lang]/dictionaries/fr.json",
+      "contentHash": "cf78baf62a55d3d5a4b221634c18d8e4c54043b98a6c7cf7a6d6a18462228b3f",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 143,
+      "hasStructuralAnalysis": false
+    },
+    "frontend/src/app/[lang]/layout.tsx": {
+      "filePath": "frontend/src/app/[lang]/layout.tsx",
+      "contentHash": "375f0937a4647e3347ad0be63ea5c6afa31ab860f459216f56cf677bbed4276a",
+      "functions": [
+        {
+          "name": "generateStaticParams",
+          "params": [],
+          "exported": true,
+          "lineCount": 3
+        },
+        {
+          "name": "RootLayout",
+          "params": [
+            "{\r\n  children,\r\n  params,\r\n}"
+          ],
+          "exported": true,
+          "lineCount": 24
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next",
+          "specifiers": [
+            "Metadata"
+          ]
+        },
+        {
+          "source": "../globals.css",
+          "specifiers": []
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "AuthProvider"
+          ]
+        },
+        {
+          "source": "@/components/Navbar",
+          "specifiers": [
+            "Navbar"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "I18nProvider"
+          ]
+        },
+        {
+          "source": "@/lib/i18n",
+          "specifiers": [
+            "defaultLocale",
+            "locales",
+            "Locale"
+          ]
+        },
+        {
+          "source": "./dictionaries",
+          "specifiers": [
+            "getDictionary",
+            "hasLocale"
+          ]
+        }
+      ],
+      "exports": [
+        "metadata",
+        "generateStaticParams",
+        "RootLayout"
+      ],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/login/page.tsx": {
+      "filePath": "frontend/src/app/[lang]/login/page.tsx",
+      "contentHash": "628366a0059bb89b60a87802d6231b91434c29fd02dc04eefdb56a8609992377",
+      "functions": [
+        {
+          "name": "LoginPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 102
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "useRouter"
+          ]
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "useAuth"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        }
+      ],
+      "exports": [
+        "LoginPage"
+      ],
+      "totalLines": 111,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/orders/page.tsx": {
+      "filePath": "frontend/src/app/[lang]/orders/page.tsx",
+      "contentHash": "58b2eeb6086bcb195bbcee086d56dbe0487726abf84e70988c53b36a4b28ed50",
+      "functions": [
+        {
+          "name": "OrdersPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 146
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "useRouter"
+          ]
+        },
+        {
+          "source": "@/types",
+          "specifiers": [
+            "Order"
+          ]
+        },
+        {
+          "source": "@/lib/api",
+          "specifiers": [
+            "apiFetch"
+          ]
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "useAuth"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        }
+      ],
+      "exports": [
+        "OrdersPage"
+      ],
+      "totalLines": 157,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/page.tsx": {
+      "filePath": "frontend/src/app/[lang]/page.tsx",
+      "contentHash": "1cd6c59913377a4c0045f54cf9c469f2e58ff2b926b8a1a636b2cc8a4e1f4af3",
+      "functions": [
+        {
+          "name": "Home",
+          "params": [],
+          "exported": true,
+          "lineCount": 40
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "useRouter"
+          ]
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "useAuth"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        }
+      ],
+      "exports": [
+        "Home"
+      ],
+      "totalLines": 48,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/products/page.tsx": {
+      "filePath": "frontend/src/app/[lang]/products/page.tsx",
+      "contentHash": "e2d146bf63ff7a853f97157ddd3ef567981e89b54b0e84049ce30846c7017f2d",
+      "functions": [
+        {
+          "name": "ProductsPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 219
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "useRouter"
+          ]
+        },
+        {
+          "source": "@/types",
+          "specifiers": [
+            "Product"
+          ]
+        },
+        {
+          "source": "@/lib/api",
+          "specifiers": [
+            "apiFetch"
+          ]
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "useAuth"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductsPage"
+      ],
+      "totalLines": 229,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/[lang]/register/page.tsx": {
+      "filePath": "frontend/src/app/[lang]/register/page.tsx",
+      "contentHash": "1395621f8562fa0d238e0eb301c233d8fa2d704b270d6435ad1c6a2f18c866e2",
+      "functions": [
+        {
+          "name": "RegisterPage",
+          "params": [],
+          "exported": true,
+          "lineCount": 123
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "useState"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "useRouter"
+          ]
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "useAuth"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        }
+      ],
+      "exports": [
+        "RegisterPage"
+      ],
+      "totalLines": 132,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/app/globals.css": {
+      "filePath": "frontend/src/app/globals.css",
+      "contentHash": "da1ef17e266fbc4e21482dd6c9ecaf87b256cd7fe278bdd332b949ec95e71f69",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 130,
+      "hasStructuralAnalysis": false
+    },
+    "frontend/src/components/LanguageSwitcher.tsx": {
+      "filePath": "frontend/src/components/LanguageSwitcher.tsx",
+      "contentHash": "dae2e920953cf299288470293fb55e405b3cd18041f9854ecd0275c319d57d1c",
+      "functions": [
+        {
+          "name": "LanguageSwitcher",
+          "params": [],
+          "exported": true,
+          "lineCount": 95
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "useEffect",
+            "useRef",
+            "useState"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "usePathname"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        },
+        {
+          "source": "@/lib/i18n",
+          "specifiers": [
+            "LOCALE_COOKIE",
+            "locales"
+          ]
+        }
+      ],
+      "exports": [
+        "LanguageSwitcher"
+      ],
+      "totalLines": 108,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/components/Navbar.tsx": {
+      "filePath": "frontend/src/components/Navbar.tsx",
+      "contentHash": "76bde27fe83c51e84825012c35231250fd0fe173c0d1d4f5a7646badea73cddc",
+      "functions": [
+        {
+          "name": "Navbar",
+          "params": [
+            "{ cartCount = 0 }"
+          ],
+          "exported": true,
+          "lineCount": 129
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React"
+          ]
+        },
+        {
+          "source": "next/link",
+          "specifiers": [
+            "Link"
+          ]
+        },
+        {
+          "source": "next/navigation",
+          "specifiers": [
+            "usePathname",
+            "useRouter"
+          ]
+        },
+        {
+          "source": "@/context/AuthContext",
+          "specifiers": [
+            "useAuth"
+          ]
+        },
+        {
+          "source": "@/context/I18nContext",
+          "specifiers": [
+            "useI18n"
+          ]
+        },
+        {
+          "source": "./LanguageSwitcher",
+          "specifiers": [
+            "LanguageSwitcher"
+          ]
+        }
+      ],
+      "exports": [
+        "Navbar"
+      ],
+      "totalLines": 139,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/context/AuthContext.tsx": {
+      "filePath": "frontend/src/context/AuthContext.tsx",
+      "contentHash": "6250c70d0dc3fa64278865d6e6e8c716e01c649cbdac4a67cfb27c27d40d538c",
+      "functions": [
+        {
+          "name": "parseJwt",
+          "params": [
+            "token"
+          ],
+          "returnType": "JwtPayload | null",
+          "exported": false,
+          "lineCount": 16
+        },
+        {
+          "name": "AuthProvider",
+          "params": [
+            "{ children }"
+          ],
+          "exported": true,
+          "lineCount": 74
+        },
+        {
+          "name": "useAuth",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "React",
+            "createContext",
+            "useContext",
+            "useEffect",
+            "useState"
+          ]
+        },
+        {
+          "source": "@/types",
+          "specifiers": [
+            "User"
+          ]
+        },
+        {
+          "source": "@/lib/api",
+          "specifiers": [
+            "apiFetch",
+            "getAuthToken",
+            "setAuthToken"
+          ]
+        }
+      ],
+      "exports": [
+        "AuthProvider",
+        "useAuth"
+      ],
+      "totalLines": 124,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/context/I18nContext.tsx": {
+      "filePath": "frontend/src/context/I18nContext.tsx",
+      "contentHash": "52f02d3115b5dbdac4dd925d5aa44748faba4e08da0aeaa6e3d57189dbe87a00",
+      "functions": [
+        {
+          "name": "I18nProvider",
+          "params": [
+            "{\r\n  locale,\r\n  dictionary,\r\n  children,\r\n}"
+          ],
+          "exported": true,
+          "lineCount": 37
+        },
+        {
+          "name": "useI18n",
+          "params": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "react",
+          "specifiers": [
+            "createContext",
+            "useCallback",
+            "useContext",
+            "useMemo",
+            "ReactNode"
+          ]
+        },
+        {
+          "source": "@/lib/i18n",
+          "specifiers": [
+            "Locale"
+          ]
+        },
+        {
+          "source": "@/app/[lang]/dictionaries/en.json",
+          "specifiers": [
+            "en"
+          ]
+        }
+      ],
+      "exports": [
+        "I18nProvider",
+        "useI18n"
+      ],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/lib/api.ts": {
+      "filePath": "frontend/src/lib/api.ts",
+      "contentHash": "a5455f8a6f75d7b897e45074e9c7534ca486ec78cb397442a39fe64493f63544",
+      "functions": [
+        {
+          "name": "getAuthToken",
+          "params": [],
+          "returnType": "string | null",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "setAuthToken",
+          "params": [
+            "token"
+          ],
+          "returnType": "void",
+          "exported": true,
+          "lineCount": 12
+        },
+        {
+          "name": "apiFetch",
+          "params": [
+            "endpoint",
+            "options"
+          ],
+          "returnType": "Promise<T>",
+          "exported": true,
+          "lineCount": 49
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@/types",
+          "specifiers": [
+            "ApiErrorResponse",
+            "ApiResponse"
+          ]
+        }
+      ],
+      "exports": [
+        "getAuthToken",
+        "setAuthToken",
+        "apiFetch"
+      ],
+      "totalLines": 80,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/lib/i18n.ts": {
+      "filePath": "frontend/src/lib/i18n.ts",
+      "contentHash": "0c26dc3c7b974ab5c40b9e73474c52b9375c2794b2f7ac2d09fe7868e8cd68ee",
+      "functions": [
+        {
+          "name": "isLocale",
+          "params": [
+            "value"
+          ],
+          "exported": true,
+          "lineCount": 2
+        }
+      ],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "locales",
+        "defaultLocale",
+        "LOCALE_COOKIE",
+        "isLocale"
+      ],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/proxy.ts": {
+      "filePath": "frontend/src/proxy.ts",
+      "contentHash": "f60dd46936e5b0c8370299d84530b7f4a0ef11282f43e13de308355bfe063256",
+      "functions": [
+        {
+          "name": "getLocale",
+          "params": [
+            "request"
+          ],
+          "returnType": "string",
+          "exported": false,
+          "lineCount": 19
+        },
+        {
+          "name": "proxy",
+          "params": [
+            "request"
+          ],
+          "exported": true,
+          "lineCount": 17
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "next/server",
+          "specifiers": [
+            "NextRequest",
+            "NextResponse"
+          ]
+        }
+      ],
+      "exports": [
+        "proxy",
+        "config"
+      ],
+      "totalLines": 48,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/src/types/index.ts": {
+      "filePath": "frontend/src/types/index.ts",
+      "contentHash": "2a47296ec037a9b9bd2b055a0a69e87a8ed0953dd52b67156ac01d68b5e30402",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 57,
+      "hasStructuralAnalysis": true
+    },
+    "frontend/tsconfig.json": {
+      "filePath": "frontend/tsconfig.json",
+      "contentHash": "cc943f8c1da2bc9723eca08172e6188a9aa17832df9955795595299de3f5c3de",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/.graphify_analysis.json": {
+      "filePath": "graphify-out/.graphify_analysis.json",
+      "contentHash": "f355738d31455af07d2309188b58adc6c5181af79a7176de9e74c1b74ca501ef",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 860,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/.graphify_labels.json": {
+      "filePath": "graphify-out/.graphify_labels.json",
+      "contentHash": "229c36cdc1087aaa1878e9054381f0e0bf65db9aea9aae2323009d14a41f36e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/.graphify_labels.json.sig": {
+      "filePath": "graphify-out/.graphify_labels.json.sig",
+      "contentHash": "3c0b3c9341698e6c7e25b11d15a76f55b846f841d840519497945f0a32ac21d4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/.graphify_root": {
+      "filePath": "graphify-out/.graphify_root",
+      "contentHash": "610849b288dc8cda91e9f5964caf7729f30c4b5a42265140d8145901fc0f4437",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/GRAPH_REPORT.md": {
+      "filePath": "graphify-out/GRAPH_REPORT.md",
+      "contentHash": "8f4a47c1561684845101724eba98c15de8ae9d1021afdc2cd45ef00343ee924a",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 194,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json",
+      "contentHash": "2baa1e623a2a69ea4ddb492142a807d14e62360a89599f9150600074b3e5a07b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json",
+      "contentHash": "f5dc19619b4aa74a283eecba83d9e6595d79e6d2ec21237291dfb7b0c30d9e45",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json",
+      "contentHash": "b58dfa0116857eca4d85ae70209ba4e47e4b1ef8f85746b380cb7288c59413f0",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json",
+      "contentHash": "4246104216b65eab3d427453f13ad2594a5466f35924ee4d4399a309b6a20b61",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json",
+      "contentHash": "a9e5d1c3358e56e719a432ff4772201d77dc6a0b4e94ccd5cdeacd8414e882ea",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json": {
+      "filePath": "graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json",
+      "contentHash": "afed8e460a668a406fd8c0194e73cc9b94f7cc32d8397aac5916699e1db42567",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/cache/stat-index.json": {
+      "filePath": "graphify-out/cache/stat-index.json",
+      "contentHash": "0d44940f887c9f2f78afb3938ec09fd028b6acb2f67d2154ccc06fed52a96027",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 1,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/graph.html": {
+      "filePath": "graphify-out/graph.html",
+      "contentHash": "4679708749ce23c771cc6eada7ac14e0ee0fe91ebaf9758d350ca32bab1cb868",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 320,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/graph.json": {
+      "filePath": "graphify-out/graph.json",
+      "contentHash": "bed95eb8de3dde2af32c1f5f126ff9f132e4d6b0f1d54301ac5fa070aae9cab7",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 17028,
+      "hasStructuralAnalysis": false
+    },
+    "graphify-out/manifest.json": {
+      "filePath": "graphify-out/manifest.json",
+      "contentHash": "90665230792d96c2d35d965035e21e6ebd7b7c46637ae0fed8f88721e6ea8e63",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 542,
+      "hasStructuralAnalysis": false
+    },
+    "nest-cli.json": {
+      "filePath": "nest-cli.json",
+      "contentHash": "84dc81177a0db2270bd71242b910f07982c56eec68285694c9cbffc3911912ba",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 9,
+      "hasStructuralAnalysis": false
+    },
+    "package.json": {
+      "filePath": "package.json",
+      "contentHash": "c578f109b8f909ddbac37812ed97fb2f250197d6f422f4a3a2432ef811c7ba01",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 99,
+      "hasStructuralAnalysis": false
+    },
+    "postman/collection.json": {
+      "filePath": "postman/collection.json",
+      "contentHash": "bf8f8d1b874522cad83b70a14d4b3b6aa52bb0fe9411f36c26b71808bc750f22",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 532,
+      "hasStructuralAnalysis": false
+    },
+    "postman/environment.json": {
+      "filePath": "postman/environment.json",
+      "contentHash": "6919dd1df0d8d390db95ac3bb4f54312cfa3fbc0af9cfd5991accabeb07f3b65",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 26,
+      "hasStructuralAnalysis": false
+    },
+    "prisma.config.ts": {
+      "filePath": "prisma.config.ts",
+      "contentHash": "b8c30b02f98f6c61c5d2387bcde085a28126aaea9a13ef2e035a1bbbf547ed60",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "dotenv/config",
+          "specifiers": []
+        },
+        {
+          "source": "prisma/config",
+          "specifiers": [
+            "defineConfig"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 15,
+      "hasStructuralAnalysis": true
+    },
+    "prisma/migrations/20260724110919_init/migration.sql": {
+      "filePath": "prisma/migrations/20260724110919_init/migration.sql",
+      "contentHash": "78699f5818d55b993ffa253f3f4b70c6f1973c0f6f33eb642f1cda6495de81e4",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": false
+    },
+    "prisma/migrations/20260729093153_add_orders/migration.sql": {
+      "filePath": "prisma/migrations/20260729093153_add_orders/migration.sql",
+      "contentHash": "c2a1fbfd27e874bf4283d345ef9ac7d19d59e9d7e0e5a26c136dc3bd62bc4dd3",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": false
+    },
+    "prisma/migrations/20260730185335_add_cart_models/migration.sql": {
+      "filePath": "prisma/migrations/20260730185335_add_cart_models/migration.sql",
+      "contentHash": "5116156eda680163e798961fb0eae9131433f82178baf2ec2bf83f4ffa887f44",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 30,
+      "hasStructuralAnalysis": false
+    },
+    "prisma/migrations/migration_lock.toml": {
+      "filePath": "prisma/migrations/migration_lock.toml",
+      "contentHash": "99836963713b4f5b269ad49af0ed3d7b0b2e336115c2f92dc9ac683d139d0900",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 4,
+      "hasStructuralAnalysis": false
+    },
+    "prisma/schema.prisma": {
+      "filePath": "prisma/schema.prisma",
+      "contentHash": "1011e172018649b3a1cb6ce2cac8cf548d0556629cb42e9d3b56c14c0c10e50b",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": false
+    },
+    "skills-lock.json": {
+      "filePath": "skills-lock.json",
+      "contentHash": "4655fbdc26c8d9c1672dda5d9154f5de306cf95063d259c0713d4eb0013d25ce",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 60,
+      "hasStructuralAnalysis": false
+    },
+    "src/app.controller.spec.ts": {
+      "filePath": "src/app.controller.spec.ts",
+      "contentHash": "43750c632fc7f5997ddd690d4c3989443ab29ebd8866ee1fec6f3885834f8054",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./app.controller",
+          "specifiers": [
+            "AppController"
+          ]
+        },
+        {
+          "source": "./app.service",
+          "specifiers": [
+            "AppService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "src/app.controller.ts": {
+      "filePath": "src/app.controller.ts",
+      "contentHash": "3469c5aa62e1ba5b183d9bb9d40193e91aa761fc5734d332650b0bd49c346266",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AppController",
+          "methods": [
+            "constructor",
+            "getHello"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Controller",
+            "Get"
+          ]
+        },
+        {
+          "source": "./app.service",
+          "specifiers": [
+            "AppService"
+          ]
+        }
+      ],
+      "exports": [
+        "AppController"
+      ],
+      "totalLines": 13,
+      "hasStructuralAnalysis": true
+    },
+    "src/app.module.ts": {
+      "filePath": "src/app.module.ts",
+      "contentHash": "f4233f7bec44a780bfea3c792c43a3332d88450474d805b55fdef41ea74ef57b",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AppModule",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Module"
+          ]
+        },
+        {
+          "source": "./app.controller",
+          "specifiers": [
+            "AppController"
+          ]
+        },
+        {
+          "source": "./app.service",
+          "specifiers": [
+            "AppService"
+          ]
+        },
+        {
+          "source": "./users/users.module",
+          "specifiers": [
+            "UsersModule"
+          ]
+        },
+        {
+          "source": "./prisma/prisma.module",
+          "specifiers": [
+            "PrismaModule"
+          ]
+        },
+        {
+          "source": "./products/products.module",
+          "specifiers": [
+            "ProductsModule"
+          ]
+        },
+        {
+          "source": "./auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        },
+        {
+          "source": "./orders/orders.module",
+          "specifiers": [
+            "OrdersModule"
+          ]
+        },
+        {
+          "source": "./cart/cart.module",
+          "specifiers": [
+            "CartModule"
+          ]
+        }
+      ],
+      "exports": [
+        "AppModule"
+      ],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "src/app.service.ts": {
+      "filePath": "src/app.service.ts",
+      "contentHash": "5d4242d50092a353e5ab1f06663a89dbc714c7d9d70072ea03c83c5b14750f05",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AppService",
+          "methods": [
+            "getHello"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable"
+          ]
+        }
+      ],
+      "exports": [
+        "AppService"
+      ],
+      "totalLines": 9,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/auth.controller.spec.ts": {
+      "filePath": "src/auth/auth.controller.spec.ts",
+      "contentHash": "924a6f7b5e7dfeab1a190b5389b01d29ea570ff3d7225e884aaeb64fbbe00c94",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./auth.controller",
+          "specifiers": [
+            "AuthController"
+          ]
+        },
+        {
+          "source": "./auth.service",
+          "specifiers": [
+            "AuthService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 56,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/auth.controller.ts": {
+      "filePath": "src/auth/auth.controller.ts",
+      "contentHash": "dbe6c6981c1e89b19342128664ef9c2f40d0c7761f238cc6a0fc5a63232deec0",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuthController",
+          "methods": [
+            "constructor",
+            "register",
+            "login"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Body",
+            "Controller",
+            "HttpCode",
+            "HttpStatus",
+            "Post"
+          ]
+        },
+        {
+          "source": "./auth.service",
+          "specifiers": [
+            "AuthService"
+          ]
+        },
+        {
+          "source": "./dto/register.dto",
+          "specifiers": [
+            "RegisterDto"
+          ]
+        },
+        {
+          "source": "./dto/login.dto",
+          "specifiers": [
+            "LoginDto"
+          ]
+        }
+      ],
+      "exports": [
+        "AuthController"
+      ],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/auth.module.ts": {
+      "filePath": "src/auth/auth.module.ts",
+      "contentHash": "7e303633d712f1207f6f63ef277c55fe683eb9d4cbcc4a012fc08922a878abcd",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuthModule",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Module"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtModule"
+          ]
+        },
+        {
+          "source": "@nestjs/passport",
+          "specifiers": [
+            "PassportModule"
+          ]
+        },
+        {
+          "source": "./auth.service",
+          "specifiers": [
+            "AuthService"
+          ]
+        },
+        {
+          "source": "./auth.controller",
+          "specifiers": [
+            "AuthController"
+          ]
+        },
+        {
+          "source": "./jwt.strategy",
+          "specifiers": [
+            "JwtStrategy"
+          ]
+        }
+      ],
+      "exports": [
+        "AuthModule"
+      ],
+      "totalLines": 23,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/auth.service.spec.ts": {
+      "filePath": "src/auth/auth.service.spec.ts",
+      "contentHash": "1a5641d75016ba74cae5cd0f4862459c44541c664a292a11c6e597cae9819062",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./auth.service",
+          "specifiers": [
+            "AuthService"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ConflictException",
+            "UnauthorizedException"
+          ]
+        },
+        {
+          "source": "bcrypt",
+          "specifiers": [
+            "* as bcrypt"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 168,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/auth.service.ts": {
+      "filePath": "src/auth/auth.service.ts",
+      "contentHash": "0d3c34ff964364ac9a52af610c56a189609804df2f69b38c29e3e4588e683193",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuthService",
+          "methods": [
+            "constructor",
+            "register",
+            "login"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 48
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ConflictException",
+            "Injectable",
+            "UnauthorizedException"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        },
+        {
+          "source": "bcrypt",
+          "specifiers": [
+            "* as bcrypt"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "./dto/register.dto",
+          "specifiers": [
+            "RegisterDto"
+          ]
+        },
+        {
+          "source": "./dto/login.dto",
+          "specifiers": [
+            "LoginDto"
+          ]
+        }
+      ],
+      "exports": [
+        "AuthService"
+      ],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/decorators/roles.decorator.ts": {
+      "filePath": "src/auth/decorators/roles.decorator.ts",
+      "contentHash": "e03553bc9f8b4eb1a248cae7de6ab924ed26f4b56adc3b1af92756092219e4ac",
+      "functions": [
+        {
+          "name": "Roles",
+          "params": [
+            "...roles"
+          ],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "SetMetadata"
+          ]
+        },
+        {
+          "source": "../../../generated/prisma/client",
+          "specifiers": [
+            "Role"
+          ]
+        }
+      ],
+      "exports": [
+        "ROLES_KEY",
+        "Roles"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/decorators/user.decorator.ts": {
+      "filePath": "src/auth/decorators/user.decorator.ts",
+      "contentHash": "70f78b2177d6ead3ccc00d6f5780a006969567403ad9bd6ab240f8ab4bb32535",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "createParamDecorator",
+            "ExecutionContext"
+          ]
+        }
+      ],
+      "exports": [
+        "User"
+      ],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/dto/login.dto.spec.ts": {
+      "filePath": "src/auth/dto/login.dto.spec.ts",
+      "contentHash": "c5015bab7bbd97db9b37ab0e36540e6f7b3d2e9e006e8a8fe05557e6a1183579",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "validate"
+          ]
+        },
+        {
+          "source": "class-transformer",
+          "specifiers": [
+            "plainToInstance"
+          ]
+        },
+        {
+          "source": "./login.dto",
+          "specifiers": [
+            "LoginDto"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 45,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/dto/login.dto.ts": {
+      "filePath": "src/auth/dto/login.dto.ts",
+      "contentHash": "c6b3ef3afecf79c1e5e7faf74dcb83c060f1b44571dc56fb23dc77389c3919b3",
+      "functions": [],
+      "classes": [
+        {
+          "name": "LoginDto",
+          "methods": [],
+          "properties": [
+            "email",
+            "password"
+          ],
+          "exported": true,
+          "lineCount": 9
+        }
+      ],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "IsEmail",
+            "IsNotEmpty",
+            "IsString"
+          ]
+        }
+      ],
+      "exports": [
+        "LoginDto"
+      ],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/dto/register.dto.spec.ts": {
+      "filePath": "src/auth/dto/register.dto.spec.ts",
+      "contentHash": "3330bd816d82c5fa21c30724bf8d6f52a9faf07472abfdd8f43e7510755717f4",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "validate"
+          ]
+        },
+        {
+          "source": "class-transformer",
+          "specifiers": [
+            "plainToInstance"
+          ]
+        },
+        {
+          "source": "./register.dto",
+          "specifiers": [
+            "RegisterDto"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/dto/register.dto.ts": {
+      "filePath": "src/auth/dto/register.dto.ts",
+      "contentHash": "da38ac57ee7e59f9237f4787a713ff49f6301df2f34e014e74d5e872b348d683",
+      "functions": [],
+      "classes": [
+        {
+          "name": "RegisterDto",
+          "methods": [],
+          "properties": [
+            "name",
+            "email",
+            "password"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "IsEmail",
+            "IsNotEmpty",
+            "IsString",
+            "MinLength"
+          ]
+        }
+      ],
+      "exports": [
+        "RegisterDto"
+      ],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/guards/jwt-auth.guard.ts": {
+      "filePath": "src/auth/guards/jwt-auth.guard.ts",
+      "contentHash": "86f01fc8f2c8dc7a5d29859dee9467ccb4a7611fc82a79beee69fc71efce4308",
+      "functions": [],
+      "classes": [
+        {
+          "name": "JwtAuthGuard",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable"
+          ]
+        },
+        {
+          "source": "@nestjs/passport",
+          "specifiers": [
+            "AuthGuard"
+          ]
+        }
+      ],
+      "exports": [
+        "JwtAuthGuard"
+      ],
+      "totalLines": 6,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/guards/roles.guard.spec.ts": {
+      "filePath": "src/auth/guards/roles.guard.spec.ts",
+      "contentHash": "e6b0777acad1ef4fc2b45955acbc359106ba3365286381d15088aef64ad06218",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ExecutionContext",
+            "ForbiddenException"
+          ]
+        },
+        {
+          "source": "@nestjs/core",
+          "specifiers": [
+            "Reflector"
+          ]
+        },
+        {
+          "source": "./roles.guard",
+          "specifiers": [
+            "RolesGuard"
+          ]
+        },
+        {
+          "source": "../decorators/roles.decorator",
+          "specifiers": [
+            "ROLES_KEY"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 90,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/guards/roles.guard.ts": {
+      "filePath": "src/auth/guards/roles.guard.ts",
+      "contentHash": "cd55c2e63d9cead592f9c39ce1869957db23aa7145cbf203f569acea688da3e8",
+      "functions": [],
+      "classes": [
+        {
+          "name": "RolesGuard",
+          "methods": [
+            "constructor",
+            "canActivate"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 31
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "CanActivate",
+            "ExecutionContext",
+            "ForbiddenException",
+            "Injectable"
+          ]
+        },
+        {
+          "source": "@nestjs/core",
+          "specifiers": [
+            "Reflector"
+          ]
+        },
+        {
+          "source": "../../../generated/prisma/client",
+          "specifiers": [
+            "Role"
+          ]
+        },
+        {
+          "source": "../decorators/roles.decorator",
+          "specifiers": [
+            "ROLES_KEY"
+          ]
+        }
+      ],
+      "exports": [
+        "RolesGuard"
+      ],
+      "totalLines": 43,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/jwt.strategy.spec.ts": {
+      "filePath": "src/auth/jwt.strategy.spec.ts",
+      "contentHash": "fafc7983a77fbac6d310ff88f5ccfb1579dbb8b9db59295e9f980317725fa266",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./jwt.strategy",
+          "specifiers": [
+            "JwtStrategy"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "src/auth/jwt.strategy.ts": {
+      "filePath": "src/auth/jwt.strategy.ts",
+      "contentHash": "49b5b07ef50f1124e68d0388fcd8ce68a3283e85f400fb7cd0a94db3a21a2b8c",
+      "functions": [],
+      "classes": [
+        {
+          "name": "JwtStrategy",
+          "methods": [
+            "constructor",
+            "validate"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 13
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable"
+          ]
+        },
+        {
+          "source": "@nestjs/passport",
+          "specifiers": [
+            "PassportStrategy"
+          ]
+        },
+        {
+          "source": "passport-jwt",
+          "specifiers": [
+            "ExtractJwt",
+            "Strategy"
+          ]
+        }
+      ],
+      "exports": [
+        "JwtStrategy"
+      ],
+      "totalLines": 25,
+      "hasStructuralAnalysis": true
+    },
+    "src/cart/cart.controller.spec.ts": {
+      "filePath": "src/cart/cart.controller.spec.ts",
+      "contentHash": "c57351d402a2614e8bcf49798ba8be764772f6398e3095b06a7bc5de383f6196",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./cart.controller",
+          "specifiers": [
+            "CartController"
+          ]
+        },
+        {
+          "source": "./cart.service",
+          "specifiers": [
+            "CartService"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "NotFoundException"
+          ]
+        },
+        {
+          "source": "./dto/add-to-cart.dto",
+          "specifiers": [
+            "AddToCartDto"
+          ]
+        },
+        {
+          "source": "./dto/update-cart-item.dto",
+          "specifiers": [
+            "UpdateCartItemDto"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ExecutionContext"
+          ]
+        },
+        {
+          "source": "../users/auth/auth.guard",
+          "specifiers": [
+            "AuthGuard"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 127,
+      "hasStructuralAnalysis": true
+    },
+    "src/cart/cart.controller.ts": {
+      "filePath": "src/cart/cart.controller.ts",
+      "contentHash": "e63b4c0905863b731a2ef5ff7cef05c37c2c17217fbc3c7dcd1651ac67902341",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CartController",
+          "methods": [
+            "constructor",
+            "addItem",
+            "getCart",
+            "updateItem",
+            "removeItem"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Controller",
+            "Get",
+            "Post",
+            "Patch",
+            "Delete",
+            "Body",
+            "Param",
+            "UseGuards",
+            "ParseIntPipe",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "./cart.service",
+          "specifiers": [
+            "CartService"
+          ]
+        },
+        {
+          "source": "./dto/add-to-cart.dto",
+          "specifiers": [
+            "AddToCartDto"
+          ]
+        },
+        {
+          "source": "./dto/update-cart-item.dto",
+          "specifiers": [
+            "UpdateCartItemDto"
+          ]
+        },
+        {
+          "source": "../users/auth/auth.guard",
+          "specifiers": [
+            "AuthGuard"
+          ]
+        },
+        {
+          "source": "../auth/decorators/user.decorator",
+          "specifiers": [
+            "User"
+          ]
+        }
+      ],
+      "exports": [
+        "CartController"
+      ],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "src/cart/cart.module.ts": {
+      "filePath": "src/cart/cart.module.ts",
+      "contentHash": "99a4673e0dbd6ccc1731f574dbf431374eb9cd932060cffd5dfdecb12f7ac443",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CartModule",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Module"
+          ]
+        },
+        {
+          "source": "./cart.service",
+          "specifiers": [
+            "CartService"
+          ]
+        },
+        {
+          "source": "./cart.controller",
+          "specifiers": [
+            "CartController"
+          ]
+        },
+        {
+          "source": "../auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        }
+      ],
+      "exports": [
+        "CartModule"
+      ],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "src/cart/cart.service.spec.ts": {
+      "filePath": "src/cart/cart.service.spec.ts",
+      "contentHash": "546af73b7dfa79b5d1af9a83f9ed4c502d30dc426bbc9bbd8c452c0d6ca9a3d6",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./cart.service",
+          "specifiers": [
+            "CartService"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "NotFoundException",
+            "BadRequestException"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 339,
+      "hasStructuralAnalysis": true
+    },
+    "src/cart/cart.service.ts": {
+      "filePath": "src/cart/cart.service.ts",
+      "contentHash": "53662adb462b6a2f6e8ebcb415da4dd958d22cdf5a5a56cc775b1a8b19ab7289",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CartService",
+          "methods": [
+            "constructor",
+            "addItem",
+            "getCart",
+            "updateItem",
+            "removeItem"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 115
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable",
+            "NotFoundException",
+            "BadRequestException"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "./dto/add-to-cart.dto",
+          "specifiers": [
+            "AddToCartDto"
+          ]
+        },
+        {
+          "source": "./dto/update-cart-item.dto",
+          "specifiers": [
+            "UpdateCartItemDto"
+          ]
+        }
+      ],
+      "exports": [
+        "CartService"
+      ],
+      "totalLines": 122,
+      "hasStructuralAnalysis": true
+    },
+    "src/cart/dto/add-to-cart.dto.ts": {
+      "filePath": "src/cart/dto/add-to-cart.dto.ts",
+      "contentHash": "26f8a707adfaae525e42aadef5d4b22b6d991a03063b79dc56c0b6efa7149b26",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AddToCartDto",
+          "methods": [],
+          "properties": [
+            "productId",
+            "quantity"
+          ],
+          "exported": true,
+          "lineCount": 8
+        }
+      ],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "IsInt",
+            "Min"
+          ]
+        }
+      ],
+      "exports": [
+        "AddToCartDto"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "src/cart/dto/update-cart-item.dto.ts": {
+      "filePath": "src/cart/dto/update-cart-item.dto.ts",
+      "contentHash": "64ffdb00ea32b410fd310d010008dc3852362a16f0652ebd97d82168aa00f278",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UpdateCartItemDto",
+          "methods": [],
+          "properties": [
+            "quantity"
+          ],
+          "exported": true,
+          "lineCount": 5
+        }
+      ],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "IsInt",
+            "Min"
+          ]
+        }
+      ],
+      "exports": [
+        "UpdateCartItemDto"
+      ],
+      "totalLines": 8,
+      "hasStructuralAnalysis": true
+    },
+    "src/logger/logger.middleware.ts": {
+      "filePath": "src/logger/logger.middleware.ts",
+      "contentHash": "69c9c578101bc8ff0c65a55168177f1341045bd4152f6d47715799d9f71f445a",
+      "functions": [],
+      "classes": [
+        {
+          "name": "LoggerMiddleware",
+          "methods": [],
+          "properties": [
+            "logger",
+            "use"
+          ],
+          "exported": true,
+          "lineCount": 14
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable",
+            "Logger",
+            "NestMiddleware"
+          ]
+        },
+        {
+          "source": "express",
+          "specifiers": [
+            "Request",
+            "Response",
+            "NextFunction"
+          ]
+        }
+      ],
+      "exports": [
+        "LoggerMiddleware"
+      ],
+      "totalLines": 19,
+      "hasStructuralAnalysis": true
+    },
+    "src/main.ts": {
+      "filePath": "src/main.ts",
+      "contentHash": "74548d4a53ec770d00de1589e666f2f2280e400e3b3dfd93e59066044b929376",
+      "functions": [
+        {
+          "name": "bootstrap",
+          "params": [],
+          "exported": false,
+          "lineCount": 19
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "dotenv/config",
+          "specifiers": []
+        },
+        {
+          "source": "@nestjs/core",
+          "specifiers": [
+            "NestFactory"
+          ]
+        },
+        {
+          "source": "./app.module",
+          "specifiers": [
+            "AppModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "./users/transform/transform.interceptor",
+          "specifiers": [
+            "TransformInterceptor"
+          ]
+        },
+        {
+          "source": "./logger/logger.middleware",
+          "specifiers": [
+            "LoggerMiddleware"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "src/orders/dto/create-order.dto.ts": {
+      "filePath": "src/orders/dto/create-order.dto.ts",
+      "contentHash": "6c1f87212acbefa8b36dbe46596aa67764e636833028a9099f635d861d6ab370",
+      "functions": [],
+      "classes": [
+        {
+          "name": "OrderItemDto",
+          "methods": [],
+          "properties": [
+            "productId",
+            "quantity"
+          ],
+          "exported": true,
+          "lineCount": 8
+        },
+        {
+          "name": "CreateOrderDto",
+          "methods": [],
+          "properties": [
+            "items"
+          ],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "IsArray",
+            "IsInt",
+            "Min",
+            "ArrayMinSize",
+            "ValidateNested"
+          ]
+        },
+        {
+          "source": "class-transformer",
+          "specifiers": [
+            "Type"
+          ]
+        }
+      ],
+      "exports": [
+        "OrderItemDto",
+        "CreateOrderDto"
+      ],
+      "totalLines": 20,
+      "hasStructuralAnalysis": true
+    },
+    "src/orders/orders.controller.ts": {
+      "filePath": "src/orders/orders.controller.ts",
+      "contentHash": "c6dcb5e10076177b1470885caeab71f16b4116a712d0dc4b46b7b258da3d40d2",
+      "functions": [],
+      "classes": [
+        {
+          "name": "OrdersController",
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 18
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Controller",
+            "Get",
+            "Post",
+            "Body",
+            "Param",
+            "UseGuards",
+            "ParseIntPipe",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "./orders.service",
+          "specifiers": [
+            "OrdersService"
+          ]
+        },
+        {
+          "source": "./dto/create-order.dto",
+          "specifiers": [
+            "CreateOrderDto"
+          ]
+        },
+        {
+          "source": "../users/auth/auth.guard",
+          "specifiers": [
+            "AuthGuard"
+          ]
+        },
+        {
+          "source": "../auth/decorators/user.decorator",
+          "specifiers": [
+            "User"
+          ]
+        }
+      ],
+      "exports": [
+        "OrdersController"
+      ],
+      "totalLines": 27,
+      "hasStructuralAnalysis": true
+    },
+    "src/orders/orders.module.ts": {
+      "filePath": "src/orders/orders.module.ts",
+      "contentHash": "aee9913e849d4c2fe5bcac096741b031b51532a48cc155d028bdeb371a12956f",
+      "functions": [],
+      "classes": [
+        {
+          "name": "OrdersModule",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Module"
+          ]
+        },
+        {
+          "source": "./orders.service",
+          "specifiers": [
+            "OrdersService"
+          ]
+        },
+        {
+          "source": "./orders.controller",
+          "specifiers": [
+            "OrdersController"
+          ]
+        },
+        {
+          "source": "../auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        }
+      ],
+      "exports": [
+        "OrdersModule"
+      ],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "src/orders/orders.service.spec.ts": {
+      "filePath": "src/orders/orders.service.spec.ts",
+      "contentHash": "743c7d1e8384b3838b87197f073a57c1d26978e89a06ead38c2e27e98a89b0b7",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./orders.service",
+          "specifiers": [
+            "OrdersService"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "BadRequestException",
+            "NotFoundException"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 215,
+      "hasStructuralAnalysis": true
+    },
+    "src/orders/orders.service.ts": {
+      "filePath": "src/orders/orders.service.ts",
+      "contentHash": "10a185b642dea24ebf3c9a5ba9c58581076d6688e69cd8b2a2208da665ade219",
+      "functions": [],
+      "classes": [
+        {
+          "name": "OrdersService",
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 85
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable",
+            "BadRequestException",
+            "NotFoundException"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "./dto/create-order.dto",
+          "specifiers": [
+            "CreateOrderDto"
+          ]
+        }
+      ],
+      "exports": [
+        "OrdersService"
+      ],
+      "totalLines": 91,
+      "hasStructuralAnalysis": true
+    },
+    "src/prisma/prisma.module.ts": {
+      "filePath": "src/prisma/prisma.module.ts",
+      "contentHash": "14d19dcd7848e4d134cd9eaa205818d5e0302123a5fc5ea2440d358a39f2fd25",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PrismaModule",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Global",
+            "Module"
+          ]
+        },
+        {
+          "source": "./prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        }
+      ],
+      "exports": [
+        "PrismaModule"
+      ],
+      "totalLines": 10,
+      "hasStructuralAnalysis": true
+    },
+    "src/prisma/prisma.service.spec.ts": {
+      "filePath": "src/prisma/prisma.service.spec.ts",
+      "contentHash": "ff546b4223719655ba2e67fb1fb3db4d394cc1c169b5bd3a15c94eb6bada64dd",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 64,
+      "hasStructuralAnalysis": true
+    },
+    "src/prisma/prisma.service.ts": {
+      "filePath": "src/prisma/prisma.service.ts",
+      "contentHash": "5a1768f209d7f93a2fad6fa892ee8b4570ec7d09e139a2fad1e7dd2803798bd8",
+      "functions": [],
+      "classes": [
+        {
+          "name": "PrismaService",
+          "methods": [
+            "constructor",
+            "onModuleInit",
+            "onModuleDestroy"
+          ],
+          "properties": [
+            "pool"
+          ],
+          "exported": true,
+          "lineCount": 19
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable",
+            "OnModuleInit",
+            "OnModuleDestroy"
+          ]
+        },
+        {
+          "source": "../../generated/prisma/client",
+          "specifiers": [
+            "PrismaClient"
+          ]
+        },
+        {
+          "source": "@prisma/adapter-pg",
+          "specifiers": [
+            "PrismaPg"
+          ]
+        },
+        {
+          "source": "pg",
+          "specifiers": [
+            "pg"
+          ]
+        }
+      ],
+      "exports": [
+        "PrismaService"
+      ],
+      "totalLines": 26,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/dto/create-product.dto.spec.ts": {
+      "filePath": "src/products/dto/create-product.dto.spec.ts",
+      "contentHash": "28b2775e23c01cadcb1d66a698c5f6784762a045a7498ce8874382908f1a394b",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "validate"
+          ]
+        },
+        {
+          "source": "class-transformer",
+          "specifiers": [
+            "plainToInstance"
+          ]
+        },
+        {
+          "source": "./create-product.dto",
+          "specifiers": [
+            "CreateProductDto"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 96,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/dto/create-product.dto.ts": {
+      "filePath": "src/products/dto/create-product.dto.ts",
+      "contentHash": "7e547fe51c823e5d16896f4f92558fa09dac067a9898ae80422fc79c63c1a6cc",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CreateProductDto",
+          "methods": [],
+          "properties": [
+            "name",
+            "price",
+            "stock"
+          ],
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "IsInt",
+            "IsNotEmpty",
+            "IsNumber",
+            "IsPositive",
+            "IsString",
+            "Min"
+          ]
+        }
+      ],
+      "exports": [
+        "CreateProductDto"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/dto/update-product.dto.spec.ts": {
+      "filePath": "src/products/dto/update-product.dto.spec.ts",
+      "contentHash": "1ecd7dc35e8daec3ff6a8dcb51b40e26fa5520efea0b113091284a9013de5f76",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "validate"
+          ]
+        },
+        {
+          "source": "class-transformer",
+          "specifiers": [
+            "plainToInstance"
+          ]
+        },
+        {
+          "source": "./update-product.dto",
+          "specifiers": [
+            "UpdateProductDto"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/dto/update-product.dto.ts": {
+      "filePath": "src/products/dto/update-product.dto.ts",
+      "contentHash": "fac354d65fda0dd5c6ff8c473b0a52f294ff603c960133dd31293d9427da25b0",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UpdateProductDto",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/mapped-types",
+          "specifiers": [
+            "PartialType"
+          ]
+        },
+        {
+          "source": "./create-product.dto",
+          "specifiers": [
+            "CreateProductDto"
+          ]
+        }
+      ],
+      "exports": [
+        "UpdateProductDto"
+      ],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/products.controller.spec.ts": {
+      "filePath": "src/products/products.controller.spec.ts",
+      "contentHash": "df76ae0a44a783107a09040dbaa8558c9eccbf4a1b8e2c6c3cc9b73f9743c5da",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./products.controller",
+          "specifiers": [
+            "ProductsController"
+          ]
+        },
+        {
+          "source": "./products.service",
+          "specifiers": [
+            "ProductsService"
+          ]
+        },
+        {
+          "source": "../users/auth/auth.guard",
+          "specifiers": [
+            "AuthGuard"
+          ]
+        },
+        {
+          "source": "../auth/guards/roles.guard",
+          "specifiers": [
+            "RolesGuard"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 107,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/products.controller.ts": {
+      "filePath": "src/products/products.controller.ts",
+      "contentHash": "7de23d9894b1888536220ed22d8d6acecfbe1ed841ebebba33f32302a30dd919",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProductsController",
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne",
+            "update",
+            "remove"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 34
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Controller",
+            "Get",
+            "Post",
+            "Body",
+            "Patch",
+            "Param",
+            "Delete",
+            "UseGuards",
+            "ParseIntPipe"
+          ]
+        },
+        {
+          "source": "./products.service",
+          "specifiers": [
+            "ProductsService"
+          ]
+        },
+        {
+          "source": "./dto/create-product.dto",
+          "specifiers": [
+            "CreateProductDto"
+          ]
+        },
+        {
+          "source": "./dto/update-product.dto",
+          "specifiers": [
+            "UpdateProductDto"
+          ]
+        },
+        {
+          "source": "../users/auth/auth.guard",
+          "specifiers": [
+            "AuthGuard"
+          ]
+        },
+        {
+          "source": "../auth/guards/roles.guard",
+          "specifiers": [
+            "RolesGuard"
+          ]
+        },
+        {
+          "source": "../auth/decorators/roles.decorator",
+          "specifiers": [
+            "Roles"
+          ]
+        },
+        {
+          "source": "../../generated/prisma/client",
+          "specifiers": [
+            "Role"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductsController"
+      ],
+      "totalLines": 56,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/products.module.ts": {
+      "filePath": "src/products/products.module.ts",
+      "contentHash": "3e7cce960decf6fb12138a0f8ae0b20ade30ae1fa33de021fc12ee80a38e9381",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProductsModule",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Module"
+          ]
+        },
+        {
+          "source": "./products.service",
+          "specifiers": [
+            "ProductsService"
+          ]
+        },
+        {
+          "source": "./products.controller",
+          "specifiers": [
+            "ProductsController"
+          ]
+        },
+        {
+          "source": "../auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductsModule"
+      ],
+      "totalLines": 12,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/products.service.spec.ts": {
+      "filePath": "src/products/products.service.spec.ts",
+      "contentHash": "da9d6d9010926cfa46eb41ef009d55fb3327b437f0e3301196f31f5fb7640035",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./products.service",
+          "specifiers": [
+            "ProductsService"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "NotFoundException"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 152,
+      "hasStructuralAnalysis": true
+    },
+    "src/products/products.service.ts": {
+      "filePath": "src/products/products.service.ts",
+      "contentHash": "f005f4aca0ffdd60bbfd5f3aefda9e040adf90ff187ef565a295fb1b6a9731d6",
+      "functions": [],
+      "classes": [
+        {
+          "name": "ProductsService",
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne",
+            "update",
+            "remove"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 40
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable",
+            "NotFoundException"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "./dto/create-product.dto",
+          "specifiers": [
+            "CreateProductDto"
+          ]
+        },
+        {
+          "source": "./dto/update-product.dto",
+          "specifiers": [
+            "UpdateProductDto"
+          ]
+        }
+      ],
+      "exports": [
+        "ProductsService"
+      ],
+      "totalLines": 47,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/auth/auth.guard.spec.ts": {
+      "filePath": "src/users/auth/auth.guard.spec.ts",
+      "contentHash": "cde4eefc322017836f200f6dd1ce45c6b5e22d22d9314ad9101493d07998bb7d",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "UnauthorizedException"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ExecutionContext"
+          ]
+        },
+        {
+          "source": "./auth.guard",
+          "specifiers": [
+            "AuthGuard"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 117,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/auth/auth.guard.ts": {
+      "filePath": "src/users/auth/auth.guard.ts",
+      "contentHash": "28ca8c0a86c2767866408c085a6ed13c0ae7ab8e5cbf497840a916a60a780ffd",
+      "functions": [],
+      "classes": [
+        {
+          "name": "AuthGuard",
+          "methods": [
+            "constructor",
+            "canActivate",
+            "extractTokenFromHeader"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 30
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "CanActivate",
+            "ExecutionContext",
+            "Injectable",
+            "UnauthorizedException"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        },
+        {
+          "source": "express",
+          "specifiers": [
+            "Request"
+          ]
+        }
+      ],
+      "exports": [
+        "AuthGuard"
+      ],
+      "totalLines": 41,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/dto/create-user.dto.spec.ts": {
+      "filePath": "src/users/dto/create-user.dto.spec.ts",
+      "contentHash": "d060fd057391b781f6a3f3aae2065eea5a08224d430c3a15168a36108d08ba77",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "validate"
+          ]
+        },
+        {
+          "source": "class-transformer",
+          "specifiers": [
+            "plainToInstance"
+          ]
+        },
+        {
+          "source": "./create-user.dto",
+          "specifiers": [
+            "CreateUserDto"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 72,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/dto/create-user.dto.ts": {
+      "filePath": "src/users/dto/create-user.dto.ts",
+      "contentHash": "1ee3a73e2b80f134c6fa21162741f11db4c6a056270783d6fe4dc12ed9333c96",
+      "functions": [],
+      "classes": [
+        {
+          "name": "CreateUserDto",
+          "methods": [],
+          "properties": [
+            "name",
+            "email",
+            "password"
+          ],
+          "exported": true,
+          "lineCount": 15
+        }
+      ],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "IsEmail",
+            "IsNotEmpty",
+            "IsString",
+            "MinLength"
+          ]
+        }
+      ],
+      "exports": [
+        "CreateUserDto"
+      ],
+      "totalLines": 18,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/dto/update-user.dto.spec.ts": {
+      "filePath": "src/users/dto/update-user.dto.spec.ts",
+      "contentHash": "2dffb380cc992209520ccb981fab8d7819054df4e8c37577fc6fa6af0f787155",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "class-validator",
+          "specifiers": [
+            "validate"
+          ]
+        },
+        {
+          "source": "class-transformer",
+          "specifiers": [
+            "plainToInstance"
+          ]
+        },
+        {
+          "source": "./update-user.dto",
+          "specifiers": [
+            "UpdateUserDto"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 52,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/dto/update-user.dto.ts": {
+      "filePath": "src/users/dto/update-user.dto.ts",
+      "contentHash": "1a1d53079df2e7276164b016fe914e1fdb287da057ba665896cf56633537eaa0",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UpdateUserDto",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/mapped-types",
+          "specifiers": [
+            "PartialType"
+          ]
+        },
+        {
+          "source": "./create-user.dto",
+          "specifiers": [
+            "CreateUserDto"
+          ]
+        }
+      ],
+      "exports": [
+        "UpdateUserDto"
+      ],
+      "totalLines": 5,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/entities/user.entity.ts": {
+      "filePath": "src/users/entities/user.entity.ts",
+      "contentHash": "ba492c59e9ebd17cb5bf98dedb396793017622c81b9f89e0a3bd4f39c02062ce",
+      "functions": [],
+      "classes": [
+        {
+          "name": "User",
+          "methods": [],
+          "properties": [],
+          "exported": true,
+          "lineCount": 1
+        }
+      ],
+      "imports": [],
+      "exports": [
+        "User"
+      ],
+      "totalLines": 2,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/logger/logger.middleware.spec.ts": {
+      "filePath": "src/users/logger/logger.middleware.spec.ts",
+      "contentHash": "6199ba2ce0a5f04a299d788cfbade570acf3714ec81f6eb7c99650afc7dc37c2",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "./logger.middleware",
+          "specifiers": [
+            "LoggerMiddleware"
+          ]
+        },
+        {
+          "source": "express",
+          "specifiers": [
+            "Request",
+            "Response",
+            "NextFunction"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 55,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/logger/logger.middleware.ts": {
+      "filePath": "src/users/logger/logger.middleware.ts",
+      "contentHash": "942032b865f99534890e9712161dd0c97d09da78e1e222ec8ba7a514e7e3a32f",
+      "functions": [],
+      "classes": [
+        {
+          "name": "LoggerMiddleware",
+          "methods": [
+            "use"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 6
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable",
+            "NestMiddleware"
+          ]
+        },
+        {
+          "source": "express",
+          "specifiers": [
+            "NextFunction",
+            "Request",
+            "Response"
+          ]
+        }
+      ],
+      "exports": [
+        "LoggerMiddleware"
+      ],
+      "totalLines": 11,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/transform/transform.interceptor.spec.ts": {
+      "filePath": "src/users/transform/transform.interceptor.spec.ts",
+      "contentHash": "11449971934abc2db93afb556c103ccd1021658e0e723d40ffdef2b4b32048fa",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "CallHandler",
+            "ExecutionContext"
+          ]
+        },
+        {
+          "source": "./transform.interceptor",
+          "specifiers": [
+            "TransformInterceptor"
+          ]
+        },
+        {
+          "source": "rxjs",
+          "specifiers": [
+            "of"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 95,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/transform/transform.interceptor.ts": {
+      "filePath": "src/users/transform/transform.interceptor.ts",
+      "contentHash": "27864be3459d0e3529e4226a9d4514f6587f188fbe59efef794a069ba44b0556",
+      "functions": [],
+      "classes": [
+        {
+          "name": "TransformInterceptor",
+          "methods": [
+            "intercept"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "CallHandler",
+            "ExecutionContext",
+            "Injectable",
+            "NestInterceptor"
+          ]
+        },
+        {
+          "source": "rxjs",
+          "specifiers": [
+            "map",
+            "Observable",
+            "timestamp"
+          ]
+        }
+      ],
+      "exports": [
+        "TransformInterceptor"
+      ],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/users.controller.spec.ts": {
+      "filePath": "src/users/users.controller.spec.ts",
+      "contentHash": "cb91b968056a2c37c7525437249b9f4c11198aa2eed23bdf24d37373bbe40dc3",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./users.controller",
+          "specifiers": [
+            "UsersController"
+          ]
+        },
+        {
+          "source": "./users.service",
+          "specifiers": [
+            "UsersService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 74,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/users.controller.ts": {
+      "filePath": "src/users/users.controller.ts",
+      "contentHash": "5c868e075f97ef84c27a5a46368b465ff7c7b8e57fd45145de49f35a607d6531",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UsersController",
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne",
+            "update",
+            "remove"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 36
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Controller",
+            "Get",
+            "Post",
+            "Body",
+            "Patch",
+            "Param",
+            "Delete",
+            "UseInterceptors",
+            "UseGuards",
+            "ParseIntPipe"
+          ]
+        },
+        {
+          "source": "./users.service",
+          "specifiers": [
+            "UsersService"
+          ]
+        },
+        {
+          "source": "./dto/create-user.dto",
+          "specifiers": [
+            "CreateUserDto"
+          ]
+        },
+        {
+          "source": "./dto/update-user.dto",
+          "specifiers": [
+            "UpdateUserDto"
+          ]
+        },
+        {
+          "source": "./transform/transform.interceptor",
+          "specifiers": [
+            "TransformInterceptor"
+          ]
+        },
+        {
+          "source": "../auth/guards/jwt-auth.guard",
+          "specifiers": [
+            "JwtAuthGuard"
+          ]
+        },
+        {
+          "source": "../auth/guards/roles.guard",
+          "specifiers": [
+            "RolesGuard"
+          ]
+        },
+        {
+          "source": "../auth/decorators/roles.decorator",
+          "specifiers": [
+            "Roles"
+          ]
+        },
+        {
+          "source": "../../generated/prisma/client",
+          "specifiers": [
+            "Role"
+          ]
+        }
+      ],
+      "exports": [
+        "UsersController"
+      ],
+      "totalLines": 61,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/users.module.ts": {
+      "filePath": "src/users/users.module.ts",
+      "contentHash": "553222ed7048d006dffb9284b7416bc3cce2a8627f468f5caa91472a2f7293c8",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UsersModule",
+          "methods": [
+            "configure"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "MiddlewareConsumer",
+            "Module",
+            "NestModule"
+          ]
+        },
+        {
+          "source": "./users.service",
+          "specifiers": [
+            "UsersService"
+          ]
+        },
+        {
+          "source": "./users.controller",
+          "specifiers": [
+            "UsersController"
+          ]
+        },
+        {
+          "source": "./logger/logger.middleware",
+          "specifiers": [
+            "LoggerMiddleware"
+          ]
+        }
+      ],
+      "exports": [
+        "UsersModule"
+      ],
+      "totalLines": 17,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/users.service.spec.ts": {
+      "filePath": "src/users/users.service.spec.ts",
+      "contentHash": "7412146d8d63c93e5de830bad59dc1f2d221cf64d215b256312697a662b0d845",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "./users.service",
+          "specifiers": [
+            "UsersService"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ConflictException",
+            "NotFoundException"
+          ]
+        },
+        {
+          "source": "bcrypt",
+          "specifiers": [
+            "* as bcrypt"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 202,
+      "hasStructuralAnalysis": true
+    },
+    "src/users/users.service.ts": {
+      "filePath": "src/users/users.service.ts",
+      "contentHash": "bc01d1ea09eda6ff5f2cedf4f2e5a1581d3a2a48a2810bf6b63262d773ad8d65",
+      "functions": [],
+      "classes": [
+        {
+          "name": "UsersService",
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne",
+            "update",
+            "remove"
+          ],
+          "properties": [],
+          "exported": true,
+          "lineCount": 97
+        }
+      ],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "Injectable",
+            "ConflictException",
+            "NotFoundException"
+          ]
+        },
+        {
+          "source": "../prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "./dto/create-user.dto",
+          "specifiers": [
+            "CreateUserDto"
+          ]
+        },
+        {
+          "source": "./dto/update-user.dto",
+          "specifiers": [
+            "UpdateUserDto"
+          ]
+        },
+        {
+          "source": "bcrypt",
+          "specifiers": [
+            "* as bcrypt"
+          ]
+        }
+      ],
+      "exports": [
+        "UsersService"
+      ],
+      "totalLines": 105,
+      "hasStructuralAnalysis": true
+    },
+    "test/app.e2e-spec.ts": {
+      "filePath": "test/app.e2e-spec.ts",
+      "contentHash": "612040355eea552a83780124b61e536c125938b78e1265bef8117535878a6b03",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication"
+          ]
+        },
+        {
+          "source": "supertest",
+          "specifiers": [
+            "request"
+          ]
+        },
+        {
+          "source": "supertest/types",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "./../src/app.module",
+          "specifiers": [
+            "AppModule"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 40,
+      "hasStructuralAnalysis": true
+    },
+    "test/e2e/auth-flow.e2e-spec.ts": {
+      "filePath": "test/e2e/auth-flow.e2e-spec.ts",
+      "contentHash": "dcaad4f0e99f47b2950ab170aba22497eef0f0de25e43c14a1c136ca68c93349",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "supertest",
+          "specifiers": [
+            "request"
+          ]
+        },
+        {
+          "source": "supertest/types",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "../../src/auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        },
+        {
+          "source": "../../src/products/products.module",
+          "specifiers": [
+            "ProductsModule"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.module",
+          "specifiers": [
+            "PrismaModule"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 174,
+      "hasStructuralAnalysis": true
+    },
+    "test/e2e/auth.e2e-spec.ts": {
+      "filePath": "test/e2e/auth.e2e-spec.ts",
+      "contentHash": "2b34191008e326673247042667cfa7d17705bfd2374906614b873bf74486646d",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "supertest",
+          "specifiers": [
+            "request"
+          ]
+        },
+        {
+          "source": "supertest/types",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "../../src/auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        },
+        {
+          "source": "../../src/products/products.module",
+          "specifiers": [
+            "ProductsModule"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.module",
+          "specifiers": [
+            "PrismaModule"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 159,
+      "hasStructuralAnalysis": true
+    },
+    "test/e2e/products.e2e-spec.ts": {
+      "filePath": "test/e2e/products.e2e-spec.ts",
+      "contentHash": "439efa20b98082618d2c7ea878a3760d9271d1b3a231680082012e6d2626767f",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "supertest",
+          "specifiers": [
+            "request"
+          ]
+        },
+        {
+          "source": "supertest/types",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "../../src/auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        },
+        {
+          "source": "../../src/products/products.module",
+          "specifiers": [
+            "ProductsModule"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.module",
+          "specifiers": [
+            "PrismaModule"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 189,
+      "hasStructuralAnalysis": true
+    },
+    "test/edge-cases.spec.ts": {
+      "filePath": "test/edge-cases.spec.ts",
+      "contentHash": "732bdc7d1be5ee4f1e6a5efaf532ff760b7d9d920e282bd237a80679613fc47a",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "supertest",
+          "specifiers": [
+            "request"
+          ]
+        },
+        {
+          "source": "supertest/types",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "../src/auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        },
+        {
+          "source": "../src/products/products.module",
+          "specifiers": [
+            "ProductsModule"
+          ]
+        },
+        {
+          "source": "../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "../src/prisma/prisma.module",
+          "specifiers": [
+            "PrismaModule"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 202,
+      "hasStructuralAnalysis": true
+    },
+    "test/factories/product.factory.ts": {
+      "filePath": "test/factories/product.factory.ts",
+      "contentHash": "eae6022be931cb5e8ab73a0e0a2b533dddcab2d1c09f9f9a5cdca0bd68ac9eef",
+      "functions": [
+        {
+          "name": "createTestProduct",
+          "params": [
+            "prisma",
+            "input"
+          ],
+          "exported": true,
+          "lineCount": 12
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        }
+      ],
+      "exports": [
+        "createTestProduct"
+      ],
+      "totalLines": 21,
+      "hasStructuralAnalysis": true
+    },
+    "test/factories/user.factory.ts": {
+      "filePath": "test/factories/user.factory.ts",
+      "contentHash": "fe4bc68628665e46a1f6ad9c81617b09a28017b451b53a7ff932b6ef4e6eb602",
+      "functions": [
+        {
+          "name": "createTestUser",
+          "params": [
+            "prisma",
+            "input"
+          ],
+          "exported": true,
+          "lineCount": 22
+        },
+        {
+          "name": "createTestAdmin",
+          "params": [
+            "prisma"
+          ],
+          "exported": true,
+          "lineCount": 3
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "bcrypt",
+          "specifiers": [
+            "* as bcrypt"
+          ]
+        },
+        {
+          "source": "../../generated/prisma/client",
+          "specifiers": [
+            "Role"
+          ]
+        }
+      ],
+      "exports": [
+        "createTestUser",
+        "createTestAdmin"
+      ],
+      "totalLines": 38,
+      "hasStructuralAnalysis": true
+    },
+    "test/fixtures/test-data.ts": {
+      "filePath": "test/fixtures/test-data.ts",
+      "contentHash": "5d22b69cd48a38f19e1b46a07108bb59aaad14126bf0cb6d902d77b0ee0a4a03",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [
+        "TEST_USER",
+        "TEST_ADMIN",
+        "TEST_PRODUCT",
+        "TEST_PRODUCT_2",
+        "INVALID_EMAIL",
+        "SHORT_PASSWORD",
+        "LONG_NAME"
+      ],
+      "totalLines": 28,
+      "hasStructuralAnalysis": true
+    },
+    "test/helpers/auth.helper.ts": {
+      "filePath": "test/helpers/auth.helper.ts",
+      "contentHash": "1eb0b1df4a172821e5412e1a14b75af9169a6df4ed03ff4233592cf114cdd982",
+      "functions": [
+        {
+          "name": "registerUser",
+          "params": [
+            "app",
+            "userData"
+          ],
+          "returnType": "Promise<{ status: number; body: any }>",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "loginUser",
+          "params": [
+            "app",
+            "credentials"
+          ],
+          "returnType": "Promise<AuthTokens>",
+          "exported": true,
+          "lineCount": 11
+        },
+        {
+          "name": "registerAndLogin",
+          "params": [
+            "app",
+            "userData"
+          ],
+          "returnType": "Promise<AuthTokens>",
+          "exported": true,
+          "lineCount": 7
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication"
+          ]
+        },
+        {
+          "source": "supertest",
+          "specifiers": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        "registerUser",
+        "loginUser",
+        "registerAndLogin"
+      ],
+      "totalLines": 39,
+      "hasStructuralAnalysis": true
+    },
+    "test/helpers/create-app-mocked.ts": {
+      "filePath": "test/helpers/create-app-mocked.ts",
+      "contentHash": "0a75e7287baea61b63770cb389d2724704cd787f5c7d7dbb830a464ccb92dacc",
+      "functions": [
+        {
+          "name": "createMockedApp",
+          "params": [
+            "prismaOverride"
+          ],
+          "returnType": "Promise<INestApplication>",
+          "exported": true,
+          "lineCount": 36
+        }
+      ],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "../../src/auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        },
+        {
+          "source": "../../src/products/products.module",
+          "specifiers": [
+            "ProductsModule"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        }
+      ],
+      "exports": [
+        "createMockedApp"
+      ],
+      "totalLines": 44,
+      "hasStructuralAnalysis": true
+    },
+    "test/integration/auth.integration-spec.ts": {
+      "filePath": "test/integration/auth.integration-spec.ts",
+      "contentHash": "101910244045bcda6add292d4d6dcd7302c13758783106a968c48a631005ce97",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "../../src/auth/auth.service",
+          "specifiers": [
+            "AuthService"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ConflictException",
+            "UnauthorizedException"
+          ]
+        },
+        {
+          "source": "bcrypt",
+          "specifiers": [
+            "* as bcrypt"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 138,
+      "hasStructuralAnalysis": true
+    },
+    "test/integration/products.integration-spec.ts": {
+      "filePath": "test/integration/products.integration-spec.ts",
+      "contentHash": "88d4658b1b5907af9cdfc82377cb8b3ad0be9786644149967a68dc07fed0fc6d",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "../../src/products/products.service",
+          "specifiers": [
+            "ProductsService"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "NotFoundException"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 112,
+      "hasStructuralAnalysis": true
+    },
+    "test/integration/roles.integration-spec.ts": {
+      "filePath": "test/integration/roles.integration-spec.ts",
+      "contentHash": "64c641c4370778eeafac924aa62b94fdf7b8ab39cc4988ac5a5d3c07d7775483",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "ExecutionContext",
+            "ForbiddenException"
+          ]
+        },
+        {
+          "source": "@nestjs/core",
+          "specifiers": [
+            "Reflector"
+          ]
+        },
+        {
+          "source": "../../src/auth/guards/roles.guard",
+          "specifiers": [
+            "RolesGuard"
+          ]
+        },
+        {
+          "source": "../../generated/prisma/client",
+          "specifiers": [
+            "Role"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 128,
+      "hasStructuralAnalysis": true
+    },
+    "test/jest-e2e.json": {
+      "filePath": "test/jest-e2e.json",
+      "contentHash": "188ca6bed4e42ec9cd61c5736357428f5ca3f912ab2cf89de76e22d64499b888",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "test/jest-integration.json": {
+      "filePath": "test/jest-integration.json",
+      "contentHash": "cd24d3f0c2b21313b50033f5c723cb5ea6e80334f84175bcc606d4417cdb9e5e",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 13,
+      "hasStructuralAnalysis": false
+    },
+    "test/security/auth.security-spec.ts": {
+      "filePath": "test/security/auth.security-spec.ts",
+      "contentHash": "ebffd5ab770ea6f698abf2f83215a72bb2d62b706a5ca04c3fc5628cef4724b1",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "supertest",
+          "specifiers": [
+            "request"
+          ]
+        },
+        {
+          "source": "supertest/types",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "../../src/auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        },
+        {
+          "source": "../../src/products/products.module",
+          "specifiers": [
+            "ProductsModule"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.module",
+          "specifiers": [
+            "PrismaModule"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 216,
+      "hasStructuralAnalysis": true
+    },
+    "test/security/rbac.security-spec.ts": {
+      "filePath": "test/security/rbac.security-spec.ts",
+      "contentHash": "868b52e6d19330caaa1b9f33e5cbf160d23e05365a34f1c643b38996ee1afe0a",
+      "functions": [],
+      "classes": [],
+      "imports": [
+        {
+          "source": "@nestjs/testing",
+          "specifiers": [
+            "Test",
+            "TestingModule"
+          ]
+        },
+        {
+          "source": "@nestjs/common",
+          "specifiers": [
+            "INestApplication",
+            "ValidationPipe"
+          ]
+        },
+        {
+          "source": "supertest",
+          "specifiers": [
+            "request"
+          ]
+        },
+        {
+          "source": "supertest/types",
+          "specifiers": [
+            "App"
+          ]
+        },
+        {
+          "source": "../../src/auth/auth.module",
+          "specifiers": [
+            "AuthModule"
+          ]
+        },
+        {
+          "source": "../../src/products/products.module",
+          "specifiers": [
+            "ProductsModule"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.service",
+          "specifiers": [
+            "PrismaService"
+          ]
+        },
+        {
+          "source": "../../src/prisma/prisma.module",
+          "specifiers": [
+            "PrismaModule"
+          ]
+        },
+        {
+          "source": "@nestjs/jwt",
+          "specifiers": [
+            "JwtService"
+          ]
+        }
+      ],
+      "exports": [],
+      "totalLines": 160,
+      "hasStructuralAnalysis": true
+    },
+    "tsconfig.build.json": {
+      "filePath": "tsconfig.build.json",
+      "contentHash": "4900936e255f08b802915c300c6265db7e5db9a1e60be175d6d155e805bad533",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 5,
+      "hasStructuralAnalysis": false
+    },
+    "tsconfig.json": {
+      "filePath": "tsconfig.json",
+      "contentHash": "82d3d2c97d10560e1b991f04e1667e6cbffc7d92f8094f12fb02f0f884c6ba34",
+      "functions": [],
+      "classes": [],
+      "imports": [],
+      "exports": [],
+      "totalLines": 27,
+      "hasStructuralAnalysis": false
+    }
+  }
+}

@@ -57,10 +57,7 @@ describe('CartService', () => {
     };
 
     const module: TestingModule = await Test.createTestingModule({
-      providers: [
-        CartService,
-        { provide: PrismaService, useValue: prisma },
-      ],
+      providers: [CartService, { provide: PrismaService, useValue: prisma }],
     }).compile();
 
     service = module.get<CartService>(CartService);
@@ -321,18 +318,18 @@ describe('CartService', () => {
     it('should throw NotFoundException if cart does not exist', async () => {
       prisma.cart.findUnique.mockResolvedValue(null);
 
-      await expect(
-        service.removeItem(userId, mockCartItem.id),
-      ).rejects.toThrow(NotFoundException);
+      await expect(service.removeItem(userId, mockCartItem.id)).rejects.toThrow(
+        NotFoundException,
+      );
     });
 
     it('should throw NotFoundException if cart item not found', async () => {
       prisma.cart.findUnique.mockResolvedValue(mockCart);
       prisma.cartItem.findUnique.mockResolvedValue(null);
 
-      await expect(
-        service.removeItem(userId, 999),
-      ).rejects.toThrow(NotFoundException);
+      await expect(service.removeItem(userId, 999)).rejects.toThrow(
+        NotFoundException,
+      );
     });
   });
 });

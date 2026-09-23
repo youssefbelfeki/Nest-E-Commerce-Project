@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { useI18n } from '@/context/I18nContext';
+import { registerSchema, toFieldErrors } from '@/lib/schemas';
+import { FieldError } from '@/components/FieldError';
 
 export default function RegisterPage() {
   const { register } = useAuth();
@@ -15,20 +17,23 @@ export default function RegisterPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
+    setFieldErrors({});
 
-    if (password.length < 6) {
-      setError(t('register.passwordTooShort'));
+    const parsed = registerSchema.safeParse({ name, email, password });
+    if (!parsed.success) {
+      setFieldErrors(toFieldErrors(parsed.error));
       return;
     }
 
     setSubmitting(true);
     try {
-      await register(name, email, password);
+      await register(parsed.data.name, parsed.data.email, parsed.data.password);
       // REQUIREMENT: Redirect to products page after a successful response
       router.push(localePath('/products'));
     } catch (err: any) {
@@ -69,7 +74,10 @@ export default function RegisterPage() {
               onChange={(e) => setName(e.target.value)}
               className="input-field w-full"
               placeholder={t('register.namePlaceholder')}
+              aria-invalid={fieldErrors.name ? true : undefined}
+              aria-describedby={fieldErrors.name ? 'register-name-error' : undefined}
             />
+            <FieldError id="register-name-error" message={fieldErrors.name} />
           </div>
 
           <div>
@@ -83,7 +91,10 @@ export default function RegisterPage() {
               onChange={(e) => setEmail(e.target.value)}
               className="input-field w-full"
               placeholder={t('register.emailPlaceholder')}
+              aria-invalid={fieldErrors.email ? true : undefined}
+              aria-describedby={fieldErrors.email ? 'register-email-error' : undefined}
             />
+            <FieldError id="register-email-error" message={fieldErrors.email} />
           </div>
 
           <div>
@@ -98,7 +109,10 @@ export default function RegisterPage() {
               onChange={(e) => setPassword(e.target.value)}
               className="input-field w-full"
               placeholder="••••••••"
+              aria-invalid={fieldErrors.password ? true : undefined}
+              aria-describedby={fieldErrors.password ? 'register-password-error' : undefined}
             />
+            <FieldError id="register-password-error" message={fieldErrors.password} />
           </div>
 
           <button

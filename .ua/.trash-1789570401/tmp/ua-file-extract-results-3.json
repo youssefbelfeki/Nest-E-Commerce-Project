@@ -1,0 +1,543 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 15,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 15,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 15,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/auth/decorators/roles.decorator.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "functions": [
+        {
+          "name": "Roles",
+          "startLine": 5,
+          "endLine": 5,
+          "params": [
+            "...roles"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "ROLES_KEY",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "Roles",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Roles",
+          "callee": "SetMetadata",
+          "lineNumber": 5
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/auth/guards/roles.guard.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 89,
+      "nonEmptyLines": 69,
+      "callGraph": [
+        {
+          "caller": "createContext",
+          "callee": "jest.fn",
+          "lineNumber": 15
+        },
+        {
+          "caller": "createContext",
+          "callee": "jest.fn",
+          "lineNumber": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/auth/guards/roles.guard.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 42,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "RolesGuard",
+          "startLine": 12,
+          "endLine": 42,
+          "methods": [
+            "constructor",
+            "canActivate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RolesGuard",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "canActivate",
+          "callee": "this.reflector.getAllAndOverride",
+          "lineNumber": 16
+        },
+        {
+          "caller": "canActivate",
+          "callee": "context.getHandler",
+          "lineNumber": 17
+        },
+        {
+          "caller": "canActivate",
+          "callee": "context.getClass",
+          "lineNumber": 18
+        },
+        {
+          "caller": "canActivate",
+          "callee": "context.switchToHttp().getRequest",
+          "lineNumber": 25
+        },
+        {
+          "caller": "canActivate",
+          "callee": "context.switchToHttp",
+          "lineNumber": 25
+        },
+        {
+          "caller": "canActivate",
+          "callee": "requiredRoles.includes",
+          "lineNumber": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/products/dto/create-product.dto.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 95,
+      "nonEmptyLines": 81,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/products/dto/create-product.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "CreateProductDto",
+          "startLine": 3,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "name",
+            "price",
+            "stock"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateProductDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/products/dto/update-product.dto.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 44,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/products/dto/update-product.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 4,
+      "nonEmptyLines": 3,
+      "classes": [
+        {
+          "name": "UpdateProductDto",
+          "startLine": 4,
+          "endLine": 4,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateProductDto",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/products/products.controller.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 106,
+      "nonEmptyLines": 85,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/products/products.controller.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 49,
+      "classes": [
+        {
+          "name": "ProductsController",
+          "startLine": 22,
+          "endLine": 55,
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne",
+            "update",
+            "remove"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ProductsController",
+          "line": 20,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "Body",
+          "lineNumber": 27
+        },
+        {
+          "caller": "create",
+          "callee": "this.productsService.create",
+          "lineNumber": 28
+        },
+        {
+          "caller": "findAll",
+          "callee": "this.productsService.findAll",
+          "lineNumber": 33
+        },
+        {
+          "caller": "findOne",
+          "callee": "Param",
+          "lineNumber": 37
+        },
+        {
+          "caller": "findOne",
+          "callee": "this.productsService.findOne",
+          "lineNumber": 38
+        },
+        {
+          "caller": "update",
+          "callee": "Param",
+          "lineNumber": 44
+        },
+        {
+          "caller": "update",
+          "callee": "Body",
+          "lineNumber": 45
+        },
+        {
+          "caller": "update",
+          "callee": "this.productsService.update",
+          "lineNumber": 47
+        },
+        {
+          "caller": "remove",
+          "callee": "Param",
+          "lineNumber": 52
+        },
+        {
+          "caller": "remove",
+          "callee": "this.productsService.remove",
+          "lineNumber": 53
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/products/products.service.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 151,
+      "nonEmptyLines": 119,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/products/products.service.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 46,
+      "nonEmptyLines": 38,
+      "classes": [
+        {
+          "name": "ProductsService",
+          "startLine": 7,
+          "endLine": 46,
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne",
+            "update",
+            "remove"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ProductsService",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "this.prisma.product.create",
+          "lineNumber": 11
+        },
+        {
+          "caller": "findAll",
+          "callee": "this.prisma.product.findMany",
+          "lineNumber": 17
+        },
+        {
+          "caller": "findOne",
+          "callee": "this.prisma.product.findUnique",
+          "lineNumber": 21
+        },
+        {
+          "caller": "update",
+          "callee": "this.findOne",
+          "lineNumber": 31
+        },
+        {
+          "caller": "update",
+          "callee": "this.prisma.product.update",
+          "lineNumber": 33
+        },
+        {
+          "caller": "remove",
+          "callee": "this.findOne",
+          "lineNumber": 40
+        },
+        {
+          "caller": "remove",
+          "callee": "this.prisma.product.delete",
+          "lineNumber": 42
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/users/auth/auth.guard.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 116,
+      "nonEmptyLines": 92,
+      "callGraph": [
+        {
+          "caller": "mockContext",
+          "callee": "mockRequest",
+          "lineNumber": 21
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/users/auth/auth.guard.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 40,
+      "nonEmptyLines": 34,
+      "classes": [
+        {
+          "name": "AuthGuard",
+          "startLine": 11,
+          "endLine": 40,
+          "methods": [
+            "constructor",
+            "canActivate",
+            "extractTokenFromHeader"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthGuard",
+          "line": 10,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "canActivate",
+          "callee": "context.switchToHttp().getRequest",
+          "lineNumber": 15
+        },
+        {
+          "caller": "canActivate",
+          "callee": "context.switchToHttp",
+          "lineNumber": 15
+        },
+        {
+          "caller": "canActivate",
+          "callee": "this.extractTokenFromHeader",
+          "lineNumber": 16
+        },
+        {
+          "caller": "canActivate",
+          "callee": "this.jwtService.verifyAsync",
+          "lineNumber": 23
+        },
+        {
+          "caller": "extractTokenFromHeader",
+          "callee": "request.headers.authorization?.split",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "test/integration/products.integration-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 111,
+      "nonEmptyLines": 84,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/integration/roles.integration-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 127,
+      "nonEmptyLines": 99,
+      "callGraph": [
+        {
+          "caller": "createContext",
+          "callee": "jest.fn",
+          "lineNumber": 24
+        },
+        {
+          "caller": "createContext",
+          "callee": "jest.fn",
+          "lineNumber": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

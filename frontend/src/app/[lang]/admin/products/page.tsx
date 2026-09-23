@@ -6,6 +6,8 @@ import { Product } from '@/types';
 import { apiFetch } from '@/lib/api';
 import { useAuth } from '@/context/AuthContext';
 import { useI18n } from '@/context/I18nContext';
+import { productSchema, toFieldErrors } from '@/lib/schemas';
+import { FieldError } from '@/components/FieldError';
 
 export default function AdminProductsPage() {
   const { user, loading: authLoading } = useAuth();
@@ -21,6 +23,7 @@ export default function AdminProductsPage() {
   const [createName, setCreateName] = useState('');
   const [createPrice, setCreatePrice] = useState('');
   const [createStock, setCreateStock] = useState('');
+  const [createFieldErrors, setCreateFieldErrors] = useState<Record<string, string>>({});
   const [creating, setCreating] = useState(false);
 
   // Edit State
@@ -28,6 +31,7 @@ export default function AdminProductsPage() {
   const [editName, setEditName] = useState('');
   const [editPrice, setEditPrice] = useState('');
   const [editStock, setEditStock] = useState('');
+  const [editFieldErrors, setEditFieldErrors] = useState<Record<string, string>>({});
   const [updating, setUpdating] = useState(false);
 
   // Delete State
@@ -60,17 +64,15 @@ export default function AdminProductsPage() {
     e.preventDefault();
     setError('');
     setSuccess('');
+    setCreateFieldErrors({});
 
-    const priceNum = parseFloat(createPrice);
-    const stockNum = parseInt(createStock, 10);
-
-    if (isNaN(priceNum) || priceNum <= 0) {
-      setError(t('admin.priceInvalid'));
-      return;
-    }
-
-    if (isNaN(stockNum) || stockNum < 0) {
-      setError(t('admin.stockInvalid'));
+    const parsed = productSchema.safeParse({
+      name: createName,
+      price: createPrice,
+      stock: createStock,
+    });
+    if (!parsed.success) {
+      setCreateFieldErrors(toFieldErrors(parsed.error));
       return;
     }
 
@@ -78,11 +80,7 @@ export default function AdminProductsPage() {
     try {
       const newProduct = await apiFetch<Product>('/products', {
         method: 'POST',
-        body: JSON.stringify({
-          name: createName,
-          price: priceNum,
-          stock: stockNum,
-        }),
+        body: JSON.stringify(parsed.data),
       });
 
       setProducts((prev) => [...prev, newProduct]);
@@ -103,26 +101,26 @@ export default function AdminProductsPage() {
     setEditName(product.name);
     setEditPrice(product.price.toString());
     setEditStock(product.stock.toString());
+    setEditFieldErrors({});
   };
 
   const cancelEdit = () => {
     setEditingId(null);
+    setEditFieldErrors({});
   };
 
   const handleUpdateProduct = async (id: number) => {
     setError('');
     setSuccess('');
+    setEditFieldErrors({});
 
-    const priceNum = parseFloat(editPrice);
-    const stockNum = parseInt(editStock, 10);
-
-    if (isNaN(priceNum) || priceNum <= 0) {
-      setError(t('admin.priceInvalid'));
-      return;
-    }
-
-    if (isNaN(stockNum) || stockNum < 0) {
-      setError(t('admin.stockInvalid'));
+    const parsed = productSchema.safeParse({
+      name: editName,
+      price: editPrice,
+      stock: editStock,
+    });
+    if (!parsed.success) {
+      setEditFieldErrors(toFieldErrors(parsed.error));
       return;
     }
 
@@ -130,11 +128,7 @@ export default function AdminProductsPage() {
     try {
       const updated = await apiFetch<Product>(`/products/${id}`, {
         method: 'PATCH',
-        body: JSON.stringify({
-          name: editName,
-          price: priceNum,
-          stock: stockNum,
-        }),
+        body: JSON.stringify(parsed.data),
       });
 
       setProducts((prev) => prev.map((p) => (p.id === id ? updated : p)));
@@ -242,7 +236,10 @@ export default function AdminProductsPage() {
               onChange={(e) => setCreateName(e.target.value)}
               className="input-field w-full"
               placeholder={t('admin.namePlaceholder')}
+              aria-invalid={createFieldErrors.name ? true : undefined}
+              aria-describedby={createFieldErrors.name ? 'create-name-error' : undefined}
             />
+            <FieldError id="create-name-error" message={createFieldErrors.name} />
           </div>
 
           <div>
@@ -258,7 +255,10 @@ export default function AdminProductsPage() {
               onChange={(e) => setCreatePrice(e.target.value)}
               className="input-field w-full"
               placeholder="99.99"
+              aria-invalid={createFieldErrors.price ? true : undefined}
+              aria-describedby={createFieldErrors.price ? 'create-price-error' : undefined}
             />
+            <FieldError id="create-price-error" message={createFieldErrors.price} />
           </div>
 
           <div>
@@ -273,16 +273,10 @@ export default function AdminProductsPage() {
               onChange={(e) => setCreateStock(e.target.value)}
               className="input-field w-full"
               placeholder="50"
+              aria-invalid={createFieldErrors.stock ? true : undefined}
+              aria-describedby={createFieldErrors.stock ? 'create-stock-error' : undefined}
             />
-            <input
-              type="number"
-              min="0"
-              required
-              value={createStock}
-              onChange={(e) => setCreateStock(e.target.value)}
-              className="input-field w-full"
-              placeholder="50"
-            />
+            <FieldError id="create-stock-error" message={createFieldErrors.stock} />
           </div>
 
           <div className="md:col-span-4 flex justify-end">
@@ -338,12 +332,18 @@ export default function AdminProductsPage() {
 
                       <td className="py-4 px-6 font-medium text-white">
                         {isEditing ? (
-                          <input
-                            type="text"
-                            value={editName}
-                            onChange={(e) => setEditName(e.target.value)}
-                            className="input-field py-1 px-2 text-sm w-full"
-                          />
+                          <>
+                            <input
+                              type="text"
+                              required
+                              value={editName}
+                              onChange={(e) => setEditName(e.target.value)}
+                              className="input-field py-1 px-2 text-sm w-full"
+                              aria-invalid={editFieldErrors.name ? true : undefined}
+                              aria-describedby={editFieldErrors.name ? 'edit-name-error' : undefined}
+                            />
+                            <FieldError id="edit-name-error" message={editFieldErrors.name} />
+                          </>
                         ) : (
                           product.name
                         )}
@@ -351,13 +351,20 @@ export default function AdminProductsPage() {
 
                       <td className="py-4 px-6 font-bold text-indigo-400">
                         {isEditing ? (
-                          <input
-                            type="number"
-                            step="0.01"
-                            value={editPrice}
-                            onChange={(e) => setEditPrice(e.target.value)}
-                            className="input-field py-1 px-2 text-sm w-28"
-                          />
+                          <>
+                            <input
+                              type="number"
+                              step="0.01"
+                              min="0.01"
+                              required
+                              value={editPrice}
+                              onChange={(e) => setEditPrice(e.target.value)}
+                              className="input-field py-1 px-2 text-sm w-28"
+                              aria-invalid={editFieldErrors.price ? true : undefined}
+                              aria-describedby={editFieldErrors.price ? 'edit-price-error' : undefined}
+                            />
+                            <FieldError id="edit-price-error" message={editFieldErrors.price} />
+                          </>
                         ) : (
                           `$${product.price.toFixed(2)}`
                         )}
@@ -365,12 +372,19 @@ export default function AdminProductsPage() {
 
                       <td className="py-4 px-6">
                         {isEditing ? (
-                          <input
-                            type="number"
-                            value={editStock}
-                            onChange={(e) => setEditStock(e.target.value)}
-                            className="input-field py-1 px-2 text-sm w-24"
-                          />
+                          <>
+                            <input
+                              type="number"
+                              min="0"
+                              required
+                              value={editStock}
+                              onChange={(e) => setEditStock(e.target.value)}
+                              className="input-field py-1 px-2 text-sm w-24"
+                              aria-invalid={editFieldErrors.stock ? true : undefined}
+                              aria-describedby={editFieldErrors.stock ? 'edit-stock-error' : undefined}
+                            />
+                            <FieldError id="edit-stock-error" message={editFieldErrors.stock} />
+                          </>
                         ) : (
                           <span
                             className={`px-2.5 py-0.5 rounded-full text-xs font-semibold ${

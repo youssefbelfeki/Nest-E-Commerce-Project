@@ -151,7 +151,9 @@ describe('AuthService', () => {
       try {
         await service.login({ email: 'x', password: 'y' });
       } catch (e) {
-        expect((e as UnauthorizedException).message).toBe('Invalid credentials');
+        expect((e as UnauthorizedException).message).toBe(
+          'Invalid credentials',
+        );
       }
 
       prisma.user.findUnique.mockResolvedValue(mockUser);
@@ -160,7 +162,9 @@ describe('AuthService', () => {
       try {
         await service.login({ email: 'x', password: 'y' });
       } catch (e) {
-        expect((e as UnauthorizedException).message).toBe('Invalid credentials');
+        expect((e as UnauthorizedException).message).toBe(
+          'Invalid credentials',
+        );
       }
     });
   });

@@ -37,7 +37,9 @@ describe('Auth Flow E2E (mocked)', () => {
       .compile();
 
     app = moduleFixture.createNestApplication();
-    app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
+    app.useGlobalPipes(
+      new ValidationPipe({ whitelist: true, transform: true }),
+    );
     await app.init();
   });
 
@@ -63,7 +65,11 @@ describe('Auth Flow E2E (mocked)', () => {
 
       await request(app.getHttpServer())
         .post('/auth/register')
-        .send({ name: 'Journey User', email: 'journey@example.com', password: 'pass123' })
+        .send({
+          name: 'Journey User',
+          email: 'journey@example.com',
+          password: 'pass123',
+        })
         .expect(201);
 
       // Step 2: Login
@@ -105,7 +111,11 @@ describe('Auth Flow E2E (mocked)', () => {
 
       await request(app.getHttpServer())
         .post('/auth/register')
-        .send({ name: 'Admin User', email: 'admin@example.com', password: 'admin123' })
+        .send({
+          name: 'Admin User',
+          email: 'admin@example.com',
+          password: 'admin123',
+        })
         .expect(201);
 
       // Step 2: Login as admin

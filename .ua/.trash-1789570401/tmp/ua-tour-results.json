@@ -1,0 +1,1474 @@
+{
+  "scriptCompleted": true,
+  "entryPointCandidates": [
+    {
+      "id": "document:README.md",
+      "score": 5,
+      "name": "README.md",
+      "summary": "Monorepo overview for the ApexStore platform covering features, tech stack, repository layout, environment setup, quick start, full API reference, data models, frontend overview, testing, and deployment notes."
+    },
+    {
+      "id": "file:src/main.ts",
+      "score": 5,
+      "name": "main.ts",
+      "summary": "Application bootstrap that configures CORS, global logger middleware, validation pipes, and the response transform interceptor before listening."
+    },
+    {
+      "id": "file:frontend/src/types/index.ts",
+      "score": 3,
+      "name": "index.ts",
+      "summary": "Shared frontend domain types for users, products, cart, orders, and API response envelopes."
+    },
+    {
+      "id": "file:test/edge-cases.spec.ts",
+      "score": 3,
+      "name": "edge-cases.spec.ts",
+      "summary": "Boundary and error-handling tests covering unicode, emoji, and long inputs, null fields, zero-stock and minimum-price products, unknown routes, and concurrent reads."
+    },
+    {
+      "id": "config:.ua/config.json",
+      "score": 2,
+      "name": "config.json",
+      "summary": "Analysis tool setting fixing the generated graph language to English."
+    }
+  ],
+  "fanInRanking": [
+    {
+      "id": "file:src/prisma/prisma.service.ts",
+      "fanIn": 23,
+      "name": "prisma.service.ts"
+    },
+    {
+      "id": "file:src/auth/auth.module.ts",
+      "fanIn": 11,
+      "name": "auth.module.ts"
+    },
+    {
+      "id": "file:frontend/src/context/I18nContext.tsx",
+      "fanIn": 10,
+      "name": "I18nContext.tsx"
+    },
+    {
+      "id": "file:frontend/src/context/AuthContext.tsx",
+      "fanIn": 9,
+      "name": "AuthContext.tsx"
+    },
+    {
+      "id": "file:src/products/products.module.ts",
+      "fanIn": 8,
+      "name": "products.module.ts"
+    },
+    {
+      "id": "file:src/prisma/prisma.module.ts",
+      "fanIn": 7,
+      "name": "prisma.module.ts"
+    },
+    {
+      "id": "file:frontend/src/types/index.ts",
+      "fanIn": 6,
+      "name": "index.ts"
+    },
+    {
+      "id": "file:src/users/auth/auth.guard.ts",
+      "fanIn": 6,
+      "name": "auth.guard.ts"
+    },
+    {
+      "id": "schema:prisma/schema.prisma",
+      "fanIn": 6,
+      "name": "schema.prisma"
+    },
+    {
+      "id": "file:frontend/src/lib/api.ts",
+      "fanIn": 5,
+      "name": "api.ts"
+    },
+    {
+      "id": "file:src/auth/auth.service.ts",
+      "fanIn": 5,
+      "name": "auth.service.ts"
+    },
+    {
+      "id": "file:src/auth/guards/roles.guard.ts",
+      "fanIn": 5,
+      "name": "roles.guard.ts"
+    },
+    {
+      "id": "file:src/products/products.service.ts",
+      "fanIn": 5,
+      "name": "products.service.ts"
+    },
+    {
+      "id": "config:graphify-out/graph.json",
+      "fanIn": 4,
+      "name": "graph.json"
+    },
+    {
+      "id": "config:package.json",
+      "fanIn": 4,
+      "name": "package.json"
+    },
+    {
+      "id": "file:src/auth/decorators/roles.decorator.ts",
+      "fanIn": 4,
+      "name": "roles.decorator.ts"
+    },
+    {
+      "id": "file:src/cart/cart.service.ts",
+      "fanIn": 4,
+      "name": "cart.service.ts"
+    },
+    {
+      "id": "file:src/products/dto/create-product.dto.ts",
+      "fanIn": 4,
+      "name": "create-product.dto.ts"
+    },
+    {
+      "id": "file:src/users/dto/create-user.dto.ts",
+      "fanIn": 4,
+      "name": "create-user.dto.ts"
+    },
+    {
+      "id": "file:src/users/users.service.ts",
+      "fanIn": 4,
+      "name": "users.service.ts"
+    }
+  ],
+  "fanOutRanking": [
+    {
+      "id": "file:src/app.module.ts",
+      "fanOut": 8,
+      "name": "app.module.ts"
+    },
+    {
+      "id": "file:src/users/users.controller.ts",
+      "fanOut": 8,
+      "name": "users.controller.ts"
+    },
+    {
+      "id": "file:src/products/products.controller.ts",
+      "fanOut": 7,
+      "name": "products.controller.ts"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/layout.tsx",
+      "fanOut": 6,
+      "name": "layout.tsx"
+    },
+    {
+      "id": "file:src/cart/cart.controller.ts",
+      "fanOut": 6,
+      "name": "cart.controller.ts"
+    },
+    {
+      "id": "file:src/cart/cart.controller.spec.ts",
+      "fanOut": 5,
+      "name": "cart.controller.spec.ts"
+    },
+    {
+      "id": "document:README.md",
+      "fanOut": 4,
+      "name": "README.md"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+      "fanOut": 4,
+      "name": "page.tsx"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/cart/page.tsx",
+      "fanOut": 4,
+      "name": "page.tsx"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/orders/page.tsx",
+      "fanOut": 4,
+      "name": "page.tsx"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/products/page.tsx",
+      "fanOut": 4,
+      "name": "page.tsx"
+    },
+    {
+      "id": "file:src/auth/auth.controller.ts",
+      "fanOut": 4,
+      "name": "auth.controller.ts"
+    },
+    {
+      "id": "file:src/auth/auth.service.ts",
+      "fanOut": 4,
+      "name": "auth.service.ts"
+    },
+    {
+      "id": "file:src/cart/cart.service.ts",
+      "fanOut": 4,
+      "name": "cart.service.ts"
+    },
+    {
+      "id": "file:src/orders/orders.controller.ts",
+      "fanOut": 4,
+      "name": "orders.controller.ts"
+    },
+    {
+      "id": "file:src/products/products.controller.spec.ts",
+      "fanOut": 4,
+      "name": "products.controller.spec.ts"
+    },
+    {
+      "id": "file:src/products/products.service.ts",
+      "fanOut": 4,
+      "name": "products.service.ts"
+    },
+    {
+      "id": "file:src/users/users.service.ts",
+      "fanOut": 4,
+      "name": "users.service.ts"
+    },
+    {
+      "id": "file:test/e2e/auth-flow.e2e-spec.ts",
+      "fanOut": 4,
+      "name": "auth-flow.e2e-spec.ts"
+    },
+    {
+      "id": "file:test/e2e/auth.e2e-spec.ts",
+      "fanOut": 4,
+      "name": "auth.e2e-spec.ts"
+    }
+  ],
+  "bfsTraversal": {
+    "startNode": "file:src/main.ts",
+    "order": [
+      "file:src/main.ts",
+      "file:src/app.module.ts",
+      "file:src/logger/logger.middleware.ts",
+      "file:src/users/transform/transform.interceptor.ts",
+      "file:src/app.controller.ts",
+      "file:src/app.service.ts",
+      "file:src/auth/auth.module.ts",
+      "file:src/cart/cart.module.ts",
+      "file:src/orders/orders.module.ts",
+      "file:src/prisma/prisma.module.ts",
+      "file:src/products/products.module.ts",
+      "file:src/users/users.module.ts",
+      "file:src/auth/auth.controller.ts",
+      "file:src/auth/auth.service.ts",
+      "file:src/auth/jwt.strategy.ts",
+      "file:src/cart/cart.controller.ts",
+      "file:src/cart/cart.service.ts",
+      "file:src/orders/orders.controller.ts",
+      "file:src/orders/orders.service.ts",
+      "file:src/prisma/prisma.service.ts",
+      "file:src/products/products.controller.ts",
+      "file:src/products/products.service.ts",
+      "file:src/users/logger/logger.middleware.ts",
+      "file:src/users/users.controller.ts",
+      "file:src/users/users.service.ts",
+      "file:src/auth/dto/login.dto.ts",
+      "file:src/auth/dto/register.dto.ts",
+      "file:src/auth/decorators/user.decorator.ts",
+      "file:src/cart/dto/add-to-cart.dto.ts",
+      "file:src/cart/dto/update-cart-item.dto.ts",
+      "file:src/users/auth/auth.guard.ts",
+      "file:src/orders/dto/create-order.dto.ts",
+      "file:src/auth/decorators/roles.decorator.ts",
+      "file:src/auth/guards/roles.guard.ts",
+      "file:src/products/dto/create-product.dto.ts",
+      "file:src/products/dto/update-product.dto.ts",
+      "file:src/auth/guards/jwt-auth.guard.ts",
+      "file:src/users/dto/create-user.dto.ts",
+      "file:src/users/dto/update-user.dto.ts"
+    ],
+    "depthMap": {
+      "file:src/main.ts": 0,
+      "file:src/app.module.ts": 1,
+      "file:src/logger/logger.middleware.ts": 1,
+      "file:src/users/transform/transform.interceptor.ts": 1,
+      "file:src/app.controller.ts": 2,
+      "file:src/app.service.ts": 2,
+      "file:src/auth/auth.module.ts": 2,
+      "file:src/cart/cart.module.ts": 2,
+      "file:src/orders/orders.module.ts": 2,
+      "file:src/prisma/prisma.module.ts": 2,
+      "file:src/products/products.module.ts": 2,
+      "file:src/users/users.module.ts": 2,
+      "file:src/auth/auth.controller.ts": 3,
+      "file:src/auth/auth.service.ts": 3,
+      "file:src/auth/jwt.strategy.ts": 3,
+      "file:src/cart/cart.controller.ts": 3,
+      "file:src/cart/cart.service.ts": 3,
+      "file:src/orders/orders.controller.ts": 3,
+      "file:src/orders/orders.service.ts": 3,
+      "file:src/prisma/prisma.service.ts": 3,
+      "file:src/products/products.controller.ts": 3,
+      "file:src/products/products.service.ts": 3,
+      "file:src/users/logger/logger.middleware.ts": 3,
+      "file:src/users/users.controller.ts": 3,
+      "file:src/users/users.service.ts": 3,
+      "file:src/auth/dto/login.dto.ts": 4,
+      "file:src/auth/dto/register.dto.ts": 4,
+      "file:src/auth/decorators/user.decorator.ts": 4,
+      "file:src/cart/dto/add-to-cart.dto.ts": 4,
+      "file:src/cart/dto/update-cart-item.dto.ts": 4,
+      "file:src/users/auth/auth.guard.ts": 4,
+      "file:src/orders/dto/create-order.dto.ts": 4,
+      "file:src/auth/decorators/roles.decorator.ts": 4,
+      "file:src/auth/guards/roles.guard.ts": 4,
+      "file:src/products/dto/create-product.dto.ts": 4,
+      "file:src/products/dto/update-product.dto.ts": 4,
+      "file:src/auth/guards/jwt-auth.guard.ts": 4,
+      "file:src/users/dto/create-user.dto.ts": 4,
+      "file:src/users/dto/update-user.dto.ts": 4
+    },
+    "byDepth": {
+      "0": [
+        "file:src/main.ts"
+      ],
+      "1": [
+        "file:src/app.module.ts",
+        "file:src/logger/logger.middleware.ts",
+        "file:src/users/transform/transform.interceptor.ts"
+      ],
+      "2": [
+        "file:src/app.controller.ts",
+        "file:src/app.service.ts",
+        "file:src/auth/auth.module.ts",
+        "file:src/cart/cart.module.ts",
+        "file:src/orders/orders.module.ts",
+        "file:src/prisma/prisma.module.ts",
+        "file:src/products/products.module.ts",
+        "file:src/users/users.module.ts"
+      ],
+      "3": [
+        "file:src/auth/auth.controller.ts",
+        "file:src/auth/auth.service.ts",
+        "file:src/auth/jwt.strategy.ts",
+        "file:src/cart/cart.controller.ts",
+        "file:src/cart/cart.service.ts",
+        "file:src/orders/orders.controller.ts",
+        "file:src/orders/orders.service.ts",
+        "file:src/prisma/prisma.service.ts",
+        "file:src/products/products.controller.ts",
+        "file:src/products/products.service.ts",
+        "file:src/users/logger/logger.middleware.ts",
+        "file:src/users/users.controller.ts",
+        "file:src/users/users.service.ts"
+      ],
+      "4": [
+        "file:src/auth/dto/login.dto.ts",
+        "file:src/auth/dto/register.dto.ts",
+        "file:src/auth/decorators/user.decorator.ts",
+        "file:src/cart/dto/add-to-cart.dto.ts",
+        "file:src/cart/dto/update-cart-item.dto.ts",
+        "file:src/users/auth/auth.guard.ts",
+        "file:src/orders/dto/create-order.dto.ts",
+        "file:src/auth/decorators/roles.decorator.ts",
+        "file:src/auth/guards/roles.guard.ts",
+        "file:src/products/dto/create-product.dto.ts",
+        "file:src/products/dto/update-product.dto.ts",
+        "file:src/auth/guards/jwt-auth.guard.ts",
+        "file:src/users/dto/create-user.dto.ts",
+        "file:src/users/dto/update-user.dto.ts"
+      ]
+    }
+  },
+  "nonCodeFiles": {
+    "documentation": [
+      {
+        "id": "document:AGENTS.md",
+        "name": "AGENTS.md",
+        "type": "document",
+        "summary": "Agent working agreement for the NestJS backend covering project layout, entrypoint wiring, module registration, API contracts for auth, products, cart and orders, Prisma conventions, and npm commands."
+      },
+      {
+        "id": "document:BACKEND_RULES.md",
+        "name": "BACKEND_RULES.md",
+        "type": "document",
+        "summary": "Strict backend specification detailing server configuration, success and error response envelopes, the JWT auth pipeline, entity schemas, and per-route guards with validation constraints for auth, products, cart, and orders."
+      },
+      {
+        "id": "document:README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Monorepo overview for the ApexStore platform covering features, tech stack, repository layout, environment setup, quick start, full API reference, data models, frontend overview, testing, and deployment notes."
+      },
+      {
+        "id": "document:frontend/AGENTS.md",
+        "name": "AGENTS.md",
+        "type": "document",
+        "summary": "Authoritative agent guide for the Next.js 16 storefront covering stack versions, npm commands, Turbopack and path-alias wiring, locale-scoped App Router layout, i18n resolution, API auth wiring, and provider nesting."
+      },
+      {
+        "id": "document:frontend/CLAUDE.md",
+        "name": "CLAUDE.md",
+        "type": "document",
+        "summary": "Single-line pointer file that delegates all frontend agent guidance to AGENTS.md."
+      },
+      {
+        "id": "document:frontend/README.md",
+        "name": "README.md",
+        "type": "document",
+        "summary": "Default create-next-app readme with dev-server getting-started steps, Next.js learning links, and Vercel deployment pointers."
+      },
+      {
+        "id": "document:graphify-out/GRAPH_REPORT.md",
+        "name": "GRAPH_REPORT.md",
+        "type": "document",
+        "summary": "Generated human-readable graph report summarizing 576 nodes, 916 edges, and 44 communities with navigation hubs, god nodes, import cycles, and knowledge gaps."
+      }
+    ],
+    "infrastructure": [],
+    "data": [
+      {
+        "id": "schema:prisma/schema.prisma",
+        "name": "schema.prisma",
+        "type": "schema",
+        "summary": "Prisma Postgres schema defining the Role enum and the User, Cart, CartItem, Product, Order, and OrderItem models with their relations."
+      },
+      {
+        "id": "table:prisma/migrations/20260724110919_init/migration.sql:User",
+        "name": "User",
+        "type": "table",
+        "summary": "Initial migration creating the User account table with unique email, optional name, password, and USER/ADMIN role."
+      },
+      {
+        "id": "table:prisma/migrations/20260724110919_init/migration.sql:Product",
+        "name": "Product",
+        "type": "table",
+        "summary": "Initial migration creating the Product catalog table with name, float price, and integer stock."
+      },
+      {
+        "id": "table:prisma/migrations/20260729093153_add_orders/migration.sql:Order",
+        "name": "Order",
+        "type": "table",
+        "summary": "Orders migration creating the Order header table linking each purchase to its buyer and creation timestamp."
+      },
+      {
+        "id": "table:prisma/migrations/20260729093153_add_orders/migration.sql:OrderItem",
+        "name": "OrderItem",
+        "type": "table",
+        "summary": "Orders migration creating the OrderItem line-item table linking orders to products with quantities."
+      },
+      {
+        "id": "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:Cart",
+        "name": "Cart",
+        "type": "table",
+        "summary": "Cart migration creating the one-per-user Cart header table with a unique user reference."
+      },
+      {
+        "id": "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:CartItem",
+        "name": "CartItem",
+        "type": "table",
+        "summary": "Cart migration creating the CartItem line-item table with cascade delete from its parent cart."
+      }
+    ],
+    "config": [
+      {
+        "id": "config:nest-cli.json",
+        "name": "nest-cli.json",
+        "type": "config",
+        "summary": "NestJS CLI configuration setting src as the source root with the schematics collection and a deleteOutDir compiler option."
+      },
+      {
+        "id": "config:package.json",
+        "name": "package.json",
+        "type": "config",
+        "summary": "Root npm manifest for the NestJS v11 backend declaring runtime dependencies for JWT auth, Prisma, and validation, plus dev tooling, npm scripts, and embedded Jest unit-test configuration."
+      },
+      {
+        "id": "config:skills-lock.json",
+        "name": "skills-lock.json",
+        "type": "config",
+        "summary": "Lockfile pinning nine Prisma skill snapshots from prisma/skills with source paths and content hashes for reproducible agent guidance."
+      },
+      {
+        "id": "config:tsconfig.build.json",
+        "name": "tsconfig.build.json",
+        "type": "config",
+        "summary": "Production build TypeScript configuration extending the base config while excluding node_modules, test, dist, frontend, and spec files."
+      },
+      {
+        "id": "config:tsconfig.json",
+        "name": "tsconfig.json",
+        "type": "config",
+        "summary": "Base TypeScript compiler configuration using nodenext modules, ES2023 target, decorator metadata, and relaxed strictness with strictNullChecks enabled."
+      },
+      {
+        "id": "config:frontend/package.json",
+        "name": "package.json",
+        "type": "config",
+        "summary": "Npm manifest for the frontend workspace pinning Next.js 16.3.0 with React 19 and Tailwind CSS v4, plus the dev, build, start, and lint scripts."
+      },
+      {
+        "id": "config:frontend/tsconfig.json",
+        "name": "tsconfig.json",
+        "type": "config",
+        "summary": "Strict TypeScript configuration for the Next.js frontend using bundler module resolution, the Next.js plugin, the @/* path alias to src/*, and no-emit type checking."
+      },
+      {
+        "id": "config:graphify-out/.graphify_analysis.json",
+        "name": ".graphify_analysis.json",
+        "type": "config",
+        "summary": "Generated graphify community analysis cache grouping detected code symbols into communities with cohesion, god-node, surprise, and question annotations."
+      },
+      {
+        "id": "config:graphify-out/.graphify_labels.json",
+        "name": ".graphify_labels.json",
+        "type": "config",
+        "summary": "Generated lookup table mapping numeric community ids to human-readable labels such as controllers, services, and config files."
+      },
+      {
+        "id": "config:graphify-out/graph.json",
+        "name": "graph.json",
+        "type": "config",
+        "summary": "Generated serialized knowledge graph artifact holding the full node, link, and hyperedge dataset consumed by the HTML viewer and analysis files."
+      },
+      {
+        "id": "config:graphify-out/manifest.json",
+        "name": "manifest.json",
+        "type": "config",
+        "summary": "Generated incremental-build manifest recording per-file mtime plus AST and semantic hashes used to detect stale graph output."
+      },
+      {
+        "id": "config:graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json",
+        "name": "1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json",
+        "type": "config",
+        "summary": "Empty AST cache shard emitted by the graphify tool."
+      },
+      {
+        "id": "config:graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json",
+        "name": "52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json",
+        "type": "config",
+        "summary": "Empty AST cache shard emitted by the graphify tool."
+      },
+      {
+        "id": "config:graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json",
+        "name": "97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json",
+        "type": "config",
+        "summary": "Empty AST cache shard emitted by the graphify tool."
+      },
+      {
+        "id": "config:graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json",
+        "name": "a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json",
+        "type": "config",
+        "summary": "Empty AST cache shard emitted by the graphify tool."
+      },
+      {
+        "id": "config:graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json",
+        "name": "e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json",
+        "type": "config",
+        "summary": "Empty AST cache shard emitted by the graphify tool."
+      },
+      {
+        "id": "config:graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json",
+        "name": "f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json",
+        "type": "config",
+        "summary": "Empty AST cache shard emitted by the graphify tool."
+      },
+      {
+        "id": "config:.ua/config.json",
+        "name": "config.json",
+        "type": "config",
+        "summary": "Analysis tool setting fixing the generated graph language to English."
+      },
+      {
+        "id": "config:frontend/src/app/[lang]/dictionaries/en.json",
+        "name": "en.json",
+        "type": "config",
+        "summary": "English UI strings for navigation, home, products, cart, orders, login, register, admin, and language switcher sections."
+      },
+      {
+        "id": "config:frontend/src/app/[lang]/dictionaries/fr.json",
+        "name": "fr.json",
+        "type": "config",
+        "summary": "French UI strings mirroring the English dictionary across navigation, products, cart, orders, auth, and admin sections."
+      },
+      {
+        "id": "config:graphify-out/cache/stat-index.json",
+        "name": "stat-index.json",
+        "type": "config",
+        "summary": "Generated file-statistics cache from a previous graph scan, kept for context only."
+      },
+      {
+        "id": "config:postman/collection.json",
+        "name": "collection.json",
+        "type": "config",
+        "summary": "Postman request collection for the NestJS API covering auth, users, products, and orders, parameterized with base_url and token variables."
+      },
+      {
+        "id": "config:postman/environment.json",
+        "name": "environment.json",
+        "type": "config",
+        "summary": "Postman environment defining the base_url variable pointing at localhost:3002 plus empty token and api_key variables."
+      },
+      {
+        "id": "config:prisma/migrations/migration_lock.toml",
+        "name": "migration_lock.toml",
+        "type": "config",
+        "summary": "Prisma migration provider lock pinning the migrations to postgresql."
+      },
+      {
+        "id": "config:test/jest-e2e.json",
+        "name": "jest-e2e.json",
+        "type": "config",
+        "summary": "Jest configuration running end-to-end, security, and edge-case specs through ts-jest."
+      },
+      {
+        "id": "config:test/jest-integration.json",
+        "name": "jest-integration.json",
+        "type": "config",
+        "summary": "Jest configuration running integration-spec suites through ts-jest."
+      }
+    ]
+  },
+  "clusters": [
+    {
+      "nodes": [
+        "file:src/auth/decorators/roles.decorator.ts",
+        "file:src/auth/guards/roles.guard.spec.ts",
+        "file:src/auth/guards/roles.guard.ts",
+        "file:src/products/products.controller.ts",
+        "file:src/users/users.controller.ts"
+      ],
+      "edgeCount": 9
+    },
+    {
+      "nodes": [
+        "file:src/prisma/prisma.service.spec.ts",
+        "file:src/prisma/prisma.service.ts",
+        "file:src/products/products.service.spec.ts",
+        "file:src/products/products.service.ts",
+        "file:test/integration/products.integration-spec.ts"
+      ],
+      "edgeCount": 8
+    },
+    {
+      "nodes": [
+        "file:src/cart/cart.controller.spec.ts",
+        "file:src/cart/cart.controller.ts",
+        "file:src/cart/cart.service.ts",
+        "file:src/users/auth/auth.guard.spec.ts",
+        "file:src/users/auth/auth.guard.ts"
+      ],
+      "edgeCount": 8
+    },
+    {
+      "nodes": [
+        "file:frontend/src/app/[lang]/layout.tsx",
+        "file:frontend/src/app/globals.css"
+      ],
+      "edgeCount": 2
+    },
+    {
+      "nodes": [
+        "file:src/auth/jwt.strategy.spec.ts",
+        "file:src/auth/jwt.strategy.ts"
+      ],
+      "edgeCount": 2
+    },
+    {
+      "nodes": [
+        "file:src/products/dto/create-product.dto.spec.ts",
+        "file:src/products/dto/create-product.dto.ts"
+      ],
+      "edgeCount": 2
+    },
+    {
+      "nodes": [
+        "file:src/products/dto/update-product.dto.spec.ts",
+        "file:src/products/dto/update-product.dto.ts"
+      ],
+      "edgeCount": 2
+    },
+    {
+      "nodes": [
+        "file:src/users/dto/create-user.dto.spec.ts",
+        "file:src/users/dto/create-user.dto.ts"
+      ],
+      "edgeCount": 2
+    },
+    {
+      "nodes": [
+        "file:src/users/dto/update-user.dto.spec.ts",
+        "file:src/users/dto/update-user.dto.ts"
+      ],
+      "edgeCount": 2
+    },
+    {
+      "nodes": [
+        "file:src/users/logger/logger.middleware.spec.ts",
+        "file:src/users/logger/logger.middleware.ts"
+      ],
+      "edgeCount": 2
+    }
+  ],
+  "layers": {
+    "count": 9,
+    "list": [
+      {
+        "id": "layer:frontend",
+        "name": "Frontend Storefront",
+        "description": "Next.js 16 App Router storefront with EN/FR i18n pages, shared components, auth/i18n contexts, API client, locale dictionaries, and edge middleware."
+      },
+      {
+        "id": "layer:api",
+        "name": "Backend API",
+        "description": "NestJS HTTP surface and bootstrap for the shop API: feature controllers, app composition root, and server entry point."
+      },
+      {
+        "id": "layer:service",
+        "name": "Backend Services",
+        "description": "NestJS domain logic for auth, users, products, cart, and orders: services, feature modules, JWT strategy, guards, decorators, middleware, and response interceptor."
+      },
+      {
+        "id": "layer:data",
+        "name": "Data and Persistence",
+        "description": "PostgreSQL persistence model for users, products, carts, and orders: Prisma schema, SQL migration tables, Prisma client config, and the user entity."
+      },
+      {
+        "id": "layer:types",
+        "name": "Contracts and Validation",
+        "description": "class-validator request/response DTOs enforcing the shop API contract for auth, users, products, cart, and orders."
+      },
+      {
+        "id": "layer:test",
+        "name": "Tests and QA",
+        "description": "Unit, integration, e2e, security, and edge-case suites plus factories, fixtures, helpers, and Jest configs covering the NestJS backend."
+      },
+      {
+        "id": "layer:config",
+        "name": "Configuration",
+        "description": "Build, lint, type-check, and workspace configuration for the NestJS backend and Next.js frontend, plus Postman API collections."
+      },
+      {
+        "id": "layer:documentation",
+        "name": "Documentation",
+        "description": "Project guides and agent instructions for the backend, the storefront, and generated analysis reports."
+      },
+      {
+        "id": "layer:tooling",
+        "name": "Generated Tooling Artifacts",
+        "description": "Machine-generated cache, graph, and manifest files from a previous graphify analysis run, excluded from the application architecture."
+      }
+    ]
+  },
+  "nodeSummaryIndex": {
+    "file:frontend/src/app/[lang]/admin/products/page.tsx": {
+      "name": "page.tsx",
+      "type": "file",
+      "summary": "Admin-only product management console with full create, edit, and delete CRUD against the products API."
+    },
+    "file:frontend/src/app/[lang]/cart/page.tsx": {
+      "name": "page.tsx",
+      "type": "file",
+      "summary": "Shopping cart page showing cart items with quantity updates, item removal, totals, and checkout that places an order."
+    },
+    "file:frontend/src/app/[lang]/dictionaries.ts": {
+      "name": "dictionaries.ts",
+      "type": "file",
+      "summary": "Server-only locale dictionary registry exposing hasLocale and getDictionary with English fallback."
+    },
+    "file:frontend/src/app/[lang]/layout.tsx": {
+      "name": "layout.tsx",
+      "type": "file",
+      "summary": "Locale-scoped root layout that resolves the dictionary server-side and composes AuthProvider, I18nProvider, and Navbar."
+    },
+    "file:frontend/src/app/[lang]/login/page.tsx": {
+      "name": "page.tsx",
+      "type": "file",
+      "summary": "Login form that authenticates through AuthContext and redirects to the product catalog on success."
+    },
+    "file:frontend/src/app/[lang]/orders/page.tsx": {
+      "name": "page.tsx",
+      "type": "file",
+      "summary": "Order history page listing the current user's past orders with items, quantities, and totals."
+    },
+    "file:frontend/src/app/[lang]/page.tsx": {
+      "name": "page.tsx",
+      "type": "file",
+      "summary": "Storefront landing page introducing the shop with locale-aware links into the product catalog."
+    },
+    "file:frontend/src/app/[lang]/products/page.tsx": {
+      "name": "page.tsx",
+      "type": "file",
+      "summary": "Product catalog page fetching all products with per-item quantity selection and add-to-cart actions."
+    },
+    "file:frontend/src/app/[lang]/register/page.tsx": {
+      "name": "page.tsx",
+      "type": "file",
+      "summary": "Registration form creating an account through AuthContext with auto-login and redirect to the catalog."
+    },
+    "file:frontend/src/components/LanguageSwitcher.tsx": {
+      "name": "LanguageSwitcher.tsx",
+      "type": "file",
+      "summary": "Locale dropdown that rewrites the URL locale segment, with click-outside and Escape dismissal handling."
+    },
+    "file:frontend/src/components/Navbar.tsx": {
+      "name": "Navbar.tsx",
+      "type": "file",
+      "summary": "Auth-aware sticky navigation bar with locale-aware links, cart badge, logout, and language switcher."
+    },
+    "file:frontend/src/context/AuthContext.tsx": {
+      "name": "AuthContext.tsx",
+      "type": "file",
+      "summary": "JWT authentication provider restoring the session from storage and exposing login, register, and logout backed by the auth API."
+    },
+    "file:frontend/src/context/I18nContext.tsx": {
+      "name": "I18nContext.tsx",
+      "type": "file",
+      "summary": "Client i18n provider exposing the t translator with interpolation and the localePath route helper."
+    },
+    "file:frontend/src/lib/api.ts": {
+      "name": "api.ts",
+      "type": "file",
+      "summary": "Typed API client with token persistence and a fetch wrapper injecting the bearer token and unwrapping the response envelope."
+    },
+    "file:frontend/src/lib/i18n.ts": {
+      "name": "i18n.ts",
+      "type": "file",
+      "summary": "Locale constants for English and French with default locale, cookie name, and isLocale type guard."
+    },
+    "file:frontend/src/types/index.ts": {
+      "name": "index.ts",
+      "type": "file",
+      "summary": "Shared frontend domain types for users, products, cart, orders, and API response envelopes."
+    },
+    "file:src/auth/auth.module.ts": {
+      "name": "auth.module.ts",
+      "type": "file",
+      "summary": "NestJS authentication module wiring Passport, async JWT configuration, AuthController, and AuthService with JwtStrategy providers for the auth endpoints."
+    },
+    "file:src/auth/jwt.strategy.spec.ts": {
+      "name": "jwt.strategy.spec.ts",
+      "type": "file",
+      "summary": "Unit tests for JwtStrategy.validate covering payload-to-user mapping and sub-to-id translation."
+    },
+    "file:src/auth/jwt.strategy.ts": {
+      "name": "jwt.strategy.ts",
+      "type": "file",
+      "summary": "Passport JWT strategy extracting bearer tokens and mapping validated payloads to request user objects with id, email, and role."
+    },
+    "file:src/prisma/prisma.module.ts": {
+      "name": "prisma.module.ts",
+      "type": "file",
+      "summary": "Global NestJS module exposing the shared PrismaService database client to all feature modules."
+    },
+    "file:src/prisma/prisma.service.spec.ts": {
+      "name": "prisma.service.spec.ts",
+      "type": "file",
+      "summary": "Unit tests for PrismaService lifecycle hooks verifying connect on init and disconnect plus pool shutdown on destroy with a mocked pg client."
+    },
+    "file:src/prisma/prisma.service.ts": {
+      "name": "prisma.service.ts",
+      "type": "file",
+      "summary": "Prisma database service managing a pg connection pool and client lifecycle with connect on module init and disconnect plus pool drain on destroy."
+    },
+    "file:src/products/products.module.ts": {
+      "name": "products.module.ts",
+      "type": "file",
+      "summary": "NestJS feature module wiring ProductsController and ProductsService with AuthModule imported for JWT guard and admin role checks."
+    },
+    "file:test/e2e/auth-flow.e2e-spec.ts": {
+      "name": "auth-flow.e2e-spec.ts",
+      "type": "file",
+      "summary": "Mocked end-to-end tests covering full user journeys: register-login-token product access, admin product creation, and USER rejection on admin operations."
+    },
+    "file:test/e2e/auth.e2e-spec.ts": {
+      "name": "auth.e2e-spec.ts",
+      "type": "file",
+      "summary": "Mocked end-to-end tests for auth endpoints covering registration success, duplicate-email conflicts, input validation, and login credential handling."
+    },
+    "file:test/e2e/products.e2e-spec.ts": {
+      "name": "products.e2e-spec.ts",
+      "type": "file",
+      "summary": "Mocked end-to-end tests for the products API covering authenticated reads, admin-only create/update/delete, and 401/403/404/400 responses."
+    },
+    "file:test/edge-cases.spec.ts": {
+      "name": "edge-cases.spec.ts",
+      "type": "file",
+      "summary": "Boundary and error-handling tests covering unicode, emoji, and long inputs, null fields, zero-stock and minimum-price products, unknown routes, and concurrent reads."
+    },
+    "file:test/factories/product.factory.ts": {
+      "name": "product.factory.ts",
+      "type": "file",
+      "summary": "Test factory creating products with unique default names via Prisma for integration and end-to-end suites."
+    },
+    "file:test/factories/user.factory.ts": {
+      "name": "user.factory.ts",
+      "type": "file",
+      "summary": "Test factories creating users with unique emails and bcrypt-hashed passwords plus an admin shortcut for role-based test scenarios."
+    },
+    "file:test/helpers/create-app-mocked.ts": {
+      "name": "create-app-mocked.ts",
+      "type": "file",
+      "summary": "Test helper bootstrapping a NestJS application with Auth and Products modules and a mocked PrismaService plus global validation pipes."
+    },
+    "file:test/security/auth.security-spec.ts": {
+      "name": "auth.security-spec.ts",
+      "type": "file",
+      "summary": "Security tests covering JWT rejection paths for missing, malformed, expired, and wrong-secret tokens, bcrypt password storage, and whitelist input validation."
+    },
+    "file:test/security/rbac.security-spec.ts": {
+      "name": "rbac.security-spec.ts",
+      "type": "file",
+      "summary": "Role-based access control tests verifying admins can mutate products while regular users receive 403 responses and unauthenticated requests receive 401."
+    },
+    "file:src/auth/decorators/roles.decorator.ts": {
+      "name": "roles.decorator.ts",
+      "type": "file",
+      "summary": "Defines the ROLES_KEY metadata key and the Roles decorator that tags routes with their required roles for the guard to enforce."
+    },
+    "file:src/auth/guards/roles.guard.spec.ts": {
+      "name": "roles.guard.spec.ts",
+      "type": "file",
+      "summary": "Unit tests for RolesGuard covering open routes, matching and mismatched roles, missing users, and error messages."
+    },
+    "file:src/auth/guards/roles.guard.ts": {
+      "name": "roles.guard.ts",
+      "type": "file",
+      "summary": "Role-based access guard that reads required-roles metadata via Reflector and rejects requests whose user role is not permitted."
+    },
+    "file:src/products/dto/create-product.dto.spec.ts": {
+      "name": "create-product.dto.spec.ts",
+      "type": "file",
+      "summary": "Validation tests for CreateProductDto covering required name, positive numeric price, and non-negative integer stock."
+    },
+    "file:src/products/dto/create-product.dto.ts": {
+      "name": "create-product.dto.ts",
+      "type": "file",
+      "summary": "DTO for product creation with class-validator constraints requiring a non-empty name, positive price, and integer stock of zero or more."
+    },
+    "file:src/products/dto/update-product.dto.spec.ts": {
+      "name": "update-product.dto.spec.ts",
+      "type": "file",
+      "summary": "Validation tests confirming UpdateProductDto accepts empty and partial payloads while still rejecting invalid provided values."
+    },
+    "file:src/products/dto/update-product.dto.ts": {
+      "name": "update-product.dto.ts",
+      "type": "file",
+      "summary": "Partial update DTO that extends CreateProductDto via PartialType, making every field optional for PATCH requests."
+    },
+    "file:src/products/products.controller.spec.ts": {
+      "name": "products.controller.spec.ts",
+      "type": "file",
+      "summary": "Controller unit tests verifying each ProductsController action delegates to ProductsService with auth guards stubbed out."
+    },
+    "file:src/products/products.controller.ts": {
+      "name": "products.controller.ts",
+      "type": "file",
+      "summary": "REST controller for /products protected by AuthGuard and RolesGuard, with admin-only create, update, and delete routes."
+    },
+    "file:src/products/products.service.spec.ts": {
+      "name": "products.service.spec.ts",
+      "type": "file",
+      "summary": "Service unit tests for ProductsService CRUD against a mocked Prisma client, including NotFoundException paths."
+    },
+    "file:src/products/products.service.ts": {
+      "name": "products.service.ts",
+      "type": "file",
+      "summary": "Products domain service implementing CRUD through Prisma, throwing NotFoundException when a product does not exist."
+    },
+    "file:src/users/auth/auth.guard.spec.ts": {
+      "name": "auth.guard.spec.ts",
+      "type": "file",
+      "summary": "Unit tests for AuthGuard covering valid Bearer tokens, missing or malformed headers, and invalid or expired tokens."
+    },
+    "file:src/users/auth/auth.guard.ts": {
+      "name": "auth.guard.ts",
+      "type": "file",
+      "summary": "JWT authentication guard that extracts the Bearer token, verifies it, and attaches the user id, email, and role to the request."
+    },
+    "file:test/integration/products.integration-spec.ts": {
+      "name": "products.integration-spec.ts",
+      "type": "file",
+      "summary": "Integration-style tests exercising ProductsService CRUD call ordering and not-found behavior through the Nest testing module."
+    },
+    "file:test/integration/roles.integration-spec.ts": {
+      "name": "roles.integration-spec.ts",
+      "type": "file",
+      "summary": "Integration-style tests verifying admin-only product mutations and unrestricted reads through RolesGuard with the Prisma Role enum."
+    },
+    "file:src/auth/guards/jwt-auth.guard.ts": {
+      "name": "jwt-auth.guard.ts",
+      "type": "file",
+      "summary": "Passport JWT guard subclass that enforces bearer-token authentication on protected routes."
+    },
+    "file:src/users/dto/create-user.dto.spec.ts": {
+      "name": "create-user.dto.spec.ts",
+      "type": "file",
+      "summary": "Validation tests for CreateUserDto covering name, email, and password rules via class-validator."
+    },
+    "file:src/users/dto/create-user.dto.ts": {
+      "name": "create-user.dto.ts",
+      "type": "file",
+      "summary": "User creation DTO validating name, email format, and a minimum-length password."
+    },
+    "file:src/users/dto/update-user.dto.spec.ts": {
+      "name": "update-user.dto.spec.ts",
+      "type": "file",
+      "summary": "Validation tests confirming all UpdateUserDto fields are optional yet still constrained when provided."
+    },
+    "file:src/users/dto/update-user.dto.ts": {
+      "name": "update-user.dto.ts",
+      "type": "file",
+      "summary": "Partial update DTO making all CreateUserDto fields optional via NestJS PartialType."
+    },
+    "file:src/users/logger/logger.middleware.spec.ts": {
+      "name": "logger.middleware.spec.ts",
+      "type": "file",
+      "summary": "Unit tests verifying LoggerMiddleware logs method plus URL and always calls next()."
+    },
+    "file:src/users/logger/logger.middleware.ts": {
+      "name": "logger.middleware.ts",
+      "type": "file",
+      "summary": "Request logging middleware that prints the HTTP method and URL then passes control onward."
+    },
+    "file:src/users/users.controller.spec.ts": {
+      "name": "users.controller.spec.ts",
+      "type": "file",
+      "summary": "Controller unit tests asserting each UsersController route delegates to the matching UsersService method."
+    },
+    "file:src/users/users.controller.ts": {
+      "name": "users.controller.ts",
+      "type": "file",
+      "summary": "Admin-only REST controller exposing CRUD endpoints under /users with JWT, roles, and response-transform guards."
+    },
+    "file:src/users/users.module.ts": {
+      "name": "users.module.ts",
+      "type": "file",
+      "summary": "NestJS feature module wiring UsersController and UsersService and applying LoggerMiddleware to user routes."
+    },
+    "file:src/users/users.service.spec.ts": {
+      "name": "users.service.spec.ts",
+      "type": "file",
+      "summary": "Service tests covering user creation, lookup, update, and deletion including hashing and error paths with mocked Prisma."
+    },
+    "file:src/users/users.service.ts": {
+      "name": "users.service.ts",
+      "type": "file",
+      "summary": "User domain service implementing conflict-checked creation, bcrypt password hashing, and password-safe Prisma CRUD."
+    },
+    "file:src/app.controller.spec.ts": {
+      "name": "app.controller.spec.ts",
+      "type": "file",
+      "summary": "Unit test for AppController that boots the controller with AppService and asserts the root route returns Hello World."
+    },
+    "file:src/app.controller.ts": {
+      "name": "app.controller.ts",
+      "type": "file",
+      "summary": "Root HTTP controller exposing GET / and delegating to AppService for the Hello World response."
+    },
+    "file:src/app.module.ts": {
+      "name": "app.module.ts",
+      "type": "file",
+      "summary": "Root NestJS module wiring AppController and AppService with all feature modules including users, products, cart, orders, auth, and Prisma."
+    },
+    "file:src/app.service.ts": {
+      "name": "app.service.ts",
+      "type": "file",
+      "summary": "Injectable application service returning the Hello World string used by the root controller."
+    },
+    "file:src/logger/logger.middleware.ts": {
+      "name": "logger.middleware.ts",
+      "type": "file",
+      "summary": "Global HTTP request logger middleware that logs method, URL, and status code on response finish."
+    },
+    "file:src/main.ts": {
+      "name": "main.ts",
+      "type": "file",
+      "summary": "Application bootstrap that configures CORS, global logger middleware, validation pipes, and the response transform interceptor before listening."
+    },
+    "file:src/users/transform/transform.interceptor.spec.ts": {
+      "name": "transform.interceptor.spec.ts",
+      "type": "file",
+      "summary": "Unit tests for TransformInterceptor covering the success envelope format, ISO timestamps, and null, array, and undefined payloads."
+    },
+    "file:src/users/transform/transform.interceptor.ts": {
+      "name": "transform.interceptor.ts",
+      "type": "file",
+      "summary": "Global response interceptor wrapping every handler payload in a timestamped success envelope with status and data fields."
+    },
+    "file:test/app.e2e-spec.ts": {
+      "name": "app.e2e-spec.ts",
+      "type": "file",
+      "summary": "End-to-end test booting the full AppModule and asserting GET / returns Hello World, skipped when no database URL is set."
+    },
+    "file:src/auth/auth.controller.spec.ts": {
+      "name": "auth.controller.spec.ts",
+      "type": "file",
+      "summary": "Unit tests for AuthController verifying that register and login delegate to AuthService and return its results."
+    },
+    "file:src/auth/auth.controller.ts": {
+      "name": "auth.controller.ts",
+      "type": "file",
+      "summary": "NestJS controller exposing public POST /auth/register and POST /auth/login endpoints that delegate to AuthService."
+    },
+    "file:src/auth/auth.service.spec.ts": {
+      "name": "auth.service.spec.ts",
+      "type": "file",
+      "summary": "Unit tests for AuthService covering user creation, duplicate-email conflicts, bcrypt hashing, and login credential validation."
+    },
+    "file:src/auth/auth.service.ts": {
+      "name": "auth.service.ts",
+      "type": "file",
+      "summary": "Authentication service handling user registration with bcrypt password hashing and login with JWT access token issuance via Prisma."
+    },
+    "file:src/auth/dto/login.dto.spec.ts": {
+      "name": "login.dto.spec.ts",
+      "type": "file",
+      "summary": "Validation tests for LoginDto covering email format, missing fields, and the absence of a minimum password length on login."
+    },
+    "file:src/auth/dto/login.dto.ts": {
+      "name": "login.dto.ts",
+      "type": "file",
+      "summary": "Login request DTO declaring email format and non-empty password validation rules."
+    },
+    "file:src/auth/dto/register.dto.spec.ts": {
+      "name": "register.dto.spec.ts",
+      "type": "file",
+      "summary": "Validation tests for RegisterDto covering name, email format, and minimum password length rules including boundary cases."
+    },
+    "file:src/auth/dto/register.dto.ts": {
+      "name": "register.dto.ts",
+      "type": "file",
+      "summary": "Registration request DTO declaring name, email, and minimum-length password validation rules."
+    },
+    "file:test/integration/auth.integration-spec.ts": {
+      "name": "auth.integration-spec.ts",
+      "type": "file",
+      "summary": "Integration tests exercising the AuthService register-then-login flow, JWT payload verification, and credential rejection paths."
+    },
+    "file:src/cart/cart.controller.spec.ts": {
+      "name": "cart.controller.spec.ts",
+      "type": "file",
+      "summary": "Unit tests for CartController covering add, fetch, update, and remove endpoints with a mocked CartService and the AuthGuard overridden."
+    },
+    "file:src/cart/cart.controller.ts": {
+      "name": "cart.controller.ts",
+      "type": "file",
+      "summary": "Auth-guarded REST controller exposing the per-user cart endpoints (add, fetch, update item, remove item) and delegating all logic to CartService."
+    },
+    "file:src/cart/cart.module.ts": {
+      "name": "cart.module.ts",
+      "type": "file",
+      "summary": "NestJS module wiring CartController and CartService together and importing AuthModule for guard support."
+    },
+    "file:src/cart/cart.service.spec.ts": {
+      "name": "cart.service.spec.ts",
+      "type": "file",
+      "summary": "Comprehensive unit tests for CartService covering add, fetch, update, and remove flows with a mocked PrismaService, including stock and ownership edge cases."
+    },
+    "file:src/cart/cart.service.ts": {
+      "name": "cart.service.ts",
+      "type": "file",
+      "summary": "Implements per-user cart operations with product stock validation, lazy cart creation, ownership checks, and transactional item upserts via PrismaService."
+    },
+    "file:src/cart/dto/add-to-cart.dto.ts": {
+      "name": "add-to-cart.dto.ts",
+      "type": "file",
+      "summary": "Validated request DTO carrying productId and a minimum-1 quantity for the add-to-cart endpoint."
+    },
+    "file:src/cart/dto/update-cart-item.dto.ts": {
+      "name": "update-cart-item.dto.ts",
+      "type": "file",
+      "summary": "Validated request DTO carrying only the new minimum-1 quantity for updating a cart item."
+    },
+    "file:src/auth/decorators/user.decorator.ts": {
+      "name": "user.decorator.ts",
+      "type": "file",
+      "summary": "Custom NestJS parameter decorator that extracts the authenticated user (or a single user property) from the incoming request."
+    },
+    "file:src/orders/dto/create-order.dto.ts": {
+      "name": "create-order.dto.ts",
+      "type": "file",
+      "summary": "Validation DTOs for order creation: an order line (productId plus quantity) and a wrapper requiring at least one item."
+    },
+    "file:src/orders/orders.controller.ts": {
+      "name": "orders.controller.ts",
+      "type": "file",
+      "summary": "Authenticated orders REST controller exposing order creation, list-my-orders, and get-one-order endpoints scoped to the current user."
+    },
+    "file:src/orders/orders.module.ts": {
+      "name": "orders.module.ts",
+      "type": "file",
+      "summary": "NestJS module wiring the orders controller and service, importing AuthModule for guard dependencies."
+    },
+    "file:src/orders/orders.service.spec.ts": {
+      "name": "orders.service.spec.ts",
+      "type": "file",
+      "summary": "Jest unit test suite for OrdersService covering order creation, stock validation, and order queries with a mocked PrismaService."
+    },
+    "file:src/orders/orders.service.ts": {
+      "name": "orders.service.ts",
+      "type": "file",
+      "summary": "Order business logic that validates product stock, atomically decrements stock and creates the order in a Prisma transaction, plus user-scoped order queries."
+    },
+    "document:AGENTS.md": {
+      "name": "AGENTS.md",
+      "type": "document",
+      "summary": "Agent working agreement for the NestJS backend covering project layout, entrypoint wiring, module registration, API contracts for auth, products, cart and orders, Prisma conventions, and npm commands."
+    },
+    "document:BACKEND_RULES.md": {
+      "name": "BACKEND_RULES.md",
+      "type": "document",
+      "summary": "Strict backend specification detailing server configuration, success and error response envelopes, the JWT auth pipeline, entity schemas, and per-route guards with validation constraints for auth, products, cart, and orders."
+    },
+    "document:README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Monorepo overview for the ApexStore platform covering features, tech stack, repository layout, environment setup, quick start, full API reference, data models, frontend overview, testing, and deployment notes."
+    },
+    "config:nest-cli.json": {
+      "name": "nest-cli.json",
+      "type": "config",
+      "summary": "NestJS CLI configuration setting src as the source root with the schematics collection and a deleteOutDir compiler option."
+    },
+    "config:package.json": {
+      "name": "package.json",
+      "type": "config",
+      "summary": "Root npm manifest for the NestJS v11 backend declaring runtime dependencies for JWT auth, Prisma, and validation, plus dev tooling, npm scripts, and embedded Jest unit-test configuration."
+    },
+    "config:skills-lock.json": {
+      "name": "skills-lock.json",
+      "type": "config",
+      "summary": "Lockfile pinning nine Prisma skill snapshots from prisma/skills with source paths and content hashes for reproducible agent guidance."
+    },
+    "config:tsconfig.build.json": {
+      "name": "tsconfig.build.json",
+      "type": "config",
+      "summary": "Production build TypeScript configuration extending the base config while excluding node_modules, test, dist, frontend, and spec files."
+    },
+    "config:tsconfig.json": {
+      "name": "tsconfig.json",
+      "type": "config",
+      "summary": "Base TypeScript compiler configuration using nodenext modules, ES2023 target, decorator metadata, and relaxed strictness with strictNullChecks enabled."
+    },
+    "document:frontend/AGENTS.md": {
+      "name": "AGENTS.md",
+      "type": "document",
+      "summary": "Authoritative agent guide for the Next.js 16 storefront covering stack versions, npm commands, Turbopack and path-alias wiring, locale-scoped App Router layout, i18n resolution, API auth wiring, and provider nesting."
+    },
+    "document:frontend/CLAUDE.md": {
+      "name": "CLAUDE.md",
+      "type": "document",
+      "summary": "Single-line pointer file that delegates all frontend agent guidance to AGENTS.md."
+    },
+    "document:frontend/README.md": {
+      "name": "README.md",
+      "type": "document",
+      "summary": "Default create-next-app readme with dev-server getting-started steps, Next.js learning links, and Vercel deployment pointers."
+    },
+    "config:frontend/package.json": {
+      "name": "package.json",
+      "type": "config",
+      "summary": "Npm manifest for the frontend workspace pinning Next.js 16.3.0 with React 19 and Tailwind CSS v4, plus the dev, build, start, and lint scripts."
+    },
+    "config:frontend/tsconfig.json": {
+      "name": "tsconfig.json",
+      "type": "config",
+      "summary": "Strict TypeScript configuration for the Next.js frontend using bundler module resolution, the Next.js plugin, the @/* path alias to src/*, and no-emit type checking."
+    },
+    "config:graphify-out/.graphify_analysis.json": {
+      "name": ".graphify_analysis.json",
+      "type": "config",
+      "summary": "Generated graphify community analysis cache grouping detected code symbols into communities with cohesion, god-node, surprise, and question annotations."
+    },
+    "config:graphify-out/.graphify_labels.json": {
+      "name": ".graphify_labels.json",
+      "type": "config",
+      "summary": "Generated lookup table mapping numeric community ids to human-readable labels such as controllers, services, and config files."
+    },
+    "document:graphify-out/GRAPH_REPORT.md": {
+      "name": "GRAPH_REPORT.md",
+      "type": "document",
+      "summary": "Generated human-readable graph report summarizing 576 nodes, 916 edges, and 44 communities with navigation hubs, god nodes, import cycles, and knowledge gaps."
+    },
+    "file:graphify-out/graph.html": {
+      "name": "graph.html",
+      "type": "file",
+      "summary": "Generated interactive graph viewer page rendering the knowledge graph with vis-network, search, info panel, legend, and dark themed layout."
+    },
+    "config:graphify-out/graph.json": {
+      "name": "graph.json",
+      "type": "config",
+      "summary": "Generated serialized knowledge graph artifact holding the full node, link, and hyperedge dataset consumed by the HTML viewer and analysis files."
+    },
+    "config:graphify-out/manifest.json": {
+      "name": "manifest.json",
+      "type": "config",
+      "summary": "Generated incremental-build manifest recording per-file mtime plus AST and semantic hashes used to detect stale graph output."
+    },
+    "config:graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json": {
+      "name": "1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json",
+      "type": "config",
+      "summary": "Empty AST cache shard emitted by the graphify tool."
+    },
+    "config:graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json": {
+      "name": "52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json",
+      "type": "config",
+      "summary": "Empty AST cache shard emitted by the graphify tool."
+    },
+    "config:graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json": {
+      "name": "97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json",
+      "type": "config",
+      "summary": "Empty AST cache shard emitted by the graphify tool."
+    },
+    "config:graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json": {
+      "name": "a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json",
+      "type": "config",
+      "summary": "Empty AST cache shard emitted by the graphify tool."
+    },
+    "config:graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json": {
+      "name": "e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json",
+      "type": "config",
+      "summary": "Empty AST cache shard emitted by the graphify tool."
+    },
+    "config:graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json": {
+      "name": "f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json",
+      "type": "config",
+      "summary": "Empty AST cache shard emitted by the graphify tool."
+    },
+    "config:.ua/config.json": {
+      "name": "config.json",
+      "type": "config",
+      "summary": "Analysis tool setting fixing the generated graph language to English."
+    },
+    "file:eslint.config.mjs": {
+      "name": "eslint.config.mjs",
+      "type": "file",
+      "summary": "Root ESLint flat config combining recommended, type-checked TypeScript, and Prettier rules with Node and Jest globals."
+    },
+    "file:frontend/eslint.config.mjs": {
+      "name": "eslint.config.mjs",
+      "type": "file",
+      "summary": "Frontend ESLint flat config extending the Next.js core-web-vitals and TypeScript presets with build-output ignores."
+    },
+    "file:frontend/next.config.ts": {
+      "name": "next.config.ts",
+      "type": "file",
+      "summary": "Next.js configuration pointing the Turbopack root at the monorepo root above the frontend directory."
+    },
+    "file:frontend/postcss.config.mjs": {
+      "name": "postcss.config.mjs",
+      "type": "file",
+      "summary": "PostCSS configuration registering only the Tailwind CSS v4 plugin, with no separate Tailwind config file."
+    },
+    "config:frontend/src/app/[lang]/dictionaries/en.json": {
+      "name": "en.json",
+      "type": "config",
+      "summary": "English UI strings for navigation, home, products, cart, orders, login, register, admin, and language switcher sections."
+    },
+    "config:frontend/src/app/[lang]/dictionaries/fr.json": {
+      "name": "fr.json",
+      "type": "config",
+      "summary": "French UI strings mirroring the English dictionary across navigation, products, cart, orders, auth, and admin sections."
+    },
+    "file:frontend/src/app/globals.css": {
+      "name": "globals.css",
+      "type": "file",
+      "summary": "Dark glassmorphism storefront stylesheet defining theme variables, glass panels, buttons, inputs, badges, and a fade-in animation."
+    },
+    "file:frontend/src/proxy.ts": {
+      "name": "proxy.ts",
+      "type": "file",
+      "summary": "Locale-aware request proxy that lets locale-prefixed paths through and redirects all other paths to their /en or /fr equivalent."
+    },
+    "file:graphify-out/.graphify_labels.json.sig": {
+      "name": ".graphify_labels.json.sig",
+      "type": "file",
+      "summary": "Signature artifact of a previous graph scan with no project source content."
+    },
+    "file:graphify-out/.graphify_root": {
+      "name": ".graphify_root",
+      "type": "file",
+      "summary": "Root marker artifact of a previous graph scan with no project source content."
+    },
+    "config:graphify-out/cache/stat-index.json": {
+      "name": "stat-index.json",
+      "type": "config",
+      "summary": "Generated file-statistics cache from a previous graph scan, kept for context only."
+    },
+    "config:postman/collection.json": {
+      "name": "collection.json",
+      "type": "config",
+      "summary": "Postman request collection for the NestJS API covering auth, users, products, and orders, parameterized with base_url and token variables."
+    },
+    "config:postman/environment.json": {
+      "name": "environment.json",
+      "type": "config",
+      "summary": "Postman environment defining the base_url variable pointing at localhost:3002 plus empty token and api_key variables."
+    },
+    "file:prisma.config.ts": {
+      "name": "prisma.config.ts",
+      "type": "file",
+      "summary": "Prisma CLI configuration wiring the schema path, the migrations directory, and the DATABASE_URL datasource."
+    },
+    "config:prisma/migrations/migration_lock.toml": {
+      "name": "migration_lock.toml",
+      "type": "config",
+      "summary": "Prisma migration provider lock pinning the migrations to postgresql."
+    },
+    "schema:prisma/schema.prisma": {
+      "name": "schema.prisma",
+      "type": "schema",
+      "summary": "Prisma Postgres schema defining the Role enum and the User, Cart, CartItem, Product, Order, and OrderItem models with their relations."
+    },
+    "file:src/users/entities/user.entity.ts": {
+      "name": "user.entity.ts",
+      "type": "file",
+      "summary": "Placeholder User entity class with no fields or methods yet."
+    },
+    "file:test/fixtures/test-data.ts": {
+      "name": "test-data.ts",
+      "type": "file",
+      "summary": "Shared test fixtures for a regular user, an admin, two products, and invalid-input edge cases."
+    },
+    "file:test/helpers/auth.helper.ts": {
+      "name": "auth.helper.ts",
+      "type": "file",
+      "summary": "Supertest helpers that register users, log in for JWT tokens, and combine both steps for API test setup."
+    },
+    "config:test/jest-e2e.json": {
+      "name": "jest-e2e.json",
+      "type": "config",
+      "summary": "Jest configuration running end-to-end, security, and edge-case specs through ts-jest."
+    },
+    "config:test/jest-integration.json": {
+      "name": "jest-integration.json",
+      "type": "config",
+      "summary": "Jest configuration running integration-spec suites through ts-jest."
+    },
+    "table:prisma/migrations/20260724110919_init/migration.sql:User": {
+      "name": "User",
+      "type": "table",
+      "summary": "Initial migration creating the User account table with unique email, optional name, password, and USER/ADMIN role."
+    },
+    "table:prisma/migrations/20260724110919_init/migration.sql:Product": {
+      "name": "Product",
+      "type": "table",
+      "summary": "Initial migration creating the Product catalog table with name, float price, and integer stock."
+    },
+    "table:prisma/migrations/20260729093153_add_orders/migration.sql:Order": {
+      "name": "Order",
+      "type": "table",
+      "summary": "Orders migration creating the Order header table linking each purchase to its buyer and creation timestamp."
+    },
+    "table:prisma/migrations/20260729093153_add_orders/migration.sql:OrderItem": {
+      "name": "OrderItem",
+      "type": "table",
+      "summary": "Orders migration creating the OrderItem line-item table linking orders to products with quantities."
+    },
+    "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:Cart": {
+      "name": "Cart",
+      "type": "table",
+      "summary": "Cart migration creating the one-per-user Cart header table with a unique user reference."
+    },
+    "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:CartItem": {
+      "name": "CartItem",
+      "type": "table",
+      "summary": "Cart migration creating the CartItem line-item table with cascade delete from its parent cart."
+    }
+  },
+  "totalNodes": 143,
+  "totalEdges": 237
+}

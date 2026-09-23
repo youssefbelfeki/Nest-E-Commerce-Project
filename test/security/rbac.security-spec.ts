@@ -42,12 +42,22 @@ describe('RBAC Security', () => {
       .compile();
 
     app = moduleFixture.createNestApplication();
-    app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
+    app.useGlobalPipes(
+      new ValidationPipe({ whitelist: true, transform: true }),
+    );
     await app.init();
 
     jwtService = moduleFixture.get<JwtService>(JwtService);
-    adminToken = await jwtService.signAsync({ sub: 1, email: 'admin@test.com', role: 'ADMIN' });
-    userToken = await jwtService.signAsync({ sub: 2, email: 'user@test.com', role: 'USER' });
+    adminToken = await jwtService.signAsync({
+      sub: 1,
+      email: 'admin@test.com',
+      role: 'ADMIN',
+    });
+    userToken = await jwtService.signAsync({
+      sub: 2,
+      email: 'user@test.com',
+      role: 'USER',
+    });
   });
 
   afterAll(async () => {
@@ -72,7 +82,10 @@ describe('RBAC Security', () => {
 
     it('should allow admin to update product', async () => {
       prisma.product.findUnique.mockResolvedValue(mockProduct);
-      prisma.product.update.mockResolvedValue({ ...mockProduct, name: 'Updated' });
+      prisma.product.update.mockResolvedValue({
+        ...mockProduct,
+        name: 'Updated',
+      });
 
       await request(app.getHttpServer())
         .patch('/products/1')
@@ -145,15 +158,11 @@ describe('RBAC Security', () => {
         .send({ name: 'Updated' })
         .expect(401);
 
-      await request(app.getHttpServer())
-        .delete('/products/1')
-        .expect(401);
+      await request(app.getHttpServer()).delete('/products/1').expect(401);
     });
 
     it('should deny product reads without token', async () => {
-      await request(app.getHttpServer())
-        .get('/products')
-        .expect(401);
+      await request(app.getHttpServer()).get('/products').expect(401);
     });
   });
 });

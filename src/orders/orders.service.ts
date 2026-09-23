@@ -1,4 +1,8 @@
-import { Injectable, BadRequestException, NotFoundException } from '@nestjs/common';
+import {
+  Injectable,
+  BadRequestException,
+  NotFoundException,
+} from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { CreateOrderDto } from './dto/create-order.dto';
 
@@ -7,17 +11,19 @@ export class OrdersService {
   constructor(private readonly prisma: PrismaService) {}
 
   async create(userId: number, dto: CreateOrderDto) {
-    const productIds = dto.items.map(item => item.productId);
+    const productIds = dto.items.map((item) => item.productId);
     const products = await this.prisma.product.findMany({
       where: { id: { in: productIds } },
     });
 
-    const productMap = new Map(products.map(p => [p.id, p]));
+    const productMap = new Map(products.map((p) => [p.id, p]));
 
     for (const item of dto.items) {
       const product = productMap.get(item.productId);
       if (!product) {
-        throw new BadRequestException(`Product with ID ${item.productId} not found`);
+        throw new BadRequestException(
+          `Product with ID ${item.productId} not found`,
+        );
       }
       if (product.stock < item.quantity) {
         throw new BadRequestException(
@@ -38,7 +44,7 @@ export class OrdersService {
         data: {
           userId,
           items: {
-            create: dto.items.map(item => ({
+            create: dto.items.map((item) => ({
               productId: item.productId,
               quantity: item.quantity,
             })),

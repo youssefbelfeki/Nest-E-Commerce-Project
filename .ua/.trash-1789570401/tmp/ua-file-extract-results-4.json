@@ -1,0 +1,437 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 12,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 12,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 12,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/auth/guards/jwt-auth.guard.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 5,
+      "nonEmptyLines": 4,
+      "classes": [
+        {
+          "name": "JwtAuthGuard",
+          "startLine": 5,
+          "endLine": 5,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "JwtAuthGuard",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/users/dto/create-user.dto.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 71,
+      "nonEmptyLines": 61,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/users/dto/create-user.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 17,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "CreateUserDto",
+          "startLine": 3,
+          "endLine": 17,
+          "methods": [],
+          "properties": [
+            "name",
+            "email",
+            "password"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "CreateUserDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/users/dto/update-user.dto.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 51,
+      "nonEmptyLines": 44,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/users/dto/update-user.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 4,
+      "nonEmptyLines": 3,
+      "classes": [
+        {
+          "name": "UpdateUserDto",
+          "startLine": 4,
+          "endLine": 4,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UpdateUserDto",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/users/logger/logger.middleware.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 54,
+      "nonEmptyLines": 40,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/users/logger/logger.middleware.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "LoggerMiddleware",
+          "startLine": 5,
+          "endLine": 10,
+          "methods": [
+            "use"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoggerMiddleware",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "use",
+          "callee": "console.log",
+          "lineNumber": 7
+        },
+        {
+          "caller": "use",
+          "callee": "next",
+          "lineNumber": 8
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/users/users.controller.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 73,
+      "nonEmptyLines": 64,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/users/users.controller.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 54,
+      "classes": [
+        {
+          "name": "UsersController",
+          "startLine": 25,
+          "endLine": 60,
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne",
+            "update",
+            "remove"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UsersController",
+          "line": 22,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "Body",
+          "lineNumber": 30
+        },
+        {
+          "caller": "create",
+          "callee": "this.usersService.create",
+          "lineNumber": 31
+        },
+        {
+          "caller": "findAll",
+          "callee": "this.usersService.findAll",
+          "lineNumber": 37
+        },
+        {
+          "caller": "findOne",
+          "callee": "Param",
+          "lineNumber": 42
+        },
+        {
+          "caller": "findOne",
+          "callee": "this.usersService.findOne",
+          "lineNumber": 43
+        },
+        {
+          "caller": "update",
+          "callee": "Param",
+          "lineNumber": 49
+        },
+        {
+          "caller": "update",
+          "callee": "Body",
+          "lineNumber": 50
+        },
+        {
+          "caller": "update",
+          "callee": "this.usersService.update",
+          "lineNumber": 52
+        },
+        {
+          "caller": "remove",
+          "callee": "Param",
+          "lineNumber": 57
+        },
+        {
+          "caller": "remove",
+          "callee": "this.usersService.remove",
+          "lineNumber": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 7,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/users/users.module.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "UsersModule",
+          "startLine": 10,
+          "endLine": 16,
+          "methods": [
+            "configure"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UsersModule",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "configure",
+          "callee": "consumer\r\n    .apply(LoggerMiddleware)\r\n    .forRoutes",
+          "lineNumber": 12
+        },
+        {
+          "caller": "configure",
+          "callee": "consumer\r\n    .apply",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/users/users.service.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 201,
+      "nonEmptyLines": 162,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/users/users.service.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 104,
+      "nonEmptyLines": 84,
+      "classes": [
+        {
+          "name": "UsersService",
+          "startLine": 8,
+          "endLine": 104,
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne",
+            "update",
+            "remove"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "UsersService",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "this.prisma.user.findUnique",
+          "lineNumber": 12
+        },
+        {
+          "caller": "create",
+          "callee": "bcrypt.hash",
+          "lineNumber": 20
+        },
+        {
+          "caller": "create",
+          "callee": "this.prisma.user.create",
+          "lineNumber": 22
+        },
+        {
+          "caller": "findAll",
+          "callee": "this.prisma.user.findMany",
+          "lineNumber": 38
+        },
+        {
+          "caller": "findOne",
+          "callee": "this.prisma.user.findUnique",
+          "lineNumber": 50
+        },
+        {
+          "caller": "update",
+          "callee": "this.findOne",
+          "lineNumber": 69
+        },
+        {
+          "caller": "update",
+          "callee": "bcrypt.hash",
+          "lineNumber": 74
+        },
+        {
+          "caller": "update",
+          "callee": "this.prisma.user.update",
+          "lineNumber": 77
+        },
+        {
+          "caller": "remove",
+          "callee": "this.findOne",
+          "lineNumber": 91
+        },
+        {
+          "caller": "remove",
+          "callee": "this.prisma.user.delete",
+          "lineNumber": 93
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

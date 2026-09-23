@@ -1,0 +1,305 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 9,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/app.controller.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 18,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/app.controller.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 12,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "AppController",
+          "startLine": 5,
+          "endLine": 12,
+          "methods": [
+            "constructor",
+            "getHello"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AppController",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getHello",
+          "callee": "this.appService.getHello",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/app.module.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 15,
+      "classes": [
+        {
+          "name": "AppModule",
+          "startLine": 16,
+          "endLine": 16,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AppModule",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 8,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/app.service.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 8,
+      "nonEmptyLines": 7,
+      "classes": [
+        {
+          "name": "AppService",
+          "startLine": 4,
+          "endLine": 8,
+          "methods": [
+            "getHello"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AppService",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/logger/logger.middleware.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "LoggerMiddleware",
+          "startLine": 5,
+          "endLine": 18,
+          "methods": [],
+          "properties": [
+            "logger",
+            "use"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoggerMiddleware",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/main.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 26,
+      "functions": [
+        {
+          "name": "bootstrap",
+          "startLine": 8,
+          "endLine": 26,
+          "params": []
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "bootstrap",
+          "callee": "NestFactory.create",
+          "lineNumber": 9
+        },
+        {
+          "caller": "bootstrap",
+          "callee": "app.enableCors",
+          "lineNumber": 10
+        },
+        {
+          "caller": "bootstrap",
+          "callee": "process.env.CORS_ORIGIN.split",
+          "lineNumber": 12
+        },
+        {
+          "caller": "bootstrap",
+          "callee": "app.use",
+          "lineNumber": 16
+        },
+        {
+          "caller": "bootstrap",
+          "callee": "app.useGlobalPipes",
+          "lineNumber": 17
+        },
+        {
+          "caller": "bootstrap",
+          "callee": "app.useGlobalInterceptors",
+          "lineNumber": 23
+        },
+        {
+          "caller": "bootstrap",
+          "callee": "app.listen",
+          "lineNumber": 24
+        },
+        {
+          "caller": "bootstrap",
+          "callee": "console.log",
+          "lineNumber": 25
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 0,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/users/transform/transform.interceptor.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 94,
+      "nonEmptyLines": 81,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/users/transform/transform.interceptor.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 14,
+      "classes": [
+        {
+          "name": "TransformInterceptor",
+          "startLine": 5,
+          "endLine": 16,
+          "methods": [
+            "intercept"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "TransformInterceptor",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "intercept",
+          "callee": "next.handle().pipe",
+          "lineNumber": 8
+        },
+        {
+          "caller": "intercept",
+          "callee": "next.handle",
+          "lineNumber": 8
+        },
+        {
+          "caller": "intercept",
+          "callee": "map",
+          "lineNumber": 8
+        },
+        {
+          "caller": "intercept",
+          "callee": "new Date().toISOString",
+          "lineNumber": 12
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "test/app.e2e-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 39,
+      "nonEmptyLines": 31,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

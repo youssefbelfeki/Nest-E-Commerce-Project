@@ -1,0 +1,405 @@
+{
+  "scriptCompleted": true,
+  "stats": {
+    "filesScanned": 140,
+    "filesWithImports": 71,
+    "totalEdges": 183
+  },
+  "failures": [],
+  "importMap": {
+    ".ua/config.json": [],
+    "AGENTS.md": [],
+    "BACKEND_RULES.md": [],
+    "README.md": [],
+    "eslint.config.mjs": [],
+    "frontend/AGENTS.md": [],
+    "frontend/CLAUDE.md": [],
+    "frontend/README.md": [],
+    "frontend/eslint.config.mjs": [],
+    "frontend/next.config.ts": [],
+    "frontend/package.json": [],
+    "frontend/postcss.config.mjs": [],
+    "frontend/src/app/[lang]/admin/products/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/app/[lang]/cart/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/app/[lang]/dictionaries.ts": [
+      "frontend/src/app/[lang]/dictionaries/en.json",
+      "frontend/src/app/[lang]/dictionaries/fr.json"
+    ],
+    "frontend/src/app/[lang]/dictionaries/en.json": [],
+    "frontend/src/app/[lang]/dictionaries/fr.json": [],
+    "frontend/src/app/[lang]/layout.tsx": [
+      "frontend/src/app/[lang]/dictionaries.ts",
+      "frontend/src/app/globals.css",
+      "frontend/src/components/Navbar.tsx",
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/i18n.ts"
+    ],
+    "frontend/src/app/[lang]/login/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx"
+    ],
+    "frontend/src/app/[lang]/orders/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/app/[lang]/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx"
+    ],
+    "frontend/src/app/[lang]/products/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/app/[lang]/register/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx"
+    ],
+    "frontend/src/app/globals.css": [],
+    "frontend/src/components/LanguageSwitcher.tsx": [
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/i18n.ts"
+    ],
+    "frontend/src/components/Navbar.tsx": [
+      "frontend/src/components/LanguageSwitcher.tsx",
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx"
+    ],
+    "frontend/src/context/AuthContext.tsx": [
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/context/I18nContext.tsx": [
+      "frontend/src/app/[lang]/dictionaries/en.json",
+      "frontend/src/lib/i18n.ts"
+    ],
+    "frontend/src/lib/api.ts": [
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/lib/i18n.ts": [],
+    "frontend/src/proxy.ts": [],
+    "frontend/src/types/index.ts": [],
+    "frontend/tsconfig.json": [],
+    "graphify-out/.graphify_analysis.json": [],
+    "graphify-out/.graphify_labels.json": [],
+    "graphify-out/.graphify_labels.json.sig": [],
+    "graphify-out/.graphify_root": [],
+    "graphify-out/GRAPH_REPORT.md": [],
+    "graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json": [],
+    "graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json": [],
+    "graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json": [],
+    "graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json": [],
+    "graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json": [],
+    "graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json": [],
+    "graphify-out/cache/stat-index.json": [],
+    "graphify-out/graph.html": [],
+    "graphify-out/graph.json": [],
+    "graphify-out/manifest.json": [],
+    "nest-cli.json": [],
+    "package.json": [],
+    "postman/collection.json": [],
+    "postman/environment.json": [],
+    "prisma.config.ts": [],
+    "prisma/migrations/20260724110919_init/migration.sql": [],
+    "prisma/migrations/20260729093153_add_orders/migration.sql": [],
+    "prisma/migrations/20260730185335_add_cart_models/migration.sql": [],
+    "prisma/migrations/migration_lock.toml": [],
+    "prisma/schema.prisma": [],
+    "skills-lock.json": [],
+    "src/app.controller.spec.ts": [
+      "src/app.controller.ts",
+      "src/app.service.ts"
+    ],
+    "src/app.controller.ts": [
+      "src/app.service.ts"
+    ],
+    "src/app.module.ts": [
+      "src/app.controller.ts",
+      "src/app.service.ts",
+      "src/auth/auth.module.ts",
+      "src/cart/cart.module.ts",
+      "src/orders/orders.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/products/products.module.ts",
+      "src/users/users.module.ts"
+    ],
+    "src/app.service.ts": [],
+    "src/auth/auth.controller.spec.ts": [
+      "src/auth/auth.controller.ts",
+      "src/auth/auth.service.ts"
+    ],
+    "src/auth/auth.controller.ts": [
+      "src/auth/auth.service.ts",
+      "src/auth/dto/login.dto.ts",
+      "src/auth/dto/register.dto.ts"
+    ],
+    "src/auth/auth.module.ts": [
+      "src/auth/auth.controller.ts",
+      "src/auth/auth.service.ts",
+      "src/auth/jwt.strategy.ts"
+    ],
+    "src/auth/auth.service.spec.ts": [
+      "src/auth/auth.service.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/auth/auth.service.ts": [
+      "src/auth/dto/login.dto.ts",
+      "src/auth/dto/register.dto.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/auth/decorators/roles.decorator.ts": [],
+    "src/auth/decorators/user.decorator.ts": [],
+    "src/auth/dto/login.dto.spec.ts": [
+      "src/auth/dto/login.dto.ts"
+    ],
+    "src/auth/dto/login.dto.ts": [],
+    "src/auth/dto/register.dto.spec.ts": [
+      "src/auth/dto/register.dto.ts"
+    ],
+    "src/auth/dto/register.dto.ts": [],
+    "src/auth/guards/jwt-auth.guard.ts": [],
+    "src/auth/guards/roles.guard.spec.ts": [
+      "src/auth/decorators/roles.decorator.ts",
+      "src/auth/guards/roles.guard.ts"
+    ],
+    "src/auth/guards/roles.guard.ts": [
+      "src/auth/decorators/roles.decorator.ts"
+    ],
+    "src/auth/jwt.strategy.spec.ts": [
+      "src/auth/jwt.strategy.ts"
+    ],
+    "src/auth/jwt.strategy.ts": [],
+    "src/cart/cart.controller.spec.ts": [
+      "src/cart/cart.controller.ts",
+      "src/cart/cart.service.ts",
+      "src/cart/dto/add-to-cart.dto.ts",
+      "src/cart/dto/update-cart-item.dto.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/cart/cart.controller.ts": [
+      "src/auth/decorators/user.decorator.ts",
+      "src/cart/cart.service.ts",
+      "src/cart/dto/add-to-cart.dto.ts",
+      "src/cart/dto/update-cart-item.dto.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/cart/cart.module.ts": [
+      "src/auth/auth.module.ts",
+      "src/cart/cart.controller.ts",
+      "src/cart/cart.service.ts"
+    ],
+    "src/cart/cart.service.spec.ts": [
+      "src/cart/cart.service.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/cart/cart.service.ts": [
+      "src/cart/dto/add-to-cart.dto.ts",
+      "src/cart/dto/update-cart-item.dto.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/cart/dto/add-to-cart.dto.ts": [],
+    "src/cart/dto/update-cart-item.dto.ts": [],
+    "src/logger/logger.middleware.ts": [],
+    "src/main.ts": [
+      "src/app.module.ts",
+      "src/logger/logger.middleware.ts",
+      "src/users/transform/transform.interceptor.ts"
+    ],
+    "src/orders/dto/create-order.dto.ts": [],
+    "src/orders/orders.controller.ts": [
+      "src/auth/decorators/user.decorator.ts",
+      "src/orders/dto/create-order.dto.ts",
+      "src/orders/orders.service.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/orders/orders.module.ts": [
+      "src/auth/auth.module.ts",
+      "src/orders/orders.controller.ts",
+      "src/orders/orders.service.ts"
+    ],
+    "src/orders/orders.service.spec.ts": [
+      "src/orders/orders.service.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/orders/orders.service.ts": [
+      "src/orders/dto/create-order.dto.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/prisma/prisma.module.ts": [
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/prisma/prisma.service.spec.ts": [
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/prisma/prisma.service.ts": [],
+    "src/products/dto/create-product.dto.spec.ts": [
+      "src/products/dto/create-product.dto.ts"
+    ],
+    "src/products/dto/create-product.dto.ts": [],
+    "src/products/dto/update-product.dto.spec.ts": [
+      "src/products/dto/update-product.dto.ts"
+    ],
+    "src/products/dto/update-product.dto.ts": [
+      "src/products/dto/create-product.dto.ts"
+    ],
+    "src/products/products.controller.spec.ts": [
+      "src/auth/guards/roles.guard.ts",
+      "src/products/products.controller.ts",
+      "src/products/products.service.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/products/products.controller.ts": [
+      "src/auth/decorators/roles.decorator.ts",
+      "src/auth/guards/roles.guard.ts",
+      "src/products/dto/create-product.dto.ts",
+      "src/products/dto/update-product.dto.ts",
+      "src/products/products.service.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/products/products.module.ts": [
+      "src/auth/auth.module.ts",
+      "src/products/products.controller.ts",
+      "src/products/products.service.ts"
+    ],
+    "src/products/products.service.spec.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/products/products.service.ts"
+    ],
+    "src/products/products.service.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/products/dto/create-product.dto.ts",
+      "src/products/dto/update-product.dto.ts"
+    ],
+    "src/users/auth/auth.guard.spec.ts": [
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/users/auth/auth.guard.ts": [],
+    "src/users/dto/create-user.dto.spec.ts": [
+      "src/users/dto/create-user.dto.ts"
+    ],
+    "src/users/dto/create-user.dto.ts": [],
+    "src/users/dto/update-user.dto.spec.ts": [
+      "src/users/dto/update-user.dto.ts"
+    ],
+    "src/users/dto/update-user.dto.ts": [
+      "src/users/dto/create-user.dto.ts"
+    ],
+    "src/users/entities/user.entity.ts": [],
+    "src/users/logger/logger.middleware.spec.ts": [
+      "src/users/logger/logger.middleware.ts"
+    ],
+    "src/users/logger/logger.middleware.ts": [],
+    "src/users/transform/transform.interceptor.spec.ts": [
+      "src/users/transform/transform.interceptor.ts"
+    ],
+    "src/users/transform/transform.interceptor.ts": [],
+    "src/users/users.controller.spec.ts": [
+      "src/users/users.controller.ts",
+      "src/users/users.service.ts"
+    ],
+    "src/users/users.controller.ts": [
+      "src/auth/decorators/roles.decorator.ts",
+      "src/auth/guards/jwt-auth.guard.ts",
+      "src/auth/guards/roles.guard.ts",
+      "src/users/dto/create-user.dto.ts",
+      "src/users/dto/update-user.dto.ts",
+      "src/users/transform/transform.interceptor.ts",
+      "src/users/users.service.ts"
+    ],
+    "src/users/users.module.ts": [
+      "src/users/logger/logger.middleware.ts",
+      "src/users/users.controller.ts",
+      "src/users/users.service.ts"
+    ],
+    "src/users/users.service.spec.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/users/users.service.ts"
+    ],
+    "src/users/users.service.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/users/dto/create-user.dto.ts",
+      "src/users/dto/update-user.dto.ts"
+    ],
+    "test/app.e2e-spec.ts": [
+      "src/app.module.ts"
+    ],
+    "test/e2e/auth-flow.e2e-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/e2e/auth.e2e-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/e2e/products.e2e-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/edge-cases.spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/factories/product.factory.ts": [
+      "src/prisma/prisma.service.ts"
+    ],
+    "test/factories/user.factory.ts": [
+      "src/prisma/prisma.service.ts"
+    ],
+    "test/fixtures/test-data.ts": [],
+    "test/helpers/auth.helper.ts": [],
+    "test/helpers/create-app-mocked.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/integration/auth.integration-spec.ts": [
+      "src/auth/auth.service.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "test/integration/products.integration-spec.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/products/products.service.ts"
+    ],
+    "test/integration/roles.integration-spec.ts": [
+      "src/auth/guards/roles.guard.ts"
+    ],
+    "test/jest-e2e.json": [],
+    "test/jest-integration.json": [],
+    "test/security/auth.security-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/security/rbac.security-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "tsconfig.build.json": [],
+    "tsconfig.json": []
+  }
+}

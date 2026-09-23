@@ -1,0 +1,153 @@
+[
+  {
+    "description": "ApexStore is a full-stack e-commerce monorepo pairing a NestJS v11 REST API (PostgreSQL plus Prisma, JWT auth with USER and ADMIN roles, per-user cart, transactional orders) with a Next.js 16 storefront (App Router, React 19, Tailwind CSS v4, EN/FR i18n). This overview covers features, tech stack, repository layout, setup, the full API reference, and data models, giving you a roadmap for every stop ahead.",
+    "nodeIds": [
+      "document:README.md"
+    ],
+    "order": 1,
+    "title": "Project Overview"
+  },
+  {
+    "description": "The server boots in main.ts, which configures CORS for the storefront origin, registers the global request logger, enables the validating ValidationPipe, applies the response envelope interceptor, and listens on port 3002. AppModule composes every feature module (auth, users, products, cart, orders, Prisma) into one dependency graph, which is why this file has the widest fan-out in the backend. The logger records method, URL, and status while the interceptor wraps every success payload as { status: 'success', data, timestamp }, a contract the frontend relies on.",
+    "nodeIds": [
+      "file:src/main.ts",
+      "file:src/app.module.ts",
+      "file:src/logger/logger.middleware.ts",
+      "file:src/users/transform/transform.interceptor.ts"
+    ],
+    "order": 2,
+    "title": "Application Bootstrap"
+  },
+  {
+    "description": "The Prisma schema is the foundation everything else builds on: a Role enum plus User, Product, Cart, CartItem, Order, and OrderItem models with their relations. The User and Product tables created by the initial migration anchor identity and the sellable catalog, while later migrations add carts and orders on top. PrismaService, the most depended-upon file in the backend with a fan-in of 23, manages the connection pool and client lifecycle that every domain service uses to reach these tables.",
+    "languageLesson": "Prisma models declare relations (one-to-one User-Cart, unique cart/product pairs, cascade delete from Cart to CartItem) that generate a type-safe client. Migrations evolve the SQL schema incrementally, and the generated client turns each table into query methods the services call.",
+    "nodeIds": [
+      "schema:prisma/schema.prisma",
+      "table:prisma/migrations/20260724110919_init/migration.sql:User",
+      "table:prisma/migrations/20260724110919_init/migration.sql:Product"
+    ],
+    "order": 3,
+    "title": "Database Model"
+  },
+  {
+    "description": "Building on the User model from Step 3, the auth endpoints expose public POST /auth/register and POST /auth/login, returning 409 on duplicate email and 401 on bad credentials. AuthService hashes passwords with bcrypt and issues a JWT access token carrying { sub, email, role }, which the Passport JWT strategy later turns back into a request user. The login and register DTOs declare the email, name, and password validation rules enforced by the global ValidationPipe from Step 2.",
+    "nodeIds": [
+      "file:src/auth/auth.controller.ts",
+      "file:src/auth/auth.service.ts",
+      "file:src/auth/jwt.strategy.ts",
+      "file:src/auth/dto/login.dto.ts",
+      "file:src/auth/dto/register.dto.ts"
+    ],
+    "order": 4,
+    "title": "Authentication Flow"
+  },
+  {
+    "description": "Every protected route from here on passes through AuthGuard, which extracts the Bearer token, verifies it, and attaches the user id, email, and role to the request. RolesGuard then reads route metadata set by the @Roles decorator (keyed by ROLES_KEY) and rejects callers whose role is not permitted, while the @User decorator extracts the authenticated user inside handlers. This guard-plus-decorator pattern is how admin-only writes are enforced across products and users without repeating authorization logic.",
+    "languageLesson": "NestJS guards run before handlers and can deny requests with 401/403. Custom decorators store metadata via Reflector, so @Roles(Role.ADMIN) declaratively marks admin routes and RolesGuard enforces them in one place.",
+    "nodeIds": [
+      "file:src/users/auth/auth.guard.ts",
+      "file:src/auth/guards/roles.guard.ts",
+      "file:src/auth/decorators/roles.decorator.ts",
+      "file:src/auth/decorators/user.decorator.ts"
+    ],
+    "order": 5,
+    "title": "Guards and Authorization"
+  },
+  {
+    "description": "The product catalog lets any authenticated user list and fetch products, while create, update, and delete routes require the ADMIN role via the guards from Step 5. ProductsService implements CRUD through Prisma and throws NotFoundException for missing products, and the create/update DTOs enforce a non-empty name, positive price, and integer stock of zero or more. The controller, guard, and decorator form one of the most tightly coupled clusters in the graph, which is why they are taught together.",
+    "languageLesson": "class-validator decorators on DTOs (NotEmpty, Positive, Min) combine with the global ValidationPipe using whitelist and transform, so invalid payloads are rejected with 400 before any service code runs.",
+    "nodeIds": [
+      "file:src/products/products.controller.ts",
+      "file:src/products/products.service.ts",
+      "file:src/products/dto/create-product.dto.ts",
+      "file:src/products/dto/update-product.dto.ts"
+    ],
+    "order": 6,
+    "title": "Product Catalog"
+  },
+  {
+    "description": "Each user gets one cart (unique userId) holding CartItems with a unique cart/product pair, so adding the same product upserts rather than duplicates. CartService lazily creates the cart, validates requested quantities against Product stock (400 when stock is exceeded, 404 for unknown products), checks item ownership, and performs transactional upserts. The thin controller exposes fetch, add, update-item, and remove-item endpoints, with the two small DTOs carrying just productId/quantity and the new quantity respectively.",
+    "nodeIds": [
+      "file:src/cart/cart.controller.ts",
+      "file:src/cart/cart.service.ts",
+      "file:src/cart/dto/add-to-cart.dto.ts",
+      "file:src/cart/dto/update-cart-item.dto.ts",
+      "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:CartItem"
+    ],
+    "order": 7,
+    "title": "Shopping Cart"
+  },
+  {
+    "description": "Checkout converts cart lines into an Order with OrderItems, and the critical design decision is atomicity: stock validation, stock decrement, and order creation happen inside a single Prisma transaction that fails with 400 on insufficient stock. Orders are scoped to the current user, listed newest-first, and the create DTO requires at least one line with productId and minimum-1 quantity. The Order and OrderItem tables persist exactly what the service writes, with the foreign keys encoding the user, product, and line-item relationships.",
+    "languageLesson": "Wrapping dependent writes in a Prisma transaction guarantees all-or-nothing semantics: if any line lacks stock, no stock is decremented and no order row is created, preventing overselling under concurrency.",
+    "nodeIds": [
+      "file:src/orders/orders.controller.ts",
+      "file:src/orders/orders.service.ts",
+      "file:src/orders/dto/create-order.dto.ts",
+      "table:prisma/migrations/20260729093153_add_orders/migration.sql:Order",
+      "table:prisma/migrations/20260729093153_add_orders/migration.sql:OrderItem"
+    ],
+    "order": 8,
+    "title": "Transactional Orders"
+  },
+  {
+    "description": "Rounding out the backend, the admin-only users controller exposes user CRUD under /users behind the same JWT plus roles pipeline from Step 5. UsersService enforces unique emails with conflict-checked creation, hashes passwords with bcrypt, and returns password-safe records from Prisma. Its creation DTO validates name, email format, and minimum-length password, mirroring the registration contract from Step 4.",
+    "nodeIds": [
+      "file:src/users/users.controller.ts",
+      "file:src/users/users.service.ts",
+      "file:src/users/dto/create-user.dto.ts"
+    ],
+    "order": 9,
+    "title": "User Administration"
+  },
+  {
+    "description": "Crossing to the Frontend Storefront layer, the locale-scoped layout resolves the EN/FR dictionary server-side (defaulting to French) and composes AuthProvider, I18nProvider, and the Navbar. The edge proxy lets locale-prefixed paths through and redirects everything else to its /en or /fr equivalent, so every route lives under a locale segment. The dictionaries registry, locale constants with type guard, and the mirrored English strings file power the full French translation alongside.",
+    "languageLesson": "Locale-prefixed routing ([lang] segment plus middleware/proxy redirects) keeps one page tree serving multiple languages. Server components load the dictionary and pass it to a client i18n provider, so translations work without refetching on navigation.",
+    "nodeIds": [
+      "file:frontend/src/app/[lang]/layout.tsx",
+      "file:frontend/src/proxy.ts",
+      "file:frontend/src/app/[lang]/dictionaries.ts",
+      "file:frontend/src/lib/i18n.ts",
+      "config:frontend/src/app/[lang]/dictionaries/en.json"
+    ],
+    "order": 10,
+    "title": "Storefront Shell"
+  },
+  {
+    "description": "The typed API client is the single fetch boundary: it persists the JWT from Step 4 in localStorage, sends it as a Bearer header with credentials included, and unwraps the { status: 'success', data } envelope from Step 2. AuthContext restores the session from storage and exposes login, register, and logout, while I18nContext exposes the t translator and localePath route helper over the shared domain types. The sticky Navbar ties it together with locale-aware links, a cart badge, logout, and the language switcher.",
+    "nodeIds": [
+      "file:frontend/src/lib/api.ts",
+      "file:frontend/src/context/AuthContext.tsx",
+      "file:frontend/src/context/I18nContext.tsx",
+      "file:frontend/src/types/index.ts",
+      "file:frontend/src/components/Navbar.tsx"
+    ],
+    "order": 11,
+    "title": "Client Data Layer"
+  },
+  {
+    "description": "With the shell and data layer in place, the locale-scoped pages implement the shopper journey end to end: the catalog fetches products with per-item quantity selection and add-to-cart, the cart page edits quantities, removes items, totals, and checks out through the orders API from Step 8, and the orders page lists past purchases. The login form authenticates through AuthContext and redirects to the catalog, the register form adds auto-login, and the admin console (guarded by an ADMIN role check) performs full product CRUD against the endpoints from Step 6.",
+    "nodeIds": [
+      "file:frontend/src/app/[lang]/products/page.tsx",
+      "file:frontend/src/app/[lang]/cart/page.tsx",
+      "file:frontend/src/app/[lang]/orders/page.tsx",
+      "file:frontend/src/app/[lang]/login/page.tsx",
+      "file:frontend/src/app/[lang]/admin/products/page.tsx"
+    ],
+    "order": 12,
+    "title": "Shopper Journey Pages"
+  },
+  {
+    "description": "The tour closes with how the contracts above are verified and consumed: role-based security specs prove admins can mutate products while regular users get 403 and anonymous callers get 401, integration specs exercise the register-then-login flow and JWT payload, and Supertest helpers plus user factories set up those scenarios. The Postman collection documents the auth, users, products, and orders requests with base_url and token variables for manual exploration, and the Jest e2e configuration runs the end-to-end, security, and edge-case suites that guard the whole platform.",
+    "languageLesson": "Layered testing isolates concerns: unit specs pin services and guards, integration specs verify real service flows, security specs lock role boundaries, and e2e specs replay full user journeys like register, login, and admin product creation.",
+    "nodeIds": [
+      "file:test/security/rbac.security-spec.ts",
+      "file:test/integration/auth.integration-spec.ts",
+      "file:test/helpers/auth.helper.ts",
+      "config:postman/collection.json",
+      "config:test/jest-e2e.json"
+    ],
+    "order": 13,
+    "title": "Verification and Contracts"
+  }
+]

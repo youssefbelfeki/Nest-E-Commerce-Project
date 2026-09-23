@@ -1,0 +1,171 @@
+{
+    "batchFiles": [
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "src/auth/auth.module.ts",
+            "sizeLines": 22
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "src/auth/jwt.strategy.spec.ts",
+            "sizeLines": 43
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "src/auth/jwt.strategy.ts",
+            "sizeLines": 24
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "src/prisma/prisma.module.ts",
+            "sizeLines": 9
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "src/prisma/prisma.service.spec.ts",
+            "sizeLines": 63
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "src/prisma/prisma.service.ts",
+            "sizeLines": 25
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "src/products/products.module.ts",
+            "sizeLines": 11
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/e2e/auth-flow.e2e-spec.ts",
+            "sizeLines": 173
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/e2e/auth.e2e-spec.ts",
+            "sizeLines": 158
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/e2e/products.e2e-spec.ts",
+            "sizeLines": 188
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/edge-cases.spec.ts",
+            "sizeLines": 201
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/factories/product.factory.ts",
+            "sizeLines": 20
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/factories/user.factory.ts",
+            "sizeLines": 37
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/helpers/create-app-mocked.ts",
+            "sizeLines": 43
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/security/auth.security-spec.ts",
+            "sizeLines": 215
+        },
+        {
+            "fileCategory": "code",
+            "language": "typescript",
+            "path": "test/security/rbac.security-spec.ts",
+            "sizeLines": 159
+        }
+    ],
+    "batchImportData": {
+        "src/auth/auth.module.ts": [
+            "src/auth/auth.controller.ts",
+            "src/auth/auth.service.ts",
+            "src/auth/jwt.strategy.ts"
+        ],
+        "src/auth/jwt.strategy.spec.ts": [
+            "src/auth/jwt.strategy.ts"
+        ],
+        "src/auth/jwt.strategy.ts": [],
+        "src/prisma/prisma.module.ts": [
+            "src/prisma/prisma.service.ts"
+        ],
+        "src/prisma/prisma.service.spec.ts": [
+            "src/prisma/prisma.service.ts"
+        ],
+        "src/prisma/prisma.service.ts": [],
+        "src/products/products.module.ts": [
+            "src/auth/auth.module.ts",
+            "src/products/products.controller.ts",
+            "src/products/products.service.ts"
+        ],
+        "test/e2e/auth-flow.e2e-spec.ts": [
+            "src/auth/auth.module.ts",
+            "src/prisma/prisma.module.ts",
+            "src/prisma/prisma.service.ts",
+            "src/products/products.module.ts"
+        ],
+        "test/e2e/auth.e2e-spec.ts": [
+            "src/auth/auth.module.ts",
+            "src/prisma/prisma.module.ts",
+            "src/prisma/prisma.service.ts",
+            "src/products/products.module.ts"
+        ],
+        "test/e2e/products.e2e-spec.ts": [
+            "src/auth/auth.module.ts",
+            "src/prisma/prisma.module.ts",
+            "src/prisma/prisma.service.ts",
+            "src/products/products.module.ts"
+        ],
+        "test/edge-cases.spec.ts": [
+            "src/auth/auth.module.ts",
+            "src/prisma/prisma.module.ts",
+            "src/prisma/prisma.service.ts",
+            "src/products/products.module.ts"
+        ],
+        "test/factories/product.factory.ts": [
+            "src/prisma/prisma.service.ts"
+        ],
+        "test/factories/user.factory.ts": [
+            "src/prisma/prisma.service.ts"
+        ],
+        "test/helpers/create-app-mocked.ts": [
+            "src/auth/auth.module.ts",
+            "src/prisma/prisma.service.ts",
+            "src/products/products.module.ts"
+        ],
+        "test/security/auth.security-spec.ts": [
+            "src/auth/auth.module.ts",
+            "src/prisma/prisma.module.ts",
+            "src/prisma/prisma.service.ts",
+            "src/products/products.module.ts"
+        ],
+        "test/security/rbac.security-spec.ts": [
+            "src/auth/auth.module.ts",
+            "src/prisma/prisma.module.ts",
+            "src/prisma/prisma.service.ts",
+            "src/products/products.module.ts"
+        ]
+    },
+    "projectRoot": "C:\\Users\\Youssef\\Desktop\\ecommerce-project"
+}

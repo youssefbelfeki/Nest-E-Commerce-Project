@@ -61,33 +61,43 @@ describe('AuthGuard', () => {
     it('should throw UnauthorizedException when no Authorization header', async () => {
       const ctx = mockContext(undefined);
 
-      await expect(guard.canActivate(ctx)).rejects.toThrow(UnauthorizedException);
+      await expect(guard.canActivate(ctx)).rejects.toThrow(
+        UnauthorizedException,
+      );
     });
 
     it('should throw UnauthorizedException when header is empty string', async () => {
       const ctx = mockContext('');
 
-      await expect(guard.canActivate(ctx)).rejects.toThrow(UnauthorizedException);
+      await expect(guard.canActivate(ctx)).rejects.toThrow(
+        UnauthorizedException,
+      );
     });
 
     it('should throw UnauthorizedException when scheme is not Bearer', async () => {
       const ctx = mockContext('Basic abc123');
 
-      await expect(guard.canActivate(ctx)).rejects.toThrow(UnauthorizedException);
+      await expect(guard.canActivate(ctx)).rejects.toThrow(
+        UnauthorizedException,
+      );
     });
 
     it('should throw UnauthorizedException when token is invalid', async () => {
       jwtService.verifyAsync.mockRejectedValue(new Error('jwt invalid'));
       const ctx = mockContext('Bearer invalid-token');
 
-      await expect(guard.canActivate(ctx)).rejects.toThrow(UnauthorizedException);
+      await expect(guard.canActivate(ctx)).rejects.toThrow(
+        UnauthorizedException,
+      );
     });
 
     it('should throw UnauthorizedException when token is expired', async () => {
       jwtService.verifyAsync.mockRejectedValue(new Error('jwt expired'));
       const ctx = mockContext('Bearer expired-token');
 
-      await expect(guard.canActivate(ctx)).rejects.toThrow(UnauthorizedException);
+      await expect(guard.canActivate(ctx)).rejects.toThrow(
+        UnauthorizedException,
+      );
     });
 
     it('should throw with "Invalid or expired token" message on verify failure', async () => {
@@ -97,7 +107,9 @@ describe('AuthGuard', () => {
       try {
         await guard.canActivate(ctx);
       } catch (e) {
-        expect((e as UnauthorizedException).message).toBe('Invalid or expired token');
+        expect((e as UnauthorizedException).message).toBe(
+          'Invalid or expired token',
+        );
       }
     });
 
