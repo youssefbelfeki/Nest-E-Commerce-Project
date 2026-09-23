@@ -1,4 +1,8 @@
-import { Injectable, NotFoundException, BadRequestException } from '@nestjs/common';
+import {
+  Injectable,
+  NotFoundException,
+  BadRequestException,
+} from '@nestjs/common';
 import { PrismaService } from '../prisma/prisma.service';
 import { AddToCartDto } from './dto/add-to-cart.dto';
 import { UpdateCartItemDto } from './dto/update-cart-item.dto';
@@ -17,7 +21,9 @@ export class CartService {
     }
 
     if (product.stock < 1) {
-      throw new BadRequestException(`Product "${product.name}" is out of stock`);
+      throw new BadRequestException(
+        `Product "${product.name}" is out of stock`,
+      );
     }
 
     return this.prisma.$transaction(async (tx) => {

@@ -1,0 +1,1372 @@
+{
+  "nodes": [
+    {
+      "id": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "frontend/src/app/[lang]/admin/products/page.tsx",
+      "summary": "Admin-only product management page with create, edit, and delete flows backed by the products REST API.",
+      "tags": [
+        "component",
+        "admin",
+        "product-management",
+        "api-handler",
+        "crud"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/cart/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "frontend/src/app/[lang]/cart/page.tsx",
+      "summary": "Shopping cart page showing cart items with quantity editing, removal, and checkout-to-order flow.",
+      "tags": [
+        "component",
+        "cart",
+        "checkout",
+        "api-handler"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/dictionaries.ts",
+      "type": "file",
+      "name": "dictionaries.ts",
+      "filePath": "frontend/src/app/[lang]/dictionaries.ts",
+      "summary": "Locale dictionary registry mapping supported locales to their English and French translation bundles.",
+      "tags": [
+        "utility",
+        "i18n",
+        "localization",
+        "dictionary"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/layout.tsx",
+      "type": "file",
+      "name": "layout.tsx",
+      "filePath": "frontend/src/app/[lang]/layout.tsx",
+      "summary": "Localized route layout that validates the locale, loads its dictionary, and wires auth and i18n providers.",
+      "tags": [
+        "entry-point",
+        "layout",
+        "i18n",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/login/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "frontend/src/app/[lang]/login/page.tsx",
+      "summary": "Login form page that authenticates via the auth context and redirects to the product catalog.",
+      "tags": [
+        "component",
+        "authentication",
+        "login-form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/orders/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "frontend/src/app/[lang]/orders/page.tsx",
+      "summary": "Order history page listing the current user's past orders with line items and computed totals.",
+      "tags": [
+        "component",
+        "orders",
+        "order-history",
+        "api-handler"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "frontend/src/app/[lang]/page.tsx",
+      "summary": "Landing page that redirects visitors into the localized storefront catalog.",
+      "tags": [
+        "component",
+        "landing-page",
+        "entry-point",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/products/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "frontend/src/app/[lang]/products/page.tsx",
+      "summary": "Product catalog page with product listing, quantity selection, and add-to-cart actions.",
+      "tags": [
+        "component",
+        "catalog",
+        "product-listing",
+        "api-handler"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "file:frontend/src/app/[lang]/register/page.tsx",
+      "type": "file",
+      "name": "page.tsx",
+      "filePath": "frontend/src/app/[lang]/register/page.tsx",
+      "summary": "Registration form page creating a new account through the auth context with password confirmation.",
+      "tags": [
+        "component",
+        "authentication",
+        "registration-form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/components/LanguageSwitcher.tsx",
+      "type": "file",
+      "name": "LanguageSwitcher.tsx",
+      "filePath": "frontend/src/components/LanguageSwitcher.tsx",
+      "summary": "Locale switcher dropdown that rewrites the URL path prefix to change the interface language.",
+      "tags": [
+        "component",
+        "i18n",
+        "locale-switcher",
+        "dropdown"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/components/Navbar.tsx",
+      "type": "file",
+      "name": "Navbar.tsx",
+      "filePath": "frontend/src/components/Navbar.tsx",
+      "summary": "Top navigation bar with localized links, cart indicator, and auth-aware login and logout actions.",
+      "tags": [
+        "component",
+        "navigation",
+        "authentication",
+        "i18n"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/context/AuthContext.tsx",
+      "type": "file",
+      "name": "AuthContext.tsx",
+      "filePath": "frontend/src/context/AuthContext.tsx",
+      "summary": "Authentication context providing JWT-backed login, registration, logout, and current-user state.",
+      "tags": [
+        "authentication",
+        "context",
+        "provider",
+        "jwt",
+        "state-management"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/context/I18nContext.tsx",
+      "type": "file",
+      "name": "I18nContext.tsx",
+      "filePath": "frontend/src/context/I18nContext.tsx",
+      "summary": "Internationalization context supplying the active dictionary plus translation and locale-path helpers.",
+      "tags": [
+        "i18n",
+        "context",
+        "provider",
+        "localization"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/lib/api.ts",
+      "type": "file",
+      "name": "api.ts",
+      "filePath": "frontend/src/lib/api.ts",
+      "summary": "Backend API client with JWT token persistence and an authenticated fetch wrapper over the REST API.",
+      "tags": [
+        "utility",
+        "api-client",
+        "authentication",
+        "http-client"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:frontend/src/lib/i18n.ts",
+      "type": "file",
+      "name": "i18n.ts",
+      "filePath": "frontend/src/lib/i18n.ts",
+      "summary": "Locale constants and type guard defining the supported English and French locales.",
+      "tags": [
+        "utility",
+        "i18n",
+        "localization",
+        "type-definition"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "file:frontend/src/types/index.ts",
+      "type": "file",
+      "name": "index.ts",
+      "filePath": "frontend/src/types/index.ts",
+      "summary": "Shared frontend type definitions for the user, product, cart, and order domain models.",
+      "tags": [
+        "type-definition",
+        "data-model",
+        "shared-types"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+      "type": "function",
+      "name": "AdminProductsPage",
+      "filePath": "frontend/src/app/[lang]/admin/products/page.tsx",
+      "lineRange": [
+        10,
+        434
+      ],
+      "summary": "Admin product console handling product fetching, creation, inline editing, and deletion.",
+      "tags": [
+        "component",
+        "admin",
+        "product-management",
+        "crud"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+      "type": "function",
+      "name": "CartPage",
+      "filePath": "frontend/src/app/[lang]/cart/page.tsx",
+      "lineRange": [
+        11,
+        278
+      ],
+      "summary": "Cart view handling cart fetching, quantity updates, item removal, and order placement.",
+      "tags": [
+        "component",
+        "cart",
+        "checkout",
+        "order-placement"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/dictionaries.ts:hasLocale",
+      "type": "function",
+      "name": "hasLocale",
+      "filePath": "frontend/src/app/[lang]/dictionaries.ts",
+      "lineRange": [
+        13,
+        14
+      ],
+      "summary": "Type guard checking whether a string is a supported locale key.",
+      "tags": [
+        "utility",
+        "i18n",
+        "type-guard"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/dictionaries.ts:getDictionary",
+      "type": "function",
+      "name": "getDictionary",
+      "filePath": "frontend/src/app/[lang]/dictionaries.ts",
+      "lineRange": [
+        16,
+        21
+      ],
+      "summary": "Returns the translation dictionary for a locale, falling back to the default dictionary.",
+      "tags": [
+        "utility",
+        "i18n",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/layout.tsx:generateStaticParams",
+      "type": "function",
+      "name": "generateStaticParams",
+      "filePath": "frontend/src/app/[lang]/layout.tsx",
+      "lineRange": [
+        14,
+        16
+      ],
+      "summary": "Generates static route params for each supported locale at build time.",
+      "tags": [
+        "routing",
+        "i18n",
+        "static-generation"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+      "type": "function",
+      "name": "RootLayout",
+      "filePath": "frontend/src/app/[lang]/layout.tsx",
+      "lineRange": [
+        18,
+        41
+      ],
+      "summary": "Root layout validating the locale and providing auth state, i18n dictionary, and navigation.",
+      "tags": [
+        "layout",
+        "entry-point",
+        "i18n",
+        "provider"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+      "type": "function",
+      "name": "LoginPage",
+      "filePath": "frontend/src/app/[lang]/login/page.tsx",
+      "lineRange": [
+        9,
+        110
+      ],
+      "summary": "Login form submitting credentials through the auth context and redirecting on success.",
+      "tags": [
+        "component",
+        "authentication",
+        "login-form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+      "type": "function",
+      "name": "OrdersPage",
+      "filePath": "frontend/src/app/[lang]/orders/page.tsx",
+      "lineRange": [
+        11,
+        156
+      ],
+      "summary": "Order history view fetching and rendering the current user's orders with totals.",
+      "tags": [
+        "component",
+        "orders",
+        "order-history"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/page.tsx:Home",
+      "type": "function",
+      "name": "Home",
+      "filePath": "frontend/src/app/[lang]/page.tsx",
+      "lineRange": [
+        9,
+        48
+      ],
+      "summary": "Landing component redirecting visitors into the localized product storefront.",
+      "tags": [
+        "component",
+        "landing-page",
+        "routing"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+      "type": "function",
+      "name": "ProductsPage",
+      "filePath": "frontend/src/app/[lang]/products/page.tsx",
+      "lineRange": [
+        10,
+        228
+      ],
+      "summary": "Catalog view fetching products and supporting quantity selection with add-to-cart feedback.",
+      "tags": [
+        "component",
+        "catalog",
+        "product-listing",
+        "cart"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+      "type": "function",
+      "name": "RegisterPage",
+      "filePath": "frontend/src/app/[lang]/register/page.tsx",
+      "lineRange": [
+        9,
+        131
+      ],
+      "summary": "Registration form validating password confirmation and creating accounts via the auth context.",
+      "tags": [
+        "component",
+        "authentication",
+        "registration-form"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/components/LanguageSwitcher.tsx:LanguageSwitcher",
+      "type": "function",
+      "name": "LanguageSwitcher",
+      "filePath": "frontend/src/components/LanguageSwitcher.tsx",
+      "lineRange": [
+        14,
+        108
+      ],
+      "summary": "Dropdown component switching the URL locale prefix with outside-click and escape handling.",
+      "tags": [
+        "component",
+        "i18n",
+        "locale-switcher"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/components/Navbar.tsx:Navbar",
+      "type": "function",
+      "name": "Navbar",
+      "filePath": "frontend/src/components/Navbar.tsx",
+      "lineRange": [
+        10,
+        138
+      ],
+      "summary": "Navigation bar rendering localized links, cart count, role-aware admin link, and auth actions.",
+      "tags": [
+        "component",
+        "navigation",
+        "authentication"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/context/AuthContext.tsx:parseJwt",
+      "type": "function",
+      "name": "parseJwt",
+      "filePath": "frontend/src/context/AuthContext.tsx",
+      "lineRange": [
+        14,
+        29
+      ],
+      "summary": "Decodes a JWT access token payload without verification for client-side session state.",
+      "tags": [
+        "utility",
+        "jwt",
+        "authentication"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "function",
+      "name": "AuthProvider",
+      "filePath": "frontend/src/context/AuthContext.tsx",
+      "lineRange": [
+        42,
+        115
+      ],
+      "summary": "Auth state provider restoring JWT sessions and exposing login, register, and logout actions.",
+      "tags": [
+        "authentication",
+        "provider",
+        "jwt",
+        "state-management"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "function",
+      "name": "useAuth",
+      "filePath": "frontend/src/context/AuthContext.tsx",
+      "lineRange": [
+        117,
+        123
+      ],
+      "summary": "Context hook exposing the current auth state and authentication actions to components.",
+      "tags": [
+        "hook",
+        "authentication",
+        "context"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/context/I18nContext.tsx:I18nProvider",
+      "type": "function",
+      "name": "I18nProvider",
+      "filePath": "frontend/src/context/I18nContext.tsx",
+      "lineRange": [
+        17,
+        53
+      ],
+      "summary": "I18n provider exposing the active dictionary with dot-path translation and locale-path helpers.",
+      "tags": [
+        "i18n",
+        "provider",
+        "localization"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "function",
+      "name": "useI18n",
+      "filePath": "frontend/src/context/I18nContext.tsx",
+      "lineRange": [
+        55,
+        61
+      ],
+      "summary": "Context hook exposing the translation function and locale helpers to components.",
+      "tags": [
+        "hook",
+        "i18n",
+        "context"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/lib/api.ts:getAuthToken",
+      "type": "function",
+      "name": "getAuthToken",
+      "filePath": "frontend/src/lib/api.ts",
+      "lineRange": [
+        6,
+        16
+      ],
+      "summary": "Reads the persisted JWT access token from local storage or the locale cookie.",
+      "tags": [
+        "utility",
+        "authentication",
+        "token-storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/lib/api.ts:setAuthToken",
+      "type": "function",
+      "name": "setAuthToken",
+      "filePath": "frontend/src/lib/api.ts",
+      "lineRange": [
+        18,
+        29
+      ],
+      "summary": "Persists or clears the JWT access token in local storage and the locale cookie.",
+      "tags": [
+        "utility",
+        "authentication",
+        "token-storage"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/lib/api.ts:apiFetch",
+      "type": "function",
+      "name": "apiFetch",
+      "filePath": "frontend/src/lib/api.ts",
+      "lineRange": [
+        31,
+        79
+      ],
+      "summary": "Authenticated fetch wrapper attaching the JWT bearer header and normalizing API errors.",
+      "tags": [
+        "utility",
+        "api-client",
+        "http-client",
+        "error-handling"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "function:frontend/src/lib/i18n.ts:isLocale",
+      "type": "function",
+      "name": "isLocale",
+      "filePath": "frontend/src/lib/i18n.ts",
+      "lineRange": [
+        9,
+        10
+      ],
+      "summary": "Type guard checking whether a value is one of the supported locales.",
+      "tags": [
+        "utility",
+        "i18n",
+        "type-guard"
+      ],
+      "complexity": "simple"
+    }
+  ],
+  "edges": [
+    {
+      "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+      "target": "file:frontend/src/lib/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+      "target": "file:frontend/src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+      "target": "file:frontend/src/lib/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+      "target": "file:frontend/src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+      "target": "file:frontend/src/app/[lang]/dictionaries/en.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+      "target": "file:frontend/src/app/[lang]/dictionaries/fr.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "file:frontend/src/app/[lang]/dictionaries.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "file:frontend/src/app/globals.css",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "file:frontend/src/components/Navbar.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "file:frontend/src/lib/i18n.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/login/page.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/login/page.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+      "target": "file:frontend/src/lib/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+      "target": "file:frontend/src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/page.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/page.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/products/page.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/products/page.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/products/page.tsx",
+      "target": "file:frontend/src/lib/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/products/page.tsx",
+      "target": "file:frontend/src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/register/page.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/register/page.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/components/LanguageSwitcher.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/components/LanguageSwitcher.tsx",
+      "target": "file:frontend/src/lib/i18n.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/components/Navbar.tsx",
+      "target": "file:frontend/src/components/LanguageSwitcher.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/components/Navbar.tsx",
+      "target": "file:frontend/src/context/AuthContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/components/Navbar.tsx",
+      "target": "file:frontend/src/context/I18nContext.tsx",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "file:frontend/src/lib/api.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "file:frontend/src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/I18nContext.tsx",
+      "target": "file:frontend/src/app/[lang]/dictionaries/en.json",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/context/I18nContext.tsx",
+      "target": "file:frontend/src/lib/i18n.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/lib/api.ts",
+      "target": "file:frontend/src/types/index.ts",
+      "type": "imports",
+      "direction": "forward",
+      "weight": 0.7
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+      "target": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+      "target": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+      "target": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+      "target": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+      "target": "function:frontend/src/app/[lang]/dictionaries.ts:hasLocale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+      "target": "function:frontend/src/app/[lang]/dictionaries.ts:hasLocale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+      "target": "function:frontend/src/app/[lang]/dictionaries.ts:getDictionary",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+      "target": "function:frontend/src/app/[lang]/dictionaries.ts:getDictionary",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "function:frontend/src/app/[lang]/layout.tsx:generateStaticParams",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "function:frontend/src/app/[lang]/layout.tsx:generateStaticParams",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/layout.tsx",
+      "target": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/login/page.tsx",
+      "target": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/login/page.tsx",
+      "target": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+      "target": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+      "target": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/page.tsx",
+      "target": "function:frontend/src/app/[lang]/page.tsx:Home",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/page.tsx",
+      "target": "function:frontend/src/app/[lang]/page.tsx:Home",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/products/page.tsx",
+      "target": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/products/page.tsx",
+      "target": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/register/page.tsx",
+      "target": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/app/[lang]/register/page.tsx",
+      "target": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/components/LanguageSwitcher.tsx",
+      "target": "function:frontend/src/components/LanguageSwitcher.tsx:LanguageSwitcher",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/components/LanguageSwitcher.tsx",
+      "target": "function:frontend/src/components/LanguageSwitcher.tsx:LanguageSwitcher",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/components/Navbar.tsx",
+      "target": "function:frontend/src/components/Navbar.tsx:Navbar",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/components/Navbar.tsx",
+      "target": "function:frontend/src/components/Navbar.tsx:Navbar",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:parseJwt",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/context/AuthContext.tsx",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/context/I18nContext.tsx",
+      "target": "function:frontend/src/context/I18nContext.tsx:I18nProvider",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/context/I18nContext.tsx",
+      "target": "function:frontend/src/context/I18nContext.tsx:I18nProvider",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/context/I18nContext.tsx",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/context/I18nContext.tsx",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/lib/api.ts",
+      "target": "function:frontend/src/lib/api.ts:getAuthToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/lib/api.ts",
+      "target": "function:frontend/src/lib/api.ts:getAuthToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/lib/api.ts",
+      "target": "function:frontend/src/lib/api.ts:setAuthToken",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/lib/api.ts",
+      "target": "function:frontend/src/lib/api.ts:setAuthToken",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/lib/api.ts",
+      "target": "function:frontend/src/lib/api.ts:apiFetch",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/lib/api.ts",
+      "target": "function:frontend/src/lib/api.ts:apiFetch",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "file:frontend/src/lib/i18n.ts",
+      "target": "function:frontend/src/lib/i18n.ts:isLocale",
+      "type": "contains",
+      "direction": "forward",
+      "weight": 1.0
+    },
+    {
+      "source": "file:frontend/src/lib/i18n.ts",
+      "target": "function:frontend/src/lib/i18n.ts:isLocale",
+      "type": "exports",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+      "target": "function:frontend/src/lib/api.ts:apiFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+      "target": "function:frontend/src/lib/api.ts:apiFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+      "target": "function:frontend/src/app/[lang]/dictionaries.ts:hasLocale",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+      "target": "function:frontend/src/app/[lang]/dictionaries.ts:getDictionary",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+      "target": "function:frontend/src/lib/api.ts:apiFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/page.tsx:Home",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/page.tsx:Home",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+      "target": "function:frontend/src/lib/api.ts:apiFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/components/LanguageSwitcher.tsx:LanguageSwitcher",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/components/Navbar.tsx:Navbar",
+      "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/components/Navbar.tsx:Navbar",
+      "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "target": "function:frontend/src/lib/api.ts:getAuthToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "target": "function:frontend/src/lib/api.ts:setAuthToken",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    },
+    {
+      "source": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+      "target": "function:frontend/src/lib/api.ts:apiFetch",
+      "type": "calls",
+      "direction": "forward",
+      "weight": 0.8
+    }
+  ]
+}

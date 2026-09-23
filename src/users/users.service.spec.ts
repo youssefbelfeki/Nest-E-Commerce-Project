@@ -37,10 +37,7 @@ describe('UsersService', () => {
     };
 
     const module: TestingModule = await Test.createTestingModule({
-      providers: [
-        UsersService,
-        { provide: PrismaService, useValue: prisma },
-      ],
+      providers: [UsersService, { provide: PrismaService, useValue: prisma }],
     }).compile();
 
     service = module.get<UsersService>(UsersService);
@@ -51,7 +48,11 @@ describe('UsersService', () => {
   });
 
   describe('create', () => {
-    const dto = { name: 'New User', email: 'new@example.com', password: 'secret123' };
+    const dto = {
+      name: 'New User',
+      email: 'new@example.com',
+      password: 'secret123',
+    };
 
     it('should create a user and return it without password', async () => {
       prisma.user.findUnique.mockResolvedValue(null);
@@ -81,7 +82,10 @@ describe('UsersService', () => {
 
   describe('findAll', () => {
     it('should return all users', async () => {
-      const users = [mockUser, { id: 2, name: 'User 2', email: 'u2@example.com', role: 'USER' }];
+      const users = [
+        mockUser,
+        { id: 2, name: 'User 2', email: 'u2@example.com', role: 'USER' },
+      ];
       prisma.user.findMany.mockResolvedValue(users);
 
       const result = await service.findAll();
@@ -168,7 +172,9 @@ describe('UsersService', () => {
     it('should throw NotFoundException if user does not exist', async () => {
       prisma.user.findUnique.mockResolvedValue(null);
 
-      await expect(service.update(999, { name: 'X' })).rejects.toThrow(NotFoundException);
+      await expect(service.update(999, { name: 'X' })).rejects.toThrow(
+        NotFoundException,
+      );
       expect(prisma.user.update).not.toHaveBeenCalled();
     });
   });

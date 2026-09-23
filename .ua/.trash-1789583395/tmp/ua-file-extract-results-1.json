@@ -1,0 +1,3015 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 16,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 16,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 16,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "frontend/src/app/[lang]/admin/products/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 434,
+      "nonEmptyLines": 393,
+      "functions": [
+        {
+          "name": "AdminProductsPage",
+          "startLine": 10,
+          "endLine": 434,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AdminProductsPage",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useAuth",
+          "lineNumber": 11
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useRouter",
+          "lineNumber": 12
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useI18n",
+          "lineNumber": 13
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 21
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 22
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 23
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 24
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 27
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 28
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 29
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 30
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 31
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useState",
+          "lineNumber": 34
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "useEffect",
+          "lineNumber": 36
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "router.push",
+          "lineNumber": 39
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "localePath",
+          "lineNumber": 39
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "fetchProducts",
+          "lineNumber": 42
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setLoading",
+          "lineNumber": 47
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setError",
+          "lineNumber": 48
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "await apiFetch",
+          "lineNumber": 50
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setProducts",
+          "lineNumber": 51
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setError",
+          "lineNumber": 53
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "t",
+          "lineNumber": 53
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setLoading",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "e.preventDefault",
+          "lineNumber": 60
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setError",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setSuccess",
+          "lineNumber": 62
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "parseFloat",
+          "lineNumber": 64
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "parseInt",
+          "lineNumber": 65
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "isNaN",
+          "lineNumber": 67
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setError",
+          "lineNumber": 68
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "t",
+          "lineNumber": 68
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "isNaN",
+          "lineNumber": 72
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setError",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "t",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setCreating",
+          "lineNumber": 77
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "await apiFetch",
+          "lineNumber": 79
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "JSON.stringify",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setProducts",
+          "lineNumber": 88
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setSuccess",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "t",
+          "lineNumber": 89
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setCreateName",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setCreatePrice",
+          "lineNumber": 91
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setCreateStock",
+          "lineNumber": 92
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setTimeout",
+          "lineNumber": 93
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setSuccess",
+          "lineNumber": 93
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setError",
+          "lineNumber": 95
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "t",
+          "lineNumber": 95
+        },
+        {
+          "caller": "handleCreateProduct",
+          "callee": "setCreating",
+          "lineNumber": 97
+        },
+        {
+          "caller": "startEdit",
+          "callee": "setEditingId",
+          "lineNumber": 102
+        },
+        {
+          "caller": "startEdit",
+          "callee": "setEditName",
+          "lineNumber": 103
+        },
+        {
+          "caller": "startEdit",
+          "callee": "setEditPrice",
+          "lineNumber": 104
+        },
+        {
+          "caller": "startEdit",
+          "callee": "product.price.toString",
+          "lineNumber": 104
+        },
+        {
+          "caller": "startEdit",
+          "callee": "setEditStock",
+          "lineNumber": 105
+        },
+        {
+          "caller": "startEdit",
+          "callee": "product.stock.toString",
+          "lineNumber": 105
+        },
+        {
+          "caller": "cancelEdit",
+          "callee": "setEditingId",
+          "lineNumber": 109
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setError",
+          "lineNumber": 113
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setSuccess",
+          "lineNumber": 114
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "parseFloat",
+          "lineNumber": 116
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "parseInt",
+          "lineNumber": 117
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "isNaN",
+          "lineNumber": 119
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setError",
+          "lineNumber": 120
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "t",
+          "lineNumber": 120
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "isNaN",
+          "lineNumber": 124
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setError",
+          "lineNumber": 125
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "t",
+          "lineNumber": 125
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setUpdating",
+          "lineNumber": 129
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "await apiFetch",
+          "lineNumber": 131
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "JSON.stringify",
+          "lineNumber": 133
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setProducts",
+          "lineNumber": 140
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "prev.map",
+          "lineNumber": 140
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setSuccess",
+          "lineNumber": 141
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "t",
+          "lineNumber": 141
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setEditingId",
+          "lineNumber": 142
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setTimeout",
+          "lineNumber": 143
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setSuccess",
+          "lineNumber": 143
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setError",
+          "lineNumber": 145
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "t",
+          "lineNumber": 145
+        },
+        {
+          "caller": "handleUpdateProduct",
+          "callee": "setUpdating",
+          "lineNumber": 147
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "confirm",
+          "lineNumber": 152
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "t",
+          "lineNumber": 152
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setDeletingId",
+          "lineNumber": 154
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setError",
+          "lineNumber": 155
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setSuccess",
+          "lineNumber": 156
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "apiFetch",
+          "lineNumber": 158
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setProducts",
+          "lineNumber": 162
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "prev.filter",
+          "lineNumber": 162
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setSuccess",
+          "lineNumber": 163
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "t",
+          "lineNumber": 163
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setTimeout",
+          "lineNumber": 164
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setSuccess",
+          "lineNumber": 164
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setError",
+          "lineNumber": 166
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "t",
+          "lineNumber": 166
+        },
+        {
+          "caller": "handleDeleteProduct",
+          "callee": "setDeletingId",
+          "lineNumber": 168
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 176
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 188
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 190
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 192
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 201
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 230
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 236
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "setCreateName",
+          "lineNumber": 242
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 244
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 250
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "setCreatePrice",
+          "lineNumber": 258
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 266
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "setCreateStock",
+          "lineNumber": 273
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "setCreateStock",
+          "lineNumber": 282
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 295
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 298
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 312
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 317
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 324
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 325
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 326
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 327
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 328
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "products.map",
+          "lineNumber": 332
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "setEditName",
+          "lineNumber": 344
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "setEditPrice",
+          "lineNumber": 358
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "product.price.toFixed",
+          "lineNumber": 362
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "setEditStock",
+          "lineNumber": 371
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 384
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "handleUpdateProduct",
+          "lineNumber": 393
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 397
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 403
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "startEdit",
+          "lineNumber": 409
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 412
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "handleDeleteProduct",
+          "lineNumber": 415
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 419
+        },
+        {
+          "caller": "AdminProductsPage",
+          "callee": "t",
+          "lineNumber": 419
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/cart/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 278,
+      "nonEmptyLines": 255,
+      "functions": [
+        {
+          "name": "CartPage",
+          "startLine": 11,
+          "endLine": 278,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "CartPage",
+          "line": 11,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "CartPage",
+          "callee": "useAuth",
+          "lineNumber": 12
+        },
+        {
+          "caller": "CartPage",
+          "callee": "useRouter",
+          "lineNumber": 13
+        },
+        {
+          "caller": "CartPage",
+          "callee": "useI18n",
+          "lineNumber": 14
+        },
+        {
+          "caller": "CartPage",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "CartPage",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "CartPage",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "CartPage",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "CartPage",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "CartPage",
+          "callee": "useEffect",
+          "lineNumber": 22
+        },
+        {
+          "caller": "CartPage",
+          "callee": "router.push",
+          "lineNumber": 25
+        },
+        {
+          "caller": "CartPage",
+          "callee": "localePath",
+          "lineNumber": 25
+        },
+        {
+          "caller": "CartPage",
+          "callee": "fetchCart",
+          "lineNumber": 28
+        },
+        {
+          "caller": "fetchCart",
+          "callee": "setLoading",
+          "lineNumber": 33
+        },
+        {
+          "caller": "fetchCart",
+          "callee": "setError",
+          "lineNumber": 34
+        },
+        {
+          "caller": "fetchCart",
+          "callee": "await apiFetch",
+          "lineNumber": 36
+        },
+        {
+          "caller": "fetchCart",
+          "callee": "setCart",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fetchCart",
+          "callee": "setError",
+          "lineNumber": 39
+        },
+        {
+          "caller": "fetchCart",
+          "callee": "t",
+          "lineNumber": 39
+        },
+        {
+          "caller": "fetchCart",
+          "callee": "setLoading",
+          "lineNumber": 41
+        },
+        {
+          "caller": "handleUpdateQuantity",
+          "callee": "setUpdatingId",
+          "lineNumber": 47
+        },
+        {
+          "caller": "handleUpdateQuantity",
+          "callee": "setError",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleUpdateQuantity",
+          "callee": "apiFetch",
+          "lineNumber": 50
+        },
+        {
+          "caller": "handleUpdateQuantity",
+          "callee": "JSON.stringify",
+          "lineNumber": 52
+        },
+        {
+          "caller": "handleUpdateQuantity",
+          "callee": "fetchCart",
+          "lineNumber": 54
+        },
+        {
+          "caller": "handleUpdateQuantity",
+          "callee": "setError",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleUpdateQuantity",
+          "callee": "t",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleUpdateQuantity",
+          "callee": "setUpdatingId",
+          "lineNumber": 58
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "setUpdatingId",
+          "lineNumber": 63
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "setError",
+          "lineNumber": 64
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "apiFetch",
+          "lineNumber": 66
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "fetchCart",
+          "lineNumber": 69
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "setError",
+          "lineNumber": 71
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "t",
+          "lineNumber": 71
+        },
+        {
+          "caller": "handleRemoveItem",
+          "callee": "setUpdatingId",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "setPlacingOrder",
+          "lineNumber": 80
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "setError",
+          "lineNumber": 81
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "cart.items.map",
+          "lineNumber": 83
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "apiFetch",
+          "lineNumber": 88
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "JSON.stringify",
+          "lineNumber": 90
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "router.push",
+          "lineNumber": 94
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "localePath",
+          "lineNumber": 94
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "setError",
+          "lineNumber": 96
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "t",
+          "lineNumber": 96
+        },
+        {
+          "caller": "handlePlaceOrder",
+          "callee": "setPlacingOrder",
+          "lineNumber": 97
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 105
+        },
+        {
+          "caller": "CartPage",
+          "callee": "items.reduce",
+          "lineNumber": 111
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 121
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 122
+        },
+        {
+          "caller": "CartPage",
+          "callee": "localePath",
+          "lineNumber": 125
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 131
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 152
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 153
+        },
+        {
+          "caller": "CartPage",
+          "callee": "localePath",
+          "lineNumber": 155
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 156
+        },
+        {
+          "caller": "CartPage",
+          "callee": "items.map",
+          "lineNumber": 164
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 178
+        },
+        {
+          "caller": "CartPage",
+          "callee": "(product?.price || 0).toFixed",
+          "lineNumber": 180
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 180
+        },
+        {
+          "caller": "CartPage",
+          "callee": "handleUpdateQuantity",
+          "lineNumber": 189
+        },
+        {
+          "caller": "CartPage",
+          "callee": "handleUpdateQuantity",
+          "lineNumber": 199
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 209
+        },
+        {
+          "caller": "CartPage",
+          "callee": "((product?.price || 0) * item.quantity).toFixed",
+          "lineNumber": 211
+        },
+        {
+          "caller": "CartPage",
+          "callee": "handleRemoveItem",
+          "lineNumber": 217
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 220
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 235
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 240
+        },
+        {
+          "caller": "CartPage",
+          "callee": "items.reduce",
+          "lineNumber": 241
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 244
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 245
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 248
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 252
+        },
+        {
+          "caller": "CartPage",
+          "callee": "totalPrice.toFixed",
+          "lineNumber": 253
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 263
+        },
+        {
+          "caller": "CartPage",
+          "callee": "t",
+          "lineNumber": 266
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/dictionaries.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "hasLocale",
+          "startLine": 13,
+          "endLine": 14,
+          "params": [
+            "locale"
+          ]
+        },
+        {
+          "name": "getDictionary",
+          "startLine": 16,
+          "endLine": 21,
+          "params": [
+            "locale"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "hasLocale",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "getDictionary",
+          "line": 16,
+          "isDefault": false
+        },
+        {
+          "name": "defaultDictionary",
+          "line": 23,
+          "isDefault": false
+        },
+        {
+          "name": "frenchDictionary",
+          "line": 24,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getDictionary",
+          "callee": "hasLocale",
+          "lineNumber": 17
+        },
+        {
+          "caller": "getDictionary",
+          "callee": "dictionaries[locale]",
+          "lineNumber": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 4,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/layout.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 41,
+      "nonEmptyLines": 37,
+      "functions": [
+        {
+          "name": "generateStaticParams",
+          "startLine": 14,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "RootLayout",
+          "startLine": 18,
+          "endLine": 41,
+          "params": [
+            "{\r\n  children,\r\n  params,\r\n}"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "metadata",
+          "line": 9,
+          "isDefault": false
+        },
+        {
+          "name": "generateStaticParams",
+          "line": 14,
+          "isDefault": false
+        },
+        {
+          "name": "RootLayout",
+          "line": 18,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "generateStaticParams",
+          "callee": "locales.map",
+          "lineNumber": 15
+        },
+        {
+          "caller": "RootLayout",
+          "callee": "hasLocale",
+          "lineNumber": 26
+        },
+        {
+          "caller": "RootLayout",
+          "callee": "getDictionary",
+          "lineNumber": 27
+        }
+      ],
+      "metrics": {
+        "importCount": 6,
+        "exportCount": 3,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/login/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 110,
+      "nonEmptyLines": 99,
+      "functions": [
+        {
+          "name": "LoginPage",
+          "startLine": 9,
+          "endLine": 110,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoginPage",
+          "line": 9,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LoginPage",
+          "callee": "useAuth",
+          "lineNumber": 10
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useRouter",
+          "lineNumber": 11
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useI18n",
+          "lineNumber": 12
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "e.preventDefault",
+          "lineNumber": 20
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 21
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setSubmitting",
+          "lineNumber": 22
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "login",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "router.push",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "localePath",
+          "lineNumber": 27
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "t",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setSubmitting",
+          "lineNumber": 31
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 44
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 45
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 57
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "setEmail",
+          "lineNumber": 63
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 65
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 71
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "setPassword",
+          "lineNumber": 77
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 89
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 92
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 102
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "localePath",
+          "lineNumber": 103
+        },
+        {
+          "caller": "LoginPage",
+          "callee": "t",
+          "lineNumber": 104
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/orders/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 156,
+      "nonEmptyLines": 143,
+      "functions": [
+        {
+          "name": "OrdersPage",
+          "startLine": 11,
+          "endLine": 156,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OrdersPage",
+          "line": 11,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "OrdersPage",
+          "callee": "useAuth",
+          "lineNumber": 12
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "useRouter",
+          "lineNumber": 13
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "useI18n",
+          "lineNumber": 14
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "useEffect",
+          "lineNumber": 20
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "router.push",
+          "lineNumber": 23
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "localePath",
+          "lineNumber": 23
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "fetchOrders",
+          "lineNumber": 26
+        },
+        {
+          "caller": "fetchOrders",
+          "callee": "setLoading",
+          "lineNumber": 31
+        },
+        {
+          "caller": "fetchOrders",
+          "callee": "setError",
+          "lineNumber": 32
+        },
+        {
+          "caller": "fetchOrders",
+          "callee": "await apiFetch",
+          "lineNumber": 34
+        },
+        {
+          "caller": "fetchOrders",
+          "callee": "setOrders",
+          "lineNumber": 35
+        },
+        {
+          "caller": "fetchOrders",
+          "callee": "setError",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fetchOrders",
+          "callee": "t",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fetchOrders",
+          "callee": "setLoading",
+          "lineNumber": 39
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 47
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 57
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 58
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 67
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 88
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 89
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "localePath",
+          "lineNumber": 91
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 92
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "orders.map",
+          "lineNumber": 98
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "new Date(order.createdAt).toLocaleString",
+          "lineNumber": 99
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "order.items.reduce",
+          "lineNumber": 104
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 115
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 121
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 124
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "orderTotal.toFixed",
+          "lineNumber": 124
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "order.items.map",
+          "lineNumber": 131
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "t",
+          "lineNumber": 135
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "(item.product?.price || 0).toFixed",
+          "lineNumber": 140
+        },
+        {
+          "caller": "OrdersPage",
+          "callee": "((item.product?.price || 0) * item.quantity).toFixed",
+          "lineNumber": 143
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 44,
+      "functions": [
+        {
+          "name": "Home",
+          "startLine": 9,
+          "endLine": 48,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "Home",
+          "line": 9,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Home",
+          "callee": "useAuth",
+          "lineNumber": 10
+        },
+        {
+          "caller": "Home",
+          "callee": "useRouter",
+          "lineNumber": 11
+        },
+        {
+          "caller": "Home",
+          "callee": "useI18n",
+          "lineNumber": 12
+        },
+        {
+          "caller": "Home",
+          "callee": "useEffect",
+          "lineNumber": 14
+        },
+        {
+          "caller": "Home",
+          "callee": "router.push",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Home",
+          "callee": "localePath",
+          "lineNumber": 16
+        },
+        {
+          "caller": "Home",
+          "callee": "t",
+          "lineNumber": 22
+        },
+        {
+          "caller": "Home",
+          "callee": "t",
+          "lineNumber": 24
+        },
+        {
+          "caller": "Home",
+          "callee": "t",
+          "lineNumber": 26
+        },
+        {
+          "caller": "Home",
+          "callee": "t",
+          "lineNumber": 30
+        },
+        {
+          "caller": "Home",
+          "callee": "localePath",
+          "lineNumber": 34
+        },
+        {
+          "caller": "Home",
+          "callee": "t",
+          "lineNumber": 37
+        },
+        {
+          "caller": "Home",
+          "callee": "localePath",
+          "lineNumber": 40
+        },
+        {
+          "caller": "Home",
+          "callee": "t",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/products/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 228,
+      "nonEmptyLines": 210,
+      "functions": [
+        {
+          "name": "ProductsPage",
+          "startLine": 10,
+          "endLine": 228,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ProductsPage",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "ProductsPage",
+          "callee": "useAuth",
+          "lineNumber": 11
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useRouter",
+          "lineNumber": 12
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useI18n",
+          "lineNumber": 13
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useState",
+          "lineNumber": 19
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useState",
+          "lineNumber": 20
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "useEffect",
+          "lineNumber": 22
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "router.push",
+          "lineNumber": 24
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "localePath",
+          "lineNumber": 24
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "fetchProducts",
+          "lineNumber": 29
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setLoading",
+          "lineNumber": 34
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setError",
+          "lineNumber": 35
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "await apiFetch",
+          "lineNumber": 37
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setProducts",
+          "lineNumber": 38
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "(data || []).forEach",
+          "lineNumber": 41
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setQuantities",
+          "lineNumber": 44
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setError",
+          "lineNumber": 46
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "t",
+          "lineNumber": 46
+        },
+        {
+          "caller": "fetchProducts",
+          "callee": "setLoading",
+          "lineNumber": 48
+        },
+        {
+          "caller": "handleQuantityChange",
+          "callee": "products.find",
+          "lineNumber": 53
+        },
+        {
+          "caller": "handleQuantityChange",
+          "callee": "Math.max",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handleQuantityChange",
+          "callee": "Math.min",
+          "lineNumber": 55
+        },
+        {
+          "caller": "handleQuantityChange",
+          "callee": "setQuantities",
+          "lineNumber": 56
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "setAddingId",
+          "lineNumber": 61
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "setError",
+          "lineNumber": 62
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "apiFetch",
+          "lineNumber": 64
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "JSON.stringify",
+          "lineNumber": 66
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "setToastMessage",
+          "lineNumber": 72
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "t",
+          "lineNumber": 72
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "setTimeout",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "setToastMessage",
+          "lineNumber": 73
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "setError",
+          "lineNumber": 75
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "t",
+          "lineNumber": 75
+        },
+        {
+          "caller": "handleAddToCart",
+          "callee": "setAddingId",
+          "lineNumber": 77
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 85
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 95
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 96
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 105
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "router.push",
+          "lineNumber": 119
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "localePath",
+          "lineNumber": 119
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 122
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 143
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 144
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "products.map",
+          "lineNumber": 148
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 172
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 172
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "product.price.toFixed",
+          "lineNumber": 182
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 190
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "handleQuantityChange",
+          "lineNumber": 197
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "parseInt",
+          "lineNumber": 197
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "handleAddToCart",
+          "lineNumber": 203
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 208
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 210
+        },
+        {
+          "caller": "ProductsPage",
+          "callee": "t",
+          "lineNumber": 216
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/register/page.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 131,
+      "nonEmptyLines": 118,
+      "functions": [
+        {
+          "name": "RegisterPage",
+          "startLine": 9,
+          "endLine": 131,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "RegisterPage",
+          "line": 9,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "RegisterPage",
+          "callee": "useAuth",
+          "lineNumber": 10
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "useRouter",
+          "lineNumber": 11
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "useI18n",
+          "lineNumber": 12
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "useState",
+          "lineNumber": 14
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "useState",
+          "lineNumber": 15
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "useState",
+          "lineNumber": 16
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "useState",
+          "lineNumber": 18
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "e.preventDefault",
+          "lineNumber": 21
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 22
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "t",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setSubmitting",
+          "lineNumber": 29
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "register",
+          "lineNumber": 31
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "router.push",
+          "lineNumber": 33
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "localePath",
+          "lineNumber": 33
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setError",
+          "lineNumber": 35
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "t",
+          "lineNumber": 35
+        },
+        {
+          "caller": "handleSubmit",
+          "callee": "setSubmitting",
+          "lineNumber": 37
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 50
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 51
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 63
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "setName",
+          "lineNumber": 69
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 71
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 77
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "setEmail",
+          "lineNumber": 83
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 85
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 91
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "setPassword",
+          "lineNumber": 98
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 110
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 113
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 123
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "localePath",
+          "lineNumber": 124
+        },
+        {
+          "caller": "RegisterPage",
+          "callee": "t",
+          "lineNumber": 125
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/LanguageSwitcher.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 108,
+      "nonEmptyLines": 97,
+      "functions": [
+        {
+          "name": "LanguageSwitcher",
+          "startLine": 14,
+          "endLine": 108,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "LanguageSwitcher",
+          "line": 14,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "useI18n",
+          "lineNumber": 15
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "usePathname",
+          "lineNumber": 16
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "useState",
+          "lineNumber": 17
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "useRef",
+          "lineNumber": 18
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "useEffect",
+          "lineNumber": 20
+        },
+        {
+          "caller": "handleClickOutside",
+          "callee": "containerRef.current.contains",
+          "lineNumber": 24
+        },
+        {
+          "caller": "handleClickOutside",
+          "callee": "setOpen",
+          "lineNumber": 25
+        },
+        {
+          "caller": "handleEscape",
+          "callee": "setOpen",
+          "lineNumber": 31
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "document.addEventListener",
+          "lineNumber": 35
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "document.addEventListener",
+          "lineNumber": 36
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "document.removeEventListener",
+          "lineNumber": 38
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "document.removeEventListener",
+          "lineNumber": 39
+        },
+        {
+          "caller": "switchLanguage",
+          "callee": "setOpen",
+          "lineNumber": 44
+        },
+        {
+          "caller": "switchLanguage",
+          "callee": "pathname.replace",
+          "lineNumber": 47
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "setOpen",
+          "lineNumber": 55
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "locales.map",
+          "lineNumber": 80
+        },
+        {
+          "caller": "LanguageSwitcher",
+          "callee": "switchLanguage",
+          "lineNumber": 88
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/components/Navbar.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 138,
+      "nonEmptyLines": 128,
+      "functions": [
+        {
+          "name": "Navbar",
+          "startLine": 10,
+          "endLine": 138,
+          "params": [
+            "{ cartCount = 0 }"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "Navbar",
+          "line": 10,
+          "isDefault": true
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "Navbar",
+          "callee": "useAuth",
+          "lineNumber": 11
+        },
+        {
+          "caller": "Navbar",
+          "callee": "usePathname",
+          "lineNumber": 12
+        },
+        {
+          "caller": "Navbar",
+          "callee": "useRouter",
+          "lineNumber": 13
+        },
+        {
+          "caller": "Navbar",
+          "callee": "useI18n",
+          "lineNumber": 14
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "logout",
+          "lineNumber": 17
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "router.push",
+          "lineNumber": 18
+        },
+        {
+          "caller": "handleLogout",
+          "callee": "localePath",
+          "lineNumber": 18
+        },
+        {
+          "caller": "isActive",
+          "callee": "localePath",
+          "lineNumber": 21
+        },
+        {
+          "caller": "Navbar",
+          "callee": "localePath",
+          "lineNumber": 27
+        },
+        {
+          "caller": "Navbar",
+          "callee": "localePath",
+          "lineNumber": 41
+        },
+        {
+          "caller": "Navbar",
+          "callee": "isActive",
+          "lineNumber": 43
+        },
+        {
+          "caller": "Navbar",
+          "callee": "t",
+          "lineNumber": 48
+        },
+        {
+          "caller": "Navbar",
+          "callee": "localePath",
+          "lineNumber": 54
+        },
+        {
+          "caller": "Navbar",
+          "callee": "isActive",
+          "lineNumber": 56
+        },
+        {
+          "caller": "Navbar",
+          "callee": "t",
+          "lineNumber": 61
+        },
+        {
+          "caller": "Navbar",
+          "callee": "localePath",
+          "lineNumber": 70
+        },
+        {
+          "caller": "Navbar",
+          "callee": "isActive",
+          "lineNumber": 72
+        },
+        {
+          "caller": "Navbar",
+          "callee": "t",
+          "lineNumber": 77
+        },
+        {
+          "caller": "Navbar",
+          "callee": "localePath",
+          "lineNumber": 84
+        },
+        {
+          "caller": "Navbar",
+          "callee": "isActive",
+          "lineNumber": 86
+        },
+        {
+          "caller": "Navbar",
+          "callee": "t",
+          "lineNumber": 95
+        },
+        {
+          "caller": "Navbar",
+          "callee": "t",
+          "lineNumber": 115
+        },
+        {
+          "caller": "Navbar",
+          "callee": "localePath",
+          "lineNumber": 121
+        },
+        {
+          "caller": "Navbar",
+          "callee": "t",
+          "lineNumber": 124
+        },
+        {
+          "caller": "Navbar",
+          "callee": "localePath",
+          "lineNumber": 127
+        },
+        {
+          "caller": "Navbar",
+          "callee": "t",
+          "lineNumber": 130
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/context/AuthContext.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 123,
+      "nonEmptyLines": 108,
+      "functions": [
+        {
+          "name": "parseJwt",
+          "startLine": 14,
+          "endLine": 29,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "AuthProvider",
+          "startLine": 42,
+          "endLine": 115,
+          "params": [
+            "{ children }"
+          ]
+        },
+        {
+          "name": "useAuth",
+          "startLine": 117,
+          "endLine": 123,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthProvider",
+          "line": 42,
+          "isDefault": false
+        },
+        {
+          "name": "useAuth",
+          "line": 117,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "parseJwt",
+          "callee": "token.split",
+          "lineNumber": 16
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "base64Url.replace(/-/g, '+').replace",
+          "lineNumber": 18
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "base64Url.replace",
+          "lineNumber": 18
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "decodeURIComponent",
+          "lineNumber": 19
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "atob(base64)\r\n        .split('')\r\n        .map((c) => '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2))\r\n        .join",
+          "lineNumber": 20
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "atob(base64)\r\n        .split('')\r\n        .map",
+          "lineNumber": 20
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "atob(base64)\r\n        .split",
+          "lineNumber": 20
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "atob",
+          "lineNumber": 20
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "('00' + c.charCodeAt(0).toString(16)).slice",
+          "lineNumber": 22
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "c.charCodeAt(0).toString",
+          "lineNumber": 22
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "c.charCodeAt",
+          "lineNumber": 22
+        },
+        {
+          "caller": "parseJwt",
+          "callee": "JSON.parse",
+          "lineNumber": 25
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "useState",
+          "lineNumber": 43
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "useState",
+          "lineNumber": 44
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "useState",
+          "lineNumber": 45
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "useEffect",
+          "lineNumber": 47
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "getAuthToken",
+          "lineNumber": 48
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "parseJwt",
+          "lineNumber": 50
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "Date.now",
+          "lineNumber": 51
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "setTokenState",
+          "lineNumber": 52
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "setUser",
+          "lineNumber": 53
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "setAuthToken",
+          "lineNumber": 59
+        },
+        {
+          "caller": "AuthProvider",
+          "callee": "setLoading",
+          "lineNumber": 62
+        },
+        {
+          "caller": "login",
+          "callee": "await apiFetch",
+          "lineNumber": 66
+        },
+        {
+          "caller": "login",
+          "callee": "JSON.stringify",
+          "lineNumber": 68
+        },
+        {
+          "caller": "login",
+          "callee": "setAuthToken",
+          "lineNumber": 72
+        },
+        {
+          "caller": "login",
+          "callee": "setTokenState",
+          "lineNumber": 73
+        },
+        {
+          "caller": "login",
+          "callee": "parseJwt",
+          "lineNumber": 75
+        },
+        {
+          "caller": "login",
+          "callee": "setUser",
+          "lineNumber": 77
+        },
+        {
+          "caller": "register",
+          "callee": "apiFetch",
+          "lineNumber": 86
+        },
+        {
+          "caller": "register",
+          "callee": "JSON.stringify",
+          "lineNumber": 88
+        },
+        {
+          "caller": "register",
+          "callee": "login",
+          "lineNumber": 92
+        },
+        {
+          "caller": "logout",
+          "callee": "setAuthToken",
+          "lineNumber": 96
+        },
+        {
+          "caller": "logout",
+          "callee": "setTokenState",
+          "lineNumber": 97
+        },
+        {
+          "caller": "logout",
+          "callee": "setUser",
+          "lineNumber": 98
+        },
+        {
+          "caller": "useAuth",
+          "callee": "useContext",
+          "lineNumber": 118
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/context/I18nContext.tsx",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 61,
+      "nonEmptyLines": 52,
+      "functions": [
+        {
+          "name": "I18nProvider",
+          "startLine": 17,
+          "endLine": 53,
+          "params": [
+            "{\r\n  locale,\r\n  dictionary,\r\n  children,\r\n}"
+          ]
+        },
+        {
+          "name": "useI18n",
+          "startLine": 55,
+          "endLine": 61,
+          "params": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "I18nProvider",
+          "line": 17,
+          "isDefault": false
+        },
+        {
+          "name": "useI18n",
+          "line": 55,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "I18nProvider",
+          "callee": "useCallback",
+          "lineNumber": 26
+        },
+        {
+          "caller": "I18nProvider",
+          "callee": "key.split('.').reduce",
+          "lineNumber": 28
+        },
+        {
+          "caller": "I18nProvider",
+          "callee": "key.split",
+          "lineNumber": 28
+        },
+        {
+          "caller": "I18nProvider",
+          "callee": "text.replace",
+          "lineNumber": 36
+        },
+        {
+          "caller": "I18nProvider",
+          "callee": "String",
+          "lineNumber": 37
+        },
+        {
+          "caller": "I18nProvider",
+          "callee": "useCallback",
+          "lineNumber": 45
+        },
+        {
+          "caller": "I18nProvider",
+          "callee": "useMemo",
+          "lineNumber": 50
+        },
+        {
+          "caller": "useI18n",
+          "callee": "useContext",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/lib/api.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 79,
+      "nonEmptyLines": 63,
+      "functions": [
+        {
+          "name": "getAuthToken",
+          "startLine": 6,
+          "endLine": 16,
+          "params": []
+        },
+        {
+          "name": "setAuthToken",
+          "startLine": 18,
+          "endLine": 29,
+          "params": [
+            "token"
+          ]
+        },
+        {
+          "name": "apiFetch",
+          "startLine": 31,
+          "endLine": 79,
+          "params": [
+            "endpoint",
+            "options"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "getAuthToken",
+          "line": 6,
+          "isDefault": false
+        },
+        {
+          "name": "setAuthToken",
+          "line": 18,
+          "isDefault": false
+        },
+        {
+          "name": "apiFetch",
+          "line": 31,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getAuthToken",
+          "callee": "localStorage.getItem",
+          "lineNumber": 10
+        },
+        {
+          "caller": "getAuthToken",
+          "callee": "document.cookie.match",
+          "lineNumber": 14
+        },
+        {
+          "caller": "getAuthToken",
+          "callee": "decodeURIComponent",
+          "lineNumber": 15
+        },
+        {
+          "caller": "setAuthToken",
+          "callee": "localStorage.setItem",
+          "lineNumber": 22
+        },
+        {
+          "caller": "setAuthToken",
+          "callee": "encodeURIComponent",
+          "lineNumber": 24
+        },
+        {
+          "caller": "setAuthToken",
+          "callee": "localStorage.removeItem",
+          "lineNumber": 26
+        },
+        {
+          "caller": "apiFetch",
+          "callee": "getAuthToken",
+          "lineNumber": 35
+        },
+        {
+          "caller": "apiFetch",
+          "callee": "fetch",
+          "lineNumber": 53
+        },
+        {
+          "caller": "apiFetch",
+          "callee": "response.json",
+          "lineNumber": 57
+        },
+        {
+          "caller": "apiFetch",
+          "callee": "Array.isArray",
+          "lineNumber": 67
+        },
+        {
+          "caller": "apiFetch",
+          "callee": "errorRes.message.join",
+          "lineNumber": 68
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/lib/i18n.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 10,
+      "nonEmptyLines": 6,
+      "functions": [
+        {
+          "name": "isLocale",
+          "startLine": 9,
+          "endLine": 10,
+          "params": [
+            "value"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "locales",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "defaultLocale",
+          "line": 5,
+          "isDefault": false
+        },
+        {
+          "name": "LOCALE_COOKIE",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "isLocale",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "isLocale",
+          "callee": "(locales as readonly string[]).includes",
+          "lineNumber": 10
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 4,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/types/index.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 56,
+      "nonEmptyLines": 48,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

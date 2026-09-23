@@ -1,0 +1,207 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 5
+    }
+  },
+  "results": [
+    {
+      "path": "frontend/AGENTS.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 62,
+      "nonEmptyLines": 42,
+      "sections": [
+        {
+          "heading": "This is NOT the Next.js you know",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "AGENTS.md — Frontend (Next.js 16.3.0)",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "Stack",
+          "level": 2,
+          "line": 13
+        },
+        {
+          "heading": "Commands",
+          "level": 2,
+          "line": 19
+        },
+        {
+          "heading": "Config / wiring",
+          "level": 2,
+          "line": 26
+        },
+        {
+          "heading": "Source layout",
+          "level": 2,
+          "line": 33
+        },
+        {
+          "heading": "i18n",
+          "level": 2,
+          "line": 40
+        },
+        {
+          "heading": "API wiring (src/lib/api.ts)",
+          "level": 2,
+          "line": 47
+        },
+        {
+          "heading": "Auth (src/context/AuthContext.tsx)",
+          "level": 2,
+          "line": 53
+        },
+        {
+          "heading": "Layout (src/app/[lang]/layout.tsx)",
+          "level": 2,
+          "line": 58
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 10
+      }
+    },
+    {
+      "path": "frontend/CLAUDE.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "frontend/README.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 36,
+      "nonEmptyLines": 23,
+      "sections": [
+        {
+          "heading": "Getting Started",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Learn More",
+          "level": 2,
+          "line": 23
+        },
+        {
+          "heading": "Deploy on Vercel",
+          "level": 2,
+          "line": 32
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    },
+    {
+      "path": "frontend/package.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 26,
+      "nonEmptyLines": 26,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "version",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "private",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "scripts",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "dependencies",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "devDependencies",
+          "level": 1,
+          "line": 16
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 44,
+      "nonEmptyLines": 44,
+      "sections": [
+        {
+          "heading": "compilerOptions",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "include",
+          "level": 1,
+          "line": 31
+        },
+        {
+          "heading": "exclude",
+          "level": 1,
+          "line": 41
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 3
+      }
+    }
+  ]
+}

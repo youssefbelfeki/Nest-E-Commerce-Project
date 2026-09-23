@@ -38,7 +38,9 @@ describe('Auth Security', () => {
       .compile();
 
     app = moduleFixture.createNestApplication();
-    app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
+    app.useGlobalPipes(
+      new ValidationPipe({ whitelist: true, transform: true }),
+    );
     await app.init();
 
     jwtService = moduleFixture.get<JwtService>(JwtService);
@@ -55,9 +57,7 @@ describe('Auth Security', () => {
 
   describe('JWT security', () => {
     it('should reject request with no Authorization header', async () => {
-      await request(app.getHttpServer())
-        .get('/products')
-        .expect(401);
+      await request(app.getHttpServer()).get('/products').expect(401);
     });
 
     it('should reject request with malformed Authorization header', async () => {
@@ -149,7 +149,11 @@ describe('Auth Security', () => {
     it('should reject SQL injection in email field', async () => {
       await request(app.getHttpServer())
         .post('/auth/register')
-        .send({ name: 'Test', email: "'; DROP TABLE users;--", password: 'pass123' })
+        .send({
+          name: 'Test',
+          email: "'; DROP TABLE users;--",
+          password: 'pass123',
+        })
         .expect(400);
     });
 
@@ -164,7 +168,11 @@ describe('Auth Security', () => {
 
       const response = await request(app.getHttpServer())
         .post('/auth/register')
-        .send({ name: '<script>alert("xss")</script>', email: 'xss@test.com', password: 'pass123' })
+        .send({
+          name: '<script>alert("xss")</script>',
+          email: 'xss@test.com',
+          password: 'pass123',
+        })
         .expect(201);
 
       // Note: The app doesn't sanitize HTML, but the name is stored as-is.

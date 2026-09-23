@@ -1,0 +1,1081 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 5,
+  "filesSkipped": [
+    "graphify-out/graph.html"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 5,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 0,
+      "failed": 0,
+      "skipped": 5
+    }
+  },
+  "results": [
+    {
+      "path": "graphify-out/.graphify_analysis.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 860,
+      "nonEmptyLines": 860,
+      "sections": [
+        {
+          "heading": "communities",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "cohesion",
+          "level": 1,
+          "line": 668
+        },
+        {
+          "heading": "gods",
+          "level": 1,
+          "line": 714
+        },
+        {
+          "heading": "surprises",
+          "level": 1,
+          "line": 766
+        },
+        {
+          "heading": "questions",
+          "level": 1,
+          "line": 823
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 5
+      }
+    },
+    {
+      "path": "graphify-out/.graphify_labels.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "sections": [
+        {
+          "heading": "0",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "1",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "2",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "3",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "4",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "5",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "6",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "7",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "8",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "9",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "10",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "11",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "12",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "13",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "14",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "15",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "16",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "17",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "18",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "19",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "20",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "21",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "22",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "23",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "24",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "25",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "26",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "27",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "28",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "29",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "30",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "31",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "32",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "33",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "34",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "35",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "36",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "37",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "38",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "39",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "40",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "41",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "42",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "43",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 44
+      }
+    },
+    {
+      "path": "graphify-out/GRAPH_REPORT.md",
+      "language": "markdown",
+      "fileCategory": "docs",
+      "totalLines": 194,
+      "nonEmptyLines": 162,
+      "sections": [
+        {
+          "heading": "Graph Report - .  (2026-08-21)",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "Corpus Check",
+          "level": 2,
+          "line": 3
+        },
+        {
+          "heading": "Summary",
+          "level": 2,
+          "line": 6
+        },
+        {
+          "heading": "Graph Freshness",
+          "level": 2,
+          "line": 11
+        },
+        {
+          "heading": "Community Hubs (Navigation)",
+          "level": 2,
+          "line": 16
+        },
+        {
+          "heading": "God Nodes (most connected - your core abstractions)",
+          "level": 2,
+          "line": 60
+        },
+        {
+          "heading": "Surprising Connections (you probably didn't know these)",
+          "level": 2,
+          "line": 72
+        },
+        {
+          "heading": "Import Cycles",
+          "level": 2,
+          "line": 84
+        },
+        {
+          "heading": "Communities (44 total, 21 thin omitted)",
+          "level": 2,
+          "line": 87
+        },
+        {
+          "heading": "Community 0 - \"PrismaService\"",
+          "level": 3,
+          "line": 89
+        },
+        {
+          "heading": "Community 1 - \"products.controller.ts\"",
+          "level": 3,
+          "line": 93
+        },
+        {
+          "heading": "Community 2 - \"users.controller.ts\"",
+          "level": 3,
+          "line": 97
+        },
+        {
+          "heading": "Community 3 - \"AuthContext.tsx\"",
+          "level": 3,
+          "line": 101
+        },
+        {
+          "heading": "Community 4 - \"cart.controller.ts\"",
+          "level": 3,
+          "line": 105
+        },
+        {
+          "heading": "Community 5 - \"scripts\"",
+          "level": 3,
+          "line": 109
+        },
+        {
+          "heading": "Community 6 - \"dependencies\"",
+          "level": 3,
+          "line": 113
+        },
+        {
+          "heading": "Community 7 - \"orders.controller.ts\"",
+          "level": 3,
+          "line": 117
+        },
+        {
+          "heading": "Community 8 - \"include\"",
+          "level": 3,
+          "line": 121
+        },
+        {
+          "heading": "Community 9 - \"compilerOptions\"",
+          "level": 3,
+          "line": 125
+        },
+        {
+          "heading": "Community 10 - \"compilerOptions\"",
+          "level": 3,
+          "line": 129
+        },
+        {
+          "heading": "Community 11 - \"devDependencies\"",
+          "level": 3,
+          "line": 133
+        },
+        {
+          "heading": "Community 12 - \"frontend/package.json\"",
+          "level": 3,
+          "line": 137
+        },
+        {
+          "heading": "Community 13 - \"devDependencies\"",
+          "level": 3,
+          "line": 141
+        },
+        {
+          "heading": "Community 14 - \"main.ts\"",
+          "level": 3,
+          "line": 145
+        },
+        {
+          "heading": "Community 15 - \"AppService\"",
+          "level": 3,
+          "line": 149
+        },
+        {
+          "heading": "Community 16 - \"test-data.ts\"",
+          "level": 3,
+          "line": 153
+        },
+        {
+          "heading": "Community 17 - \"JwtStrategy\"",
+          "level": 3,
+          "line": 157
+        },
+        {
+          "heading": "Community 18 - \"nest-cli.json\"",
+          "level": 3,
+          "line": 161
+        },
+        {
+          "heading": "Community 19 - \"auth.helper.ts\"",
+          "level": 3,
+          "line": 165
+        },
+        {
+          "heading": "Community 20 - \"eslint\"",
+          "level": 3,
+          "line": 169
+        },
+        {
+          "heading": "Knowledge Gaps",
+          "level": 2,
+          "line": 173
+        },
+        {
+          "heading": "Suggested Questions",
+          "level": 2,
+          "line": 178
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 32
+      }
+    },
+    {
+      "path": "graphify-out/graph.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 17028,
+      "nonEmptyLines": 17028,
+      "sections": [
+        {
+          "heading": "directed",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "multigraph",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "graph",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "nodes",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "links",
+          "level": 1,
+          "line": 6343
+        },
+        {
+          "heading": "hyperedges",
+          "level": 1,
+          "line": 17026
+        },
+        {
+          "heading": "built_at_commit",
+          "level": 1,
+          "line": 17027
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 7
+      }
+    },
+    {
+      "path": "graphify-out/manifest.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 542,
+      "nonEmptyLines": 542,
+      "sections": [
+        {
+          "heading": "eslint.config.mjs",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "frontend/eslint.config.mjs",
+          "level": 1,
+          "line": 7
+        },
+        {
+          "heading": "frontend/next.config.ts",
+          "level": 1,
+          "line": 12
+        },
+        {
+          "heading": "frontend/package.json",
+          "level": 1,
+          "line": 17
+        },
+        {
+          "heading": "frontend/postcss.config.mjs",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "frontend/src/app/admin/products/page.tsx",
+          "level": 1,
+          "line": 27
+        },
+        {
+          "heading": "frontend/src/app/cart/page.tsx",
+          "level": 1,
+          "line": 32
+        },
+        {
+          "heading": "frontend/src/app/layout.tsx",
+          "level": 1,
+          "line": 37
+        },
+        {
+          "heading": "frontend/src/app/login/page.tsx",
+          "level": 1,
+          "line": 42
+        },
+        {
+          "heading": "frontend/src/app/orders/page.tsx",
+          "level": 1,
+          "line": 47
+        },
+        {
+          "heading": "frontend/src/app/page.tsx",
+          "level": 1,
+          "line": 52
+        },
+        {
+          "heading": "frontend/src/app/products/page.tsx",
+          "level": 1,
+          "line": 57
+        },
+        {
+          "heading": "frontend/src/app/register/page.tsx",
+          "level": 1,
+          "line": 62
+        },
+        {
+          "heading": "frontend/src/components/Navbar.tsx",
+          "level": 1,
+          "line": 67
+        },
+        {
+          "heading": "frontend/src/context/AuthContext.tsx",
+          "level": 1,
+          "line": 72
+        },
+        {
+          "heading": "frontend/src/lib/api.ts",
+          "level": 1,
+          "line": 77
+        },
+        {
+          "heading": "frontend/src/types/index.ts",
+          "level": 1,
+          "line": 82
+        },
+        {
+          "heading": "frontend/tsconfig.json",
+          "level": 1,
+          "line": 87
+        },
+        {
+          "heading": "nest-cli.json",
+          "level": 1,
+          "line": 92
+        },
+        {
+          "heading": "package.json",
+          "level": 1,
+          "line": 97
+        },
+        {
+          "heading": "postman/collection.json",
+          "level": 1,
+          "line": 102
+        },
+        {
+          "heading": "postman/environment.json",
+          "level": 1,
+          "line": 107
+        },
+        {
+          "heading": "prisma.config.ts",
+          "level": 1,
+          "line": 112
+        },
+        {
+          "heading": "prisma/migrations/20260724110919_init/migration.sql",
+          "level": 1,
+          "line": 117
+        },
+        {
+          "heading": "prisma/migrations/20260729093153_add_orders/migration.sql",
+          "level": 1,
+          "line": 122
+        },
+        {
+          "heading": "prisma/migrations/20260730185335_add_cart_models/migration.sql",
+          "level": 1,
+          "line": 127
+        },
+        {
+          "heading": "skills-lock.json",
+          "level": 1,
+          "line": 132
+        },
+        {
+          "heading": "src/app.controller.spec.ts",
+          "level": 1,
+          "line": 137
+        },
+        {
+          "heading": "src/app.controller.ts",
+          "level": 1,
+          "line": 142
+        },
+        {
+          "heading": "src/app.module.ts",
+          "level": 1,
+          "line": 147
+        },
+        {
+          "heading": "src/app.service.ts",
+          "level": 1,
+          "line": 152
+        },
+        {
+          "heading": "src/auth/auth.controller.spec.ts",
+          "level": 1,
+          "line": 157
+        },
+        {
+          "heading": "src/auth/auth.controller.ts",
+          "level": 1,
+          "line": 162
+        },
+        {
+          "heading": "src/auth/auth.module.ts",
+          "level": 1,
+          "line": 167
+        },
+        {
+          "heading": "src/auth/auth.service.spec.ts",
+          "level": 1,
+          "line": 172
+        },
+        {
+          "heading": "src/auth/auth.service.ts",
+          "level": 1,
+          "line": 177
+        },
+        {
+          "heading": "src/auth/decorators/roles.decorator.ts",
+          "level": 1,
+          "line": 182
+        },
+        {
+          "heading": "src/auth/decorators/user.decorator.ts",
+          "level": 1,
+          "line": 187
+        },
+        {
+          "heading": "src/auth/dto/login.dto.spec.ts",
+          "level": 1,
+          "line": 192
+        },
+        {
+          "heading": "src/auth/dto/login.dto.ts",
+          "level": 1,
+          "line": 197
+        },
+        {
+          "heading": "src/auth/dto/register.dto.spec.ts",
+          "level": 1,
+          "line": 202
+        },
+        {
+          "heading": "src/auth/dto/register.dto.ts",
+          "level": 1,
+          "line": 207
+        },
+        {
+          "heading": "src/auth/guards/jwt-auth.guard.ts",
+          "level": 1,
+          "line": 212
+        },
+        {
+          "heading": "src/auth/guards/roles.guard.spec.ts",
+          "level": 1,
+          "line": 217
+        },
+        {
+          "heading": "src/auth/guards/roles.guard.ts",
+          "level": 1,
+          "line": 222
+        },
+        {
+          "heading": "src/auth/jwt.strategy.spec.ts",
+          "level": 1,
+          "line": 227
+        },
+        {
+          "heading": "src/auth/jwt.strategy.ts",
+          "level": 1,
+          "line": 232
+        },
+        {
+          "heading": "src/cart/cart.controller.spec.ts",
+          "level": 1,
+          "line": 237
+        },
+        {
+          "heading": "src/cart/cart.controller.ts",
+          "level": 1,
+          "line": 242
+        },
+        {
+          "heading": "src/cart/cart.module.ts",
+          "level": 1,
+          "line": 247
+        },
+        {
+          "heading": "src/cart/cart.service.spec.ts",
+          "level": 1,
+          "line": 252
+        },
+        {
+          "heading": "src/cart/cart.service.ts",
+          "level": 1,
+          "line": 257
+        },
+        {
+          "heading": "src/cart/dto/add-to-cart.dto.ts",
+          "level": 1,
+          "line": 262
+        },
+        {
+          "heading": "src/cart/dto/update-cart-item.dto.ts",
+          "level": 1,
+          "line": 267
+        },
+        {
+          "heading": "src/logger/logger.middleware.ts",
+          "level": 1,
+          "line": 272
+        },
+        {
+          "heading": "src/main.ts",
+          "level": 1,
+          "line": 277
+        },
+        {
+          "heading": "src/orders/dto/create-order.dto.ts",
+          "level": 1,
+          "line": 282
+        },
+        {
+          "heading": "src/orders/orders.controller.ts",
+          "level": 1,
+          "line": 287
+        },
+        {
+          "heading": "src/orders/orders.module.ts",
+          "level": 1,
+          "line": 292
+        },
+        {
+          "heading": "src/orders/orders.service.spec.ts",
+          "level": 1,
+          "line": 297
+        },
+        {
+          "heading": "src/orders/orders.service.ts",
+          "level": 1,
+          "line": 302
+        },
+        {
+          "heading": "src/prisma/prisma.module.ts",
+          "level": 1,
+          "line": 307
+        },
+        {
+          "heading": "src/prisma/prisma.service.spec.ts",
+          "level": 1,
+          "line": 312
+        },
+        {
+          "heading": "src/prisma/prisma.service.ts",
+          "level": 1,
+          "line": 317
+        },
+        {
+          "heading": "src/products/dto/create-product.dto.spec.ts",
+          "level": 1,
+          "line": 322
+        },
+        {
+          "heading": "src/products/dto/create-product.dto.ts",
+          "level": 1,
+          "line": 327
+        },
+        {
+          "heading": "src/products/dto/update-product.dto.spec.ts",
+          "level": 1,
+          "line": 332
+        },
+        {
+          "heading": "src/products/dto/update-product.dto.ts",
+          "level": 1,
+          "line": 337
+        },
+        {
+          "heading": "src/products/products.controller.spec.ts",
+          "level": 1,
+          "line": 342
+        },
+        {
+          "heading": "src/products/products.controller.ts",
+          "level": 1,
+          "line": 347
+        },
+        {
+          "heading": "src/products/products.module.ts",
+          "level": 1,
+          "line": 352
+        },
+        {
+          "heading": "src/products/products.service.spec.ts",
+          "level": 1,
+          "line": 357
+        },
+        {
+          "heading": "src/products/products.service.ts",
+          "level": 1,
+          "line": 362
+        },
+        {
+          "heading": "src/users/auth/auth.guard.spec.ts",
+          "level": 1,
+          "line": 367
+        },
+        {
+          "heading": "src/users/auth/auth.guard.ts",
+          "level": 1,
+          "line": 372
+        },
+        {
+          "heading": "src/users/dto/create-user.dto.spec.ts",
+          "level": 1,
+          "line": 377
+        },
+        {
+          "heading": "src/users/dto/create-user.dto.ts",
+          "level": 1,
+          "line": 382
+        },
+        {
+          "heading": "src/users/dto/update-user.dto.spec.ts",
+          "level": 1,
+          "line": 387
+        },
+        {
+          "heading": "src/users/dto/update-user.dto.ts",
+          "level": 1,
+          "line": 392
+        },
+        {
+          "heading": "src/users/entities/user.entity.ts",
+          "level": 1,
+          "line": 397
+        },
+        {
+          "heading": "src/users/logger/logger.middleware.spec.ts",
+          "level": 1,
+          "line": 402
+        },
+        {
+          "heading": "src/users/logger/logger.middleware.ts",
+          "level": 1,
+          "line": 407
+        },
+        {
+          "heading": "src/users/transform/transform.interceptor.spec.ts",
+          "level": 1,
+          "line": 412
+        },
+        {
+          "heading": "src/users/transform/transform.interceptor.ts",
+          "level": 1,
+          "line": 417
+        },
+        {
+          "heading": "src/users/users.controller.spec.ts",
+          "level": 1,
+          "line": 422
+        },
+        {
+          "heading": "src/users/users.controller.ts",
+          "level": 1,
+          "line": 427
+        },
+        {
+          "heading": "src/users/users.module.ts",
+          "level": 1,
+          "line": 432
+        },
+        {
+          "heading": "src/users/users.service.spec.ts",
+          "level": 1,
+          "line": 437
+        },
+        {
+          "heading": "src/users/users.service.ts",
+          "level": 1,
+          "line": 442
+        },
+        {
+          "heading": "test/app.e2e-spec.ts",
+          "level": 1,
+          "line": 447
+        },
+        {
+          "heading": "test/e2e/auth-flow.e2e-spec.ts",
+          "level": 1,
+          "line": 452
+        },
+        {
+          "heading": "test/e2e/auth.e2e-spec.ts",
+          "level": 1,
+          "line": 457
+        },
+        {
+          "heading": "test/e2e/products.e2e-spec.ts",
+          "level": 1,
+          "line": 462
+        },
+        {
+          "heading": "test/edge-cases.spec.ts",
+          "level": 1,
+          "line": 467
+        },
+        {
+          "heading": "test/factories/product.factory.ts",
+          "level": 1,
+          "line": 472
+        },
+        {
+          "heading": "test/factories/user.factory.ts",
+          "level": 1,
+          "line": 477
+        },
+        {
+          "heading": "test/fixtures/test-data.ts",
+          "level": 1,
+          "line": 482
+        },
+        {
+          "heading": "test/helpers/auth.helper.ts",
+          "level": 1,
+          "line": 487
+        },
+        {
+          "heading": "test/helpers/create-app-mocked.ts",
+          "level": 1,
+          "line": 492
+        },
+        {
+          "heading": "test/integration/auth.integration-spec.ts",
+          "level": 1,
+          "line": 497
+        },
+        {
+          "heading": "test/integration/products.integration-spec.ts",
+          "level": 1,
+          "line": 502
+        },
+        {
+          "heading": "test/integration/roles.integration-spec.ts",
+          "level": 1,
+          "line": 507
+        },
+        {
+          "heading": "test/jest-e2e.json",
+          "level": 1,
+          "line": 512
+        },
+        {
+          "heading": "test/jest-integration.json",
+          "level": 1,
+          "line": 517
+        },
+        {
+          "heading": "test/security/auth.security-spec.ts",
+          "level": 1,
+          "line": 522
+        },
+        {
+          "heading": "test/security/rbac.security-spec.ts",
+          "level": 1,
+          "line": 527
+        },
+        {
+          "heading": "tsconfig.build.json",
+          "level": 1,
+          "line": 532
+        },
+        {
+          "heading": "tsconfig.json",
+          "level": 1,
+          "line": 537
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 108
+      }
+    }
+  ]
+}

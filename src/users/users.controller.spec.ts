@@ -34,8 +34,16 @@ describe('UsersController', () => {
   describe('create', () => {
     it('should call service.create', () => {
       const spy = jest.spyOn(service, 'create');
-      controller.create({ name: 'Test', email: 'test@test.com', password: 'pass' });
-      expect(spy).toHaveBeenCalledWith({ name: 'Test', email: 'test@test.com', password: 'pass' });
+      controller.create({
+        name: 'Test',
+        email: 'test@test.com',
+        password: 'pass',
+      });
+      expect(spy).toHaveBeenCalledWith({
+        name: 'Test',
+        email: 'test@test.com',
+        password: 'pass',
+      });
     });
   });
 

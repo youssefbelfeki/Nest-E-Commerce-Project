@@ -7,6 +7,7 @@ import { Cart } from '@/types';
 import { apiFetch } from '@/lib/api';
 import { useAuth } from '@/context/AuthContext';
 import { useI18n } from '@/context/I18nContext';
+import { quantitySchema } from '@/lib/schemas';
 
 export default function CartPage() {
   const { user, loading: authLoading } = useAuth();
@@ -43,13 +44,14 @@ export default function CartPage() {
   };
 
   const handleUpdateQuantity = async (itemId: number, newQty: number) => {
-    if (newQty < 1) return;
+    const parsed = quantitySchema.safeParse(newQty);
+    if (!parsed.success) return;
     setUpdatingId(itemId);
     setError('');
     try {
       await apiFetch(`/cart/item/${itemId}`, {
         method: 'PATCH',
-        body: JSON.stringify({ quantity: newQty }),
+        body: JSON.stringify({ quantity: parsed.data }),
       });
       await fetchCart();
     } catch (err: any) {

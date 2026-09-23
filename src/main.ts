@@ -20,8 +20,8 @@ async function bootstrap() {
       transform: true,
     }),
   );
-  app.useGlobalInterceptors(new TransformInterceptor())
+  app.useGlobalInterceptors(new TransformInterceptor());
   await app.listen(process.env.PORT ?? 3002);
-  console.log('port:', process.env.PORT)
+  console.log('port:', process.env.PORT);
 }
 bootstrap();

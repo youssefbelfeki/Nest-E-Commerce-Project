@@ -1,0 +1,52 @@
+{
+    "projectRoot":  "C:\\Users\\Youssef\\Desktop\\ecommerce-project",
+    "batchImportData":  {
+                            "frontend/tsconfig.json":  [
+
+                                                       ],
+                            "frontend/AGENTS.md":  [
+
+                                                   ],
+                            "frontend/CLAUDE.md":  [
+
+                                                   ],
+                            "frontend/README.md":  [
+
+                                                   ],
+                            "frontend/package.json":  [
+
+                                                      ]
+                        },
+    "batchFiles":  [
+                       {
+                           "fileCategory":  "docs",
+                           "path":  "frontend/AGENTS.md",
+                           "language":  "markdown",
+                           "sizeLines":  61
+                       },
+                       {
+                           "fileCategory":  "docs",
+                           "path":  "frontend/CLAUDE.md",
+                           "language":  "markdown",
+                           "sizeLines":  1
+                       },
+                       {
+                           "fileCategory":  "docs",
+                           "path":  "frontend/README.md",
+                           "language":  "markdown",
+                           "sizeLines":  36
+                       },
+                       {
+                           "fileCategory":  "config",
+                           "path":  "frontend/package.json",
+                           "language":  "json",
+                           "sizeLines":  26
+                       },
+                       {
+                           "fileCategory":  "config",
+                           "path":  "frontend/tsconfig.json",
+                           "language":  "json",
+                           "sizeLines":  44
+                       }
+                   ]
+}

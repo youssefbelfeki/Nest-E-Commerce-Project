@@ -1,0 +1,539 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 16,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 16,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 16,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/auth/auth.module.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 22,
+      "nonEmptyLines": 21,
+      "classes": [
+        {
+          "name": "AuthModule",
+          "startLine": 22,
+          "endLine": 22,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthModule",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/auth/jwt.strategy.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 32,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/auth/jwt.strategy.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 24,
+      "nonEmptyLines": 21,
+      "classes": [
+        {
+          "name": "JwtStrategy",
+          "startLine": 12,
+          "endLine": 24,
+          "methods": [
+            "constructor",
+            "validate"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "JwtStrategy",
+          "line": 11,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "constructor",
+          "callee": "super",
+          "lineNumber": 14
+        },
+        {
+          "caller": "constructor",
+          "callee": "ExtractJwt.fromAuthHeaderAsBearerToken",
+          "lineNumber": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/prisma/prisma.module.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 8,
+      "classes": [
+        {
+          "name": "PrismaModule",
+          "startLine": 9,
+          "endLine": 9,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "PrismaModule",
+          "line": 4,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/prisma/prisma.service.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 63,
+      "nonEmptyLines": 51,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/prisma/prisma.service.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 25,
+      "nonEmptyLines": 21,
+      "classes": [
+        {
+          "name": "PrismaService",
+          "startLine": 7,
+          "endLine": 25,
+          "methods": [
+            "constructor",
+            "onModuleInit",
+            "onModuleDestroy"
+          ],
+          "properties": [
+            "pool"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "PrismaService",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "constructor",
+          "callee": "super",
+          "lineNumber": 13
+        },
+        {
+          "caller": "onModuleInit",
+          "callee": "this.$connect",
+          "lineNumber": 18
+        },
+        {
+          "caller": "onModuleDestroy",
+          "callee": "this.$disconnect",
+          "lineNumber": 22
+        },
+        {
+          "caller": "onModuleDestroy",
+          "callee": "PrismaService.pool.end",
+          "lineNumber": 23
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/products/products.module.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "ProductsModule",
+          "startLine": 11,
+          "endLine": 11,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "ProductsModule",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "test/e2e/auth-flow.e2e-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 173,
+      "nonEmptyLines": 146,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/e2e/auth.e2e-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 158,
+      "nonEmptyLines": 133,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/e2e/products.e2e-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 188,
+      "nonEmptyLines": 156,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/edge-cases.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 201,
+      "nonEmptyLines": 170,
+      "callGraph": [
+        {
+          "caller": "createAdminToken",
+          "callee": "moduleFixture.get",
+          "lineNumber": 198
+        },
+        {
+          "caller": "createAdminToken",
+          "callee": "jwtService.signAsync",
+          "lineNumber": 199
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/factories/product.factory.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 18,
+      "functions": [
+        {
+          "name": "createTestProduct",
+          "startLine": 9,
+          "endLine": 20,
+          "params": [
+            "prisma",
+            "input"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createTestProduct",
+          "line": 9,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createTestProduct",
+          "callee": "prisma.product.create",
+          "lineNumber": 13
+        },
+        {
+          "caller": "createTestProduct",
+          "callee": "Date.now",
+          "lineNumber": 15
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/factories/user.factory.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 37,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "createTestUser",
+          "startLine": 12,
+          "endLine": 33,
+          "params": [
+            "prisma",
+            "input"
+          ]
+        },
+        {
+          "name": "createTestAdmin",
+          "startLine": 35,
+          "endLine": 37,
+          "params": [
+            "prisma"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createTestUser",
+          "line": 12,
+          "isDefault": false
+        },
+        {
+          "name": "createTestAdmin",
+          "line": 35,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createTestUser",
+          "callee": "Date.now",
+          "lineNumber": 18
+        },
+        {
+          "caller": "createTestUser",
+          "callee": "bcrypt.hash",
+          "lineNumber": 23
+        },
+        {
+          "caller": "createTestUser",
+          "callee": "prisma.user.create",
+          "lineNumber": 25
+        },
+        {
+          "caller": "createTestAdmin",
+          "callee": "createTestUser",
+          "lineNumber": 36
+        },
+        {
+          "caller": "createTestAdmin",
+          "callee": "Date.now",
+          "lineNumber": 36
+        }
+      ],
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/helpers/create-app-mocked.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 43,
+      "nonEmptyLines": 39,
+      "functions": [
+        {
+          "name": "createMockedApp",
+          "startLine": 8,
+          "endLine": 43,
+          "params": [
+            "prismaOverride"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "createMockedApp",
+          "line": 8,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "createMockedApp",
+          "callee": "jest.fn",
+          "lineNumber": 13
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "jest.fn",
+          "lineNumber": 14
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "jest.fn",
+          "lineNumber": 17
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "jest.fn",
+          "lineNumber": 18
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "jest.fn",
+          "lineNumber": 19
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "jest.fn",
+          "lineNumber": 20
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "jest.fn",
+          "lineNumber": 21
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "Test.createTestingModule({\r\n    imports: [AuthModule, ProductsModule],\r\n  })\r\n    .overrideProvider(PrismaService)\r\n    .useValue(mockPrismaService)\r\n    .compile",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "Test.createTestingModule({\r\n    imports: [AuthModule, ProductsModule],\r\n  })\r\n    .overrideProvider(PrismaService)\r\n    .useValue",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "Test.createTestingModule({\r\n    imports: [AuthModule, ProductsModule],\r\n  })\r\n    .overrideProvider",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "Test.createTestingModule",
+          "lineNumber": 26
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "moduleFixture.createNestApplication",
+          "lineNumber": 33
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "app.useGlobalPipes",
+          "lineNumber": 34
+        },
+        {
+          "caller": "createMockedApp",
+          "callee": "app.init",
+          "lineNumber": 40
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 1,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/security/auth.security-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 215,
+      "nonEmptyLines": 183,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/security/rbac.security-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 159,
+      "nonEmptyLines": 132,
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

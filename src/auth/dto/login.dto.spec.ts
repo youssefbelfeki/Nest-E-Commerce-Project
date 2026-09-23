@@ -30,7 +30,10 @@ describe('LoginDto', () => {
 
   describe('password', () => {
     it('should fail when password is missing', async () => {
-      const dto = plainToInstance(LoginDto, { ...validData, password: undefined });
+      const dto = plainToInstance(LoginDto, {
+        ...validData,
+        password: undefined,
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });

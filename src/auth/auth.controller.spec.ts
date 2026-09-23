@@ -29,8 +29,17 @@ describe('AuthController', () => {
 
   describe('register', () => {
     it('should delegate to authService.register and return result', async () => {
-      const dto = { name: 'Test', email: 'test@example.com', password: 'pass123' };
-      const expected = { id: 1, name: 'Test', email: 'test@example.com', role: 'USER' };
+      const dto = {
+        name: 'Test',
+        email: 'test@example.com',
+        password: 'pass123',
+      };
+      const expected = {
+        id: 1,
+        name: 'Test',
+        email: 'test@example.com',
+        role: 'USER',
+      };
       authService.register.mockResolvedValue(expected);
 
       const result = await controller.register(dto);

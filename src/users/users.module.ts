@@ -9,8 +9,6 @@ import { LoggerMiddleware } from './logger/logger.middleware';
 })
 export class UsersModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
-    consumer
-    .apply(LoggerMiddleware)
-    .forRoutes('users');
+    consumer.apply(LoggerMiddleware).forRoutes('users');
   }
 }

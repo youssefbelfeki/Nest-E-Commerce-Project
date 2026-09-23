@@ -100,6 +100,11 @@
     "namePlaceholder": "Jean Dupont",
     "emailPlaceholder": "user@example.com"
   },
+  "validation": {
+    "required": "Ce champ est obligatoire",
+    "emailInvalid": "Veuillez saisir une adresse e-mail valide",
+    "quantity": "La quantité doit être un entier supérieur ou égal à 1"
+  },
   "admin": {
     "restricted": "Accès Admin",
     "title": "Gestion des produits",

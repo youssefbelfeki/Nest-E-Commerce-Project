@@ -1,0 +1,68 @@
+{
+    "projectRoot":  "C:\\Users\\Youssef\\Desktop\\ecommerce-project",
+    "batchFiles":  [
+                       {
+                           "fileCategory":  "code",
+                           "path":  "src/auth/decorators/user.decorator.ts",
+                           "language":  "typescript",
+                           "sizeLines":  9
+                       },
+                       {
+                           "fileCategory":  "code",
+                           "path":  "src/orders/dto/create-order.dto.ts",
+                           "language":  "typescript",
+                           "sizeLines":  19
+                       },
+                       {
+                           "fileCategory":  "code",
+                           "path":  "src/orders/orders.controller.ts",
+                           "language":  "typescript",
+                           "sizeLines":  26
+                       },
+                       {
+                           "fileCategory":  "code",
+                           "path":  "src/orders/orders.module.ts",
+                           "language":  "typescript",
+                           "sizeLines":  11
+                       },
+                       {
+                           "fileCategory":  "code",
+                           "path":  "src/orders/orders.service.spec.ts",
+                           "language":  "typescript",
+                           "sizeLines":  214
+                       },
+                       {
+                           "fileCategory":  "code",
+                           "path":  "src/orders/orders.service.ts",
+                           "language":  "typescript",
+                           "sizeLines":  90
+                       }
+                   ],
+    "batchImportData":  {
+                            "src/auth/decorators/user.decorator.ts":  [
+
+                                                                      ],
+                            "src/orders/dto/create-order.dto.ts":  [
+
+                                                                   ],
+                            "src/orders/orders.controller.ts":  [
+                                                                    "src/auth/decorators/user.decorator.ts",
+                                                                    "src/orders/dto/create-order.dto.ts",
+                                                                    "src/orders/orders.service.ts",
+                                                                    "src/users/auth/auth.guard.ts"
+                                                                ],
+                            "src/orders/orders.module.ts":  [
+                                                                "src/auth/auth.module.ts",
+                                                                "src/orders/orders.controller.ts",
+                                                                "src/orders/orders.service.ts"
+                                                            ],
+                            "src/orders/orders.service.spec.ts":  [
+                                                                      "src/orders/orders.service.ts",
+                                                                      "src/prisma/prisma.service.ts"
+                                                                  ],
+                            "src/orders/orders.service.ts":  [
+                                                                 "src/orders/dto/create-order.dto.ts",
+                                                                 "src/prisma/prisma.service.ts"
+                                                             ]
+                        }
+}

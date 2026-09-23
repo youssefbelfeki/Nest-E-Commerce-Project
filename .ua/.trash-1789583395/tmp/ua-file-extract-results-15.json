@@ -1,0 +1,1468 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 20,
+  "filesSkipped": [
+    ".ua/dashboard.log.err",
+    "frontend/src/app/globals.css",
+    "graphify-out/.graphify_labels.json.sig",
+    "graphify-out/.graphify_root",
+    "prisma/schema.prisma"
+  ],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 20,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 9,
+      "failed": 0,
+      "skipped": 11
+    }
+  },
+  "results": [
+    {
+      "path": ".ua/intermediate/scan-result.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1319,
+      "nonEmptyLines": 1319,
+      "sections": [
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "description",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "languages",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "frameworks",
+          "level": 1,
+          "line": 15
+        },
+        {
+          "heading": "files",
+          "level": 1,
+          "line": 22
+        },
+        {
+          "heading": "totalFiles",
+          "level": 1,
+          "line": 912
+        },
+        {
+          "heading": "filteredByIgnore",
+          "level": 1,
+          "line": 913
+        },
+        {
+          "heading": "estimatedComplexity",
+          "level": 1,
+          "line": 914
+        },
+        {
+          "heading": "importMap",
+          "level": 1,
+          "line": 915
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "eslint.config.mjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 35,
+      "nonEmptyLines": 34,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/eslint.config.mjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 18,
+      "nonEmptyLines": 16,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/next.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 8,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/postcss.config.mjs",
+      "language": "javascript",
+      "fileCategory": "code",
+      "totalLines": 7,
+      "nonEmptyLines": 6,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/dictionaries/en.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 143,
+      "nonEmptyLines": 143,
+      "sections": [
+        {
+          "heading": "nav",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "home",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "products",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "cart",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "orders",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "login",
+          "level": 1,
+          "line": 76
+        },
+        {
+          "heading": "register",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "admin",
+          "level": 1,
+          "line": 103
+        },
+        {
+          "heading": "language",
+          "level": 1,
+          "line": 140
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "frontend/src/app/[lang]/dictionaries/fr.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 143,
+      "nonEmptyLines": 143,
+      "sections": [
+        {
+          "heading": "nav",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "home",
+          "level": 1,
+          "line": 11
+        },
+        {
+          "heading": "products",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "cart",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "orders",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "login",
+          "level": 1,
+          "line": 76
+        },
+        {
+          "heading": "register",
+          "level": 1,
+          "line": 9
+        },
+        {
+          "heading": "admin",
+          "level": 1,
+          "line": 103
+        },
+        {
+          "heading": "language",
+          "level": 1,
+          "line": 140
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 9
+      }
+    },
+    {
+      "path": "frontend/src/proxy.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 48,
+      "nonEmptyLines": 38,
+      "functions": [
+        {
+          "name": "getLocale",
+          "startLine": 8,
+          "endLine": 26,
+          "params": [
+            "request"
+          ]
+        },
+        {
+          "name": "proxy",
+          "startLine": 28,
+          "endLine": 44,
+          "params": [
+            "request"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "proxy",
+          "line": 28,
+          "isDefault": false
+        },
+        {
+          "name": "config",
+          "line": 46,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "getLocale",
+          "callee": "request.cookies.get",
+          "lineNumber": 10
+        },
+        {
+          "caller": "getLocale",
+          "callee": "locales.includes",
+          "lineNumber": 11
+        },
+        {
+          "caller": "getLocale",
+          "callee": "request.headers.get",
+          "lineNumber": 16
+        },
+        {
+          "caller": "getLocale",
+          "callee": "acceptLanguage.split",
+          "lineNumber": 17
+        },
+        {
+          "caller": "getLocale",
+          "callee": "part.trim().split(';')[0].trim().split('-')[0].toLowerCase",
+          "lineNumber": 18
+        },
+        {
+          "caller": "getLocale",
+          "callee": "part.trim().split(';')[0].trim().split",
+          "lineNumber": 18
+        },
+        {
+          "caller": "getLocale",
+          "callee": "part.trim().split(';')[0].trim",
+          "lineNumber": 18
+        },
+        {
+          "caller": "getLocale",
+          "callee": "part.trim().split",
+          "lineNumber": 18
+        },
+        {
+          "caller": "getLocale",
+          "callee": "part.trim",
+          "lineNumber": 18
+        },
+        {
+          "caller": "getLocale",
+          "callee": "locales.includes",
+          "lineNumber": 19
+        },
+        {
+          "caller": "proxy",
+          "callee": "locales.some",
+          "lineNumber": 31
+        },
+        {
+          "caller": "proxy",
+          "callee": "pathname.startsWith",
+          "lineNumber": 33
+        },
+        {
+          "caller": "proxy",
+          "callee": "NextResponse.next",
+          "lineNumber": 36
+        },
+        {
+          "caller": "proxy",
+          "callee": "getLocale",
+          "lineNumber": 38
+        },
+        {
+          "caller": "proxy",
+          "callee": "request.nextUrl.clone",
+          "lineNumber": 39
+        },
+        {
+          "caller": "proxy",
+          "callee": "NextResponse.redirect",
+          "lineNumber": 43
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 2,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "graphify-out/cache/stat-index.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "sections": [
+        {
+          "heading": "BACKEND_RULES.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "README.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "eslint.config.mjs",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/AGENTS.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/CLAUDE.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/README.md",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/eslint.config.mjs",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/next.config.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/package.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/postcss.config.mjs",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/public/file.svg",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/public/globe.svg",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/public/next.svg",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/public/vercel.svg",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/public/window.svg",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/app/admin/products/page.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/app/cart/page.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/app/layout.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/app/login/page.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/app/orders/page.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/app/page.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/app/products/page.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/app/register/page.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/components/Navbar.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/context/AuthContext.tsx",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/lib/api.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/src/types/index.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "frontend/tsconfig.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "nest-cli.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "package.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "postman/collection.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "postman/environment.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "prisma.config.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "prisma/migrations/20260724110919_init/migration.sql",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "prisma/migrations/20260729093153_add_orders/migration.sql",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "prisma/migrations/20260730185335_add_cart_models/migration.sql",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "skills-lock.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/app.controller.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/app.controller.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/app.module.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/app.service.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/auth.controller.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/auth.controller.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/auth.module.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/auth.service.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/auth.service.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/decorators/roles.decorator.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/decorators/user.decorator.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/dto/login.dto.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/dto/login.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/dto/register.dto.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/dto/register.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/guards/jwt-auth.guard.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/guards/roles.guard.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/guards/roles.guard.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/jwt.strategy.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/auth/jwt.strategy.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/cart/cart.controller.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/cart/cart.controller.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/cart/cart.module.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/cart/cart.service.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/cart/cart.service.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/cart/dto/add-to-cart.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/cart/dto/update-cart-item.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/logger/logger.middleware.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/main.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/orders/dto/create-order.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/orders/orders.controller.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/orders/orders.module.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/orders/orders.service.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/orders/orders.service.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/prisma/prisma.module.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/prisma/prisma.service.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/prisma/prisma.service.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/dto/create-product.dto.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/dto/create-product.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/dto/update-product.dto.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/dto/update-product.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/products.controller.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/products.controller.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/products.module.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/products.service.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/products/products.service.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/auth/auth.guard.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/auth/auth.guard.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/dto/create-user.dto.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/dto/create-user.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/dto/update-user.dto.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/dto/update-user.dto.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/entities/user.entity.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/logger/logger.middleware.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/logger/logger.middleware.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/transform/transform.interceptor.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/transform/transform.interceptor.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/users.controller.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/users.controller.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/users.module.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/users.service.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "src/users/users.service.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/app.e2e-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/e2e/auth-flow.e2e-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/e2e/auth.e2e-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/e2e/products.e2e-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/edge-cases.spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/factories/product.factory.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/factories/user.factory.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/fixtures/test-data.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/helpers/auth.helper.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/helpers/create-app-mocked.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/integration/auth.integration-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/integration/products.integration-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/integration/roles.integration-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/jest-e2e.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/jest-integration.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/security/auth.security-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "test/security/rbac.security-spec.ts",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "tsconfig.build.json",
+          "level": 1,
+          "line": 1
+        },
+        {
+          "heading": "tsconfig.json",
+          "level": 1,
+          "line": 1
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 118
+      }
+    },
+    {
+      "path": "postman/collection.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 531,
+      "nonEmptyLines": 531,
+      "sections": [
+        {
+          "heading": "info",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "item",
+          "level": 1,
+          "line": 8
+        },
+        {
+          "heading": "variable",
+          "level": 1,
+          "line": 514
+        },
+        {
+          "heading": "auth",
+          "level": 1,
+          "line": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "postman/environment.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 25,
+      "nonEmptyLines": 25,
+      "sections": [
+        {
+          "heading": "id",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "name",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "values",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "_postman_variable_scope",
+          "level": 1,
+          "line": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 4
+      }
+    },
+    {
+      "path": "prisma.config.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 14,
+      "nonEmptyLines": 13,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "prisma/migrations/20260724110919_init/migration.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 26,
+      "nonEmptyLines": 21,
+      "definitions": [
+        {
+          "name": "User",
+          "kind": "table",
+          "fields": [
+            "id",
+            "email",
+            "name",
+            "password",
+            "role"
+          ],
+          "startLine": 5,
+          "endLine": 13
+        },
+        {
+          "name": "Product",
+          "kind": "table",
+          "fields": [
+            "id",
+            "name",
+            "price",
+            "stock"
+          ],
+          "startLine": 16,
+          "endLine": 23
+        },
+        {
+          "name": "User_email_key",
+          "kind": "index",
+          "fields": [],
+          "startLine": 26,
+          "endLine": 26
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 3
+      }
+    },
+    {
+      "path": "prisma/migrations/20260729093153_add_orders/migration.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 27,
+      "nonEmptyLines": 21,
+      "definitions": [
+        {
+          "name": "Order",
+          "kind": "table",
+          "fields": [
+            "id",
+            "userId",
+            "createdAt"
+          ],
+          "startLine": 2,
+          "endLine": 8
+        },
+        {
+          "name": "OrderItem",
+          "kind": "table",
+          "fields": [
+            "id",
+            "orderId",
+            "productId",
+            "quantity"
+          ],
+          "startLine": 11,
+          "endLine": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 2
+      }
+    },
+    {
+      "path": "prisma/migrations/20260730185335_add_cart_models/migration.sql",
+      "language": "sql",
+      "fileCategory": "data",
+      "totalLines": 29,
+      "nonEmptyLines": 22,
+      "definitions": [
+        {
+          "name": "Cart",
+          "kind": "table",
+          "fields": [
+            "id",
+            "userId"
+          ],
+          "startLine": 2,
+          "endLine": 7
+        },
+        {
+          "name": "CartItem",
+          "kind": "table",
+          "fields": [
+            "id",
+            "cartId",
+            "productId",
+            "quantity"
+          ],
+          "startLine": 10,
+          "endLine": 17
+        },
+        {
+          "name": "Cart_userId_key",
+          "kind": "index",
+          "fields": [],
+          "startLine": 20,
+          "endLine": 20
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "definitionCount": 3
+      }
+    },
+    {
+      "path": "prisma/migrations/migration_lock.toml",
+      "language": "toml",
+      "fileCategory": "config",
+      "totalLines": 3,
+      "nonEmptyLines": 3,
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 0
+      }
+    },
+    {
+      "path": "src/users/entities/user.entity.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 1,
+      "nonEmptyLines": 1,
+      "classes": [
+        {
+          "name": "User",
+          "startLine": 1,
+          "endLine": 1,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "User",
+          "line": 1,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "test/fixtures/test-data.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 27,
+      "nonEmptyLines": 23,
+      "exports": [
+        {
+          "name": "TEST_USER",
+          "line": 1,
+          "isDefault": false
+        },
+        {
+          "name": "TEST_ADMIN",
+          "line": 7,
+          "isDefault": false
+        },
+        {
+          "name": "TEST_PRODUCT",
+          "line": 13,
+          "isDefault": false
+        },
+        {
+          "name": "TEST_PRODUCT_2",
+          "line": 19,
+          "isDefault": false
+        },
+        {
+          "name": "INVALID_EMAIL",
+          "line": 25,
+          "isDefault": false
+        },
+        {
+          "name": "SHORT_PASSWORD",
+          "line": 26,
+          "isDefault": false
+        },
+        {
+          "name": "LONG_NAME",
+          "line": 27,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 7,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/helpers/auth.helper.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 38,
+      "nonEmptyLines": 32,
+      "functions": [
+        {
+          "name": "registerUser",
+          "startLine": 8,
+          "endLine": 18,
+          "params": [
+            "app",
+            "userData"
+          ]
+        },
+        {
+          "name": "loginUser",
+          "startLine": 20,
+          "endLine": 30,
+          "params": [
+            "app",
+            "credentials"
+          ]
+        },
+        {
+          "name": "registerAndLogin",
+          "startLine": 32,
+          "endLine": 38,
+          "params": [
+            "app",
+            "userData"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "registerUser",
+          "line": 8,
+          "isDefault": false
+        },
+        {
+          "name": "loginUser",
+          "line": 20,
+          "isDefault": false
+        },
+        {
+          "name": "registerAndLogin",
+          "line": 32,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "registerUser",
+          "callee": "request(app.getHttpServer())\r\n    .post('/auth/register')\r\n    .send(userData)\r\n    .expect",
+          "lineNumber": 12
+        },
+        {
+          "caller": "registerUser",
+          "callee": "request(app.getHttpServer())\r\n    .post('/auth/register')\r\n    .send",
+          "lineNumber": 12
+        },
+        {
+          "caller": "registerUser",
+          "callee": "request(app.getHttpServer())\r\n    .post",
+          "lineNumber": 12
+        },
+        {
+          "caller": "registerUser",
+          "callee": "request",
+          "lineNumber": 12
+        },
+        {
+          "caller": "registerUser",
+          "callee": "app.getHttpServer",
+          "lineNumber": 12
+        },
+        {
+          "caller": "loginUser",
+          "callee": "request(app.getHttpServer())\r\n    .post('/auth/login')\r\n    .send(credentials)\r\n    .expect",
+          "lineNumber": 24
+        },
+        {
+          "caller": "loginUser",
+          "callee": "request(app.getHttpServer())\r\n    .post('/auth/login')\r\n    .send",
+          "lineNumber": 24
+        },
+        {
+          "caller": "loginUser",
+          "callee": "request(app.getHttpServer())\r\n    .post",
+          "lineNumber": 24
+        },
+        {
+          "caller": "loginUser",
+          "callee": "request",
+          "lineNumber": 24
+        },
+        {
+          "caller": "loginUser",
+          "callee": "app.getHttpServer",
+          "lineNumber": 24
+        },
+        {
+          "caller": "registerAndLogin",
+          "callee": "registerUser",
+          "lineNumber": 36
+        },
+        {
+          "caller": "registerAndLogin",
+          "callee": "loginUser",
+          "lineNumber": 37
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 3,
+        "functionCount": 3,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "test/jest-e2e.json",
+      "language": "json",
+      "fileCategory": "config",
+      "totalLines": 12,
+      "nonEmptyLines": 12,
+      "sections": [
+        {
+          "heading": "moduleFileExtensions",
+          "level": 1,
+          "line": 2
+        },
+        {
+          "heading": "rootDir",
+          "level": 1,
+          "line": 3
+        },
+        {
+          "heading": "testEnvironment",
+          "level": 1,
+          "line": 4
+        },
+        {
+          "heading": "testRegex",
+          "level": 1,
+          "line": 5
+        },
+        {
+          "heading": "transform",
+          "level": 1,
+          "line": 6
+        },
+        {
+          "heading": "moduleNameMapper",
+          "level": 1,
+          "line": 9
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0,
+        "sectionCount": 6
+      }
+    }
+  ]
+}

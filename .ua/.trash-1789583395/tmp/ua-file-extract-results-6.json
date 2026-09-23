@@ -1,0 +1,269 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 9,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 9,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 9,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/auth/auth.controller.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 55,
+      "nonEmptyLines": 44,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/auth/auth.controller.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 20,
+      "nonEmptyLines": 17,
+      "classes": [
+        {
+          "name": "AuthController",
+          "startLine": 7,
+          "endLine": 20,
+          "methods": [
+            "constructor",
+            "register",
+            "login"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthController",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "register",
+          "callee": "Body",
+          "lineNumber": 11
+        },
+        {
+          "caller": "register",
+          "callee": "this.authService.register",
+          "lineNumber": 12
+        },
+        {
+          "caller": "login",
+          "callee": "Body",
+          "lineNumber": 17
+        },
+        {
+          "caller": "login",
+          "callee": "this.authService.login",
+          "lineNumber": 18
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/auth/auth.service.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 167,
+      "nonEmptyLines": 140,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/auth/auth.service.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 60,
+      "nonEmptyLines": 51,
+      "classes": [
+        {
+          "name": "AuthService",
+          "startLine": 13,
+          "endLine": 60,
+          "methods": [
+            "constructor",
+            "register",
+            "login"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "AuthService",
+          "line": 12,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "register",
+          "callee": "this.prisma.user.findUnique",
+          "lineNumber": 20
+        },
+        {
+          "caller": "register",
+          "callee": "bcrypt.hash",
+          "lineNumber": 27
+        },
+        {
+          "caller": "register",
+          "callee": "this.prisma.user.create",
+          "lineNumber": 29
+        },
+        {
+          "caller": "login",
+          "callee": "this.prisma.user.findUnique",
+          "lineNumber": 43
+        },
+        {
+          "caller": "login",
+          "callee": "bcrypt.compare",
+          "lineNumber": 50
+        },
+        {
+          "caller": "login",
+          "callee": "this.jwtService.signAsync",
+          "lineNumber": 56
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/auth/dto/login.dto.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 44,
+      "nonEmptyLines": 38,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/auth/dto/login.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 9,
+      "classes": [
+        {
+          "name": "LoginDto",
+          "startLine": 3,
+          "endLine": 11,
+          "methods": [],
+          "properties": [
+            "email",
+            "password"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "LoginDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/auth/dto/register.dto.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 95,
+      "nonEmptyLines": 82,
+      "metrics": {
+        "importCount": 1,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/auth/dto/register.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 16,
+      "nonEmptyLines": 13,
+      "classes": [
+        {
+          "name": "RegisterDto",
+          "startLine": 3,
+          "endLine": 16,
+          "methods": [],
+          "properties": [
+            "name",
+            "email",
+            "password"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "RegisterDto",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "test/integration/auth.integration-spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 137,
+      "nonEmptyLines": 112,
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    }
+  ]
+}

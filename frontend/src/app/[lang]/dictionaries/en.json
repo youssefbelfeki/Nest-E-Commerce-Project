@@ -100,6 +100,11 @@
     "namePlaceholder": "John Doe",
     "emailPlaceholder": "user@example.com"
   },
+  "validation": {
+    "required": "This field is required",
+    "emailInvalid": "Please enter a valid email address",
+    "quantity": "Quantity must be a whole number of at least 1"
+  },
   "admin": {
     "restricted": "Admin Restricted",
     "title": "Product Management",

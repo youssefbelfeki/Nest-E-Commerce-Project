@@ -17,7 +17,10 @@ describe('RegisterDto', () => {
 
   describe('name', () => {
     it('should fail when name is missing', async () => {
-      const dto = plainToInstance(RegisterDto, { ...validData, name: undefined });
+      const dto = plainToInstance(RegisterDto, {
+        ...validData,
+        name: undefined,
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
       expect(errors[0].property).toBe('name');
@@ -38,26 +41,38 @@ describe('RegisterDto', () => {
 
   describe('email', () => {
     it('should fail when email is missing', async () => {
-      const dto = plainToInstance(RegisterDto, { ...validData, email: undefined });
+      const dto = plainToInstance(RegisterDto, {
+        ...validData,
+        email: undefined,
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
       expect(errors[0].property).toBe('email');
     });
 
     it('should fail with invalid email format', async () => {
-      const dto = plainToInstance(RegisterDto, { ...validData, email: 'not-an-email' });
+      const dto = plainToInstance(RegisterDto, {
+        ...validData,
+        email: 'not-an-email',
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });
 
     it('should fail with email missing @', async () => {
-      const dto = plainToInstance(RegisterDto, { ...validData, email: 'testexample.com' });
+      const dto = plainToInstance(RegisterDto, {
+        ...validData,
+        email: 'testexample.com',
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });
 
     it('should pass with valid email', async () => {
-      const dto = plainToInstance(RegisterDto, { ...validData, email: 'user@domain.org' });
+      const dto = plainToInstance(RegisterDto, {
+        ...validData,
+        email: 'user@domain.org',
+      });
       const errors = await validate(dto);
       expect(errors.length).toBe(0);
     });
@@ -65,20 +80,29 @@ describe('RegisterDto', () => {
 
   describe('password', () => {
     it('should fail when password is missing', async () => {
-      const dto = plainToInstance(RegisterDto, { ...validData, password: undefined });
+      const dto = plainToInstance(RegisterDto, {
+        ...validData,
+        password: undefined,
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
       expect(errors[0].property).toBe('password');
     });
 
     it('should fail when password is less than 6 characters', async () => {
-      const dto = plainToInstance(RegisterDto, { ...validData, password: '12345' });
+      const dto = plainToInstance(RegisterDto, {
+        ...validData,
+        password: '12345',
+      });
       const errors = await validate(dto);
       expect(errors.length).toBeGreaterThan(0);
     });
 
     it('should pass with password of exactly 6 characters', async () => {
-      const dto = plainToInstance(RegisterDto, { ...validData, password: '123456' });
+      const dto = plainToInstance(RegisterDto, {
+        ...validData,
+        password: '123456',
+      });
       const errors = await validate(dto);
       expect(errors.length).toBe(0);
     });

@@ -50,10 +50,7 @@ describe('OrdersService', () => {
     };
 
     const module: TestingModule = await Test.createTestingModule({
-      providers: [
-        OrdersService,
-        { provide: PrismaService, useValue: prisma },
-      ],
+      providers: [OrdersService, { provide: PrismaService, useValue: prisma }],
     }).compile();
 
     service = module.get(OrdersService);
@@ -87,38 +84,32 @@ describe('OrdersService', () => {
     it('should throw BadRequestException when product not found', async () => {
       prisma.product.findMany.mockResolvedValue([]);
 
-      await expect(
-        service.create(mockUserId, createOrderDto),
-      ).rejects.toThrow(BadRequestException);
-      await expect(
-        service.create(mockUserId, createOrderDto),
-      ).rejects.toThrow('Product with ID 1 not found');
+      await expect(service.create(mockUserId, createOrderDto)).rejects.toThrow(
+        BadRequestException,
+      );
+      await expect(service.create(mockUserId, createOrderDto)).rejects.toThrow(
+        'Product with ID 1 not found',
+      );
     });
 
     it('should throw BadRequestException when product missing from results', async () => {
-      prisma.product.findMany.mockResolvedValue([
-        { ...mockProduct, id: 999 },
-      ]);
+      prisma.product.findMany.mockResolvedValue([{ ...mockProduct, id: 999 }]);
 
-      await expect(
-        service.create(mockUserId, createOrderDto),
-      ).rejects.toThrow(BadRequestException);
-      await expect(
-        service.create(mockUserId, createOrderDto),
-      ).rejects.toThrow('Product with ID 1 not found');
+      await expect(service.create(mockUserId, createOrderDto)).rejects.toThrow(
+        BadRequestException,
+      );
+      await expect(service.create(mockUserId, createOrderDto)).rejects.toThrow(
+        'Product with ID 1 not found',
+      );
     });
 
     it('should throw BadRequestException when stock insufficient', async () => {
-      prisma.product.findMany.mockResolvedValue([
-        { ...mockProduct, stock: 1 },
-      ]);
+      prisma.product.findMany.mockResolvedValue([{ ...mockProduct, stock: 1 }]);
 
-      await expect(
-        service.create(mockUserId, createOrderDto),
-      ).rejects.toThrow(BadRequestException);
-      await expect(
-        service.create(mockUserId, createOrderDto),
-      ).rejects.toThrow(
+      await expect(service.create(mockUserId, createOrderDto)).rejects.toThrow(
+        BadRequestException,
+      );
+      await expect(service.create(mockUserId, createOrderDto)).rejects.toThrow(
         'Insufficient stock for product "Test Product". Available: 1, requested: 2',
       );
     });
@@ -192,23 +183,23 @@ describe('OrdersService', () => {
     it('should throw NotFoundException when order not found', async () => {
       prisma.order.findFirst.mockResolvedValue(null);
 
-      await expect(
-        service.findOne(999, mockUserId),
-      ).rejects.toThrow(NotFoundException);
-      await expect(
-        service.findOne(999, mockUserId),
-      ).rejects.toThrow('Order with ID 999 not found');
+      await expect(service.findOne(999, mockUserId)).rejects.toThrow(
+        NotFoundException,
+      );
+      await expect(service.findOne(999, mockUserId)).rejects.toThrow(
+        'Order with ID 999 not found',
+      );
     });
 
     it('should throw NotFoundException when order belongs to another user', async () => {
       prisma.order.findFirst.mockResolvedValue(null);
 
-      await expect(
-        service.findOne(1, mockUserId),
-      ).rejects.toThrow(NotFoundException);
-      await expect(
-        service.findOne(1, mockUserId),
-      ).rejects.toThrow('Order with ID 1 not found');
+      await expect(service.findOne(1, mockUserId)).rejects.toThrow(
+        NotFoundException,
+      );
+      await expect(service.findOne(1, mockUserId)).rejects.toThrow(
+        'Order with ID 1 not found',
+      );
     });
   });
 });

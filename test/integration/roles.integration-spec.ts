@@ -8,7 +8,9 @@ describe('Roles Integration', () => {
   let reflector: jest.Mocked<Reflector>;
 
   beforeEach(() => {
-    reflector = { getAllAndOverride: jest.fn() } as unknown as jest.Mocked<Reflector>;
+    reflector = {
+      getAllAndOverride: jest.fn(),
+    } as unknown as jest.Mocked<Reflector>;
     guard = new RolesGuard(reflector);
   });
 

@@ -36,7 +36,9 @@ describe('Auth E2E (mocked)', () => {
       .compile();
 
     app = moduleFixture.createNestApplication();
-    app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
+    app.useGlobalPipes(
+      new ValidationPipe({ whitelist: true, transform: true }),
+    );
     await app.init();
   });
 
@@ -69,7 +71,10 @@ describe('Auth E2E (mocked)', () => {
     });
 
     it('should return 409 for duplicate email', async () => {
-      prisma.user.findUnique.mockResolvedValue({ id: 1, email: 'john@example.com' });
+      prisma.user.findUnique.mockResolvedValue({
+        id: 1,
+        email: 'john@example.com',
+      });
 
       await request(app.getHttpServer())
         .post('/auth/register')

@@ -38,7 +38,9 @@ describe('Edge Cases & Error Handling', () => {
       .compile();
 
     app = moduleFixture.createNestApplication();
-    app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
+    app.useGlobalPipes(
+      new ValidationPipe({ whitelist: true, transform: true }),
+    );
     await app.init();
   });
 
@@ -86,7 +88,11 @@ describe('Edge Cases & Error Handling', () => {
 
       const response = await request(app.getHttpServer())
         .post('/auth/register')
-        .send({ name: 'Ünïcödé Usér', email: 'unicode@test.com', password: 'pass123' })
+        .send({
+          name: 'Ünïcödé Usér',
+          email: 'unicode@test.com',
+          password: 'pass123',
+        })
         .expect(201);
 
       expect(response.body.name).toBe('Ünïcödé Usér');
@@ -103,7 +109,11 @@ describe('Edge Cases & Error Handling', () => {
 
       const response = await request(app.getHttpServer())
         .post('/auth/register')
-        .send({ name: '😀 Test User', email: 'emoji@test.com', password: 'pass123' })
+        .send({
+          name: '😀 Test User',
+          email: 'emoji@test.com',
+          password: 'pass123',
+        })
         .expect(201);
 
       expect(response.body.name).toBe('😀 Test User');
@@ -160,15 +170,17 @@ describe('Edge Cases & Error Handling', () => {
 
   describe('error handling', () => {
     it('should return 404 for unknown routes', async () => {
-      await request(app.getHttpServer())
-        .get('/nonexistent')
-        .expect(404);
+      await request(app.getHttpServer()).get('/nonexistent').expect(404);
     });
 
     it('should return 404 for unknown product', async () => {
       prisma.product.findUnique.mockResolvedValue(null);
       const jwtService = moduleFixture.get(JwtService);
-      const token = await jwtService.signAsync({ sub: 1, email: 'test@test.com', role: 'USER' });
+      const token = await jwtService.signAsync({
+        sub: 1,
+        email: 'test@test.com',
+        role: 'USER',
+      });
 
       await request(app.getHttpServer())
         .get('/products/999999')
@@ -179,7 +191,11 @@ describe('Edge Cases & Error Handling', () => {
     it('should handle concurrent GET requests', async () => {
       prisma.product.findMany.mockResolvedValue([]);
       const jwtService = moduleFixture.get(JwtService);
-      const token = await jwtService.signAsync({ sub: 1, email: 'test@test.com', role: 'USER' });
+      const token = await jwtService.signAsync({
+        sub: 1,
+        email: 'test@test.com',
+        role: 'USER',
+      });
 
       const requests = Array.from({ length: 10 }, () =>
         request(app.getHttpServer())
@@ -196,6 +212,10 @@ describe('Edge Cases & Error Handling', () => {
 
   async function createAdminToken(): Promise<string> {
     const jwtService = moduleFixture.get(JwtService);
-    return jwtService.signAsync({ sub: 1, email: 'admin@test.com', role: 'ADMIN' });
+    return jwtService.signAsync({
+      sub: 1,
+      email: 'admin@test.com',
+      role: 'ADMIN',
+    });
   }
 });

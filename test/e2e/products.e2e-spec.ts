@@ -42,12 +42,22 @@ describe('Products E2E (mocked)', () => {
       .compile();
 
     app = moduleFixture.createNestApplication();
-    app.useGlobalPipes(new ValidationPipe({ whitelist: true, transform: true }));
+    app.useGlobalPipes(
+      new ValidationPipe({ whitelist: true, transform: true }),
+    );
     await app.init();
 
     jwtService = moduleFixture.get<JwtService>(JwtService);
-    adminToken = await jwtService.signAsync({ sub: 1, email: 'admin@test.com', role: 'ADMIN' });
-    userToken = await jwtService.signAsync({ sub: 2, email: 'user@test.com', role: 'USER' });
+    adminToken = await jwtService.signAsync({
+      sub: 1,
+      email: 'admin@test.com',
+      role: 'ADMIN',
+    });
+    userToken = await jwtService.signAsync({
+      sub: 2,
+      email: 'user@test.com',
+      role: 'USER',
+    });
   });
 
   afterAll(async () => {
@@ -72,9 +82,7 @@ describe('Products E2E (mocked)', () => {
     });
 
     it('should return 401 without token', async () => {
-      await request(app.getHttpServer())
-        .get('/products')
-        .expect(401);
+      await request(app.getHttpServer()).get('/products').expect(401);
     });
 
     it('should return 401 with invalid token', async () => {
@@ -147,7 +155,10 @@ describe('Products E2E (mocked)', () => {
   describe('PATCH /products/:id', () => {
     it('should update product as admin', async () => {
       prisma.product.findUnique.mockResolvedValue(mockProduct);
-      prisma.product.update.mockResolvedValue({ ...mockProduct, name: 'Updated' });
+      prisma.product.update.mockResolvedValue({
+        ...mockProduct,
+        name: 'Updated',
+      });
 
       const response = await request(app.getHttpServer())
         .patch('/products/1')

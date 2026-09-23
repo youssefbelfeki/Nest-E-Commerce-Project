@@ -38,14 +38,21 @@ describe('Products Integration', () => {
     it('should create a product', async () => {
       prisma.product.create.mockResolvedValue(mockProduct);
 
-      const result = await service.create({ name: 'Widget', price: 9.99, stock: 50 });
+      const result = await service.create({
+        name: 'Widget',
+        price: 9.99,
+        stock: 50,
+      });
 
       expect(result).toEqual(mockProduct);
       expect(prisma.product.create).toHaveBeenCalledTimes(1);
     });
 
     it('should return all products', async () => {
-      const products = [mockProduct, { id: 2, name: 'Gadget', price: 19.99, stock: 25 }];
+      const products = [
+        mockProduct,
+        { id: 2, name: 'Gadget', price: 19.99, stock: 25 },
+      ];
       prisma.product.findMany.mockResolvedValue(products);
 
       const result = await service.findAll();
@@ -64,14 +71,18 @@ describe('Products Integration', () => {
 
     it('should update product after verifying existence', async () => {
       prisma.product.findUnique.mockResolvedValue(mockProduct);
-      prisma.product.update.mockResolvedValue({ ...mockProduct, name: 'Updated' });
+      prisma.product.update.mockResolvedValue({
+        ...mockProduct,
+        name: 'Updated',
+      });
 
       const result = await service.update(1, { name: 'Updated' });
 
       expect(result.name).toBe('Updated');
       expect(prisma.product.findUnique).toHaveBeenCalled();
       expect(prisma.product.update).toHaveBeenCalled();
-      const findUniqueOrder = prisma.product.findUnique.mock.invocationCallOrder[0];
+      const findUniqueOrder =
+        prisma.product.findUnique.mock.invocationCallOrder[0];
       const updateOrder = prisma.product.update.mock.invocationCallOrder[0];
       expect(findUniqueOrder).toBeLessThan(updateOrder);
     });
@@ -97,7 +108,9 @@ describe('Products Integration', () => {
     it('should not update non-existent product', async () => {
       prisma.product.findUnique.mockResolvedValue(null);
 
-      await expect(service.update(999, { name: 'X' })).rejects.toThrow(NotFoundException);
+      await expect(service.update(999, { name: 'X' })).rejects.toThrow(
+        NotFoundException,
+      );
       expect(prisma.product.update).not.toHaveBeenCalled();
     });
 

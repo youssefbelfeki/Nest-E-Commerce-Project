@@ -1,0 +1,3941 @@
+{
+ "nodes": [
+  {
+   "id": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+   "type": "file",
+   "name": "page.tsx",
+   "filePath": "frontend/src/app/[lang]/admin/products/page.tsx",
+   "summary": "Admin-only product management page with create, edit, and delete flows backed by the products REST API."
+  },
+  {
+   "id": "file:frontend/src/app/[lang]/cart/page.tsx",
+   "type": "file",
+   "name": "page.tsx",
+   "filePath": "frontend/src/app/[lang]/cart/page.tsx",
+   "summary": "Shopping cart page showing cart items with quantity editing, removal, and checkout-to-order flow."
+  },
+  {
+   "id": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "type": "file",
+   "name": "dictionaries.ts",
+   "filePath": "frontend/src/app/[lang]/dictionaries.ts",
+   "summary": "Locale dictionary registry mapping supported locales to their English and French translation bundles."
+  },
+  {
+   "id": "file:frontend/src/app/[lang]/layout.tsx",
+   "type": "file",
+   "name": "layout.tsx",
+   "filePath": "frontend/src/app/[lang]/layout.tsx",
+   "summary": "Localized route layout that validates the locale, loads its dictionary, and wires auth and i18n providers."
+  },
+  {
+   "id": "file:frontend/src/app/[lang]/login/page.tsx",
+   "type": "file",
+   "name": "page.tsx",
+   "filePath": "frontend/src/app/[lang]/login/page.tsx",
+   "summary": "Login form page that authenticates via the auth context and redirects to the product catalog."
+  },
+  {
+   "id": "file:frontend/src/app/[lang]/orders/page.tsx",
+   "type": "file",
+   "name": "page.tsx",
+   "filePath": "frontend/src/app/[lang]/orders/page.tsx",
+   "summary": "Order history page listing the current user's past orders with line items and computed totals."
+  },
+  {
+   "id": "file:frontend/src/app/[lang]/page.tsx",
+   "type": "file",
+   "name": "page.tsx",
+   "filePath": "frontend/src/app/[lang]/page.tsx",
+   "summary": "Landing page that redirects visitors into the localized storefront catalog."
+  },
+  {
+   "id": "file:frontend/src/app/[lang]/products/page.tsx",
+   "type": "file",
+   "name": "page.tsx",
+   "filePath": "frontend/src/app/[lang]/products/page.tsx",
+   "summary": "Product catalog page with product listing, quantity selection, and add-to-cart actions."
+  },
+  {
+   "id": "file:frontend/src/app/[lang]/register/page.tsx",
+   "type": "file",
+   "name": "page.tsx",
+   "filePath": "frontend/src/app/[lang]/register/page.tsx",
+   "summary": "Registration form page creating a new account through the auth context with password confirmation."
+  },
+  {
+   "id": "file:frontend/src/components/LanguageSwitcher.tsx",
+   "type": "file",
+   "name": "LanguageSwitcher.tsx",
+   "filePath": "frontend/src/components/LanguageSwitcher.tsx",
+   "summary": "Locale switcher dropdown that rewrites the URL path prefix to change the interface language."
+  },
+  {
+   "id": "file:frontend/src/components/Navbar.tsx",
+   "type": "file",
+   "name": "Navbar.tsx",
+   "filePath": "frontend/src/components/Navbar.tsx",
+   "summary": "Top navigation bar with localized links, cart indicator, and auth-aware login and logout actions."
+  },
+  {
+   "id": "file:frontend/src/context/AuthContext.tsx",
+   "type": "file",
+   "name": "AuthContext.tsx",
+   "filePath": "frontend/src/context/AuthContext.tsx",
+   "summary": "Authentication context providing JWT-backed login, registration, logout, and current-user state."
+  },
+  {
+   "id": "file:frontend/src/context/I18nContext.tsx",
+   "type": "file",
+   "name": "I18nContext.tsx",
+   "filePath": "frontend/src/context/I18nContext.tsx",
+   "summary": "Internationalization context supplying the active dictionary plus translation and locale-path helpers."
+  },
+  {
+   "id": "file:frontend/src/lib/api.ts",
+   "type": "file",
+   "name": "api.ts",
+   "filePath": "frontend/src/lib/api.ts",
+   "summary": "Backend API client with JWT token persistence and an authenticated fetch wrapper over the REST API."
+  },
+  {
+   "id": "file:frontend/src/lib/i18n.ts",
+   "type": "file",
+   "name": "i18n.ts",
+   "filePath": "frontend/src/lib/i18n.ts",
+   "summary": "Locale constants and type guard defining the supported English and French locales."
+  },
+  {
+   "id": "file:frontend/src/types/index.ts",
+   "type": "file",
+   "name": "index.ts",
+   "filePath": "frontend/src/types/index.ts",
+   "summary": "Shared frontend type definitions for the user, product, cart, and order domain models."
+  },
+  {
+   "id": "file:src/auth/auth.module.ts",
+   "type": "file",
+   "name": "auth.module.ts",
+   "filePath": "src/auth/auth.module.ts",
+   "summary": "NestJS module wiring the authentication feature with JWT, Passport, controller, service, and strategy."
+  },
+  {
+   "id": "file:src/auth/jwt.strategy.spec.ts",
+   "type": "file",
+   "name": "jwt.strategy.spec.ts",
+   "filePath": "src/auth/jwt.strategy.spec.ts",
+   "summary": "Unit tests verifying that JwtStrategy.validate maps the JWT payload sub claim to a user id object."
+  },
+  {
+   "id": "file:src/auth/jwt.strategy.ts",
+   "type": "file",
+   "name": "jwt.strategy.ts",
+   "filePath": "src/auth/jwt.strategy.ts",
+   "summary": "Passport JWT strategy extracting bearer tokens and validating payloads into request user objects."
+  },
+  {
+   "id": "file:src/prisma/prisma.module.ts",
+   "type": "file",
+   "name": "prisma.module.ts",
+   "filePath": "src/prisma/prisma.module.ts",
+   "summary": "Global NestJS module exposing the shared PrismaService database client to all feature modules."
+  },
+  {
+   "id": "file:src/prisma/prisma.service.spec.ts",
+   "type": "file",
+   "name": "prisma.service.spec.ts",
+   "filePath": "src/prisma/prisma.service.spec.ts",
+   "summary": "Unit tests for PrismaService lifecycle hooks verifying connect, disconnect, and connection pool shutdown."
+  },
+  {
+   "id": "file:src/prisma/prisma.service.ts",
+   "type": "file",
+   "name": "prisma.service.ts",
+   "filePath": "src/prisma/prisma.service.ts",
+   "summary": "Injectable Prisma client wrapper managing a pg connection pool with NestJS lifecycle connect and disconnect."
+  },
+  {
+   "id": "file:src/products/products.module.ts",
+   "type": "file",
+   "name": "products.module.ts",
+   "filePath": "src/products/products.module.ts",
+   "summary": "NestJS module wiring the products controller and service with the auth module for guard dependencies."
+  },
+  {
+   "id": "file:test/e2e/auth-flow.e2e-spec.ts",
+   "type": "file",
+   "name": "auth-flow.e2e-spec.ts",
+   "filePath": "test/e2e/auth-flow.e2e-spec.ts",
+   "summary": "Mocked end-to-end tests covering the complete user journey from registration and login to authenticated product access."
+  },
+  {
+   "id": "file:test/e2e/auth.e2e-spec.ts",
+   "type": "file",
+   "name": "auth.e2e-spec.ts",
+   "filePath": "test/e2e/auth.e2e-spec.ts",
+   "summary": "Mocked end-to-end tests for the auth endpoints covering registration, login, and validation failures."
+  },
+  {
+   "id": "file:test/e2e/products.e2e-spec.ts",
+   "type": "file",
+   "name": "products.e2e-spec.ts",
+   "filePath": "test/e2e/products.e2e-spec.ts",
+   "summary": "Mocked end-to-end tests for product CRUD with admin and user JWT tokens exercising role-based access."
+  },
+  {
+   "id": "file:test/edge-cases.spec.ts",
+   "type": "file",
+   "name": "edge-cases.spec.ts",
+   "filePath": "test/edge-cases.spec.ts",
+   "summary": "Boundary and error-handling tests for validation edge cases such as empty fields, bad input, and admin token issuance."
+  },
+  {
+   "id": "file:test/factories/product.factory.ts",
+   "type": "file",
+   "name": "product.factory.ts",
+   "filePath": "test/factories/product.factory.ts",
+   "summary": "Test factory creating product rows with sensible defaults and optional name, price, and stock overrides."
+  },
+  {
+   "id": "file:test/factories/user.factory.ts",
+   "type": "file",
+   "name": "user.factory.ts",
+   "filePath": "test/factories/user.factory.ts",
+   "summary": "Test factories creating user and admin rows with unique emails and bcrypt-hashed passwords."
+  },
+  {
+   "id": "file:test/helpers/create-app-mocked.ts",
+   "type": "file",
+   "name": "create-app-mocked.ts",
+   "filePath": "test/helpers/create-app-mocked.ts",
+   "summary": "Test helper bootstrapping a NestJS app with Auth and Products modules and a mocked PrismaService."
+  },
+  {
+   "id": "file:test/security/auth.security-spec.ts",
+   "type": "file",
+   "name": "auth.security-spec.ts",
+   "filePath": "test/security/auth.security-spec.ts",
+   "summary": "Security tests verifying JWT enforcement such as rejected missing, malformed, and invalid tokens on protected routes."
+  },
+  {
+   "id": "file:test/security/rbac.security-spec.ts",
+   "type": "file",
+   "name": "rbac.security-spec.ts",
+   "filePath": "test/security/rbac.security-spec.ts",
+   "summary": "Role-based access control tests verifying admin-only product writes while reads stay open to authenticated users."
+  },
+  {
+   "id": "file:src/auth/decorators/roles.decorator.ts",
+   "type": "file",
+   "name": "roles.decorator.ts",
+   "filePath": "src/auth/decorators/roles.decorator.ts",
+   "summary": "Defines the Roles decorator and ROLES_KEY metadata key used to mark admin-only NestJS routes for enforcement by the RolesGuard."
+  },
+  {
+   "id": "file:src/auth/guards/roles.guard.spec.ts",
+   "type": "file",
+   "name": "roles.guard.spec.ts",
+   "filePath": "src/auth/guards/roles.guard.spec.ts",
+   "summary": "Unit tests for RolesGuard covering open routes, role matching, and forbidden access when the user role is missing or insufficient."
+  },
+  {
+   "id": "file:src/auth/guards/roles.guard.ts",
+   "type": "file",
+   "name": "roles.guard.ts",
+   "filePath": "src/auth/guards/roles.guard.ts",
+   "summary": "NestJS RolesGuard that reads required roles from handler metadata and rejects requests whose user role is not permitted."
+  },
+  {
+   "id": "file:src/products/dto/create-product.dto.spec.ts",
+   "type": "file",
+   "name": "create-product.dto.spec.ts",
+   "filePath": "src/products/dto/create-product.dto.spec.ts",
+   "summary": "Validation tests for CreateProductDto covering required name, positive price, and non-negative integer stock constraints."
+  },
+  {
+   "id": "file:src/products/dto/create-product.dto.ts",
+   "type": "file",
+   "name": "create-product.dto.ts",
+   "filePath": "src/products/dto/create-product.dto.ts",
+   "summary": "Validated product creation payload requiring a non-empty name, a positive price, and a non-negative integer stock value."
+  },
+  {
+   "id": "file:src/products/dto/update-product.dto.spec.ts",
+   "type": "file",
+   "name": "update-product.dto.spec.ts",
+   "filePath": "src/products/dto/update-product.dto.spec.ts",
+   "summary": "Validation tests for UpdateProductDto verifying that partial product updates accept any subset of fields."
+  },
+  {
+   "id": "file:src/products/dto/update-product.dto.ts",
+   "type": "file",
+   "name": "update-product.dto.ts",
+   "filePath": "src/products/dto/update-product.dto.ts",
+   "summary": "Partial variant of CreateProductDto allowing any subset of product fields on update operations."
+  },
+  {
+   "id": "file:src/products/products.controller.spec.ts",
+   "type": "file",
+   "name": "products.controller.spec.ts",
+   "filePath": "src/products/products.controller.spec.ts",
+   "summary": "Unit tests for ProductsController verifying CRUD delegation to ProductsService with mocked guards."
+  },
+  {
+   "id": "file:src/products/products.controller.ts",
+   "type": "file",
+   "name": "products.controller.ts",
+   "filePath": "src/products/products.controller.ts",
+   "summary": "REST controller exposing product CRUD endpoints with authenticated reads and admin-restricted create, update, and delete operations."
+  },
+  {
+   "id": "file:src/products/products.service.spec.ts",
+   "type": "file",
+   "name": "products.service.spec.ts",
+   "filePath": "src/products/products.service.spec.ts",
+   "summary": "Unit tests for ProductsService covering CRUD behavior and not-found handling with a mocked PrismaService."
+  },
+  {
+   "id": "file:src/products/products.service.ts",
+   "type": "file",
+   "name": "products.service.ts",
+   "filePath": "src/products/products.service.ts",
+   "summary": "Prisma-backed service implementing product CRUD with not-found checks before update and delete."
+  },
+  {
+   "id": "file:src/users/auth/auth.guard.spec.ts",
+   "type": "file",
+   "name": "auth.guard.spec.ts",
+   "filePath": "src/users/auth/auth.guard.spec.ts",
+   "summary": "Unit tests for the JWT AuthGuard covering valid tokens, missing headers, and invalid or expired tokens."
+  },
+  {
+   "id": "file:src/users/auth/auth.guard.ts",
+   "type": "file",
+   "name": "auth.guard.ts",
+   "filePath": "src/users/auth/auth.guard.ts",
+   "summary": "JWT authentication guard that verifies the bearer token and attaches the user id, email, and role to the request."
+  },
+  {
+   "id": "file:test/integration/products.integration-spec.ts",
+   "type": "file",
+   "name": "products.integration-spec.ts",
+   "filePath": "test/integration/products.integration-spec.ts",
+   "summary": "Integration tests exercising ProductsService CRUD against a real Prisma-backed database."
+  },
+  {
+   "id": "file:test/integration/roles.integration-spec.ts",
+   "type": "file",
+   "name": "roles.integration-spec.ts",
+   "filePath": "test/integration/roles.integration-spec.ts",
+   "summary": "Integration tests verifying RolesGuard authorization behavior across roles and route metadata."
+  },
+  {
+   "id": "file:src/auth/guards/jwt-auth.guard.ts",
+   "type": "file",
+   "name": "jwt-auth.guard.ts",
+   "filePath": "src/auth/guards/jwt-auth.guard.ts",
+   "summary": "Passport-based JWT guard subclass that enforces bearer-token authentication on protected NestJS routes."
+  },
+  {
+   "id": "file:src/users/dto/create-user.dto.spec.ts",
+   "type": "file",
+   "name": "create-user.dto.spec.ts",
+   "filePath": "src/users/dto/create-user.dto.spec.ts",
+   "summary": "Unit tests validating the CreateUserDto field constraints for name, email, and password."
+  },
+  {
+   "id": "file:src/users/dto/create-user.dto.ts",
+   "type": "file",
+   "name": "create-user.dto.ts",
+   "filePath": "src/users/dto/create-user.dto.ts",
+   "summary": "Defines the user-creation payload with class-validator rules requiring a name, a valid email, and a password of at least 6 characters."
+  },
+  {
+   "id": "file:src/users/dto/update-user.dto.spec.ts",
+   "type": "file",
+   "name": "update-user.dto.spec.ts",
+   "filePath": "src/users/dto/update-user.dto.spec.ts",
+   "summary": "Unit tests covering partial-update validation behavior of UpdateUserDto."
+  },
+  {
+   "id": "file:src/users/dto/update-user.dto.ts",
+   "type": "file",
+   "name": "update-user.dto.ts",
+   "filePath": "src/users/dto/update-user.dto.ts",
+   "summary": "Partial-update variant of CreateUserDto where all fields are optional for PATCH requests."
+  },
+  {
+   "id": "file:src/users/logger/logger.middleware.spec.ts",
+   "type": "file",
+   "name": "logger.middleware.spec.ts",
+   "filePath": "src/users/logger/logger.middleware.spec.ts",
+   "summary": "Unit tests verifying that LoggerMiddleware logs requests and delegates to the next handler."
+  },
+  {
+   "id": "file:src/users/logger/logger.middleware.ts",
+   "type": "file",
+   "name": "logger.middleware.ts",
+   "filePath": "src/users/logger/logger.middleware.ts",
+   "summary": "NestJS middleware that logs each incoming request method and URL, then passes control to the next handler."
+  },
+  {
+   "id": "file:src/users/users.controller.spec.ts",
+   "type": "file",
+   "name": "users.controller.spec.ts",
+   "filePath": "src/users/users.controller.spec.ts",
+   "summary": "Unit tests for the UsersController CRUD endpoints with a mocked UsersService."
+  },
+  {
+   "id": "file:src/users/users.controller.ts",
+   "type": "file",
+   "name": "users.controller.ts",
+   "filePath": "src/users/users.controller.ts",
+   "summary": "Admin-only REST controller exposing user CRUD under /users, guarded by JwtAuthGuard and RolesGuard with the response envelope interceptor."
+  },
+  {
+   "id": "file:src/users/users.module.ts",
+   "type": "file",
+   "name": "users.module.ts",
+   "filePath": "src/users/users.module.ts",
+   "summary": "NestJS module wiring UsersController and UsersService, applying LoggerMiddleware to all users routes."
+  },
+  {
+   "id": "file:src/users/users.service.spec.ts",
+   "type": "file",
+   "name": "users.service.spec.ts",
+   "filePath": "src/users/users.service.spec.ts",
+   "summary": "Unit tests for UsersService covering creation conflicts, lookups, updates, and deletion with a mocked PrismaService."
+  },
+  {
+   "id": "file:src/users/users.service.ts",
+   "type": "file",
+   "name": "users.service.ts",
+   "filePath": "src/users/users.service.ts",
+   "summary": "User persistence service providing CRUD over Prisma with bcrypt password hashing, duplicate-email conflict detection, and not-found handling."
+  },
+  {
+   "id": "file:src/app.controller.spec.ts",
+   "type": "file",
+   "name": "app.controller.spec.ts",
+   "filePath": "src/app.controller.spec.ts",
+   "summary": "Unit test for the root AppController verifying the GET / handler returns \"Hello World!\" via AppService."
+  },
+  {
+   "id": "file:src/app.controller.ts",
+   "type": "file",
+   "name": "app.controller.ts",
+   "filePath": "src/app.controller.ts",
+   "summary": "Root HTTP controller exposing GET / by delegating to AppService for the default greeting response."
+  },
+  {
+   "id": "file:src/app.module.ts",
+   "type": "file",
+   "name": "app.module.ts",
+   "filePath": "src/app.module.ts",
+   "summary": "Root NestJS module composing all feature modules (users, auth, products, cart, orders, prisma) with the root controller and service."
+  },
+  {
+   "id": "file:src/app.service.ts",
+   "type": "file",
+   "name": "app.service.ts",
+   "filePath": "src/app.service.ts",
+   "summary": "Root application service returning the default \"Hello World!\" greeting string."
+  },
+  {
+   "id": "file:src/logger/logger.middleware.ts",
+   "type": "file",
+   "name": "logger.middleware.ts",
+   "filePath": "src/logger/logger.middleware.ts",
+   "summary": "Global HTTP request-logging middleware recording method, URL, and status code when each response finishes."
+  },
+  {
+   "id": "file:src/main.ts",
+   "type": "file",
+   "name": "main.ts",
+   "filePath": "src/main.ts",
+   "summary": "Application bootstrap configuring CORS, global validation, request logging, the success-envelope interceptor, and the port 3002 listener."
+  },
+  {
+   "id": "file:src/users/transform/transform.interceptor.spec.ts",
+   "type": "file",
+   "name": "transform.interceptor.spec.ts",
+   "filePath": "src/users/transform/transform.interceptor.spec.ts",
+   "summary": "Unit tests for TransformInterceptor covering the success envelope, ISO timestamps, and null, array, and undefined payloads."
+  },
+  {
+   "id": "file:src/users/transform/transform.interceptor.ts",
+   "type": "file",
+   "name": "transform.interceptor.ts",
+   "filePath": "src/users/transform/transform.interceptor.ts",
+   "summary": "Global response interceptor wrapping successful payloads in a { status, data, timestamp } envelope."
+  },
+  {
+   "id": "file:test/app.e2e-spec.ts",
+   "type": "file",
+   "name": "app.e2e-spec.ts",
+   "filePath": "test/app.e2e-spec.ts",
+   "summary": "End-to-end test booting the full AppModule and asserting GET / returns 200 with \"Hello World!\"."
+  },
+  {
+   "id": "file:src/auth/auth.controller.spec.ts",
+   "type": "file",
+   "name": "auth.controller.spec.ts",
+   "filePath": "src/auth/auth.controller.spec.ts",
+   "summary": "Unit tests for AuthController verifying that register and login delegate to AuthService using a mocked service."
+  },
+  {
+   "id": "file:src/auth/auth.controller.ts",
+   "type": "file",
+   "name": "auth.controller.ts",
+   "filePath": "src/auth/auth.controller.ts",
+   "summary": "Public REST controller exposing POST /auth/register and POST /auth/login, delegating credential handling to AuthService."
+  },
+  {
+   "id": "file:src/auth/auth.service.spec.ts",
+   "type": "file",
+   "name": "auth.service.spec.ts",
+   "filePath": "src/auth/auth.service.spec.ts",
+   "summary": "Unit tests for AuthService covering registration conflicts, bcrypt password hashing, login credential checks, and JWT issuance with mocked Prisma and JWT services."
+  },
+  {
+   "id": "file:src/auth/auth.service.ts",
+   "type": "file",
+   "name": "auth.service.ts",
+   "filePath": "src/auth/auth.service.ts",
+   "summary": "Injectable authentication service implementing user registration with duplicate-email checks and bcrypt hashing, plus login with credential verification returning a signed JWT access token."
+  },
+  {
+   "id": "file:src/auth/dto/login.dto.spec.ts",
+   "type": "file",
+   "name": "login.dto.spec.ts",
+   "filePath": "src/auth/dto/login.dto.spec.ts",
+   "summary": "Validation tests for LoginDto covering required email format and password presence, including the absence of a minimum length on login."
+  },
+  {
+   "id": "file:src/auth/dto/login.dto.ts",
+   "type": "file",
+   "name": "login.dto.ts",
+   "filePath": "src/auth/dto/login.dto.ts",
+   "summary": "Validated login payload carrying email and password with class-validator email and presence constraints."
+  },
+  {
+   "id": "file:src/auth/dto/register.dto.spec.ts",
+   "type": "file",
+   "name": "register.dto.spec.ts",
+   "filePath": "src/auth/dto/register.dto.spec.ts",
+   "summary": "Validation tests for RegisterDto covering name, email format, and the 6-character minimum password boundary."
+  },
+  {
+   "id": "file:src/auth/dto/register.dto.ts",
+   "type": "file",
+   "name": "register.dto.ts",
+   "filePath": "src/auth/dto/register.dto.ts",
+   "summary": "Validated registration payload carrying name, email, and password with class-validator rules including a 6-character minimum password."
+  },
+  {
+   "id": "file:test/integration/auth.integration-spec.ts",
+   "type": "file",
+   "name": "auth.integration-spec.ts",
+   "filePath": "test/integration/auth.integration-spec.ts",
+   "summary": "Integration tests exercising the AuthService register-then-login flow, JWT payload verification, duplicate-email prevention, and credential rejection with mocked Prisma."
+  },
+  {
+   "id": "file:src/cart/cart.controller.spec.ts",
+   "type": "file",
+   "name": "cart.controller.spec.ts",
+   "filePath": "src/cart/cart.controller.spec.ts",
+   "summary": "Unit tests for CartController covering add, retrieve, update, and remove endpoints with a mocked CartService and bypassed AuthGuard."
+  },
+  {
+   "id": "file:src/cart/cart.controller.ts",
+   "type": "file",
+   "name": "cart.controller.ts",
+   "filePath": "src/cart/cart.controller.ts",
+   "summary": "Authenticated REST controller exposing cart endpoints under /cart for adding items, fetching the cart, and updating or removing items."
+  },
+  {
+   "id": "file:src/cart/cart.module.ts",
+   "type": "file",
+   "name": "cart.module.ts",
+   "filePath": "src/cart/cart.module.ts",
+   "summary": "NestJS feature module registering CartController and CartService with AuthModule imported for guard dependencies."
+  },
+  {
+   "id": "file:src/cart/cart.service.spec.ts",
+   "type": "file",
+   "name": "cart.service.spec.ts",
+   "filePath": "src/cart/cart.service.spec.ts",
+   "summary": "Comprehensive unit tests for CartService covering cart creation, stock validation, quantity updates, and removal using a mocked PrismaService."
+  },
+  {
+   "id": "file:src/cart/cart.service.ts",
+   "type": "file",
+   "name": "cart.service.ts",
+   "filePath": "src/cart/cart.service.ts",
+   "summary": "Injectable cart service implementing add, retrieve, update, and remove operations over Prisma with stock checks, ownership guards, and transactional cart creation."
+  },
+  {
+   "id": "file:src/cart/dto/add-to-cart.dto.ts",
+   "type": "file",
+   "name": "add-to-cart.dto.ts",
+   "filePath": "src/cart/dto/add-to-cart.dto.ts",
+   "summary": "Validated DTO carrying productId and a minimum quantity of one for adding items to the cart."
+  },
+  {
+   "id": "file:src/cart/dto/update-cart-item.dto.ts",
+   "type": "file",
+   "name": "update-cart-item.dto.ts",
+   "filePath": "src/cart/dto/update-cart-item.dto.ts",
+   "summary": "Validated DTO carrying only a minimum quantity of one for updating an existing cart item."
+  },
+  {
+   "id": "file:src/auth/decorators/user.decorator.ts",
+   "type": "file",
+   "name": "user.decorator.ts",
+   "filePath": "src/auth/decorators/user.decorator.ts",
+   "summary": "Custom @User() parameter decorator that extracts the authenticated user object, or a single user property, from the incoming request."
+  },
+  {
+   "id": "file:src/orders/dto/create-order.dto.ts",
+   "type": "file",
+   "name": "create-order.dto.ts",
+   "filePath": "src/orders/dto/create-order.dto.ts",
+   "summary": "Validation DTOs for order creation, defining an order line item (productId, quantity) and a non-empty items array for POST /orders."
+  },
+  {
+   "id": "file:src/orders/orders.controller.ts",
+   "type": "file",
+   "name": "orders.controller.ts",
+   "filePath": "src/orders/orders.controller.ts",
+   "summary": "Authenticated orders REST controller exposing create, list, and detail endpoints scoped to the current user."
+  },
+  {
+   "id": "file:src/orders/orders.module.ts",
+   "type": "file",
+   "name": "orders.module.ts",
+   "filePath": "src/orders/orders.module.ts",
+   "summary": "NestJS module wiring the orders controller and service together with the auth module dependency."
+  },
+  {
+   "id": "file:src/orders/orders.service.spec.ts",
+   "type": "file",
+   "name": "orders.service.spec.ts",
+   "filePath": "src/orders/orders.service.spec.ts",
+   "summary": "Unit test suite for OrdersService covering order creation, stock validation, user-scoped reads, and not-found cases with a mocked PrismaService."
+  },
+  {
+   "id": "file:src/orders/orders.service.ts",
+   "type": "file",
+   "name": "orders.service.ts",
+   "filePath": "src/orders/orders.service.ts",
+   "summary": "Order business logic that validates product stock and creates orders with atomic stock decrements inside a Prisma transaction, plus user-scoped order reads."
+  },
+  {
+   "id": "config:.ua/config.json",
+   "type": "config",
+   "name": "config.json",
+   "filePath": ".ua/config.json",
+   "summary": "Pipeline configuration storing the analysis output language setting (English) for the understand-anything run."
+  },
+  {
+   "id": "config:.ua/fingerprints.json",
+   "type": "config",
+   "name": "fingerprints.json",
+   "filePath": ".ua/fingerprints.json",
+   "summary": "Per-file content-hash fingerprint snapshot with version, commit hash, and generation timestamp used for incremental change detection across analyzed files."
+  },
+  {
+   "id": "config:.ua/knowledge-graph.json",
+   "type": "config",
+   "name": "knowledge-graph.json",
+   "filePath": ".ua/knowledge-graph.json",
+   "summary": "Serialized knowledge graph snapshot holding project metadata, graph nodes, edges, layers, and tour data for the ecommerce-project analysis."
+  },
+  {
+   "id": "config:.ua/meta.json",
+   "type": "config",
+   "name": "meta.json",
+   "filePath": ".ua/meta.json",
+   "summary": "Run metadata recording the last analysis timestamp, git commit hash, schema version, and analyzed file count."
+  },
+  {
+   "id": "config:.ua/tmp/ua-import-map-input.json",
+   "type": "config",
+   "name": "ua-import-map-input.json",
+   "filePath": ".ua/tmp/ua-import-map-input.json",
+   "summary": "Input manifest for the import-map extraction step listing the project root and all scanned files with their language and category."
+  },
+  {
+   "id": "config:.ua/tmp/ua-import-map-output.json",
+   "type": "config",
+   "name": "ua-import-map-output.json",
+   "filePath": ".ua/tmp/ua-import-map-output.json",
+   "summary": "Resolved project-internal import map covering 148 scanned files with 183 dependency edges across 71 files that have imports."
+  },
+  {
+   "id": "config:.ua/tmp/ua-scan-files.json",
+   "type": "config",
+   "name": "ua-scan-files.json",
+   "filePath": ".ua/tmp/ua-scan-files.json",
+   "summary": "Project scan inventory recording every discovered file with language, category, and size plus content digest and aggregate stats."
+  },
+  {
+   "id": "document:AGENTS.md",
+   "type": "document",
+   "name": "AGENTS.md",
+   "filePath": "AGENTS.md",
+   "summary": "Agent operating guide defining the NestJS backend layout, entrypoint wiring in main.ts, module registration, Auth/Products/Cart/Orders API contracts, Prisma conventions, and standard npm scripts."
+  },
+  {
+   "id": "document:BACKEND_RULES.md",
+   "type": "document",
+   "name": "BACKEND_RULES.md",
+   "filePath": "BACKEND_RULES.md",
+   "summary": "Strict backend specification detailing the TransformInterceptor success envelope, NestJS error shapes, JWT AuthGuard pipeline, Prisma entity schemas, and per-route DTO validation constraints for auth, products, cart, and orders."
+  },
+  {
+   "id": "document:README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "README.md",
+   "summary": "Comprehensive ApexStore monorepo guide covering features, NestJS plus Next.js tech stack, setup, Prisma workflow, full API reference, data models, frontend i18n and apiFetch client, scripts, testing, and troubleshooting."
+  },
+  {
+   "id": "config:nest-cli.json",
+   "type": "config",
+   "name": "nest-cli.json",
+   "filePath": "nest-cli.json",
+   "summary": "NestJS CLI configuration setting src as sourceRoot with the schematics collection and deleteOutDir compiler option."
+  },
+  {
+   "id": "config:package.json",
+   "type": "config",
+   "name": "package.json",
+   "filePath": "package.json",
+   "summary": "Backend package manifest defining NestJS 11 runtime plus Prisma, JWT, and validation dependencies, embedded Jest unit-test configuration, and build, lint, test, e2e, and integration scripts."
+  },
+  {
+   "id": "config:skills-lock.json",
+   "type": "config",
+   "name": "skills-lock.json",
+   "filePath": "skills-lock.json",
+   "summary": "Pinned lockfile recording the nine Prisma skill packs sourced from GitHub with their skill paths and content hashes."
+  },
+  {
+   "id": "config:tsconfig.build.json",
+   "type": "config",
+   "name": "tsconfig.build.json",
+   "filePath": "tsconfig.build.json",
+   "summary": "Production build extension of the base TypeScript config excluding node_modules, test, dist, frontend, and spec files from compilation."
+  },
+  {
+   "id": "config:tsconfig.json",
+   "type": "config",
+   "name": "tsconfig.json",
+   "filePath": "tsconfig.json",
+   "summary": "Base TypeScript compiler configuration using nodenext modules, ES2023 target, decorator metadata, and strict null checks with ./dist output."
+  },
+  {
+   "id": "document:frontend/AGENTS.md",
+   "type": "document",
+   "name": "AGENTS.md",
+   "filePath": "frontend/AGENTS.md",
+   "summary": "Agent guidance for the Next.js 16 storefront covering stack, commands, i18n routing, API wiring, and auth conventions verified against code and config."
+  },
+  {
+   "id": "document:frontend/CLAUDE.md",
+   "type": "document",
+   "name": "CLAUDE.md",
+   "filePath": "frontend/CLAUDE.md",
+   "summary": "Single-line pointer redirecting AI assistants to AGENTS.md as the canonical frontend guidance source."
+  },
+  {
+   "id": "document:frontend/README.md",
+   "type": "document",
+   "name": "README.md",
+   "filePath": "frontend/README.md",
+   "summary": "Default create-next-app readme with dev-server quickstart, learning resources, and Vercel deployment pointers."
+  },
+  {
+   "id": "config:frontend/package.json",
+   "type": "config",
+   "name": "package.json",
+   "filePath": "frontend/package.json",
+   "summary": "Npm manifest for the Next.js 16 storefront defining dev, build, start, and lint scripts with React 19, Tailwind 4, and TypeScript dependencies."
+  },
+  {
+   "id": "config:frontend/tsconfig.json",
+   "type": "config",
+   "name": "tsconfig.json",
+   "filePath": "frontend/tsconfig.json",
+   "summary": "Strict TypeScript configuration for the storefront with bundler resolution, react-jsx, Next plugin, and @/* path alias to src/*."
+  },
+  {
+   "id": "config:graphify-out/.graphify_analysis.json",
+   "type": "config",
+   "name": ".graphify_analysis.json",
+   "filePath": "graphify-out/.graphify_analysis.json",
+   "summary": "Machine-readable graphify analysis output with community clusters, cohesion metrics, god nodes, surprising connections, and suggested exploration questions."
+  },
+  {
+   "id": "config:graphify-out/.graphify_labels.json",
+   "type": "config",
+   "name": ".graphify_labels.json",
+   "filePath": "graphify-out/.graphify_labels.json",
+   "summary": "Index-to-label lookup mapping 44 detected graph communities to human-readable hub names such as PrismaService and products.controller.ts."
+  },
+  {
+   "id": "document:graphify-out/GRAPH_REPORT.md",
+   "type": "document",
+   "name": "GRAPH_REPORT.md",
+   "filePath": "graphify-out/GRAPH_REPORT.md",
+   "summary": "Human-readable knowledge graph report covering 576 nodes, 916 edges, and 44 communities with navigation hubs, god nodes, import cycles, and knowledge gaps."
+  },
+  {
+   "id": "file:graphify-out/graph.html",
+   "type": "file",
+   "name": "graph.html",
+   "filePath": "graphify-out/graph.html",
+   "summary": "Self-contained interactive vis-network visualization of the knowledge graph with search, node inspector, and community legend."
+  },
+  {
+   "id": "config:graphify-out/graph.json",
+   "type": "config",
+   "name": "graph.json",
+   "filePath": "graphify-out/graph.json",
+   "summary": "Serialized directed multigraph payload with embedded nodes, links, and hyperedges backing the interactive graph visualization."
+  },
+  {
+   "id": "config:graphify-out/manifest.json",
+   "type": "config",
+   "name": "manifest.json",
+   "filePath": "graphify-out/manifest.json",
+   "summary": "Incremental-build manifest tracking per-file mtimes with AST and semantic hashes for 108 project files used by graphify caching."
+  },
+  {
+   "id": "config:graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json",
+   "type": "config",
+   "name": "1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json",
+   "filePath": "graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json",
+   "summary": "Cached AST analysis shard from the graphify pipeline holding extracted graph nodes and edges for a source file."
+  },
+  {
+   "id": "config:graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json",
+   "type": "config",
+   "name": "52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json",
+   "filePath": "graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json",
+   "summary": "Cached AST analysis shard from the graphify pipeline holding extracted graph nodes and edges for a source file."
+  },
+  {
+   "id": "config:graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json",
+   "type": "config",
+   "name": "97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json",
+   "filePath": "graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json",
+   "summary": "Cached AST analysis shard from the graphify pipeline holding extracted graph nodes and edges for a source file."
+  },
+  {
+   "id": "config:graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json",
+   "type": "config",
+   "name": "a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json",
+   "filePath": "graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json",
+   "summary": "Cached AST analysis shard from the graphify pipeline holding extracted graph nodes and edges for a source file."
+  },
+  {
+   "id": "config:graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json",
+   "type": "config",
+   "name": "e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json",
+   "filePath": "graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json",
+   "summary": "Cached AST analysis shard from the graphify pipeline holding extracted graph nodes and edges for a source file."
+  },
+  {
+   "id": "config:graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json",
+   "type": "config",
+   "name": "f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json",
+   "filePath": "graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json",
+   "summary": "Cached AST analysis shard from the graphify pipeline holding extracted graph nodes and edges for a source file."
+  },
+  {
+   "id": "file:.ua/dashboard.log.err",
+   "type": "file",
+   "name": "dashboard.log.err",
+   "filePath": ".ua/dashboard.log.err",
+   "summary": "Empty error log file for the knowledge-graph dashboard tooling with no recorded output."
+  },
+  {
+   "id": "config:.ua/intermediate/scan-result.json",
+   "type": "config",
+   "name": "scan-result.json",
+   "filePath": ".ua/intermediate/scan-result.json",
+   "summary": "Generated project scan snapshot describing the ecommerce-project name, detected languages and frameworks, and the full file inventory used by the analysis pipeline."
+  },
+  {
+   "id": "file:eslint.config.mjs",
+   "type": "file",
+   "name": "eslint.config.mjs",
+   "filePath": "eslint.config.mjs",
+   "summary": "Backend ESLint flat config combining recommended JavaScript and type-checked TypeScript rules with Prettier integration and Node plus Jest globals."
+  },
+  {
+   "id": "file:frontend/eslint.config.mjs",
+   "type": "file",
+   "name": "eslint.config.mjs",
+   "filePath": "frontend/eslint.config.mjs",
+   "summary": "Frontend ESLint flat config applying Next.js core-web-vitals and TypeScript presets while ignoring build output directories."
+  },
+  {
+   "id": "file:frontend/next.config.ts",
+   "type": "file",
+   "name": "next.config.ts",
+   "filePath": "frontend/next.config.ts",
+   "summary": "Next.js configuration pointing the Turbopack root at the monorepo root so builds resolve the workspace rather than the frontend folder."
+  },
+  {
+   "id": "file:frontend/postcss.config.mjs",
+   "type": "file",
+   "name": "postcss.config.mjs",
+   "filePath": "frontend/postcss.config.mjs",
+   "summary": "PostCSS configuration registering only the Tailwind CSS v4 plugin with no separate Tailwind config file."
+  },
+  {
+   "id": "config:frontend/src/app/[lang]/dictionaries/en.json",
+   "type": "config",
+   "name": "en.json",
+   "filePath": "frontend/src/app/[lang]/dictionaries/en.json",
+   "summary": "English UI string dictionary covering navigation, home, products, cart, orders, auth, admin, and language labels for the storefront."
+  },
+  {
+   "id": "config:frontend/src/app/[lang]/dictionaries/fr.json",
+   "type": "config",
+   "name": "fr.json",
+   "filePath": "frontend/src/app/[lang]/dictionaries/fr.json",
+   "summary": "French UI string dictionary mirroring the English keys with translated navigation, catalog, cart, order, auth, and admin labels."
+  },
+  {
+   "id": "file:frontend/src/app/globals.css",
+   "type": "file",
+   "name": "globals.css",
+   "filePath": "frontend/src/app/globals.css",
+   "summary": "Global dark-theme stylesheet defining CSS variables, glassmorphism panels, button and input styles, badges, and a fade-in animation over Tailwind CSS."
+  },
+  {
+   "id": "file:frontend/src/proxy.ts",
+   "type": "file",
+   "name": "proxy.ts",
+   "filePath": "frontend/src/proxy.ts",
+   "summary": "Next.js proxy handling locale routing by resolving the locale from cookie or Accept-Language header and redirecting non-localized paths."
+  },
+  {
+   "id": "file:graphify-out/.graphify_labels.json.sig",
+   "type": "file",
+   "name": ".graphify_labels.json.sig",
+   "filePath": "graphify-out/.graphify_labels.json.sig",
+   "summary": "Generated signature hash map caching content hashes for graphify label outputs used to detect stale analysis artifacts."
+  },
+  {
+   "id": "file:graphify-out/.graphify_root",
+   "type": "file",
+   "name": ".graphify_root",
+   "filePath": "graphify-out/.graphify_root",
+   "summary": "Marker file recording the absolute project root path so graphify tooling can resolve the analyzed repository location."
+  },
+  {
+   "id": "config:graphify-out/cache/stat-index.json",
+   "type": "config",
+   "name": "stat-index.json",
+   "filePath": "graphify-out/cache/stat-index.json",
+   "summary": "Generated file statistics index caching size, modification time, word count, and hashes for every tracked project file."
+  },
+  {
+   "id": "config:postman/collection.json",
+   "type": "config",
+   "name": "collection.json",
+   "filePath": "postman/collection.json",
+   "summary": "Postman API collection documenting auth, users, products, cart, and order requests with JWT usage notes and the base_url variable."
+  },
+  {
+   "id": "config:postman/environment.json",
+   "type": "config",
+   "name": "environment.json",
+   "filePath": "postman/environment.json",
+   "summary": "Postman environment defining base_url pointing at the local NestJS server plus empty token and api_key secret placeholders."
+  },
+  {
+   "id": "file:prisma.config.ts",
+   "type": "file",
+   "name": "prisma.config.ts",
+   "filePath": "prisma.config.ts",
+   "summary": "Prisma CLI configuration wiring the schema path, migrations directory, and DATABASE_URL datasource for PostgreSQL."
+  },
+  {
+   "id": "table:prisma/migrations/20260724110919_init/migration.sql:User",
+   "type": "table",
+   "name": "User",
+   "filePath": "prisma/migrations/20260724110919_init/migration.sql",
+   "summary": "Initial migration creating the User table with id, unique email, optional name, password, and USER/ADMIN role enum."
+  },
+  {
+   "id": "table:prisma/migrations/20260724110919_init/migration.sql:Product",
+   "type": "table",
+   "name": "Product",
+   "filePath": "prisma/migrations/20260724110919_init/migration.sql",
+   "summary": "Initial migration creating the Product table with id, name, price, and stock columns for the catalog."
+  },
+  {
+   "id": "table:prisma/migrations/20260729093153_add_orders/migration.sql:Order",
+   "type": "table",
+   "name": "Order",
+   "filePath": "prisma/migrations/20260729093153_add_orders/migration.sql",
+   "summary": "Orders migration creating the Order table with user foreign key and creation timestamp for purchase history."
+  },
+  {
+   "id": "table:prisma/migrations/20260729093153_add_orders/migration.sql:OrderItem",
+   "type": "table",
+   "name": "OrderItem",
+   "filePath": "prisma/migrations/20260729093153_add_orders/migration.sql",
+   "summary": "Orders migration creating the OrderItem join table linking orders to products with quantities and foreign keys."
+  },
+  {
+   "id": "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:Cart",
+   "type": "table",
+   "name": "Cart",
+   "filePath": "prisma/migrations/20260730185335_add_cart_models/migration.sql",
+   "summary": "Cart migration creating the Cart table with a unique per-user foreign key for the shopping cart."
+  },
+  {
+   "id": "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:CartItem",
+   "type": "table",
+   "name": "CartItem",
+   "filePath": "prisma/migrations/20260730185335_add_cart_models/migration.sql",
+   "summary": "Cart migration creating the CartItem join table with cascade delete on cart and unique cart-product pairs."
+  },
+  {
+   "id": "config:prisma/migrations/migration_lock.toml",
+   "type": "config",
+   "name": "migration_lock.toml",
+   "filePath": "prisma/migrations/migration_lock.toml",
+   "summary": "Prisma migration lock file pinning the migration provider to PostgreSQL for version-control consistency."
+  },
+  {
+   "id": "schema:prisma/schema.prisma",
+   "type": "schema",
+   "name": "schema.prisma",
+   "filePath": "prisma/schema.prisma",
+   "summary": "Canonical Prisma data model defining User, Product, Cart, CartItem, Order, and OrderItem with roles, unique constraints, and relations."
+  },
+  {
+   "id": "file:src/users/entities/user.entity.ts",
+   "type": "file",
+   "name": "user.entity.ts",
+   "filePath": "src/users/entities/user.entity.ts",
+   "summary": "Placeholder User entity exporting an empty class with no fields or decorators."
+  },
+  {
+   "id": "file:test/fixtures/test-data.ts",
+   "type": "file",
+   "name": "test-data.ts",
+   "filePath": "test/fixtures/test-data.ts",
+   "summary": "Shared test fixtures providing sample users, admin, products, and invalid input constants for validation and API tests."
+  },
+  {
+   "id": "file:test/helpers/auth.helper.ts",
+   "type": "file",
+   "name": "auth.helper.ts",
+   "filePath": "test/helpers/auth.helper.ts",
+   "summary": "Supertest helpers for registering users, logging in to obtain JWTs, and combining both flows in integration tests."
+  },
+  {
+   "id": "config:test/jest-e2e.json",
+   "type": "config",
+   "name": "jest-e2e.json",
+   "filePath": "test/jest-e2e.json",
+   "summary": "Jest end-to-end configuration targeting e2e, security, and edge-case specs with ts-jest transform and Node test environment."
+  },
+  {
+   "id": "config:test/jest-integration.json",
+   "type": "config",
+   "name": "jest-integration.json",
+   "filePath": "test/jest-integration.json",
+   "summary": "Jest configuration for integration tests matching .integration-spec.ts files with the ts-jest transform in a node environment."
+  }
+ ],
+ "edges": [
+  {
+   "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+   "target": "file:frontend/src/lib/api.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+   "target": "file:frontend/src/types/index.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+   "target": "file:frontend/src/lib/api.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+   "target": "file:frontend/src/types/index.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "file:frontend/src/app/globals.css",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "file:frontend/src/components/Navbar.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "file:frontend/src/lib/i18n.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/login/page.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/login/page.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+   "target": "file:frontend/src/lib/api.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+   "target": "file:frontend/src/types/index.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/page.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/page.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/products/page.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/products/page.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/products/page.tsx",
+   "target": "file:frontend/src/lib/api.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/products/page.tsx",
+   "target": "file:frontend/src/types/index.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/register/page.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/register/page.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/components/LanguageSwitcher.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/components/LanguageSwitcher.tsx",
+   "target": "file:frontend/src/lib/i18n.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/components/Navbar.tsx",
+   "target": "file:frontend/src/components/LanguageSwitcher.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/components/Navbar.tsx",
+   "target": "file:frontend/src/context/AuthContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/components/Navbar.tsx",
+   "target": "file:frontend/src/context/I18nContext.tsx",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/context/AuthContext.tsx",
+   "target": "file:frontend/src/lib/api.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/context/AuthContext.tsx",
+   "target": "file:frontend/src/types/index.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/context/I18nContext.tsx",
+   "target": "file:frontend/src/lib/i18n.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/lib/api.ts",
+   "target": "file:frontend/src/types/index.ts",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+   "target": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/admin/products/page.tsx",
+   "target": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+   "target": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/cart/page.tsx",
+   "target": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "target": "function:frontend/src/app/[lang]/dictionaries.ts:hasLocale",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "target": "function:frontend/src/app/[lang]/dictionaries.ts:hasLocale",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "target": "function:frontend/src/app/[lang]/dictionaries.ts:getDictionary",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "target": "function:frontend/src/app/[lang]/dictionaries.ts:getDictionary",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "function:frontend/src/app/[lang]/layout.tsx:generateStaticParams",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "function:frontend/src/app/[lang]/layout.tsx:generateStaticParams",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/layout.tsx",
+   "target": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/login/page.tsx",
+   "target": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/login/page.tsx",
+   "target": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+   "target": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/orders/page.tsx",
+   "target": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/page.tsx",
+   "target": "function:frontend/src/app/[lang]/page.tsx:Home",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/page.tsx",
+   "target": "function:frontend/src/app/[lang]/page.tsx:Home",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/products/page.tsx",
+   "target": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/products/page.tsx",
+   "target": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/register/page.tsx",
+   "target": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/register/page.tsx",
+   "target": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/components/LanguageSwitcher.tsx",
+   "target": "function:frontend/src/components/LanguageSwitcher.tsx:LanguageSwitcher",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/components/LanguageSwitcher.tsx",
+   "target": "function:frontend/src/components/LanguageSwitcher.tsx:LanguageSwitcher",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/components/Navbar.tsx",
+   "target": "function:frontend/src/components/Navbar.tsx:Navbar",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/components/Navbar.tsx",
+   "target": "function:frontend/src/components/Navbar.tsx:Navbar",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/context/AuthContext.tsx",
+   "target": "function:frontend/src/context/AuthContext.tsx:parseJwt",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/context/AuthContext.tsx",
+   "target": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/context/AuthContext.tsx",
+   "target": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/context/AuthContext.tsx",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/context/AuthContext.tsx",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/context/I18nContext.tsx",
+   "target": "function:frontend/src/context/I18nContext.tsx:I18nProvider",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/context/I18nContext.tsx",
+   "target": "function:frontend/src/context/I18nContext.tsx:I18nProvider",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/context/I18nContext.tsx",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/context/I18nContext.tsx",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/lib/api.ts",
+   "target": "function:frontend/src/lib/api.ts:getAuthToken",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/lib/api.ts",
+   "target": "function:frontend/src/lib/api.ts:getAuthToken",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/lib/api.ts",
+   "target": "function:frontend/src/lib/api.ts:setAuthToken",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/lib/api.ts",
+   "target": "function:frontend/src/lib/api.ts:setAuthToken",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/lib/api.ts",
+   "target": "function:frontend/src/lib/api.ts:apiFetch",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/lib/api.ts",
+   "target": "function:frontend/src/lib/api.ts:apiFetch",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "file:frontend/src/lib/i18n.ts",
+   "target": "function:frontend/src/lib/i18n.ts:isLocale",
+   "type": "contains",
+   "direction": "forward",
+   "weight": 1.0
+  },
+  {
+   "source": "file:frontend/src/lib/i18n.ts",
+   "target": "function:frontend/src/lib/i18n.ts:isLocale",
+   "type": "exports",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/admin/products/page.tsx:AdminProductsPage",
+   "target": "function:frontend/src/lib/api.ts:apiFetch",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/cart/page.tsx:CartPage",
+   "target": "function:frontend/src/lib/api.ts:apiFetch",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+   "target": "function:frontend/src/app/[lang]/dictionaries.ts:hasLocale",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/layout.tsx:RootLayout",
+   "target": "function:frontend/src/app/[lang]/dictionaries.ts:getDictionary",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/login/page.tsx:LoginPage",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/orders/page.tsx:OrdersPage",
+   "target": "function:frontend/src/lib/api.ts:apiFetch",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/page.tsx:Home",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/page.tsx:Home",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/products/page.tsx:ProductsPage",
+   "target": "function:frontend/src/lib/api.ts:apiFetch",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/app/[lang]/register/page.tsx:RegisterPage",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/components/LanguageSwitcher.tsx:LanguageSwitcher",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/components/Navbar.tsx:Navbar",
+   "target": "function:frontend/src/context/AuthContext.tsx:useAuth",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/components/Navbar.tsx:Navbar",
+   "target": "function:frontend/src/context/I18nContext.tsx:useI18n",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+   "target": "function:frontend/src/lib/api.ts:getAuthToken",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+   "target": "function:frontend/src/lib/api.ts:setAuthToken",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "source": "function:frontend/src/context/AuthContext.tsx:AuthProvider",
+   "target": "function:frontend/src/lib/api.ts:apiFetch",
+   "type": "calls",
+   "direction": "forward",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.module.ts",
+   "target": "file:src/auth/auth.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.module.ts",
+   "target": "file:src/auth/auth.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.module.ts",
+   "target": "file:src/auth/jwt.strategy.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.module.ts",
+   "target": "class:src/auth/auth.module.ts:AuthModule",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.module.ts",
+   "target": "class:src/auth/auth.module.ts:AuthModule",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/jwt.strategy.spec.ts",
+   "target": "file:src/auth/jwt.strategy.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/jwt.strategy.ts",
+   "target": "class:src/auth/jwt.strategy.ts:JwtStrategy",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/jwt.strategy.ts",
+   "target": "class:src/auth/jwt.strategy.ts:JwtStrategy",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/jwt.strategy.ts",
+   "target": "file:src/auth/jwt.strategy.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/prisma/prisma.module.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/prisma/prisma.module.ts",
+   "target": "class:src/prisma/prisma.module.ts:PrismaModule",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/prisma/prisma.module.ts",
+   "target": "class:src/prisma/prisma.module.ts:PrismaModule",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/prisma/prisma.service.spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/prisma/prisma.service.ts",
+   "target": "class:src/prisma/prisma.service.ts:PrismaService",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/prisma/prisma.service.ts",
+   "target": "class:src/prisma/prisma.service.ts:PrismaService",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/prisma/prisma.service.ts",
+   "target": "file:src/prisma/prisma.service.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.module.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.module.ts",
+   "target": "file:src/products/products.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.module.ts",
+   "target": "file:src/products/products.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.module.ts",
+   "target": "class:src/products/products.module.ts:ProductsModule",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.module.ts",
+   "target": "class:src/products/products.module.ts:ProductsModule",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/auth-flow.e2e-spec.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/auth-flow.e2e-spec.ts",
+   "target": "file:src/prisma/prisma.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/auth-flow.e2e-spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/auth-flow.e2e-spec.ts",
+   "target": "file:src/products/products.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/auth.e2e-spec.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/auth.e2e-spec.ts",
+   "target": "file:src/prisma/prisma.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/auth.e2e-spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/auth.e2e-spec.ts",
+   "target": "file:src/products/products.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/products.e2e-spec.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/products.e2e-spec.ts",
+   "target": "file:src/prisma/prisma.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/products.e2e-spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/e2e/products.e2e-spec.ts",
+   "target": "file:src/products/products.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/edge-cases.spec.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/edge-cases.spec.ts",
+   "target": "file:src/prisma/prisma.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/edge-cases.spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/edge-cases.spec.ts",
+   "target": "file:src/products/products.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/factories/product.factory.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/factories/product.factory.ts",
+   "target": "function:test/factories/product.factory.ts:createTestProduct",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/factories/product.factory.ts",
+   "target": "function:test/factories/product.factory.ts:createTestProduct",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/factories/user.factory.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/factories/user.factory.ts",
+   "target": "function:test/factories/user.factory.ts:createTestUser",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/factories/user.factory.ts",
+   "target": "function:test/factories/user.factory.ts:createTestUser",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/factories/user.factory.ts",
+   "target": "function:test/factories/user.factory.ts:createTestAdmin",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/factories/user.factory.ts",
+   "target": "function:test/factories/user.factory.ts:createTestAdmin",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/create-app-mocked.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/create-app-mocked.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/create-app-mocked.ts",
+   "target": "file:src/products/products.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/create-app-mocked.ts",
+   "target": "function:test/helpers/create-app-mocked.ts:createMockedApp",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/create-app-mocked.ts",
+   "target": "function:test/helpers/create-app-mocked.ts:createMockedApp",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/security/auth.security-spec.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/security/auth.security-spec.ts",
+   "target": "file:src/prisma/prisma.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/security/auth.security-spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/security/auth.security-spec.ts",
+   "target": "file:src/products/products.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/security/rbac.security-spec.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/security/rbac.security-spec.ts",
+   "target": "file:src/prisma/prisma.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/security/rbac.security-spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/security/rbac.security-spec.ts",
+   "target": "file:src/products/products.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/decorators/roles.decorator.ts",
+   "target": "function:src/auth/decorators/roles.decorator.ts:Roles",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/decorators/roles.decorator.ts",
+   "target": "function:src/auth/decorators/roles.decorator.ts:Roles",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/guards/roles.guard.spec.ts",
+   "target": "file:src/auth/decorators/roles.decorator.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/guards/roles.guard.spec.ts",
+   "target": "file:src/auth/guards/roles.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/guards/roles.guard.ts",
+   "target": "file:src/auth/decorators/roles.decorator.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/guards/roles.guard.ts",
+   "target": "class:src/auth/guards/roles.guard.ts:RolesGuard",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/guards/roles.guard.ts",
+   "target": "class:src/auth/guards/roles.guard.ts:RolesGuard",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/guards/roles.guard.ts",
+   "target": "file:src/auth/guards/roles.guard.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/create-product.dto.spec.ts",
+   "target": "file:src/products/dto/create-product.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/create-product.dto.ts",
+   "target": "class:src/products/dto/create-product.dto.ts:CreateProductDto",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/create-product.dto.ts",
+   "target": "class:src/products/dto/create-product.dto.ts:CreateProductDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/create-product.dto.ts",
+   "target": "file:src/products/dto/create-product.dto.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/update-product.dto.spec.ts",
+   "target": "file:src/products/dto/update-product.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/update-product.dto.ts",
+   "target": "file:src/products/dto/create-product.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/update-product.dto.ts",
+   "target": "class:src/products/dto/update-product.dto.ts:UpdateProductDto",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/update-product.dto.ts",
+   "target": "class:src/products/dto/update-product.dto.ts:UpdateProductDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/dto/update-product.dto.ts",
+   "target": "file:src/products/dto/update-product.dto.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.spec.ts",
+   "target": "file:src/auth/guards/roles.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.spec.ts",
+   "target": "file:src/products/products.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.spec.ts",
+   "target": "file:src/products/products.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.spec.ts",
+   "target": "file:src/users/auth/auth.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "file:src/auth/decorators/roles.decorator.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "file:src/auth/guards/roles.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "file:src/products/dto/create-product.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "file:src/products/dto/update-product.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "file:src/products/products.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "file:src/users/auth/auth.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "class:src/products/products.controller.ts:ProductsController",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "class:src/products/products.controller.ts:ProductsController",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "file:src/products/products.controller.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.controller.ts",
+   "target": "class:src/products/products.service.ts:ProductsService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.service.spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.service.spec.ts",
+   "target": "file:src/products/products.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.service.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.service.ts",
+   "target": "file:src/products/dto/create-product.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.service.ts",
+   "target": "file:src/products/dto/update-product.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.service.ts",
+   "target": "class:src/products/products.service.ts:ProductsService",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.service.ts",
+   "target": "class:src/products/products.service.ts:ProductsService",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/products/products.service.ts",
+   "target": "file:src/products/products.service.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/auth/auth.guard.spec.ts",
+   "target": "file:src/users/auth/auth.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/auth/auth.guard.ts",
+   "target": "class:src/users/auth/auth.guard.ts:AuthGuard",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/auth/auth.guard.ts",
+   "target": "class:src/users/auth/auth.guard.ts:AuthGuard",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/auth/auth.guard.ts",
+   "target": "file:src/users/auth/auth.guard.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/integration/products.integration-spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/integration/products.integration-spec.ts",
+   "target": "file:src/products/products.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/integration/roles.integration-spec.ts",
+   "target": "file:src/auth/guards/roles.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/create-user.dto.spec.ts",
+   "target": "file:src/users/dto/create-user.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/update-user.dto.spec.ts",
+   "target": "file:src/users/dto/update-user.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/update-user.dto.ts",
+   "target": "file:src/users/dto/create-user.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/logger/logger.middleware.spec.ts",
+   "target": "file:src/users/logger/logger.middleware.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.spec.ts",
+   "target": "file:src/users/users.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.spec.ts",
+   "target": "file:src/users/users.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "file:src/auth/decorators/roles.decorator.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "file:src/auth/guards/jwt-auth.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "file:src/auth/guards/roles.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "file:src/users/dto/create-user.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "file:src/users/dto/update-user.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "file:src/users/transform/transform.interceptor.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "file:src/users/users.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.module.ts",
+   "target": "file:src/users/logger/logger.middleware.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.module.ts",
+   "target": "file:src/users/users.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.module.ts",
+   "target": "file:src/users/users.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.spec.ts",
+   "target": "file:src/users/users.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.ts",
+   "target": "file:src/users/dto/create-user.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.ts",
+   "target": "file:src/users/dto/update-user.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/guards/jwt-auth.guard.ts",
+   "target": "class:src/auth/guards/jwt-auth.guard.ts:JwtAuthGuard",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/create-user.dto.ts",
+   "target": "class:src/users/dto/create-user.dto.ts:CreateUserDto",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/update-user.dto.ts",
+   "target": "class:src/users/dto/update-user.dto.ts:UpdateUserDto",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/logger/logger.middleware.ts",
+   "target": "class:src/users/logger/logger.middleware.ts:LoggerMiddleware",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "class:src/users/users.controller.ts:UsersController",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.module.ts",
+   "target": "class:src/users/users.module.ts:UsersModule",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.ts",
+   "target": "class:src/users/users.service.ts:UsersService",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/guards/jwt-auth.guard.ts",
+   "target": "class:src/auth/guards/jwt-auth.guard.ts:JwtAuthGuard",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/create-user.dto.ts",
+   "target": "class:src/users/dto/create-user.dto.ts:CreateUserDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/update-user.dto.ts",
+   "target": "class:src/users/dto/update-user.dto.ts:UpdateUserDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/logger/logger.middleware.ts",
+   "target": "class:src/users/logger/logger.middleware.ts:LoggerMiddleware",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "class:src/users/users.controller.ts:UsersController",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.module.ts",
+   "target": "class:src/users/users.module.ts:UsersModule",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.ts",
+   "target": "class:src/users/users.service.ts:UsersService",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "class:src/users/users.service.ts:UsersService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.ts",
+   "target": "class:src/prisma/prisma.service.ts:PrismaService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.module.ts",
+   "target": "class:src/users/logger/logger.middleware.ts:LoggerMiddleware",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/create-user.dto.ts",
+   "target": "file:src/users/dto/create-user.dto.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/dto/update-user.dto.ts",
+   "target": "file:src/users/dto/update-user.dto.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/logger/logger.middleware.ts",
+   "target": "file:src/users/logger/logger.middleware.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.controller.ts",
+   "target": "file:src/users/users.controller.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/users.service.ts",
+   "target": "file:src/users/users.service.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.controller.spec.ts",
+   "target": "file:src/app.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.controller.spec.ts",
+   "target": "file:src/app.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.controller.ts",
+   "target": "file:src/app.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "file:src/app.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "file:src/app.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "file:src/cart/cart.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "file:src/orders/orders.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "file:src/prisma/prisma.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "file:src/products/products.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "file:src/users/users.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/main.ts",
+   "target": "file:src/app.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/main.ts",
+   "target": "file:src/logger/logger.middleware.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/main.ts",
+   "target": "file:src/users/transform/transform.interceptor.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/transform/transform.interceptor.spec.ts",
+   "target": "file:src/users/transform/transform.interceptor.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/app.e2e-spec.ts",
+   "target": "file:src/app.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.controller.ts",
+   "target": "class:src/app.controller.ts:AppController",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "class:src/app.module.ts:AppModule",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.service.ts",
+   "target": "class:src/app.service.ts:AppService",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/logger/logger.middleware.ts",
+   "target": "class:src/logger/logger.middleware.ts:LoggerMiddleware",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/main.ts",
+   "target": "function:src/main.ts:bootstrap",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/transform/transform.interceptor.ts",
+   "target": "class:src/users/transform/transform.interceptor.ts:TransformInterceptor",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.controller.ts",
+   "target": "class:src/app.controller.ts:AppController",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.module.ts",
+   "target": "class:src/app.module.ts:AppModule",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.service.ts",
+   "target": "class:src/app.service.ts:AppService",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/logger/logger.middleware.ts",
+   "target": "class:src/logger/logger.middleware.ts:LoggerMiddleware",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/transform/transform.interceptor.ts",
+   "target": "class:src/users/transform/transform.interceptor.ts:TransformInterceptor",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "class:src/app.controller.ts:AppController",
+   "target": "class:src/app.service.ts:AppService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/app.controller.ts",
+   "target": "file:src/app.controller.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/transform/transform.interceptor.ts",
+   "target": "file:src/users/transform/transform.interceptor.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.controller.spec.ts",
+   "target": "file:src/auth/auth.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.controller.spec.ts",
+   "target": "file:src/auth/auth.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.controller.ts",
+   "target": "file:src/auth/auth.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.controller.ts",
+   "target": "file:src/auth/dto/login.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.controller.ts",
+   "target": "file:src/auth/dto/register.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.service.spec.ts",
+   "target": "file:src/auth/auth.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.service.spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.service.ts",
+   "target": "file:src/auth/dto/login.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.service.ts",
+   "target": "file:src/auth/dto/register.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.service.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/dto/login.dto.spec.ts",
+   "target": "file:src/auth/dto/login.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/dto/register.dto.spec.ts",
+   "target": "file:src/auth/dto/register.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/integration/auth.integration-spec.ts",
+   "target": "file:src/auth/auth.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/integration/auth.integration-spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.controller.ts",
+   "target": "class:src/auth/auth.controller.ts:AuthController",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.service.ts",
+   "target": "class:src/auth/auth.service.ts:AuthService",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/dto/login.dto.ts",
+   "target": "class:src/auth/dto/login.dto.ts:LoginDto",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/dto/register.dto.ts",
+   "target": "class:src/auth/dto/register.dto.ts:RegisterDto",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.controller.ts",
+   "target": "class:src/auth/auth.controller.ts:AuthController",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.service.ts",
+   "target": "class:src/auth/auth.service.ts:AuthService",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/dto/login.dto.ts",
+   "target": "class:src/auth/dto/login.dto.ts:LoginDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/dto/register.dto.ts",
+   "target": "class:src/auth/dto/register.dto.ts:RegisterDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "class:src/auth/auth.controller.ts:AuthController",
+   "target": "class:src/auth/auth.service.ts:AuthService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "class:src/auth/auth.service.ts:AuthService",
+   "target": "class:src/prisma/prisma.service.ts:PrismaService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.controller.ts",
+   "target": "file:src/auth/auth.controller.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/auth.service.ts",
+   "target": "file:src/auth/auth.service.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/dto/login.dto.ts",
+   "target": "file:src/auth/dto/login.dto.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/auth/dto/register.dto.ts",
+   "target": "file:src/auth/dto/register.dto.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.spec.ts",
+   "target": "file:src/cart/cart.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.spec.ts",
+   "target": "file:src/cart/cart.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.spec.ts",
+   "target": "file:src/cart/dto/add-to-cart.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.spec.ts",
+   "target": "file:src/cart/dto/update-cart-item.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.spec.ts",
+   "target": "file:src/users/auth/auth.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "file:src/auth/decorators/user.decorator.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "file:src/cart/cart.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "file:src/cart/dto/add-to-cart.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "file:src/cart/dto/update-cart-item.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "file:src/users/auth/auth.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.module.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.module.ts",
+   "target": "file:src/cart/cart.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.module.ts",
+   "target": "file:src/cart/cart.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.spec.ts",
+   "target": "file:src/cart/cart.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.ts",
+   "target": "file:src/cart/dto/add-to-cart.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.ts",
+   "target": "file:src/cart/dto/update-cart-item.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "class:src/cart/cart.controller.ts:CartController",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "class:src/cart/cart.controller.ts:CartController",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.module.ts",
+   "target": "class:src/cart/cart.module.ts:CartModule",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.module.ts",
+   "target": "class:src/cart/cart.module.ts:CartModule",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.ts",
+   "target": "class:src/cart/cart.service.ts:CartService",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.ts",
+   "target": "class:src/cart/cart.service.ts:CartService",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/dto/add-to-cart.dto.ts",
+   "target": "class:src/cart/dto/add-to-cart.dto.ts:AddToCartDto",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/dto/add-to-cart.dto.ts",
+   "target": "class:src/cart/dto/add-to-cart.dto.ts:AddToCartDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/dto/update-cart-item.dto.ts",
+   "target": "class:src/cart/dto/update-cart-item.dto.ts:UpdateCartItemDto",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/dto/update-cart-item.dto.ts",
+   "target": "class:src/cart/dto/update-cart-item.dto.ts:UpdateCartItemDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "class:src/cart/cart.service.ts:CartService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.ts",
+   "target": "class:src/prisma/prisma.service.ts:PrismaService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.controller.ts",
+   "target": "file:src/cart/cart.controller.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/cart/cart.service.ts",
+   "target": "file:src/cart/cart.service.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.controller.ts",
+   "target": "file:src/auth/decorators/user.decorator.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.controller.ts",
+   "target": "file:src/orders/dto/create-order.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.controller.ts",
+   "target": "file:src/orders/orders.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.controller.ts",
+   "target": "file:src/users/auth/auth.guard.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.module.ts",
+   "target": "file:src/auth/auth.module.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.module.ts",
+   "target": "file:src/orders/orders.controller.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.module.ts",
+   "target": "file:src/orders/orders.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.service.spec.ts",
+   "target": "file:src/orders/orders.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.service.spec.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.service.ts",
+   "target": "file:src/orders/dto/create-order.dto.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.service.ts",
+   "target": "file:src/prisma/prisma.service.ts",
+   "type": "imports",
+   "weight": 0.7
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/dto/create-order.dto.ts",
+   "target": "class:src/orders/dto/create-order.dto.ts:OrderItemDto",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/dto/create-order.dto.ts",
+   "target": "class:src/orders/dto/create-order.dto.ts:CreateOrderDto",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.controller.ts",
+   "target": "class:src/orders/orders.controller.ts:OrdersController",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.module.ts",
+   "target": "class:src/orders/orders.module.ts:OrdersModule",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.service.ts",
+   "target": "class:src/orders/orders.service.ts:OrdersService",
+   "type": "contains",
+   "weight": 1.0
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/dto/create-order.dto.ts",
+   "target": "class:src/orders/dto/create-order.dto.ts:OrderItemDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/dto/create-order.dto.ts",
+   "target": "class:src/orders/dto/create-order.dto.ts:CreateOrderDto",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.controller.ts",
+   "target": "class:src/orders/orders.controller.ts:OrdersController",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.module.ts",
+   "target": "class:src/orders/orders.module.ts:OrdersModule",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.service.ts",
+   "target": "class:src/orders/orders.service.ts:OrdersService",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.controller.ts",
+   "target": "class:src/orders/orders.service.ts:OrdersService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.service.ts",
+   "target": "class:src/prisma/prisma.service.ts:PrismaService",
+   "type": "calls",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/orders/orders.service.ts",
+   "target": "file:src/orders/orders.service.spec.ts",
+   "type": "tested_by",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "config:.ua/tmp/ua-import-map-output.json",
+   "target": "config:.ua/tmp/ua-import-map-input.json",
+   "type": "depends_on",
+   "weight": 0.6
+  },
+  {
+   "direction": "forward",
+   "source": "config:.ua/tmp/ua-import-map-input.json",
+   "target": "config:.ua/tmp/ua-scan-files.json",
+   "type": "depends_on",
+   "weight": 0.6
+  },
+  {
+   "direction": "forward",
+   "source": "config:tsconfig.build.json",
+   "target": "config:tsconfig.json",
+   "type": "depends_on",
+   "weight": 0.6
+  },
+  {
+   "direction": "forward",
+   "source": "config:package.json",
+   "target": "config:tsconfig.json",
+   "type": "depends_on",
+   "weight": 0.6
+  },
+  {
+   "direction": "forward",
+   "source": "config:package.json",
+   "target": "config:nest-cli.json",
+   "type": "depends_on",
+   "weight": 0.6
+  },
+  {
+   "direction": "forward",
+   "source": "document:AGENTS.md",
+   "target": "document:README.md",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "document:BACKEND_RULES.md",
+   "target": "document:README.md",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "document:AGENTS.md",
+   "target": "document:BACKEND_RULES.md",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "document:graphify-out/GRAPH_REPORT.md",
+   "target": "config:graphify-out/graph.json",
+   "type": "documents",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "config:graphify-out/.graphify_analysis.json",
+   "target": "config:graphify-out/.graphify_labels.json",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "config:graphify-out/.graphify_analysis.json",
+   "target": "document:graphify-out/GRAPH_REPORT.md",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:graphify-out/graph.html",
+   "target": "config:graphify-out/graph.json",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "config:graphify-out/manifest.json",
+   "target": "config:graphify-out/graph.json",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "file:frontend/src/proxy.ts",
+   "target": "function:frontend/src/proxy.ts:getLocale",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:frontend/src/proxy.ts",
+   "target": "function:frontend/src/proxy.ts:proxy",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/entities/user.entity.ts",
+   "target": "class:src/users/entities/user.entity.ts:User",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/auth.helper.ts",
+   "target": "function:test/helpers/auth.helper.ts:registerUser",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/auth.helper.ts",
+   "target": "function:test/helpers/auth.helper.ts:loginUser",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/auth.helper.ts",
+   "target": "function:test/helpers/auth.helper.ts:registerAndLogin",
+   "type": "contains",
+   "weight": 1
+  },
+  {
+   "direction": "forward",
+   "source": "file:frontend/src/proxy.ts",
+   "target": "function:frontend/src/proxy.ts:proxy",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:src/users/entities/user.entity.ts",
+   "target": "class:src/users/entities/user.entity.ts:User",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/auth.helper.ts",
+   "target": "function:test/helpers/auth.helper.ts:registerUser",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/auth.helper.ts",
+   "target": "function:test/helpers/auth.helper.ts:loginUser",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "file:test/helpers/auth.helper.ts",
+   "target": "function:test/helpers/auth.helper.ts:registerAndLogin",
+   "type": "exports",
+   "weight": 0.8
+  },
+  {
+   "direction": "forward",
+   "source": "config:frontend/src/app/[lang]/dictionaries/en.json",
+   "target": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "type": "configures",
+   "weight": 0.6
+  },
+  {
+   "direction": "forward",
+   "source": "config:frontend/src/app/[lang]/dictionaries/fr.json",
+   "target": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "type": "configures",
+   "weight": 0.6
+  },
+  {
+   "direction": "forward",
+   "source": "file:frontend/src/app/globals.css",
+   "target": "file:frontend/src/app/[lang]/layout.tsx",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "config:postman/collection.json",
+   "target": "config:postman/environment.json",
+   "type": "depends_on",
+   "weight": 0.6
+  },
+  {
+   "direction": "forward",
+   "source": "table:prisma/migrations/20260729093153_add_orders/migration.sql:Order",
+   "target": "table:prisma/migrations/20260724110919_init/migration.sql:User",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "table:prisma/migrations/20260729093153_add_orders/migration.sql:OrderItem",
+   "target": "table:prisma/migrations/20260729093153_add_orders/migration.sql:Order",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "table:prisma/migrations/20260729093153_add_orders/migration.sql:OrderItem",
+   "target": "table:prisma/migrations/20260724110919_init/migration.sql:Product",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:Cart",
+   "target": "table:prisma/migrations/20260724110919_init/migration.sql:User",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:CartItem",
+   "target": "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:Cart",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "direction": "forward",
+   "source": "table:prisma/migrations/20260730185335_add_cart_models/migration.sql:CartItem",
+   "target": "table:prisma/migrations/20260724110919_init/migration.sql:Product",
+   "type": "related",
+   "weight": 0.5
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "target": "config:frontend/src/app/[lang]/dictionaries/en.json",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7,
+   "recoveredFromImportMap": true
+  },
+  {
+   "source": "file:frontend/src/app/[lang]/dictionaries.ts",
+   "target": "config:frontend/src/app/[lang]/dictionaries/fr.json",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7,
+   "recoveredFromImportMap": true
+  },
+  {
+   "source": "file:frontend/src/context/I18nContext.tsx",
+   "target": "config:frontend/src/app/[lang]/dictionaries/en.json",
+   "type": "imports",
+   "direction": "forward",
+   "weight": 0.7,
+   "recoveredFromImportMap": true
+  }
+ ],
+ "layers": [
+  {
+   "id": "layer:storefront",
+   "name": "Storefront UI Layer",
+   "description": "Next.js 16 localized storefront: App Router pages, components, auth/i18n contexts, API client, shared types, locale dictionaries, routing proxy, and global styles"
+  },
+  {
+   "id": "layer:api",
+   "name": "Backend API Layer",
+   "description": "NestJS REST controllers for auth, users, products, cart, and orders plus the validated DTO contracts that shape their request and response payloads"
+  },
+  {
+   "id": "layer:service",
+   "name": "Service and Composition Layer",
+   "description": "Prisma-backed business-logic services, NestJS feature modules, the AppModule composition root, and the main.ts application bootstrap"
+  },
+  {
+   "id": "layer:security",
+   "name": "Security and Middleware Layer",
+   "description": "Cross-cutting request pipeline: JWT strategies and guards, role-based authorization, parameter decorators, request logging middleware, and the success-envelope interceptor"
+  },
+  {
+   "id": "layer:data",
+   "name": "Data Layer",
+   "description": "PostgreSQL persistence: canonical Prisma schema, migration-defined User/Product/Order/Cart tables, migration lockfile, Prisma client module, and the user entity placeholder"
+  },
+  {
+   "id": "layer:test",
+   "name": "Test Layer",
+   "description": "Jest unit specs, integration, end-to-end, security, and edge-case suites with factories, fixtures, and app-bootstrapping helpers"
+  },
+  {
+   "id": "layer:config",
+   "name": "Configuration Layer",
+   "description": "Build, lint, type-check, and test-runner configs for the NestJS backend and Next.js storefront, plus Postman API collections and environments"
+  },
+  {
+   "id": "layer:documentation",
+   "name": "Documentation Layer",
+   "description": "Project guides and contracts: setup readmes, agent operating guides, backend API rules, and the knowledge-graph report"
+  },
+  {
+   "id": "layer:tooling",
+   "name": "Analysis Tooling Artifacts Layer",
+   "description": "Generated pipeline snapshots, import-map and scan inventories, graphify caches, and the interactive knowledge-graph visualization"
+  }
+ ]
+}

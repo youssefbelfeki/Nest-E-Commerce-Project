@@ -1,0 +1,125 @@
+{
+  "nodes": [
+    {
+      "id": "config:graphify-out/.graphify_analysis.json",
+      "type": "config",
+      "name": ".graphify_analysis.json",
+      "filePath": "graphify-out/.graphify_analysis.json",
+      "summary": "Generated graphify community analysis cache grouping detected code symbols into communities with cohesion, god-node, surprise, and question annotations.",
+      "tags": [
+        "generated",
+        "graph-analysis",
+        "community-detection",
+        "cache"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:graphify-out/.graphify_labels.json",
+      "type": "config",
+      "name": ".graphify_labels.json",
+      "filePath": "graphify-out/.graphify_labels.json",
+      "summary": "Generated lookup table mapping numeric community ids to human-readable labels such as controllers, services, and config files.",
+      "tags": [
+        "generated",
+        "graph-analysis",
+        "label-mapping",
+        "cache"
+      ],
+      "complexity": "simple"
+    },
+    {
+      "id": "document:graphify-out/GRAPH_REPORT.md",
+      "type": "document",
+      "name": "GRAPH_REPORT.md",
+      "filePath": "graphify-out/GRAPH_REPORT.md",
+      "summary": "Generated human-readable graph report summarizing 576 nodes, 916 edges, and 44 communities with navigation hubs, god nodes, import cycles, and knowledge gaps.",
+      "tags": [
+        "generated",
+        "graph-report",
+        "documentation",
+        "architecture-overview"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "file:graphify-out/graph.html",
+      "type": "file",
+      "name": "graph.html",
+      "filePath": "graphify-out/graph.html",
+      "summary": "Generated interactive graph viewer page rendering the knowledge graph with vis-network, search, info panel, legend, and dark themed layout.",
+      "tags": [
+        "generated",
+        "graph-visualization",
+        "viewer",
+        "markup"
+      ],
+      "complexity": "moderate"
+    },
+    {
+      "id": "config:graphify-out/graph.json",
+      "type": "config",
+      "name": "graph.json",
+      "filePath": "graphify-out/graph.json",
+      "summary": "Generated serialized knowledge graph artifact holding the full node, link, and hyperedge dataset consumed by the HTML viewer and analysis files.",
+      "tags": [
+        "generated",
+        "knowledge-graph",
+        "graph-data",
+        "cache"
+      ],
+      "complexity": "complex"
+    },
+    {
+      "id": "config:graphify-out/manifest.json",
+      "type": "config",
+      "name": "manifest.json",
+      "filePath": "graphify-out/manifest.json",
+      "summary": "Generated incremental-build manifest recording per-file mtime plus AST and semantic hashes used to detect stale graph output.",
+      "tags": [
+        "generated",
+        "build-cache",
+        "incremental",
+        "file-hashes"
+      ],
+      "complexity": "complex"
+    }
+  ],
+  "edges": [
+    {
+      "source": "document:graphify-out/GRAPH_REPORT.md",
+      "target": "config:graphify-out/graph.json",
+      "type": "documents",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "file:graphify-out/graph.html",
+      "target": "config:graphify-out/graph.json",
+      "type": "depends_on",
+      "direction": "forward",
+      "weight": 0.6
+    },
+    {
+      "source": "config:graphify-out/.graphify_analysis.json",
+      "target": "config:graphify-out/graph.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:graphify-out/.graphify_labels.json",
+      "target": "config:graphify-out/.graphify_analysis.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    },
+    {
+      "source": "config:graphify-out/manifest.json",
+      "target": "config:graphify-out/graph.json",
+      "type": "related",
+      "direction": "forward",
+      "weight": 0.5
+    }
+  ]
+}

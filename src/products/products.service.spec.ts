@@ -61,7 +61,10 @@ describe('ProductsService', () => {
 
   describe('findAll', () => {
     it('should return all products', async () => {
-      const products = [mockProduct, { id: 2, name: 'Product 2', price: 39.99, stock: 25 }];
+      const products = [
+        mockProduct,
+        { id: 2, name: 'Product 2', price: 39.99, stock: 25 },
+      ];
       prisma.product.findMany.mockResolvedValue(products);
 
       const result = await service.findAll();
@@ -85,7 +88,9 @@ describe('ProductsService', () => {
 
       const result = await service.findOne(1);
 
-      expect(prisma.product.findUnique).toHaveBeenCalledWith({ where: { id: 1 } });
+      expect(prisma.product.findUnique).toHaveBeenCalledWith({
+        where: { id: 1 },
+      });
       expect(result).toEqual(mockProduct);
     });
 
@@ -101,7 +106,9 @@ describe('ProductsService', () => {
       try {
         await service.findOne(42);
       } catch (e) {
-        expect((e as NotFoundException).message).toBe('Product with ID 42 not found');
+        expect((e as NotFoundException).message).toBe(
+          'Product with ID 42 not found',
+        );
       }
     });
   });
@@ -109,11 +116,16 @@ describe('ProductsService', () => {
   describe('update', () => {
     it('should update and return the product', async () => {
       prisma.product.findUnique.mockResolvedValue(mockProduct);
-      prisma.product.update.mockResolvedValue({ ...mockProduct, name: 'Updated' });
+      prisma.product.update.mockResolvedValue({
+        ...mockProduct,
+        name: 'Updated',
+      });
 
       const result = await service.update(1, { name: 'Updated' });
 
-      expect(prisma.product.findUnique).toHaveBeenCalledWith({ where: { id: 1 } });
+      expect(prisma.product.findUnique).toHaveBeenCalledWith({
+        where: { id: 1 },
+      });
       expect(prisma.product.update).toHaveBeenCalledWith({
         where: { id: 1 },
         data: { name: 'Updated' },
@@ -124,7 +136,9 @@ describe('ProductsService', () => {
     it('should throw NotFoundException if product does not exist', async () => {
       prisma.product.findUnique.mockResolvedValue(null);
 
-      await expect(service.update(999, { name: 'X' })).rejects.toThrow(NotFoundException);
+      await expect(service.update(999, { name: 'X' })).rejects.toThrow(
+        NotFoundException,
+      );
       expect(prisma.product.update).not.toHaveBeenCalled();
     });
   });
@@ -136,7 +150,9 @@ describe('ProductsService', () => {
 
       const result = await service.remove(1);
 
-      expect(prisma.product.findUnique).toHaveBeenCalledWith({ where: { id: 1 } });
+      expect(prisma.product.findUnique).toHaveBeenCalledWith({
+        where: { id: 1 },
+      });
       expect(prisma.product.delete).toHaveBeenCalledWith({ where: { id: 1 } });
       expect(result).toEqual(mockProduct);
     });

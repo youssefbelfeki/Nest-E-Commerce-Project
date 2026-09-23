@@ -1,0 +1,1319 @@
+{
+  "name": "ecommerce-project",
+  "description": "Full-stack e-commerce platform pairing a NestJS v11 REST API (PostgreSQL + Prisma, JWT auth with USER/ADMIN roles, per-user cart, and transactional orders with atomic stock decrement) with a Next.js 16 storefront (React 19, Tailwind CSS v4, EN/FR i18n). Note: this project has over 100 source files; consider scoping analysis to a subdirectory for faster results.",
+  "languages": [
+    "css",
+    "html",
+    "javascript",
+    "json",
+    "markdown",
+    "prisma",
+    "sql",
+    "toml",
+    "typescript"
+  ],
+  "frameworks": [
+    "Jest",
+    "Next.js",
+    "Prisma",
+    "React",
+    "Tailwind CSS"
+  ],
+  "files": [
+    {
+      "path": ".ua/config.json",
+      "language": "json",
+      "sizeLines": 2,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/dashboard.log.err",
+      "language": "err",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": ".ua/fingerprints.json",
+      "language": "json",
+      "sizeLines": 4757,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/intermediate/scan-result.json",
+      "language": "json",
+      "sizeLines": 1262,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/knowledge-graph.json",
+      "language": "json",
+      "sizeLines": 6602,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/meta.json",
+      "language": "json",
+      "sizeLines": 5,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/ua-import-map-input.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/ua-import-map-output.json",
+      "language": "json",
+      "sizeLines": 467,
+      "fileCategory": "config"
+    },
+    {
+      "path": ".ua/tmp/ua-scan-files.json",
+      "language": "json",
+      "sizeLines": 1252,
+      "fileCategory": "config"
+    },
+    {
+      "path": "AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 76,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "BACKEND_RULES.md",
+      "language": "markdown",
+      "sizeLines": 199,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "README.md",
+      "language": "markdown",
+      "sizeLines": 488,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "eslint.config.mjs",
+      "language": "javascript",
+      "sizeLines": 35,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/AGENTS.md",
+      "language": "markdown",
+      "sizeLines": 61,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "frontend/CLAUDE.md",
+      "language": "markdown",
+      "sizeLines": 1,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "frontend/README.md",
+      "language": "markdown",
+      "sizeLines": 36,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "frontend/eslint.config.mjs",
+      "language": "javascript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/next.config.ts",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/package.json",
+      "language": "json",
+      "sizeLines": 26,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/postcss.config.mjs",
+      "language": "javascript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/admin/products/page.tsx",
+      "language": "typescript",
+      "sizeLines": 434,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/cart/page.tsx",
+      "language": "typescript",
+      "sizeLines": 278,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/dictionaries.ts",
+      "language": "typescript",
+      "sizeLines": 23,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/dictionaries/en.json",
+      "language": "json",
+      "sizeLines": 142,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/src/app/[lang]/dictionaries/fr.json",
+      "language": "json",
+      "sizeLines": 142,
+      "fileCategory": "config"
+    },
+    {
+      "path": "frontend/src/app/[lang]/layout.tsx",
+      "language": "typescript",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/login/page.tsx",
+      "language": "typescript",
+      "sizeLines": 110,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/orders/page.tsx",
+      "language": "typescript",
+      "sizeLines": 156,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/page.tsx",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/products/page.tsx",
+      "language": "typescript",
+      "sizeLines": 228,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/[lang]/register/page.tsx",
+      "language": "typescript",
+      "sizeLines": 131,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/app/globals.css",
+      "language": "css",
+      "sizeLines": 129,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "frontend/src/components/LanguageSwitcher.tsx",
+      "language": "typescript",
+      "sizeLines": 107,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/components/Navbar.tsx",
+      "language": "typescript",
+      "sizeLines": 138,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/context/AuthContext.tsx",
+      "language": "typescript",
+      "sizeLines": 123,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/context/I18nContext.tsx",
+      "language": "typescript",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/lib/api.ts",
+      "language": "typescript",
+      "sizeLines": 79,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/lib/i18n.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/proxy.ts",
+      "language": "typescript",
+      "sizeLines": 47,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/src/types/index.ts",
+      "language": "typescript",
+      "sizeLines": 56,
+      "fileCategory": "code"
+    },
+    {
+      "path": "frontend/tsconfig.json",
+      "language": "json",
+      "sizeLines": 44,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/.graphify_analysis.json",
+      "language": "json",
+      "sizeLines": 859,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/.graphify_labels.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/.graphify_labels.json.sig",
+      "language": "sig",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "graphify-out/.graphify_root",
+      "language": "unknown",
+      "sizeLines": 0,
+      "fileCategory": "code"
+    },
+    {
+      "path": "graphify-out/GRAPH_REPORT.md",
+      "language": "markdown",
+      "sizeLines": 193,
+      "fileCategory": "docs"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/cache/stat-index.json",
+      "language": "json",
+      "sizeLines": 0,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/graph.html",
+      "language": "html",
+      "sizeLines": 319,
+      "fileCategory": "markup"
+    },
+    {
+      "path": "graphify-out/graph.json",
+      "language": "json",
+      "sizeLines": 17027,
+      "fileCategory": "config"
+    },
+    {
+      "path": "graphify-out/manifest.json",
+      "language": "json",
+      "sizeLines": 541,
+      "fileCategory": "config"
+    },
+    {
+      "path": "nest-cli.json",
+      "language": "json",
+      "sizeLines": 8,
+      "fileCategory": "config"
+    },
+    {
+      "path": "package.json",
+      "language": "json",
+      "sizeLines": 98,
+      "fileCategory": "config"
+    },
+    {
+      "path": "postman/collection.json",
+      "language": "json",
+      "sizeLines": 531,
+      "fileCategory": "config"
+    },
+    {
+      "path": "postman/environment.json",
+      "language": "json",
+      "sizeLines": 25,
+      "fileCategory": "config"
+    },
+    {
+      "path": "prisma.config.ts",
+      "language": "typescript",
+      "sizeLines": 14,
+      "fileCategory": "code"
+    },
+    {
+      "path": "prisma/migrations/20260724110919_init/migration.sql",
+      "language": "sql",
+      "sizeLines": 26,
+      "fileCategory": "data"
+    },
+    {
+      "path": "prisma/migrations/20260729093153_add_orders/migration.sql",
+      "language": "sql",
+      "sizeLines": 27,
+      "fileCategory": "data"
+    },
+    {
+      "path": "prisma/migrations/20260730185335_add_cart_models/migration.sql",
+      "language": "sql",
+      "sizeLines": 29,
+      "fileCategory": "data"
+    },
+    {
+      "path": "prisma/migrations/migration_lock.toml",
+      "language": "toml",
+      "sizeLines": 3,
+      "fileCategory": "config"
+    },
+    {
+      "path": "prisma/schema.prisma",
+      "language": "prisma",
+      "sizeLines": 71,
+      "fileCategory": "data"
+    },
+    {
+      "path": "skills-lock.json",
+      "language": "json",
+      "sizeLines": 59,
+      "fileCategory": "config"
+    },
+    {
+      "path": "src/app.controller.spec.ts",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app.controller.ts",
+      "language": "typescript",
+      "sizeLines": 12,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app.module.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/app.service.ts",
+      "language": "typescript",
+      "sizeLines": 8,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/auth.controller.spec.ts",
+      "language": "typescript",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/auth.controller.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/auth.module.ts",
+      "language": "typescript",
+      "sizeLines": 22,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/auth.service.spec.ts",
+      "language": "typescript",
+      "sizeLines": 167,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/auth.service.ts",
+      "language": "typescript",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/decorators/roles.decorator.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/decorators/user.decorator.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/dto/login.dto.spec.ts",
+      "language": "typescript",
+      "sizeLines": 44,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/dto/login.dto.ts",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/dto/register.dto.spec.ts",
+      "language": "typescript",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/dto/register.dto.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/guards/jwt-auth.guard.ts",
+      "language": "typescript",
+      "sizeLines": 5,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/guards/roles.guard.spec.ts",
+      "language": "typescript",
+      "sizeLines": 89,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/guards/roles.guard.ts",
+      "language": "typescript",
+      "sizeLines": 42,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/jwt.strategy.spec.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/auth/jwt.strategy.ts",
+      "language": "typescript",
+      "sizeLines": 24,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/cart/cart.controller.spec.ts",
+      "language": "typescript",
+      "sizeLines": 126,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/cart/cart.controller.ts",
+      "language": "typescript",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/cart/cart.module.ts",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/cart/cart.service.spec.ts",
+      "language": "typescript",
+      "sizeLines": 338,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/cart/cart.service.ts",
+      "language": "typescript",
+      "sizeLines": 121,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/cart/dto/add-to-cart.dto.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/cart/dto/update-cart-item.dto.ts",
+      "language": "typescript",
+      "sizeLines": 7,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/logger/logger.middleware.ts",
+      "language": "typescript",
+      "sizeLines": 18,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/main.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/orders/dto/create-order.dto.ts",
+      "language": "typescript",
+      "sizeLines": 19,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/orders/orders.controller.ts",
+      "language": "typescript",
+      "sizeLines": 26,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/orders/orders.module.ts",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/orders/orders.service.spec.ts",
+      "language": "typescript",
+      "sizeLines": 214,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/orders/orders.service.ts",
+      "language": "typescript",
+      "sizeLines": 90,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/prisma/prisma.module.ts",
+      "language": "typescript",
+      "sizeLines": 9,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/prisma/prisma.service.spec.ts",
+      "language": "typescript",
+      "sizeLines": 63,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/prisma/prisma.service.ts",
+      "language": "typescript",
+      "sizeLines": 25,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/dto/create-product.dto.spec.ts",
+      "language": "typescript",
+      "sizeLines": 95,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/dto/create-product.dto.ts",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/dto/update-product.dto.spec.ts",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/dto/update-product.dto.ts",
+      "language": "typescript",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/products.controller.spec.ts",
+      "language": "typescript",
+      "sizeLines": 106,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/products.controller.ts",
+      "language": "typescript",
+      "sizeLines": 55,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/products.module.ts",
+      "language": "typescript",
+      "sizeLines": 11,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/products.service.spec.ts",
+      "language": "typescript",
+      "sizeLines": 151,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/products/products.service.ts",
+      "language": "typescript",
+      "sizeLines": 46,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/auth/auth.guard.spec.ts",
+      "language": "typescript",
+      "sizeLines": 116,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/auth/auth.guard.ts",
+      "language": "typescript",
+      "sizeLines": 40,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/dto/create-user.dto.spec.ts",
+      "language": "typescript",
+      "sizeLines": 71,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/dto/create-user.dto.ts",
+      "language": "typescript",
+      "sizeLines": 17,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/dto/update-user.dto.spec.ts",
+      "language": "typescript",
+      "sizeLines": 51,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/dto/update-user.dto.ts",
+      "language": "typescript",
+      "sizeLines": 4,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/entities/user.entity.ts",
+      "language": "typescript",
+      "sizeLines": 1,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/logger/logger.middleware.spec.ts",
+      "language": "typescript",
+      "sizeLines": 54,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/logger/logger.middleware.ts",
+      "language": "typescript",
+      "sizeLines": 10,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/transform/transform.interceptor.spec.ts",
+      "language": "typescript",
+      "sizeLines": 94,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/transform/transform.interceptor.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/users.controller.spec.ts",
+      "language": "typescript",
+      "sizeLines": 73,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/users.controller.ts",
+      "language": "typescript",
+      "sizeLines": 60,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/users.module.ts",
+      "language": "typescript",
+      "sizeLines": 16,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/users.service.spec.ts",
+      "language": "typescript",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "src/users/users.service.ts",
+      "language": "typescript",
+      "sizeLines": 104,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/app.e2e-spec.ts",
+      "language": "typescript",
+      "sizeLines": 39,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/e2e/auth-flow.e2e-spec.ts",
+      "language": "typescript",
+      "sizeLines": 173,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/e2e/auth.e2e-spec.ts",
+      "language": "typescript",
+      "sizeLines": 158,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/e2e/products.e2e-spec.ts",
+      "language": "typescript",
+      "sizeLines": 188,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/edge-cases.spec.ts",
+      "language": "typescript",
+      "sizeLines": 201,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/factories/product.factory.ts",
+      "language": "typescript",
+      "sizeLines": 20,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/factories/user.factory.ts",
+      "language": "typescript",
+      "sizeLines": 37,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/fixtures/test-data.ts",
+      "language": "typescript",
+      "sizeLines": 27,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/helpers/auth.helper.ts",
+      "language": "typescript",
+      "sizeLines": 38,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/helpers/create-app-mocked.ts",
+      "language": "typescript",
+      "sizeLines": 43,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/integration/auth.integration-spec.ts",
+      "language": "typescript",
+      "sizeLines": 137,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/integration/products.integration-spec.ts",
+      "language": "typescript",
+      "sizeLines": 111,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/integration/roles.integration-spec.ts",
+      "language": "typescript",
+      "sizeLines": 127,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/jest-e2e.json",
+      "language": "json",
+      "sizeLines": 12,
+      "fileCategory": "config"
+    },
+    {
+      "path": "test/jest-integration.json",
+      "language": "json",
+      "sizeLines": 12,
+      "fileCategory": "config"
+    },
+    {
+      "path": "test/security/auth.security-spec.ts",
+      "language": "typescript",
+      "sizeLines": 215,
+      "fileCategory": "code"
+    },
+    {
+      "path": "test/security/rbac.security-spec.ts",
+      "language": "typescript",
+      "sizeLines": 159,
+      "fileCategory": "code"
+    },
+    {
+      "path": "tsconfig.build.json",
+      "language": "json",
+      "sizeLines": 4,
+      "fileCategory": "config"
+    },
+    {
+      "path": "tsconfig.json",
+      "language": "json",
+      "sizeLines": 26,
+      "fileCategory": "config"
+    }
+  ],
+  "totalFiles": 148,
+  "filteredByIgnore": 58,
+  "estimatedComplexity": "moderate",
+  "importMap": {
+    ".ua/config.json": [],
+    ".ua/dashboard.log.err": [],
+    ".ua/fingerprints.json": [],
+    ".ua/intermediate/scan-result.json": [],
+    ".ua/knowledge-graph.json": [],
+    ".ua/meta.json": [],
+    ".ua/tmp/ua-import-map-input.json": [],
+    ".ua/tmp/ua-import-map-output.json": [],
+    ".ua/tmp/ua-scan-files.json": [],
+    "AGENTS.md": [],
+    "BACKEND_RULES.md": [],
+    "README.md": [],
+    "eslint.config.mjs": [],
+    "frontend/AGENTS.md": [],
+    "frontend/CLAUDE.md": [],
+    "frontend/README.md": [],
+    "frontend/eslint.config.mjs": [],
+    "frontend/next.config.ts": [],
+    "frontend/package.json": [],
+    "frontend/postcss.config.mjs": [],
+    "frontend/src/app/[lang]/admin/products/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/app/[lang]/cart/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/app/[lang]/dictionaries.ts": [
+      "frontend/src/app/[lang]/dictionaries/en.json",
+      "frontend/src/app/[lang]/dictionaries/fr.json"
+    ],
+    "frontend/src/app/[lang]/dictionaries/en.json": [],
+    "frontend/src/app/[lang]/dictionaries/fr.json": [],
+    "frontend/src/app/[lang]/layout.tsx": [
+      "frontend/src/app/[lang]/dictionaries.ts",
+      "frontend/src/app/globals.css",
+      "frontend/src/components/Navbar.tsx",
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/i18n.ts"
+    ],
+    "frontend/src/app/[lang]/login/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx"
+    ],
+    "frontend/src/app/[lang]/orders/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/app/[lang]/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx"
+    ],
+    "frontend/src/app/[lang]/products/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/app/[lang]/register/page.tsx": [
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx"
+    ],
+    "frontend/src/app/globals.css": [],
+    "frontend/src/components/LanguageSwitcher.tsx": [
+      "frontend/src/context/I18nContext.tsx",
+      "frontend/src/lib/i18n.ts"
+    ],
+    "frontend/src/components/Navbar.tsx": [
+      "frontend/src/components/LanguageSwitcher.tsx",
+      "frontend/src/context/AuthContext.tsx",
+      "frontend/src/context/I18nContext.tsx"
+    ],
+    "frontend/src/context/AuthContext.tsx": [
+      "frontend/src/lib/api.ts",
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/context/I18nContext.tsx": [
+      "frontend/src/app/[lang]/dictionaries/en.json",
+      "frontend/src/lib/i18n.ts"
+    ],
+    "frontend/src/lib/api.ts": [
+      "frontend/src/types/index.ts"
+    ],
+    "frontend/src/lib/i18n.ts": [],
+    "frontend/src/proxy.ts": [],
+    "frontend/src/types/index.ts": [],
+    "frontend/tsconfig.json": [],
+    "graphify-out/.graphify_analysis.json": [],
+    "graphify-out/.graphify_labels.json": [],
+    "graphify-out/.graphify_labels.json.sig": [],
+    "graphify-out/.graphify_root": [],
+    "graphify-out/GRAPH_REPORT.md": [],
+    "graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json": [],
+    "graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json": [],
+    "graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json": [],
+    "graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json": [],
+    "graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json": [],
+    "graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json": [],
+    "graphify-out/cache/stat-index.json": [],
+    "graphify-out/graph.html": [],
+    "graphify-out/graph.json": [],
+    "graphify-out/manifest.json": [],
+    "nest-cli.json": [],
+    "package.json": [],
+    "postman/collection.json": [],
+    "postman/environment.json": [],
+    "prisma.config.ts": [],
+    "prisma/migrations/20260724110919_init/migration.sql": [],
+    "prisma/migrations/20260729093153_add_orders/migration.sql": [],
+    "prisma/migrations/20260730185335_add_cart_models/migration.sql": [],
+    "prisma/migrations/migration_lock.toml": [],
+    "prisma/schema.prisma": [],
+    "skills-lock.json": [],
+    "src/app.controller.spec.ts": [
+      "src/app.controller.ts",
+      "src/app.service.ts"
+    ],
+    "src/app.controller.ts": [
+      "src/app.service.ts"
+    ],
+    "src/app.module.ts": [
+      "src/app.controller.ts",
+      "src/app.service.ts",
+      "src/auth/auth.module.ts",
+      "src/cart/cart.module.ts",
+      "src/orders/orders.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/products/products.module.ts",
+      "src/users/users.module.ts"
+    ],
+    "src/app.service.ts": [],
+    "src/auth/auth.controller.spec.ts": [
+      "src/auth/auth.controller.ts",
+      "src/auth/auth.service.ts"
+    ],
+    "src/auth/auth.controller.ts": [
+      "src/auth/auth.service.ts",
+      "src/auth/dto/login.dto.ts",
+      "src/auth/dto/register.dto.ts"
+    ],
+    "src/auth/auth.module.ts": [
+      "src/auth/auth.controller.ts",
+      "src/auth/auth.service.ts",
+      "src/auth/jwt.strategy.ts"
+    ],
+    "src/auth/auth.service.spec.ts": [
+      "src/auth/auth.service.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/auth/auth.service.ts": [
+      "src/auth/dto/login.dto.ts",
+      "src/auth/dto/register.dto.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/auth/decorators/roles.decorator.ts": [],
+    "src/auth/decorators/user.decorator.ts": [],
+    "src/auth/dto/login.dto.spec.ts": [
+      "src/auth/dto/login.dto.ts"
+    ],
+    "src/auth/dto/login.dto.ts": [],
+    "src/auth/dto/register.dto.spec.ts": [
+      "src/auth/dto/register.dto.ts"
+    ],
+    "src/auth/dto/register.dto.ts": [],
+    "src/auth/guards/jwt-auth.guard.ts": [],
+    "src/auth/guards/roles.guard.spec.ts": [
+      "src/auth/decorators/roles.decorator.ts",
+      "src/auth/guards/roles.guard.ts"
+    ],
+    "src/auth/guards/roles.guard.ts": [
+      "src/auth/decorators/roles.decorator.ts"
+    ],
+    "src/auth/jwt.strategy.spec.ts": [
+      "src/auth/jwt.strategy.ts"
+    ],
+    "src/auth/jwt.strategy.ts": [],
+    "src/cart/cart.controller.spec.ts": [
+      "src/cart/cart.controller.ts",
+      "src/cart/cart.service.ts",
+      "src/cart/dto/add-to-cart.dto.ts",
+      "src/cart/dto/update-cart-item.dto.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/cart/cart.controller.ts": [
+      "src/auth/decorators/user.decorator.ts",
+      "src/cart/cart.service.ts",
+      "src/cart/dto/add-to-cart.dto.ts",
+      "src/cart/dto/update-cart-item.dto.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/cart/cart.module.ts": [
+      "src/auth/auth.module.ts",
+      "src/cart/cart.controller.ts",
+      "src/cart/cart.service.ts"
+    ],
+    "src/cart/cart.service.spec.ts": [
+      "src/cart/cart.service.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/cart/cart.service.ts": [
+      "src/cart/dto/add-to-cart.dto.ts",
+      "src/cart/dto/update-cart-item.dto.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/cart/dto/add-to-cart.dto.ts": [],
+    "src/cart/dto/update-cart-item.dto.ts": [],
+    "src/logger/logger.middleware.ts": [],
+    "src/main.ts": [
+      "src/app.module.ts",
+      "src/logger/logger.middleware.ts",
+      "src/users/transform/transform.interceptor.ts"
+    ],
+    "src/orders/dto/create-order.dto.ts": [],
+    "src/orders/orders.controller.ts": [
+      "src/auth/decorators/user.decorator.ts",
+      "src/orders/dto/create-order.dto.ts",
+      "src/orders/orders.service.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/orders/orders.module.ts": [
+      "src/auth/auth.module.ts",
+      "src/orders/orders.controller.ts",
+      "src/orders/orders.service.ts"
+    ],
+    "src/orders/orders.service.spec.ts": [
+      "src/orders/orders.service.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/orders/orders.service.ts": [
+      "src/orders/dto/create-order.dto.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/prisma/prisma.module.ts": [
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/prisma/prisma.service.spec.ts": [
+      "src/prisma/prisma.service.ts"
+    ],
+    "src/prisma/prisma.service.ts": [],
+    "src/products/dto/create-product.dto.spec.ts": [
+      "src/products/dto/create-product.dto.ts"
+    ],
+    "src/products/dto/create-product.dto.ts": [],
+    "src/products/dto/update-product.dto.spec.ts": [
+      "src/products/dto/update-product.dto.ts"
+    ],
+    "src/products/dto/update-product.dto.ts": [
+      "src/products/dto/create-product.dto.ts"
+    ],
+    "src/products/products.controller.spec.ts": [
+      "src/auth/guards/roles.guard.ts",
+      "src/products/products.controller.ts",
+      "src/products/products.service.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/products/products.controller.ts": [
+      "src/auth/decorators/roles.decorator.ts",
+      "src/auth/guards/roles.guard.ts",
+      "src/products/dto/create-product.dto.ts",
+      "src/products/dto/update-product.dto.ts",
+      "src/products/products.service.ts",
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/products/products.module.ts": [
+      "src/auth/auth.module.ts",
+      "src/products/products.controller.ts",
+      "src/products/products.service.ts"
+    ],
+    "src/products/products.service.spec.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/products/products.service.ts"
+    ],
+    "src/products/products.service.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/products/dto/create-product.dto.ts",
+      "src/products/dto/update-product.dto.ts"
+    ],
+    "src/users/auth/auth.guard.spec.ts": [
+      "src/users/auth/auth.guard.ts"
+    ],
+    "src/users/auth/auth.guard.ts": [],
+    "src/users/dto/create-user.dto.spec.ts": [
+      "src/users/dto/create-user.dto.ts"
+    ],
+    "src/users/dto/create-user.dto.ts": [],
+    "src/users/dto/update-user.dto.spec.ts": [
+      "src/users/dto/update-user.dto.ts"
+    ],
+    "src/users/dto/update-user.dto.ts": [
+      "src/users/dto/create-user.dto.ts"
+    ],
+    "src/users/entities/user.entity.ts": [],
+    "src/users/logger/logger.middleware.spec.ts": [
+      "src/users/logger/logger.middleware.ts"
+    ],
+    "src/users/logger/logger.middleware.ts": [],
+    "src/users/transform/transform.interceptor.spec.ts": [
+      "src/users/transform/transform.interceptor.ts"
+    ],
+    "src/users/transform/transform.interceptor.ts": [],
+    "src/users/users.controller.spec.ts": [
+      "src/users/users.controller.ts",
+      "src/users/users.service.ts"
+    ],
+    "src/users/users.controller.ts": [
+      "src/auth/decorators/roles.decorator.ts",
+      "src/auth/guards/jwt-auth.guard.ts",
+      "src/auth/guards/roles.guard.ts",
+      "src/users/dto/create-user.dto.ts",
+      "src/users/dto/update-user.dto.ts",
+      "src/users/transform/transform.interceptor.ts",
+      "src/users/users.service.ts"
+    ],
+    "src/users/users.module.ts": [
+      "src/users/logger/logger.middleware.ts",
+      "src/users/users.controller.ts",
+      "src/users/users.service.ts"
+    ],
+    "src/users/users.service.spec.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/users/users.service.ts"
+    ],
+    "src/users/users.service.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/users/dto/create-user.dto.ts",
+      "src/users/dto/update-user.dto.ts"
+    ],
+    "test/app.e2e-spec.ts": [
+      "src/app.module.ts"
+    ],
+    "test/e2e/auth-flow.e2e-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/e2e/auth.e2e-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/e2e/products.e2e-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/edge-cases.spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/factories/product.factory.ts": [
+      "src/prisma/prisma.service.ts"
+    ],
+    "test/factories/user.factory.ts": [
+      "src/prisma/prisma.service.ts"
+    ],
+    "test/fixtures/test-data.ts": [],
+    "test/helpers/auth.helper.ts": [],
+    "test/helpers/create-app-mocked.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/integration/auth.integration-spec.ts": [
+      "src/auth/auth.service.ts",
+      "src/prisma/prisma.service.ts"
+    ],
+    "test/integration/products.integration-spec.ts": [
+      "src/prisma/prisma.service.ts",
+      "src/products/products.service.ts"
+    ],
+    "test/integration/roles.integration-spec.ts": [
+      "src/auth/guards/roles.guard.ts"
+    ],
+    "test/jest-e2e.json": [],
+    "test/jest-integration.json": [],
+    "test/security/auth.security-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "test/security/rbac.security-spec.ts": [
+      "src/auth/auth.module.ts",
+      "src/prisma/prisma.module.ts",
+      "src/prisma/prisma.service.ts",
+      "src/products/products.module.ts"
+    ],
+    "tsconfig.build.json": [],
+    "tsconfig.json": []
+  }
+}

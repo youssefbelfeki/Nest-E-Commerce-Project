@@ -5,6 +5,8 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { useI18n } from '@/context/I18nContext';
+import { loginSchema, toFieldErrors } from '@/lib/schemas';
+import { FieldError } from '@/components/FieldError';
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -14,15 +16,23 @@ export default function LoginPage() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [submitting, setSubmitting] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError('');
-    setSubmitting(true);
+    setFieldErrors({});
 
+    const parsed = loginSchema.safeParse({ email, password });
+    if (!parsed.success) {
+      setFieldErrors(toFieldErrors(parsed.error));
+      return;
+    }
+
+    setSubmitting(true);
     try {
-      await login(email, password);
+      await login(parsed.data.email, parsed.data.password);
       // REQUIREMENT: Redirect to products page after a successful response
       router.push(localePath('/products'));
     } catch (err: any) {
@@ -63,7 +73,10 @@ export default function LoginPage() {
               onChange={(e) => setEmail(e.target.value)}
               className="input-field w-full"
               placeholder={t('login.emailPlaceholder')}
+              aria-invalid={fieldErrors.email ? true : undefined}
+              aria-describedby={fieldErrors.email ? 'login-email-error' : undefined}
             />
+            <FieldError id="login-email-error" message={fieldErrors.email} />
           </div>
 
           <div>
@@ -77,7 +90,10 @@ export default function LoginPage() {
               onChange={(e) => setPassword(e.target.value)}
               className="input-field w-full"
               placeholder="••••••••"
+              aria-invalid={fieldErrors.password ? true : undefined}
+              aria-describedby={fieldErrors.password ? 'login-password-error' : undefined}
             />
+            <FieldError id="login-password-error" message={fieldErrors.password} />
           </div>
 
           <button

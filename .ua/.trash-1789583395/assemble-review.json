@@ -1,0 +1,14 @@
+{
+  "fixedSectionOk": true,
+  "nodesRecovered": 0,
+  "edgesRestored": 0,
+  "crossBatchEdgesAdded": 0,
+  "typesRemapped": 3,
+  "complexityRemapped": 0,
+  "notes": [
+    "Fixed section sane: 4 tested_by drops are correct (orphan/test-test/prod-prod pairs); 22 prod nodes tagged tested instead is acceptable fallback.",
+    "Could-not-fix edges already resolved by script importMap recovery: dictionaries.ts -> en.json/fr.json and I18nContext.tsx -> en.json now exist as config: nodes with imports edges; verified 0 dangling edges and full 183/183 importMap coverage, so no node re-creation needed.",
+    "Set missing type=config on 3 nodes (config:.ua/tmp/ua-import-map-input.json, ua-import-map-output.json, ua-scan-files.json); IDs already had config: prefix.",
+    "No unknown node types or complexity values remain; edge count 404 vs report 401 is pre-existing drift, verified no dangling edges."
+  ]
+}

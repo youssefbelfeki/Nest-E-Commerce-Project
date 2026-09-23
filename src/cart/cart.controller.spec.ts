@@ -39,7 +39,10 @@ describe('CartController', () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [CartController],
       providers: [{ provide: CartService, useValue: mockCartService }],
-    }).overrideGuard(AuthGuard).useValue({ canActivate: () => true }).compile();
+    })
+      .overrideGuard(AuthGuard)
+      .useValue({ canActivate: () => true })
+      .compile();
 
     controller = module.get<CartController>(CartController);
     service = module.get<typeof mockCartService>(CartService);
@@ -65,7 +68,9 @@ describe('CartController', () => {
       const dto: AddToCartDto = { productId: 999, quantity: 1 };
       service.addItem.mockRejectedValue(new NotFoundException());
 
-      await expect(controller.addItem(mockUserId, dto)).rejects.toThrow(NotFoundException);
+      await expect(controller.addItem(mockUserId, dto)).rejects.toThrow(
+        NotFoundException,
+      );
     });
   });
 
@@ -82,7 +87,9 @@ describe('CartController', () => {
     it('should throw NotFoundException when cart is empty', async () => {
       service.getCart.mockRejectedValue(new NotFoundException());
 
-      await expect(controller.getCart(mockUserId)).rejects.toThrow(NotFoundException);
+      await expect(controller.getCart(mockUserId)).rejects.toThrow(
+        NotFoundException,
+      );
     });
   });
 
@@ -92,10 +99,18 @@ describe('CartController', () => {
       const updatedItem = { ...mockCartItem, quantity: 5 };
       service.updateItem.mockResolvedValue(updatedItem);
 
-      const result = await controller.updateItem(mockUserId, mockCartItemId, dto);
+      const result = await controller.updateItem(
+        mockUserId,
+        mockCartItemId,
+        dto,
+      );
 
       expect(result).toEqual(updatedItem);
-      expect(service.updateItem).toHaveBeenCalledWith(mockUserId, mockCartItemId, dto);
+      expect(service.updateItem).toHaveBeenCalledWith(
+        mockUserId,
+        mockCartItemId,
+        dto,
+      );
     });
 
     it('should throw NotFoundException when cart item not found', async () => {
@@ -114,13 +129,18 @@ describe('CartController', () => {
 
       await controller.removeItem(mockUserId, mockCartItemId);
 
-      expect(service.removeItem).toHaveBeenCalledWith(mockUserId, mockCartItemId);
+      expect(service.removeItem).toHaveBeenCalledWith(
+        mockUserId,
+        mockCartItemId,
+      );
     });
 
     it('should throw NotFoundException when cart item not found', async () => {
       service.removeItem.mockRejectedValue(new NotFoundException());
 
-      await expect(controller.removeItem(mockUserId, 999)).rejects.toThrow(NotFoundException);
+      await expect(controller.removeItem(mockUserId, 999)).rejects.toThrow(
+        NotFoundException,
+      );
     });
   });
 });

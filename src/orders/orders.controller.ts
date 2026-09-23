@@ -1,4 +1,13 @@
-import { Controller, Get, Post, Body, Param, UseGuards, ParseIntPipe, ValidationPipe } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Param,
+  UseGuards,
+  ParseIntPipe,
+  ValidationPipe,
+} from '@nestjs/common';
 import { OrdersService } from './orders.service';
 import { CreateOrderDto } from './dto/create-order.dto';
 import { AuthGuard } from '../users/auth/auth.guard';
@@ -10,7 +19,10 @@ export class OrdersController {
   constructor(private readonly ordersService: OrdersService) {}
 
   @Post()
-  create(@User('id') userId: number, @Body(ValidationPipe) dto: CreateOrderDto) {
+  create(
+    @User('id') userId: number,
+    @Body(ValidationPipe) dto: CreateOrderDto,
+  ) {
     return this.ordersService.create(userId, dto);
   }
 

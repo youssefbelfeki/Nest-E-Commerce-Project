@@ -1,0 +1,306 @@
+{
+  "scriptCompleted": true,
+  "filesAnalyzed": 6,
+  "filesSkipped": [],
+  "filesUnreadable": [],
+  "analysisOutcomes": {
+    "structure": {
+      "succeeded": 6,
+      "failed": 0
+    },
+    "callGraph": {
+      "succeeded": 6,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "results": [
+    {
+      "path": "src/auth/decorators/user.decorator.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 9,
+      "nonEmptyLines": 8,
+      "exports": [
+        {
+          "name": "User",
+          "line": 3,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/orders/dto/create-order.dto.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 19,
+      "nonEmptyLines": 16,
+      "classes": [
+        {
+          "name": "OrderItemDto",
+          "startLine": 4,
+          "endLine": 11,
+          "methods": [],
+          "properties": [
+            "productId",
+            "quantity"
+          ]
+        },
+        {
+          "name": "CreateOrderDto",
+          "startLine": 13,
+          "endLine": 19,
+          "methods": [],
+          "properties": [
+            "items"
+          ]
+        }
+      ],
+      "exports": [
+        {
+          "name": "OrderItemDto",
+          "line": 4,
+          "isDefault": false
+        },
+        {
+          "name": "CreateOrderDto",
+          "line": 13,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 0,
+        "exportCount": 2,
+        "functionCount": 0,
+        "classCount": 2
+      }
+    },
+    {
+      "path": "src/orders/orders.controller.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 26,
+      "nonEmptyLines": 22,
+      "classes": [
+        {
+          "name": "OrdersController",
+          "startLine": 9,
+          "endLine": 26,
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OrdersController",
+          "line": 7,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "User",
+          "lineNumber": 13
+        },
+        {
+          "caller": "create",
+          "callee": "Body",
+          "lineNumber": 13
+        },
+        {
+          "caller": "create",
+          "callee": "this.ordersService.create",
+          "lineNumber": 14
+        },
+        {
+          "caller": "findAll",
+          "callee": "User",
+          "lineNumber": 18
+        },
+        {
+          "caller": "findAll",
+          "callee": "this.ordersService.findAll",
+          "lineNumber": 19
+        },
+        {
+          "caller": "findOne",
+          "callee": "User",
+          "lineNumber": 23
+        },
+        {
+          "caller": "findOne",
+          "callee": "Param",
+          "lineNumber": 23
+        },
+        {
+          "caller": "findOne",
+          "callee": "this.ordersService.findOne",
+          "lineNumber": 24
+        }
+      ],
+      "metrics": {
+        "importCount": 4,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/orders/orders.module.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 11,
+      "nonEmptyLines": 10,
+      "classes": [
+        {
+          "name": "OrdersModule",
+          "startLine": 11,
+          "endLine": 11,
+          "methods": [],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OrdersModule",
+          "line": 6,
+          "isDefault": false
+        }
+      ],
+      "metrics": {
+        "importCount": 3,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    },
+    {
+      "path": "src/orders/orders.service.spec.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 214,
+      "nonEmptyLines": 176,
+      "callGraph": [
+        {
+          "caller": "mockTransaction",
+          "callee": "prisma.$transaction.mockImplementation",
+          "lineNumber": 68
+        },
+        {
+          "caller": "mockTransaction",
+          "callee": "cb",
+          "lineNumber": 69
+        },
+        {
+          "caller": "mockTransaction",
+          "callee": "tx.order.create.mockResolvedValue",
+          "lineNumber": 71
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 0,
+        "functionCount": 0,
+        "classCount": 0
+      }
+    },
+    {
+      "path": "src/orders/orders.service.ts",
+      "language": "typescript",
+      "fileCategory": "code",
+      "totalLines": 90,
+      "nonEmptyLines": 80,
+      "classes": [
+        {
+          "name": "OrdersService",
+          "startLine": 6,
+          "endLine": 90,
+          "methods": [
+            "constructor",
+            "create",
+            "findAll",
+            "findOne"
+          ],
+          "properties": []
+        }
+      ],
+      "exports": [
+        {
+          "name": "OrdersService",
+          "line": 5,
+          "isDefault": false
+        }
+      ],
+      "callGraph": [
+        {
+          "caller": "create",
+          "callee": "dto.items.map",
+          "lineNumber": 10
+        },
+        {
+          "caller": "create",
+          "callee": "this.prisma.product.findMany",
+          "lineNumber": 11
+        },
+        {
+          "caller": "create",
+          "callee": "products.map",
+          "lineNumber": 15
+        },
+        {
+          "caller": "create",
+          "callee": "productMap.get",
+          "lineNumber": 18
+        },
+        {
+          "caller": "create",
+          "callee": "this.prisma.$transaction",
+          "lineNumber": 29
+        },
+        {
+          "caller": "create",
+          "callee": "tx.product.update",
+          "lineNumber": 31
+        },
+        {
+          "caller": "create",
+          "callee": "tx.order.create",
+          "lineNumber": 37
+        },
+        {
+          "caller": "create",
+          "callee": "dto.items.map",
+          "lineNumber": 41
+        },
+        {
+          "caller": "findAll",
+          "callee": "this.prisma.order.findMany",
+          "lineNumber": 59
+        },
+        {
+          "caller": "findOne",
+          "callee": "this.prisma.order.findFirst",
+          "lineNumber": 73
+        }
+      ],
+      "metrics": {
+        "importCount": 2,
+        "exportCount": 1,
+        "functionCount": 0,
+        "classCount": 1
+      }
+    }
+  ]
+}

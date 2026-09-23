@@ -1,0 +1,49 @@
+{
+  "issues": [],
+  "warnings": [
+    "Node 'config:graphify-out/cache/ast/v0.9.32/1e2a2feb7e3e27960a657ec879f0ecda6e1a776ae1f50529c0f6862120f3e6a1.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/52e97ccf58d168643cc35047921006489f4b06a49e6294e0cca24179f637ac5a.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/97773406c28fde1a808c4dbda6bb09a80c71eb3e485102397519896dd50f7eeb.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/a289da2d045d96c4c551e39bcd85eeca5be69fe50bcbf600069df82ee2f3e748.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/e3e63150e0d2c92e572c198fe4c6e38ec87ca477ebdcf9448af6f810136e1082.json' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/ast/v0.9.32/f2045e6d34742399bee2e92c81e1bd892903cacba339f13d07bcd5ee782baa69.json' has no edges (orphan)",
+    "Node 'config:.ua/config.json' has no edges (orphan)",
+    "Node 'file:eslint.config.mjs' has no edges (orphan)",
+    "Node 'file:frontend/eslint.config.mjs' has no edges (orphan)",
+    "Node 'file:frontend/next.config.ts' has no edges (orphan)",
+    "Node 'file:frontend/postcss.config.mjs' has no edges (orphan)",
+    "Node 'file:graphify-out/.graphify_labels.json.sig' has no edges (orphan)",
+    "Node 'file:graphify-out/.graphify_root' has no edges (orphan)",
+    "Node 'config:graphify-out/cache/stat-index.json' has no edges (orphan)",
+    "Node 'file:prisma.config.ts' has no edges (orphan)",
+    "Node 'config:prisma/migrations/migration_lock.toml' has no edges (orphan)",
+    "Node 'file:test/fixtures/test-data.ts' has no edges (orphan)"
+  ],
+  "stats": {
+    "totalNodes": 217,
+    "totalEdges": 429,
+    "totalLayers": 9,
+    "tourSteps": 13,
+    "nodeTypes": {
+      "file": 103,
+      "function": 36,
+      "class": 38,
+      "document": 7,
+      "config": 26,
+      "schema": 1,
+      "table": 6
+    },
+    "edgeTypes": {
+      "imports": 183,
+      "contains": 74,
+      "exports": 69,
+      "calls": 46,
+      "tested_by": 24,
+      "inherits": 2,
+      "related": 16,
+      "documents": 5,
+      "depends_on": 4,
+      "migrates": 6
+    }
+  }
+}
