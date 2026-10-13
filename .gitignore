@@ -1,7 +1,6 @@
 # compiled output
-/dist
-/node_modules
-/build
+dist
+build
 
 # Logs
 logs
@@ -16,8 +15,8 @@ lerna-debug.log*
 .DS_Store
 
 # Tests
-/coverage
-/.nyc_output
+coverage
+.nyc_output
 
 # IDEs and editors
 /.idea
@@ -44,6 +43,7 @@ lerna-debug.log*
 .env.test.local
 .env.production.local
 .env.local
+!.env.example
 
 # temp directory
 .temp
@@ -55,10 +55,36 @@ pids
 *.seed
 *.pid.lock
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
+# Diagnostic reports
 report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
 
-/generated/prisma
+# Prisma generated client
+**/generated/prisma
 
 # Nest CLI output
 nest-output.txt
+
+# node_modules (workspace-hoisted at root)
+node_modules
+
+# Next.js
+.next
+out
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# OpenCode config (contains API keys)
+opencode.json
+
+# Apps directories - per-app overrides and generated assets
+apps/backend/.next
+apps/frontend/.next
+
+# Backend-specific
+apps/backend/dist
+apps/backend/.prisma
+
+# Frontend-specific
+apps/frontend/node_modules
