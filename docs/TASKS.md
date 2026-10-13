@@ -35,29 +35,29 @@
 ## Phase 3 — Separate the applications
 
 **Backend → `apps/backend/`**
-- [ ] `git mv` `src/` → `apps/backend/src/`
-- [ ] `git mv` `test/` → `apps/backend/test/`
-- [ ] `git mv` `prisma/` → `apps/backend/prisma/`
-- [ ] `git mv` `prisma.config.ts` → `apps/backend/prisma.config.ts`
-- [ ] `git mv` `generated/` → `apps/backend/generated/` (regenerate; git-ignored)
-- [ ] Move `nest-cli.json`, `tsconfig.json`, `tsconfig.build.json`, `eslint.config.mjs`, `.prettierrc`
-- [ ] Create `apps/backend/package.json` (backend deps + scripts from root)
-- [ ] Create `apps/backend/.env.example`
-- [ ] Create `apps/backend/README.md`
-- [ ] Fix Prisma client import paths (`../../generated/prisma/client` → `../generated/prisma/client` etc.)
-- [ ] Verify dotenv load path still works from new location
+- [x] `git mv` `src/` → `apps/backend/src/`
+- [x] `git mv` `test/` → `apps/backend/test/`
+- [x] `git mv` `prisma/` → `apps/backend/prisma/`
+- [x] `git mv` `prisma.config.ts` → `apps/backend/prisma.config.ts`
+- [x] `git mv` `generated/` → `apps/backend/generated/` (regenerate; git-ignored)
+- [x] Move `nest-cli.json`, `tsconfig.json`, `tsconfig.build.json`, `eslint.config.mjs`, `.prettierrc`
+- [x] Create `apps/backend/package.json` (backend deps + scripts from root)
+- [x] Create `apps/backend/.env.example`
+- [x] Create `apps/backend/README.md`
+- [x] Fix Prisma client import paths (`../../generated/prisma/client` → `../generated/prisma/client` etc.)
+- [x] Verify dotenv load path still works from new location
 
 **Frontend → `apps/frontend/`**
-- [ ] `git mv` `frontend/` → `apps/frontend/`
-- [ ] Fix `next.config.ts` Turbopack `root` (now points at old monorepo root — retarget)
-- [ ] Create `apps/frontend/.env.example`
-- [ ] Create/refresh `apps/frontend/README.md`
-- [ ] Fix API base URL default to backend port (`3002` or actual dev port)
+- [x] `git mv` `frontend/` → `apps/frontend/`
+- [x] Fix `next.config.ts` Turbopack `root` (now points at old monorepo root — retarget)
+- [x] Create `apps/frontend/.env.example`
+- [x] Create/refresh `apps/frontend/README.md`
+- [x] Fix API base URL default to backend port (`3002` or actual dev port)
 
 **Root orchestration**
-- [ ] Create root `package.json` with npm workspaces (`apps/*`)
-- [ ] Root scripts: `dev` (concurrently), `dev:frontend`, `dev:backend`, `build`, `lint`, `test`
-- [ ] Root `.gitignore` update for new paths (dist, node_modules, generated, coverage per app)
+- [x] Create root `package.json` with npm workspaces (`apps/*`)
+- [x] Root scripts: `dev` (concurrently), `dev:frontend`, `dev:backend`, `build`, `lint`, `test`
+- [x] Root `.gitignore` update for new paths (dist, node_modules, generated, coverage per app)
 
 ## Phase 4 — API contract and integration
 
