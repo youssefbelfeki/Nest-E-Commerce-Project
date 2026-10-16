@@ -10,7 +10,19 @@ import { JwtService } from '@nestjs/jwt';
 
 describe('RBAC Security', () => {
   let app: INestApplication<App>;
-  let prisma: any;
+  let prisma: {
+    user: {
+      findUnique: jest.Mock;
+      create: jest.Mock;
+    };
+    product: {
+      create: jest.Mock;
+      findMany: jest.Mock;
+      findUnique: jest.Mock;
+      update: jest.Mock;
+      delete: jest.Mock;
+    };
+  };
   let jwtService: JwtService;
   let adminToken: string;
   let userToken: string;
@@ -113,7 +125,9 @@ describe('RBAC Security', () => {
         .send({ name: 'Widget', price: 9.99, stock: 50 })
         .expect(403);
 
-      expect(response.body.message).toContain('not authorized');
+      expect((response.body as { message: string }).message).toContain(
+        'not authorized',
+      );
     });
 
     it('should deny user from updating product', async () => {
@@ -123,7 +137,9 @@ describe('RBAC Security', () => {
         .send({ name: 'Updated' })
         .expect(403);
 
-      expect(response.body.message).toContain('not authorized');
+      expect((response.body as { message: string }).message).toContain(
+        'not authorized',
+      );
     });
 
     it('should deny user from deleting product', async () => {
@@ -132,7 +148,9 @@ describe('RBAC Security', () => {
         .set('Authorization', `Bearer ${userToken}`)
         .expect(403);
 
-      expect(response.body.message).toContain('not authorized');
+      expect((response.body as { message: string }).message).toContain(
+        'not authorized',
+      );
     });
 
     it('should include role info in error message', async () => {
@@ -142,7 +160,7 @@ describe('RBAC Security', () => {
         .send({ name: 'Widget', price: 9.99, stock: 50 })
         .expect(403);
 
-      expect(response.body.message).toContain('USER');
+      expect((response.body as { message: string }).message).toContain('USER');
     });
   });
 

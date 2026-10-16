@@ -3,7 +3,6 @@ import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { AuthModule } from '../../src/auth/auth.module';
 import { ProductsModule } from '../../src/products/products.module';
 import { PrismaService } from '../../src/prisma/prisma.service';
-import { JwtService } from '@nestjs/jwt';
 
 export async function createMockedApp(
   prismaOverride?: Partial<PrismaService>,
