@@ -32,9 +32,9 @@ describe('UsersController', () => {
   });
 
   describe('create', () => {
-    it('should call service.create', () => {
+    it('should call service.create', async () => {
       const spy = jest.spyOn(service, 'create');
-      controller.create({
+      await controller.create({
         name: 'Test',
         email: 'test@test.com',
         password: 'pass',
@@ -48,33 +48,33 @@ describe('UsersController', () => {
   });
 
   describe('findAll', () => {
-    it('should call service.findAll', () => {
+    it('should call service.findAll', async () => {
       const spy = jest.spyOn(service, 'findAll');
-      controller.findAll();
+      await controller.findAll();
       expect(spy).toHaveBeenCalled();
     });
   });
 
   describe('findOne', () => {
-    it('should call service.findOne with parsed id', () => {
+    it('should call service.findOne with parsed id', async () => {
       const spy = jest.spyOn(service, 'findOne');
-      controller.findOne(5);
+      await controller.findOne(5);
       expect(spy).toHaveBeenCalledWith(5);
     });
   });
 
   describe('update', () => {
-    it('should call service.update with parsed id and dto', () => {
+    it('should call service.update with parsed id and dto', async () => {
       const spy = jest.spyOn(service, 'update');
-      controller.update(3, { name: 'Updated' });
+      await controller.update(3, { name: 'Updated' });
       expect(spy).toHaveBeenCalledWith(3, { name: 'Updated' });
     });
   });
 
   describe('remove', () => {
-    it('should call service.remove with parsed id', () => {
+    it('should call service.remove with parsed id', async () => {
       const spy = jest.spyOn(service, 'remove');
-      controller.remove(7);
+      await controller.remove(7);
       expect(spy).toHaveBeenCalledWith(7);
     });
   });

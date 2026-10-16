@@ -1,5 +1,4 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { INestApplication, ValidationPipe } from '@nestjs/common';
 import { AuthService } from '../../src/auth/auth.service';
 import { PrismaService } from '../../src/prisma/prisma.service';
 import { JwtService } from '@nestjs/jwt';
@@ -10,7 +9,12 @@ jest.mock('bcrypt');
 
 describe('Auth Integration', () => {
   let service: AuthService;
-  let prisma: any;
+  let prisma: {
+    user: {
+      findUnique: jest.Mock;
+      create: jest.Mock;
+    };
+  };
   let jwtService: JwtService;
 
   const mockUser = {
@@ -20,6 +24,10 @@ describe('Auth Integration', () => {
     password: 'hashedpassword',
     role: 'USER',
   };
+
+  beforeAll(() => {
+    process.env.JWT_SECRET = 'test-secret';
+  });
 
   beforeEach(async () => {
     prisma = {
@@ -33,7 +41,10 @@ describe('Auth Integration', () => {
       providers: [
         AuthService,
         { provide: PrismaService, useValue: prisma },
-        JwtService,
+        {
+          provide: JwtService,
+          useFactory: () => new JwtService({ secret: 'test-secret' }),
+        },
       ],
     }).compile();
 
@@ -92,9 +103,10 @@ describe('Auth Integration', () => {
         password: 'pass123',
       });
 
-      const decoded = jwtService.verify(accessToken, {
-        secret: process.env.JWT_SECRET || 'test-secret',
-      });
+      const decoded: { sub: string | number; email: string; role: string } =
+        jwtService.verify(accessToken, {
+          secret: process.env.JWT_SECRET || 'test-secret',
+        });
 
       expect(decoded.sub).toBe(mockUser.id);
       expect(decoded.email).toBe(mockUser.email);

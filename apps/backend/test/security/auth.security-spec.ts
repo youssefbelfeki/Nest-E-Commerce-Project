@@ -10,7 +10,19 @@ import { JwtService } from '@nestjs/jwt';
 
 describe('Auth Security', () => {
   let app: INestApplication<App>;
-  let prisma: any;
+  let prisma: {
+    user: {
+      findUnique: jest.Mock;
+      create: jest.Mock;
+    };
+    product: {
+      create: jest.Mock;
+      findMany: jest.Mock;
+      findUnique: jest.Mock;
+      update: jest.Mock;
+      delete: jest.Mock;
+    };
+  };
   let jwtService: JwtService;
 
   beforeAll(async () => {
@@ -122,13 +134,17 @@ describe('Auth Security', () => {
         .send({ name: 'Test', email: 'test@test.com', password: 'pass123' })
         .expect(201);
 
-      expect(response.body.password).toBeUndefined();
+      expect((response.body as { password: string }).password).toBeUndefined();
     });
 
     it('should store password as bcrypt hash', async () => {
       prisma.user.findUnique.mockResolvedValue(null);
       prisma.user.create.mockImplementation((data) =>
-        Promise.resolve({ id: 1, ...data.data, role: 'USER' }),
+        Promise.resolve({
+          id: 1,
+          ...(data as { data: { password?: string } }).data,
+          role: 'USER',
+        }),
       );
 
       await request(app.getHttpServer())
@@ -136,7 +152,11 @@ describe('Auth Security', () => {
         .send({ name: 'Test', email: 'test@test.com', password: 'mypassword' })
         .expect(201);
 
-      const createCall = prisma.user.create.mock.calls[0][0];
+      const createCall = (
+        prisma.user.create.mock.calls[0] as [
+          { data: { password: string; role?: string; isAdmin?: boolean } },
+        ]
+      )[0];
       const storedPassword = createCall.data.password;
 
       // bcrypt hashes start with $2b$ (or $2a$)
@@ -177,7 +197,9 @@ describe('Auth Security', () => {
 
       // Note: The app doesn't sanitize HTML, but the name is stored as-is.
       // In a real app, you'd want to sanitize this.
-      expect(response.body.name).toBe('<script>alert("xss")</script>');
+      expect((response.body as { name: string }).name).toBe(
+        '<script>alert("xss")</script>',
+      );
     });
 
     it('should strip unknown fields (whitelist)', async () => {
@@ -200,7 +222,11 @@ describe('Auth Security', () => {
         })
         .expect(201);
 
-      const createCall = prisma.user.create.mock.calls[0][0];
+      const createCall = (
+        prisma.user.create.mock.calls[0] as [
+          { data: { password: string; role?: string; isAdmin?: boolean } },
+        ]
+      )[0];
       expect(createCall.data.role).toBeUndefined();
       expect(createCall.data.isAdmin).toBeUndefined();
     });

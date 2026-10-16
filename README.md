@@ -1,7 +1,8 @@
 # E-Commerce Platform — NestJS API + Next.js Storefront (ApexStore)
 
-Full-stack e-commerce monorepo with a **NestJS v11 REST API** (PostgreSQL + Prisma v7) and a **Next.js 16 storefront** (`frontend/`, App Router, React 19, Tailwind CSS v4, EN/FR i18n).
-
+Full-stack e-commerce monorepo with a **NestJS v11 REST API** (PostgreSQL + Prisma v7) and a
+**Next.js 16 storefront** (App Router, React 19, Tailwind CSS v4, EN/FR i18n). Two independently
+installable applications under `apps/`, orchestrated from the root via npm workspaces.
 
 ## Table of Contents
 
@@ -16,7 +17,6 @@ Full-stack e-commerce monorepo with a **NestJS v11 REST API** (PostgreSQL + Pris
 - [API Reference](#api-reference)
 - [Auth & Authorization](#auth--authorization)
 - [Data Models](#data-models)
-- [Frontend Overview](#frontend-overview)
 - [Validation, Responses & Errors](#validation-responses--errors)
 - [Scripts Reference](#scripts-reference)
 - [Testing](#testing)
@@ -27,7 +27,7 @@ Full-stack e-commerce monorepo with a **NestJS v11 REST API** (PostgreSQL + Pris
 
 ## Features
 
-Backend (`src/`):
+Backend (`apps/backend/`):
 
 - JWT auth: register / login, bcrypt password hashing, `USER` / `ADMIN` roles.
 - Products CRUD: public-authenticated reads, admin-only writes.
@@ -36,7 +36,7 @@ Backend (`src/`):
 - Admin-only users CRUD.
 - Global `ValidationPipe({ whitelist: true, transform: true })`, global `TransformInterceptor` success envelope, global request logger.
 
-Frontend (`frontend/`):
+Frontend (`apps/frontend/`):
 
 - ApexStore storefront: locale-scoped routes for home, products, cart, orders, login, register, admin products.
 - EN/FR i18n (`/en/...`, `/fr/...`, default `fr`), `NEXT_LOCALE` cookie + `Accept-Language` fallback.
@@ -58,38 +58,38 @@ Frontend (`frontend/`):
 
 ## Repository Layout
 
-```text
-.
-├── src/                    # NestJS backend (sourceRoot)
-│   ├── main.ts             # bootstrap: dotenv, CORS, logger, ValidationPipe, TransformInterceptor, PORT
-│   ├── app.module.ts       # UsersModule, PrismaModule, ProductsModule, AuthModule, OrdersModule, CartModule
-│   ├── auth/               # controller, service, module, dto/, guards/, decorators/, jwt.strategy.ts
-│   ├── users/              # admin CRUD + transform/transform.interceptor.ts (global envelope)
-│   ├── products/           # controller, service, module, dto/
-│   ├── cart/               # controller, service, module, dto/
-│   ├── orders/             # controller, service, module, dto/ (service-only spec)
-│   ├── prisma/             # PrismaModule + PrismaService (pg Pool + DATABASE_URL)
-│   └── logger/             # LoggerMiddleware (global request logger)
-├── prisma/
-│   ├── schema.prisma       # Role enum, User, Cart, CartItem, Product, Order, OrderItem
-│   └── migrations/         # SQL migrations
-├── prisma.config.ts        # schema path + datasource URL from process.env.DATABASE_URL
-├── generated/prisma/       # generated Prisma client (output, moduleFormat=cjs; git-ignored)
-├── frontend/               # separate Next.js app (own package.json, AGENTS.md, README.md)
-│   └── src/
-│       ├── app/[lang]/     # locale-scoped pages: home, products, cart, orders, login, register, admin/products
-│       ├── components/     # UI components
-│       ├── context/        # AuthContext.tsx (+ I18nProvider)
-│       ├── lib/            # api.ts (API_BASE_URL, token, apiFetch), i18n.ts
-│       ├── proxy.ts        # locale routing (cookie → Accept-Language → fr); no root middleware.ts
-│       └── types/          # ApiResponse / ApiErrorResponse shared types
-├── test/                   # e2e + integration + security suites (jest-e2e.json, jest-integration.json)
-├── postman/                # collection.json + environment.json
-├── dist/                   # Nest build output (git-ignored)
-└── coverage/               # Jest coverage output (git-ignored)
+```
+project-root/
+├── apps/
+│   ├── backend/              # NestJS 11 API
+│   │   ├── src/              # modules: auth, users, products, cart, orders, prisma, logger
+│   │   ├── test/             # unit, e2e, integration, security suites
+│   │   ├── prisma/           # schema.prisma + migrations/
+│   │   ├── generated/prisma/ # Prisma client (git-ignored)
+│   │   ├── postman/          # collection + environment
+│   │   ├── package.json
+│   │   └── README.md
+│   │
+│   └── frontend/             # Next.js 16 storefront
+│       ├── src/
+│       │   ├── app/[lang]/   # locale-scoped pages
+│       │   ├── components/
+│       │   ├── context/      # AuthContext + I18nProvider
+│       │   ├── lib/          # api.ts, i18n.ts
+│       │   └── proxy.ts      # i18n locale routing
+│       ├── package.json
+│       ├── next.config.ts
+│       └── README.md
+│
+├── docs/                     # ARCHITECTURE.md, API.md, MIGRATION.md, TASKS.md, FINAL_REPORT.md
+├── .editorconfig
+├── .gitignore
+├── package.json              # npm workspaces + root orchestration scripts
+└── README.md                 # this file
 ```
 
-Module layout convention: `controller.ts`, `service.ts`, `module.ts`, `dto/`, colocated `*.spec.ts`. Exception: `src/orders/` has only `orders.service.spec.ts` (no controller/DTO spec).
+Module layout convention: `controller.ts`, `service.ts`, `module.ts`, `dto/`, colocated `*.spec.ts`.
+Exception: `apps/backend/src/orders/` has only `orders.service.spec.ts` (no controller/DTO spec).
 
 ## Prerequisites
 
@@ -108,7 +108,10 @@ psql --version
 
 ## Environment Variables
 
-Backend loads via `import 'dotenv/config'` **first** in `src/main.ts` (required before any config is read). `.env` is git-ignored — create it from the keys below. Do not commit secrets.
+Backend loads via `import 'dotenv/config'` **first** in `apps/backend/src/main.ts` (required before any config is read).
+`.env` is git-ignored — create it from the keys below. Do not commit secrets.
+
+`apps/backend/.env`:
 
 | Variable | Required | Default / Example | Used by |
 |---|---|---|---|
@@ -117,19 +120,17 @@ Backend loads via `import 'dotenv/config'` **first** in `src/main.ts` (required 
 | `PORT` | No | `3002` (`process.env.PORT ?? 3002`) | `src/main.ts` |
 | `CORS_ORIGIN` | No | `http://localhost:3000` (comma-separated list supported) | `src/main.ts` (`origin.split(',')`, `credentials: true`) |
 
-Frontend (`frontend/.env.local`, git-ignored):
+Frontend (`apps/frontend/.env.local`, git-ignored):
 
 | Variable | Required | Default | Used by |
 |---|---|---|---|
-| `NEXT_PUBLIC_API_URL` | No (recommended) | `http://localhost:3000` | `frontend/src/lib/api.ts` (`API_BASE_URL`) |
-
-> Port note: the backend listens on `3002` by default while `frontend/src/lib/api.ts` falls back to `http://localhost:3000`. Set `NEXT_PUBLIC_API_URL=http://localhost:3002` for local dev unless you proxy or remap ports. `BACKEND_RULES.md` cites `3000` in places — the running port is whatever `PORT` is set to (`3002` if unset).
+| `NEXT_PUBLIC_API_URL` | No (recommended) | `http://localhost:3002` | `src/lib/api.ts` (`API_BASE_URL`) |
 
 ## Quick Start
 
-The repository contains two independently installed applications. Run backend commands from the repository root and frontend commands from `frontend/`.
+The repository contains two independently installed applications. Install at the root (workspaces), then run each app independently.
 
-1. Clone and install the backend:
+1. Clone and install:
 
 ```bash
 git clone <repo-url>
@@ -137,7 +138,7 @@ cd ecommerce-project
 npm install
 ```
 
-2. Create `.env` in the repo root:
+2. Create `apps/backend/.env`:
 
 ```env
 DATABASE_URL="postgresql://user:password@localhost:5432/ecommerce?schema=public"
@@ -149,33 +150,27 @@ CORS_ORIGIN="http://localhost:3000"
 3. Generate the Prisma client and run migrations:
 
 ```bash
-npx prisma generate
-npx prisma migrate dev
+npm run prisma:generate
+npm run prisma:migrate
+# or, from apps/backend: npx prisma generate && npx prisma migrate dev
 ```
 
 4. Start the API:
 
 ```bash
-npm run start:dev
-# API on http://localhost:3002 (or $PORT)
+npm run dev:backend   # API on http://localhost:3002 (or $PORT)
 ```
 
-5. In a second terminal, install and run the storefront:
+5. In a second terminal, run the storefront:
 
 ```bash
-cd frontend
-npm install
+npm run dev:frontend  # Storefront on http://localhost:3000
 ```
 
-Create `frontend/.env.local`:
+Create `apps/frontend/.env.local`:
 
 ```env
 NEXT_PUBLIC_API_URL="http://localhost:3002"
-```
-
-```bash
-npm run dev
-# Storefront on http://localhost:3000
 ```
 
 Register a user at `/fr/register` (or `/en/register`), then browse `/fr/products`. The frontend defaults to French when no locale is selected.
@@ -188,214 +183,145 @@ UPDATE "User" SET role = 'ADMIN' WHERE email = 'admin@example.com';
 
 ## Database & Prisma Workflow
 
-- Schema: `prisma/schema.prisma` (generator `prisma-client`, `output = "../generated/prisma"`, `moduleFormat = "cjs"`; datasource `postgresql`, URL from `prisma.config.ts` → `process.env.DATABASE_URL`).
+- Schema: `apps/backend/prisma/schema.prisma` (generator `prisma-client`, `output = "../generated/prisma"`, `moduleFormat = "cjs"`; datasource `postgresql`, URL from `prisma.config.ts` → `process.env.DATABASE_URL`).
 - Client import path: `generated/prisma/client` (not the default `@prisma/client` output location).
 - After **any** schema change:
 
 ```bash
-npx prisma generate
-npx prisma migrate dev --name <migration-name>
+npm run prisma:generate
+npm run prisma:migrate   # dev: npx prisma migrate dev --name <migration-name>
+npm run prisma:migrate:deploy  # production: npx prisma migrate deploy
 ```
 
-- Useful commands:
+- Useful commands (run from `apps/backend` or via root workspaces):
 
 ```bash
-npx prisma studio        # visual data browser
-npx prisma migrate status
-npx prisma validate
+npm run prisma:studio        # visual data browser
+npm run prisma:migrate:status
+npm run prisma:validate
 ```
 
 ## Running the Apps
 
-Backend (repo root):
+Backend (from repo root, or `cd apps/backend`):
 
 ```bash
-npm run start:dev   # watch mode (dev, port $PORT ?? 3002)
-npm run start       # normal start
-npm run start:prod  # run compiled output: node dist/main (run npm run build first)
-npm run build       # nest build -> dist/
+npm run dev:backend   # watch mode (dev, port $PORT ?? 3002)
+npm run build:backend # nest build -> apps/backend/dist/
+npm run start:prod:backend   # node apps/backend/dist/main  (after build)
 ```
 
-Frontend (`frontend/`):
+Frontend (from repo root, or `cd apps/frontend`):
 
 ```bash
-npm run dev    # next dev
-npm run build  # next build (production)
-npm run start  # next start (serve production build)
+npm run dev:frontend  # next dev (http://localhost:3000)
+npm run build:frontend  # next build (production)
+npm run start:frontend  # next start (serve production build)
 ```
 
-Note: `frontend/next.config.ts` sets Turbopack `root` to the monorepo root (`path.join(__dirname, '../')`).
+Root orchestration scripts: `dev`, `dev:backend`, `dev:frontend`, `build`, `build:backend`, `build:frontend`,
+`lint`, `lint:backend`, `lint:frontend`, `test`, `test:e2e`, `test:integration`, `test:all`, `format`,
+`prisma:generate`, `prisma:migrate`, `prisma:migrate:deploy`, `prisma:seed`.
+
+Note: `apps/frontend/next.config.ts` sets Turbopack `root` to the monorepo root.
 
 ## API Reference
 
-> **Current route prefix:** The API currently has no global prefix. `src/main.ts` does not call `setGlobalPrefix`, so call endpoints without `/api/v1`, for example `POST /auth/login`. `AGENTS.md` contains a planned/expected `/api/v1` contract that does not match the current implementation. If a prefix is introduced later, update the backend, frontend API client, Postman environment, tests, and this README together.
+Base URL: `http://localhost:3002/api/v1`
 
-### Base URLs
+All endpoints are prefixed with `/api/v1` via `app.setGlobalPrefix('api/v1')` in `apps/backend/src/main.ts:19`.
 
-| Service | Default local URL | Configuration |
-|---|---|---|
-| Backend API | `http://localhost:3002` | `PORT` in the root `.env` |
-| Frontend | `http://localhost:3000` | Next.js default dev port |
+Every success response is wrapped by `TransformInterceptor`:
 
-### Health / Root Endpoint
+```json
+{ "status": "success", "data": <payload>, "timestamp": "2026-10-12T00:00:00.000Z" }
+```
 
-`GET /` is the NestJS starter root endpoint and returns the string configured by `AppService`. It is useful as a basic process check, but it is not a structured health/readiness endpoint.
+Error responses use NestJS defaults:
 
-All protected routes require `Authorization: Bearer <accessToken>` (plus `credentials: 'include'` from browsers). Success bodies are wrapped (see [Validation, Responses & Errors](#validation-responses--errors)); the tables below show the inner `data` payload.
+```json
+{ "statusCode": 400, "message": "Validation failed", "error": "Bad Request" }
+```
 
-### Auth — `/auth` (public)
+All protected routes require `Authorization: Bearer <accessToken>` (plus `credentials: 'include'` from browsers).
+
+### Auth — `/auth/v1` (public)
 
 | Method & Path | Body | Success `data` | Errors |
 |---|---|---|---|
 | `POST /auth/register` (`@Public()`) | `RegisterDto`: `name` string NotEmpty; `email` string NotEmpty + IsEmail; `password` string NotEmpty + MinLength 6 | `{ id, email, name, role }` | `409 "Email is already in use"` |
 | `POST /auth/login` | `LoginDto`: `email` NotEmpty + IsEmail; `password` NotEmpty | `{ accessToken }` | `401 "Invalid credentials"` |
 
-```bash
-curl -X POST http://localhost:3002/auth/register \
-  -H 'Content-Type: application/json' \
-  -d '{"name":"Ada","email":"ada@example.com","password":"secret123"}'
+JWT payload: `{ sub: number, email: string, role: "USER" \| "ADMIN" }`.
 
-curl -X POST http://localhost:3002/auth/login \
-  -H 'Content-Type: application/json' \
-  -d '{"email":"ada@example.com","password":"secret123"}'
-# -> { "status":"success", "data":{ "accessToken":"<jwt>" }, "timestamp":"..." }
-```
+### Products — `/products`
 
-JWT payload: `{ sub: number, email: string, role: "USER" | "ADMIN" }`, signed via `jwtService.signAsync({ sub: user.id, email: user.email, role: user.role })`.
+Guarded at class level with `AuthGuard` + `RolesGuard`; writes require `@Roles(ADMIN)`.
 
-The register response excludes the stored bcrypt password. Passwords are never returned by the auth service.
-
-### Products — `/products` (`@UseGuards(AuthGuard, RolesGuard)` at controller)
-
-| Method & Path | Guards | Body | Success `data` |
+| Method & Path | Role | Body | Success `data` |
 |---|---|---|---|
-| `GET /products` | `AuthGuard` (any authenticated user) | — | `Product[]` |
-| `GET /products/:id` | `AuthGuard` | — | `Product` |
-| `POST /products` | `AuthGuard` + `@Roles(ADMIN)` | `CreateProductDto`: `name` NotEmpty; `price` NotEmpty + Positive (>0); `stock` NotEmpty + Integer + Min 0 | `Product` |
-| `PATCH /products/:id` | `AuthGuard` + `@Roles(ADMIN)` | `UpdateProductDto` = all-partial `CreateProductDto` | `Product` |
-| `DELETE /products/:id` | `AuthGuard` + `@Roles(ADMIN)` | — | deleted `Product` |
+| `GET /products` | Any authenticated | — | `Product[]` |
+| `GET /products/:id` | Any authenticated | — | `Product` |
+| `POST /products` | ADMIN | `CreateProductDto`: `name` NotEmpty; `price` NotEmpty + Positive; `stock` NotEmpty + Integer + Min 0 | `Product` |
+| `PATCH /products/:id` | ADMIN | `Partial<CreateProductDto>` | `Product` |
+| `DELETE /products/:id` | ADMIN | — | deleted `Product` |
 
-Non-admin writes → `403 Forbidden`. Validation failures → `400`.
-
-```bash
-TOKEN="<accessToken>"
-curl http://localhost:3002/products -H "Authorization: Bearer $TOKEN"
-curl -X POST http://localhost:3002/products -H "Authorization: Bearer $TOKEN" \
-  -H 'Content-Type: application/json' -d '{"name":"Keyboard","price":49.99,"stock":100}'
-```
-
-### Cart — `/cart` (all `AuthGuard`, current user)
+### Cart — `/cart` (current user, `AuthGuard`)
 
 | Method & Path | Body | Success `data` | Errors |
 |---|---|---|---|
-| `GET /cart` | — | `Cart & { items: (CartItem & { product })[] }` (or `{ items: [] }` when empty) | `401` if unauthenticated |
-| `POST /cart/add` | `AddToCartDto`: `productId` Integer; `quantity` Integer Min 1 | `CartItem` | `404` product missing; `400` out of stock / quantity exceeds stock |
+| `GET /cart` | — | `Cart & { items }` | `401` if unauthenticated |
+| `POST /cart/add` | `AddToCartDto`: `productId` Integer; `quantity` Integer Min 1 | `CartItem` | `404` product missing; `400` out of stock |
 | `PATCH /cart/item/:id` | `UpdateCartItemDto`: `quantity` Integer Min 1 | updated `CartItem` | `400`/`404` |
 | `DELETE /cart/item/:id` | — | removed `CartItem` | `404` |
 
-```bash
-curl -X POST http://localhost:3002/cart/add -H "Authorization: Bearer $TOKEN" \
-  -H 'Content-Type: application/json' -d '{"productId":1,"quantity":2}'
-```
-
-### Orders — `/orders` (all `AuthGuard`, current user)
+### Orders — `/orders` (`AuthGuard`, user-scoped)
 
 | Method & Path | Body | Success `data` | Errors |
 |---|---|---|---|
-| `POST /orders` | `CreateOrderDto`: `items: Array<{ productId, quantity Integer Min 1 }>` with `ArrayMinSize(1)` | created `Order` (with items) | `400` insufficient stock (transaction rolls back) |
+| `POST /orders` | `CreateOrderDto`: `items: Array<{ productId, quantity Integer Min 1 }>` (min 1) | created `Order` | `400` insufficient stock (transaction rolls back) |
 | `GET /orders` | — | `Order[]` ordered `createdAt DESC` | `401` |
-| `GET /orders/:id` | — | single `Order` (must belong to caller) | `404` |
+| `GET /orders/:id` | — | single `Order` | `404` |
 
-Stock is decremented atomically with order creation inside a Prisma transaction.
+### Users — `/users` (ADMIN only)
 
-```bash
-curl -X POST http://localhost:3002/orders -H "Authorization: Bearer $TOKEN" \
-  -H 'Content-Type: application/json' -d '{"items":[{"productId":1,"quantity":2}]}'
-```
+Class-level `@UseGuards(JwtAuthGuard, RolesGuard)`. All routes require `ADMIN`.
 
-### Users — `/users` (admin only)
-
-Controller applies `@UseGuards(JwtAuthGuard, RolesGuard)` with `@Roles(ADMIN)` on every route: `POST /users`, `GET /users`, `GET /users/:id`, `PATCH /users/:id`, `DELETE /users/:id`. IDs are parsed with `ParseIntPipe`. The users controller is an administrative API and is not used by the standard storefront flow.
+| Method & Path | Description |
+|---|---|
+| `POST /users` | Create user |
+| `GET /users` | List users |
+| `GET /users/:id` | Get one user |
+| `PATCH /users/:id` | Update user |
+| `DELETE /users/:id` | Delete user |
 
 ## Auth & Authorization
 
-- Login returns `{ accessToken }`; the frontend stores it in `localStorage['accessToken']` (cookie fallback `accessToken=...; SameSite=Lax`) and sends `Authorization: Bearer <token>` on every `apiFetch` with `credentials: 'include'`.
-- Backend `AuthGuard` (JWT strategy, `secretOrKey: process.env.JWT_SECRET`) validates the Bearer token; `RolesGuard` uses `Reflector` + `@Roles(Role.ADMIN)` metadata for the closed-shop admin routes (product writes, all `/users` routes).
-- Frontend `AuthContext` decodes the JWT client-side (`{ sub, email, role, exp }`) and restores the session only while the token is unexpired.
+- Login returns `{ accessToken }`; the frontend stores it in `localStorage['accessToken']` (cookie fallback) and sends `Authorization: Bearer <token>` on every `apiFetch` with `credentials: 'include'`.
+- Backend `AuthGuard` (JWT strategy) validates the Bearer token; `RolesGuard` uses `Reflector` + `@Roles(Role.ADMIN)` metadata for admin routes.
+- Two overlapping auth mechanisms exist (known quirk): custom `AuthGuard` (`apps/backend/src/users/auth/auth.guard.ts`) used by products/cart/orders, and passport `JwtAuthGuard` (`apps/backend/src/auth/guards/jwt-auth.guard.ts`) used by users. Both validate the same JWT. Consolidation is future work.
 
 ## Data Models
+
+See `docs/API.md` and `apps/backend/prisma/schema.prisma`. Core models:
 
 ```prisma
 enum Role { USER ADMIN }
 
-model User {
-  id       Int     @id @default(autoincrement())
-  email    String  @unique
-  name     String?
-  password String  // bcrypt hash, never returned
-  role     Role    @default(USER)
-  cart     Cart?
-  orders   Order[]
-}
-
-model Cart {
-  id     Int        @id @default(autoincrement())
-  userId Int        @unique
-  user   User       @relation(fields: [userId], references: [id])
-  items  CartItem[]
-}
-
-model CartItem {
-  id        Int     @id @default(autoincrement())
-  cartId    Int
-  cart      Cart    @relation(fields: [cartId], references: [id], onDelete: Cascade)
-  productId Int
-  product   Product @relation(fields: [productId], references: [id])
-  quantity  Int
-  @@unique([cartId, productId])
-}
-
-model Product {
-  id         Int         @id @default(autoincrement())
-  name       String
-  price      Float
-  stock      Int
-  cartItems  CartItem[]
-  orderItems OrderItem[]
-}
-
-model Order {
-  id        Int         @id @default(autoincrement())
-  userId    Int
-  user      User        @relation(fields: [userId], references: [id])
-  items     OrderItem[]
-  createdAt DateTime    @default(now())
-}
-
-model OrderItem {
-  id        Int     @id @default(autoincrement())
-  orderId   Int
-  order     Order   @relation(fields: [orderId], references: [id])
-  productId Int
-  product   Product @relation(fields: [productId], references: [id])
-  quantity  Int
-}
+model User { id Int @id @default(autoincrement()); email String @unique; name String?; password String; role Role @default(USER); cart Cart?; orders Order[] }
+model Cart { id Int @id @default(autoincrement()); userId Int @unique; user User @relation(fields:[userId], references:[id]); items CartItem[] }
+model CartItem { id Int @id @default(autoincrement()); cartId Int; productId Int; quantity Int; @@unique([cartId, productId]) }
+model Product { id Int @id @default(autoincrement()); name String; price Float; stock Int; cartItems CartItem[]; orderItems OrderItem[] }
+model Order { id Int @id @default(autoincrement()); userId Int; items OrderItem[]; createdAt DateTime @default(now()) }
+model OrderItem { id Int @id @default(autoincrement()); orderId Int; productId Int; quantity Int }
 ```
-
-## Frontend Overview
-
-- Routes (all locale-scoped under `src/app/[lang]/`): the locale root home page (`page.tsx`), `products`, `cart`, `orders`, `login`, `register`, `admin/products`, plus `layout.tsx`, `dictionaries.ts`, and `globals.css`.
-- i18n: `src/lib/i18n.ts` (`locales = ['en','fr']`, `defaultLocale = 'fr'`, cookie `NEXT_LOCALE`); `src/proxy.ts` resolves cookie → `Accept-Language` → `fr`, redirects non-locale paths to `/[locale]`, matcher `/((?!_next|favicon.ico|.*\\..*).*)`. Dictionaries in `src/app/[lang]/dictionaries/` loaded by server-only `dictionaries.ts` (`getDictionary` falls back to `en`).
-- API layer: `src/lib/api.ts` — `API_BASE_URL`, `getAuthToken`/`setAuthToken`, `apiFetch` (JSON, `credentials: 'include'`, Bearer injection, envelope unwrapping, array-message joining on errors). The fallback URL in code is `http://localhost:3000`; for the backend's default port, set `NEXT_PUBLIC_API_URL=http://localhost:3002`.
-- Layout: `params: Promise<{ lang: string }>` is awaited; `generateStaticParams` returns all locales; title `ApexStore | Next-Gen E-Commerce Platform`; providers nest `AuthProvider > I18nProvider > Navbar > main`. Path alias `@/*` → `./src/*`.
-- Brand note: layout metadata uses the name **ApexStore**.
 
 ## Validation, Responses & Errors
 
-Success envelope (global `TransformInterceptor`, `src/users/transform/transform.interceptor.ts`):
+Success envelope (global `TransformInterceptor`, `apps/backend/src/users/transform/transform.interceptor.ts`):
 
 ```json
-{ "status": "success", "data": "<payload>", "timestamp": "2026-01-01T00:00:00.000Z" }
+{ "status": "success", "data": "<payload>", "timestamp": "..." }
 ```
 
 Frontend rule: always read `json.data`.
@@ -403,41 +329,44 @@ Frontend rule: always read `json.data`.
 Error shape (NestJS default):
 
 ```json
-{ "statusCode": 400, "message": "… | […validation errors…]", "error": "Bad Request" }
+{ "statusCode": 400, "message": "...", "error": "Bad Request" }
 ```
 
-| Code | Meaning in this project |
+| Code | Meaning |
 |---|---|
-| `400` | Validation failure (class-validator arrays) or business rule (insufficient/out-of-stock, bad cart quantity, empty order) |
-| `401` | Missing/invalid/expired Bearer token; bad login credentials (`"Invalid credentials"`) |
-| `403` | Authenticated but wrong role (non-admin product writes / users routes) |
+| `400` | Validation failure or business rule (insufficient stock, bad cart quantity, empty order) |
+| `401` | Missing/invalid/expired Bearer token; bad login credentials |
+| `403` | Authenticated but wrong role (non-admin writes / users routes) |
 | `404` | Product / cart item / order / user not found |
-| `409` | `POST /auth/register` duplicate email (`"Email is already in use"`) |
+| `409` | `POST /auth/register` duplicate email |
 
-Global pipe: `ValidationPipe({ whitelist: true, transform: true })` — unknown properties are stripped, payloads are transformed to DTO instances.
+Global pipe: `ValidationPipe({ whitelist: true, transform: true })` — unknown properties stripped, payloads transformed to DTO instances.
 
 ## Scripts Reference
 
-Backend (`package.json`):
+Root (`package.json`):
 
 | Script | What it does |
 |---|---|
-| `npm run start:dev` | `nest start --watch` (dev, `$PORT ?? 3002`) |
-| `npm run start` / `start:debug` / `start:prod` | normal / debug-watch / `node dist/main` |
-| `npm run build` | `nest build` → `dist/` |
-| `npm run test` | Jest unit tests (`rootDir: src`, `*.spec.ts`) |
-| `npm run test:watch` / `test:cov` / `test:debug` | watch / coverage (`coverage/`) / inspect-brk |
-| `npm run test:e2e` | `jest --config ./test/jest-e2e.json` |
-| `npm run test:integration` | `jest --config ./test/jest-integration.json --runInBand` |
-| `npm run test:all` | coverage + e2e |
-| `npm run lint` | `eslint "{src,apps,libs,test}/**/*.ts" --fix` (flat config, `projectService`, Prettier `endOfLine: auto`) |
-| `npm run format` | `prettier --write "src/**/*.ts" "test/**/*.ts"` |
+| `npm run dev` | Starts backend + frontend concurrently |
+| `npm run dev:backend` / `dev:frontend` | Single app watch mode |
+| `npm run build` | `nest build` + `next build` (all workspaces) |
+| `npm run build:backend` / `build:frontend` | Single app build |
+| `npm run lint` | ESLint with `--fix` (all workspaces) |
+| `npm run lint:backend` / `lint:frontend` | Single app lint |
+| `npm run test` | Backend unit tests (Jest) |
+| `npm run test:e2e` / `test:integration` | Backend e2e / integration suites |
+| `npm run test:all` | Coverage + e2e |
+| `npm run format` | Prettier (all workspaces) |
+| `npm run prisma:generate` / `prisma:migrate` / `prisma:migrate:deploy` / `prisma:seed` | Prisma workflows |
 
-Frontend (`frontend/package.json`): `npm run dev`, `npm run build`, `npm run start`, `npm run lint`.
+Backend (`apps/backend/package.json`): same scripts without workspace prefix.
+
+Frontend (`apps/frontend/package.json`): `npm run dev`, `npm run build`, `npm run start`, `npm run lint`.
 
 ## Testing
 
-- Unit: colocated `src/**/*.spec.ts` (auth, cart, products, users, prisma; orders has `orders.service.spec.ts` only).
+- Unit: colocated `apps/backend/src/**/*.spec.ts` (auth, cart, products, users, prisma; orders has `orders.service.spec.ts` only).
 - Suites: `test/app.e2e-spec.ts`, `test/e2e/`, `test/integration/`, `test/security/`, `test/edge-cases.spec.ts`, plus `test/factories/`, `test/fixtures/`, `test/helpers/`; configs `test/jest-e2e.json`, `test/jest-integration.json`.
 - Coverage excludes `*.module.ts`, `main.ts`, `*.entity.ts`, `*.spec.ts`, `*.e2e-spec.ts`, `node_modules`.
 
@@ -451,36 +380,38 @@ npm run test:integration
 ## Linting & Formatting
 
 ```bash
-npm run lint    # ESLint with --fix
-npm run format  # Prettier write over src/ and test/
-cd frontend && npm run lint
+npm run lint          # ESLint with --fix (all workspaces)
+npm run lint:backend  # backend only
+npm run lint:frontend # frontend only
+npm run format        # Prettier write
 ```
 
-TypeScript: `module/moduleResolution nodenext`, `target ES2023`, `outDir ./dist`, `baseUrl ./`, `strictNullChecks` on, `noImplicitAny` off, decorators + `emitDecoratorMetadata` on, `incremental` on. Build excludes `node_modules`, `test`, `dist`, `frontend`, `**/*spec.ts` (`tsconfig.build.json`).
+TypeScript: `module/moduleResolution nodenext`, `target ES2023`, `outDir ./dist`, `baseUrl ./`, `strictNullChecks` on, `noImplicitAny` off, decorators + `emitDecoratorMetadata` on, `incremental` on.
 
 ## Postman Collection
 
-`postman/collection.json` + `postman/environment.json` contain a ready-made collection. Import both into Postman, set the environment base URL to your running API (`http://localhost:3002` by default; add `/api/v1` only if you enable a global prefix), register/login to obtain `accessToken`, and set it as `Authorization: Bearer <token>` for protected calls.
+`apps/backend/postman/collection.json` + `apps/backend/postman/environment.json` contain a ready-made collection. Import both into Postman, set the environment base URL to your running API (`http://localhost:3002/api/v1`), register/login to obtain `accessToken`, and set it as `Authorization: Bearer <token>` for protected calls.
 
 ## Deployment Notes
 
-- Build: `npm run build` → `node dist/main` with `PORT`, `DATABASE_URL`, `JWT_SECRET`, `CORS_ORIGIN` set in the host environment. Run `npx prisma generate` (and `prisma migrate deploy` for migrations) during the build/release step.
-- CORS: set `CORS_ORIGIN` to the production storefront origin(s), comma-separated; `credentials: true` is required for the frontend's `credentials: 'include'` mode.
-- Frontend: set `NEXT_PUBLIC_API_URL` to the public API URL at build time; `npm run build && npm run start`.
-- Do not commit `.env` / `frontend/.env.local`; provide them via the host's secret management.
+- Backend: `npm run build:backend` → `node apps/backend/dist/main` with `PORT`, `DATABASE_URL`, `JWT_SECRET`, `CORS_ORIGIN` set in the host environment. Run `npx prisma generate` (and `prisma migrate deploy` for migrations) during the build/release step. No Docker in this pass (assessed in Phase 8 — plain Node + hosted Neon).
+- CORS: set `CORS_ORIGIN` to the production storefront origin(s), comma-separated; `credentials: true` is required.
+- Frontend: set `NEXT_PUBLIC_API_URL` to the public API URL at build time; `npm run build:frontend && npm run start:frontend`.
+- Do not commit `.env` / `apps/frontend/.env.local`; provide them via the host's secret management.
 
 ## Troubleshooting
 
 | Symptom | Likely cause / fix |
 |---|---|
-| `P1001` / connection refused from Prisma | `DATABASE_URL` wrong or Postgres down; verify with `psql` and `npx prisma migrate status`. |
+| `P1001` / connection refused from Prisma | `DATABASE_URL` wrong or Postgres down; verify with `psql` and `npx prisma migrate:status`. |
 | `401` on every protected call | Missing/expired `Authorization: Bearer` token or wrong `JWT_SECRET` vs the signer; log in again. |
 | `403` on `POST /products` | Caller is `USER`; promote to `ADMIN` in the DB. |
 | `400` adding to cart / placing order | Stock insufficient — check `Product.stock`; order transaction rolls back on any shortfall. |
 | Frontend calls hit wrong port | `NEXT_PUBLIC_API_URL` unset (falls back to `:3000`); set it to the API origin (`:3002` locally). |
-| Endpoints 404 with `/api/v1` prefix | Current code has no global prefix — call `/auth/...`, `/products/...` directly. |
-| Prisma client not found | Run `npx prisma generate` (client lives in `generated/prisma/`, git-ignored). |
+| Endpoints 404 | All endpoints are under `/api/v1` — call `/api/v1/auth/...`, `/api/v1/products/...`. |
+| Prisma client not found | Run `npm run prisma:generate` (client lives in `apps/backend/generated/prisma/`, git-ignored). |
 | CORS errors in browser | `CORS_ORIGIN` must include the storefront origin exactly; backend uses `credentials: true`. |
+| Frontend lint errors | 20 pre-existing errors outside plan scope (Phase 7 note); does not block `next build`. |
 
 ---
 

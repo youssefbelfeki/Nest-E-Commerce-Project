@@ -18,7 +18,7 @@ describe('Roles Integration', () => {
     jest.clearAllMocks();
   });
 
-  const createContext = (user?: any) =>
+  const createContext = (user?: { role?: string } | null) =>
     ({
       switchToHttp: () => ({
         getRequest: () => ({ user }),

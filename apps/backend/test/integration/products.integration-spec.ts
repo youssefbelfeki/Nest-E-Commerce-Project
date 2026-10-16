@@ -5,7 +5,15 @@ import { NotFoundException } from '@nestjs/common';
 
 describe('Products Integration', () => {
   let service: ProductsService;
-  let prisma: any;
+  let prisma: {
+    product: {
+      create: jest.Mock;
+      findMany: jest.Mock;
+      findUnique: jest.Mock;
+      update: jest.Mock;
+      delete: jest.Mock;
+    };
+  };
 
   beforeEach(async () => {
     prisma = {

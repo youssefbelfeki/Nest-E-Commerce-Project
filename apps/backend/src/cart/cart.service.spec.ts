@@ -5,7 +5,17 @@ import { NotFoundException, BadRequestException } from '@nestjs/common';
 
 describe('CartService', () => {
   let service: CartService;
-  let prisma: Record<string, any>;
+  let prisma: {
+    product: { findUnique: jest.Mock };
+    cart: { findUnique: jest.Mock; create: jest.Mock };
+    cartItem: {
+      findUnique: jest.Mock;
+      create: jest.Mock;
+      update: jest.Mock;
+      delete: jest.Mock;
+    };
+    $transaction: jest.Mock;
+  };
 
   const userId = 1;
   const mockProduct = {
@@ -85,7 +95,9 @@ describe('CartService', () => {
           create: jest.fn().mockResolvedValue(mockCartItem),
         },
       };
-      prisma.$transaction.mockImplementation(async (cb: any) => cb(tx));
+      prisma.$transaction.mockImplementation(
+        (cb: (tx: unknown) => Promise<unknown>) => cb(tx),
+      );
 
       const result = await service.addItem(userId, {
         productId: mockProduct.id,
@@ -105,11 +117,9 @@ describe('CartService', () => {
       });
       expect(result).toEqual(mockCartItem);
     });
-
     it('should add item when user already has a cart', async () => {
       prisma.product.findUnique.mockResolvedValue(mockProduct);
 
-      const existingCartItem = { ...mockCartItem, quantity: 1 };
       const tx = {
         cart: {
           findUnique: jest.fn().mockResolvedValue(mockCart),
@@ -120,8 +130,10 @@ describe('CartService', () => {
           create: jest.fn().mockResolvedValue(mockCartItem),
         },
       };
-      prisma.$transaction.mockImplementation(async (cb: any) => cb(tx));
 
+      prisma.$transaction.mockImplementation(
+        (cb: (tx: unknown) => Promise<unknown>) => cb(tx),
+      );
       await service.addItem(userId, {
         productId: mockProduct.id,
         quantity: 2,
@@ -130,12 +142,12 @@ describe('CartService', () => {
       expect(tx.cart.create).not.toHaveBeenCalled();
       expect(tx.cartItem.create).toHaveBeenCalled();
     });
-
     it('should increment quantity if item already exists in cart', async () => {
       prisma.product.findUnique.mockResolvedValue(mockProduct);
 
       const existingCartItem = { ...mockCartItem, quantity: 2 };
       const updatedCartItem = { ...mockCartItem, quantity: 4 };
+
       const tx = {
         cart: {
           findUnique: jest.fn().mockResolvedValue(mockCart),
@@ -145,7 +157,9 @@ describe('CartService', () => {
           update: jest.fn().mockResolvedValue(updatedCartItem),
         },
       };
-      prisma.$transaction.mockImplementation(async (cb: any) => cb(tx));
+      prisma.$transaction.mockImplementation(
+        (cb: (tx: unknown) => Promise<unknown>) => cb(tx),
+      );
 
       const result = await service.addItem(userId, {
         productId: mockProduct.id,
@@ -186,9 +200,12 @@ describe('CartService', () => {
         },
         cartItem: {
           findUnique: jest.fn().mockResolvedValue(null),
+          create: jest.fn(),
         },
       };
-      prisma.$transaction.mockImplementation(async (cb: any) => cb(tx));
+      prisma.$transaction.mockImplementation(
+        (cb: (tx: unknown) => Promise<unknown>) => cb(tx),
+      );
 
       await expect(
         service.addItem(userId, { productId: mockProduct.id, quantity: 10 }),
@@ -207,7 +224,9 @@ describe('CartService', () => {
           findUnique: jest.fn().mockResolvedValue(existingCartItem),
         },
       };
-      prisma.$transaction.mockImplementation(async (cb: any) => cb(tx));
+      prisma.$transaction.mockImplementation(
+        (cb: (tx: unknown) => Promise<unknown>) => cb(tx),
+      );
 
       await expect(
         service.addItem(userId, { productId: mockProduct.id, quantity: 2 }),

@@ -6,10 +6,25 @@ import { AuthModule } from '../../src/auth/auth.module';
 import { ProductsModule } from '../../src/products/products.module';
 import { PrismaService } from '../../src/prisma/prisma.service';
 import { PrismaModule } from '../../src/prisma/prisma.module';
+import * as bcrypt from 'bcrypt';
+
+jest.mock('bcrypt');
 
 describe('Auth E2E (mocked)', () => {
   let app: INestApplication<App>;
-  let prisma: any;
+  let prisma: {
+    user: {
+      findUnique: jest.Mock;
+      create: jest.Mock;
+    };
+    product: {
+      create: jest.Mock;
+      findMany: jest.Mock;
+      findUnique: jest.Mock;
+      update: jest.Mock;
+      delete: jest.Mock;
+    };
+  };
 
   beforeAll(async () => {
     process.env.JWT_SECRET = 'test-secret';
@@ -48,7 +63,7 @@ describe('Auth E2E (mocked)', () => {
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    jest.restoreAllMocks();
   });
 
   describe('POST /auth/register', () => {
@@ -67,7 +82,9 @@ describe('Auth E2E (mocked)', () => {
         .expect(201);
 
       expect(response.body).not.toHaveProperty('password');
-      expect(response.body.email).toBe('john@example.com');
+      expect((response.body as { email: string }).email).toBe(
+        'john@example.com',
+      );
     });
 
     it('should return 409 for duplicate email', async () => {
@@ -106,8 +123,7 @@ describe('Auth E2E (mocked)', () => {
 
   describe('POST /auth/login', () => {
     it('should return accessToken on valid credentials', async () => {
-      const bcrypt = require('bcrypt');
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true);
+      (bcrypt.compare as jest.Mock).mockResolvedValue(true);
       prisma.user.findUnique.mockResolvedValue({
         id: 1,
         email: 'john@example.com',
@@ -120,15 +136,18 @@ describe('Auth E2E (mocked)', () => {
         .send({ email: 'john@example.com', password: 'pass123' })
         .expect(200);
 
-      expect(response.body.accessToken).toBeDefined();
-      expect(typeof response.body.accessToken).toBe('string');
+      expect(
+        (response.body as { accessToken: string }).accessToken,
+      ).toBeDefined();
+      expect(
+        typeof (response.body as { accessToken: string }).accessToken,
+      ).toBe('string');
 
       jest.restoreAllMocks();
     });
 
     it('should return 401 for wrong password', async () => {
-      const bcrypt = require('bcrypt');
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(false);
+      (bcrypt.compare as jest.Mock).mockResolvedValue(false);
       prisma.user.findUnique.mockResolvedValue({
         id: 1,
         email: 'john@example.com',

@@ -5,8 +5,15 @@ import { BadRequestException, NotFoundException } from '@nestjs/common';
 
 describe('OrdersService', () => {
   let service: OrdersService;
-  let prisma: any;
-  let tx: any;
+  let prisma: {
+    product: { findMany: jest.Mock };
+    order: { findMany: jest.Mock; findFirst: jest.Mock };
+    $transaction: jest.Mock;
+  };
+  let tx: {
+    product: { update: jest.Mock };
+    order: { create: jest.Mock };
+  };
 
   const mockUserId = 1;
   const mockProduct = {
@@ -63,7 +70,7 @@ describe('OrdersService', () => {
 
     function mockTransaction() {
       prisma.$transaction.mockImplementation(
-        async (cb: (tx: any) => Promise<any>) => cb(tx),
+        async (cb: (client: typeof tx) => Promise<unknown>) => cb(tx),
       );
       tx.order.create.mockResolvedValue(mockOrder);
     }

@@ -1,14 +1,15 @@
 import { INestApplication } from '@nestjs/common';
 import request from 'supertest';
+import { App } from 'supertest/types';
 
 export interface AuthTokens {
   accessToken: string;
 }
 
 export async function registerUser(
-  app: INestApplication,
+  app: INestApplication<App>,
   userData: { name: string; email: string; password: string },
-): Promise<{ status: number; body: any }> {
+): Promise<{ status: number; body: unknown }> {
   const response = await request(app.getHttpServer())
     .post('/auth/register')
     .send(userData)
@@ -18,7 +19,7 @@ export async function registerUser(
 }
 
 export async function loginUser(
-  app: INestApplication,
+  app: INestApplication<App>,
   credentials: { email: string; password: string },
 ): Promise<AuthTokens> {
   const response = await request(app.getHttpServer())
@@ -26,11 +27,13 @@ export async function loginUser(
     .send(credentials)
     .expect(200);
 
-  return { accessToken: response.body.accessToken };
+  return {
+    accessToken: (response.body as { accessToken: string }).accessToken,
+  };
 }
 
 export async function registerAndLogin(
-  app: INestApplication,
+  app: INestApplication<App>,
   userData: { name: string; email: string; password: string },
 ): Promise<AuthTokens> {
   await registerUser(app, userData);

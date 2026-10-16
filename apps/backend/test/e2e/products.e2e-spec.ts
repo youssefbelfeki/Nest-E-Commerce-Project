@@ -10,7 +10,19 @@ import { JwtService } from '@nestjs/jwt';
 
 describe('Products E2E (mocked)', () => {
   let app: INestApplication<App>;
-  let prisma: any;
+  let prisma: {
+    user: {
+      findUnique: jest.Mock;
+      create: jest.Mock;
+    };
+    product: {
+      create: jest.Mock;
+      findMany: jest.Mock;
+      findUnique: jest.Mock;
+      update: jest.Mock;
+      delete: jest.Mock;
+    };
+  };
   let jwtService: JwtService;
   let adminToken: string;
   let userToken: string;
@@ -102,7 +114,7 @@ describe('Products E2E (mocked)', () => {
         .set('Authorization', `Bearer ${userToken}`)
         .expect(200);
 
-      expect(response.body.id).toBe(1);
+      expect((response.body as { id: number }).id).toBe(1);
     });
 
     it('should return 404 for non-existent product', async () => {
@@ -125,7 +137,7 @@ describe('Products E2E (mocked)', () => {
         .send({ name: 'Widget', price: 9.99, stock: 50 })
         .expect(201);
 
-      expect(response.body.name).toBe('Widget');
+      expect((response.body as { name: string }).name).toBe('Widget');
     });
 
     it('should return 403 for regular user', async () => {
@@ -166,7 +178,7 @@ describe('Products E2E (mocked)', () => {
         .send({ name: 'Updated' })
         .expect(200);
 
-      expect(response.body.name).toBe('Updated');
+      expect((response.body as { name: string }).name).toBe('Updated');
     });
 
     it('should return 403 for regular user', async () => {

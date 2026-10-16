@@ -11,7 +11,19 @@ import { JwtService } from '@nestjs/jwt';
 describe('Edge Cases & Error Handling', () => {
   let app: INestApplication<App>;
   let moduleFixture: TestingModule;
-  let prisma: any;
+  let prisma: {
+    user: {
+      findUnique: jest.Mock;
+      create: jest.Mock;
+    };
+    product: {
+      create: jest.Mock;
+      findMany: jest.Mock;
+      findUnique: jest.Mock;
+      update: jest.Mock;
+      delete: jest.Mock;
+    };
+  };
 
   beforeAll(async () => {
     process.env.JWT_SECRET = 'test-secret';
@@ -95,7 +107,7 @@ describe('Edge Cases & Error Handling', () => {
         })
         .expect(201);
 
-      expect(response.body.name).toBe('Ünïcödé Usér');
+      expect((response.body as { name: string }).name).toBe('Ünïcödé Usér');
     });
 
     it('should handle emoji in name field', async () => {
@@ -116,7 +128,7 @@ describe('Edge Cases & Error Handling', () => {
         })
         .expect(201);
 
-      expect(response.body.name).toBe('😀 Test User');
+      expect((response.body as { name: string }).name).toBe('😀 Test User');
     });
 
     it('should handle null fields', async () => {
@@ -147,7 +159,7 @@ describe('Edge Cases & Error Handling', () => {
         .send({ name: 'Out of Stock', price: 9.99, stock: 0 })
         .expect(201);
 
-      expect(response.body.stock).toBe(0);
+      expect((response.body as { stock: number }).stock).toBe(0);
     });
 
     it('should handle product with minimum positive price', async () => {
@@ -164,7 +176,7 @@ describe('Edge Cases & Error Handling', () => {
         .send({ name: 'Cheap', price: 0.01, stock: 1 })
         .expect(201);
 
-      expect(response.body.price).toBe(0.01);
+      expect((response.body as { price: number }).price).toBe(0.01);
     });
   });
 

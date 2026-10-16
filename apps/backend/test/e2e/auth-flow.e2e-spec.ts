@@ -6,11 +6,25 @@ import { AuthModule } from '../../src/auth/auth.module';
 import { ProductsModule } from '../../src/products/products.module';
 import { PrismaService } from '../../src/prisma/prisma.service';
 import { PrismaModule } from '../../src/prisma/prisma.module';
-import { JwtService } from '@nestjs/jwt';
+import * as bcrypt from 'bcrypt';
+
+jest.mock('bcrypt');
 
 describe('Auth Flow E2E (mocked)', () => {
   let app: INestApplication<App>;
-  let prisma: any;
+  let prisma: {
+    user: {
+      findUnique: jest.Mock;
+      create: jest.Mock;
+    };
+    product: {
+      create: jest.Mock;
+      findMany: jest.Mock;
+      findUnique: jest.Mock;
+      update: jest.Mock;
+      delete: jest.Mock;
+    };
+  };
 
   beforeAll(async () => {
     process.env.JWT_SECRET = 'test-secret';
@@ -49,7 +63,7 @@ describe('Auth Flow E2E (mocked)', () => {
   });
 
   afterEach(() => {
-    jest.clearAllMocks();
+    jest.restoreAllMocks();
   });
 
   describe('complete user journey', () => {
@@ -73,8 +87,8 @@ describe('Auth Flow E2E (mocked)', () => {
         .expect(201);
 
       // Step 2: Login
-      const bcrypt = require('bcrypt');
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true);
+
+      (bcrypt.compare as jest.Mock).mockResolvedValue(true);
       prisma.user.findUnique.mockResolvedValueOnce({
         id: 1,
         email: 'journey@example.com',
@@ -87,7 +101,7 @@ describe('Auth Flow E2E (mocked)', () => {
         .send({ email: 'journey@example.com', password: 'pass123' })
         .expect(200);
 
-      const { accessToken } = loginResponse.body;
+      const { accessToken } = loginResponse.body as { accessToken: string };
 
       // Step 3: Use token to get products
       prisma.product.findMany.mockResolvedValue([]);
@@ -119,8 +133,8 @@ describe('Auth Flow E2E (mocked)', () => {
         .expect(201);
 
       // Step 2: Login as admin
-      const bcrypt = require('bcrypt');
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true);
+
+      (bcrypt.compare as jest.Mock).mockResolvedValue(true);
       prisma.user.findUnique.mockResolvedValueOnce({
         id: 2,
         email: 'admin@example.com',
@@ -133,7 +147,7 @@ describe('Auth Flow E2E (mocked)', () => {
         .send({ email: 'admin@example.com', password: 'admin123' })
         .expect(200);
 
-      const { accessToken } = loginResponse.body;
+      const { accessToken } = loginResponse.body as { accessToken: string };
 
       // Step 3: Create product as admin
       prisma.product.create.mockResolvedValueOnce({
@@ -154,8 +168,8 @@ describe('Auth Flow E2E (mocked)', () => {
 
     it('should reject user attempting admin operations', async () => {
       // Login as regular user
-      const bcrypt = require('bcrypt');
-      jest.spyOn(bcrypt, 'compare').mockResolvedValue(true);
+
+      (bcrypt.compare as jest.Mock).mockResolvedValue(true);
       prisma.user.findUnique.mockResolvedValueOnce({
         id: 3,
         email: 'user@example.com',
@@ -168,7 +182,7 @@ describe('Auth Flow E2E (mocked)', () => {
         .send({ email: 'user@example.com', password: 'pass123' })
         .expect(200);
 
-      const { accessToken } = loginResponse.body;
+      const { accessToken } = loginResponse.body as { accessToken: string };
 
       // Attempt to create product
       await request(app.getHttpServer())
