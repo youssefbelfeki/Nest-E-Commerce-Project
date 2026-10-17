@@ -10,9 +10,11 @@ describe('Products Integration', () => {
       create: jest.Mock;
       findMany: jest.Mock;
       findUnique: jest.Mock;
+      count: jest.Mock;
       update: jest.Mock;
       delete: jest.Mock;
     };
+    $transaction: jest.Mock;
   };
 
   beforeEach(async () => {
@@ -21,9 +23,11 @@ describe('Products Integration', () => {
         create: jest.fn(),
         findMany: jest.fn(),
         findUnique: jest.fn(),
+        count: jest.fn(),
         update: jest.fn(),
         delete: jest.fn(),
       },
+      $transaction: jest.fn(async (promises: any[]) => Promise.all(promises)),
     };
 
     const module: TestingModule = await Test.createTestingModule({
@@ -56,17 +60,17 @@ describe('Products Integration', () => {
       expect(prisma.product.create).toHaveBeenCalledTimes(1);
     });
 
-    it('should return all products', async () => {
-      const products = [
-        mockProduct,
-        { id: 2, name: 'Gadget', price: 19.99, stock: 25 },
-      ];
+    it('should return paginated products', async () => {
+      const products = [mockProduct];
       prisma.product.findMany.mockResolvedValue(products);
+      prisma.product.count.mockResolvedValue(1);
 
-      const result = await service.findAll();
+      const result = await service.findAll(1, 16);
 
-      expect(result).toHaveLength(2);
+      expect(result.data).toHaveLength(1);
+      expect(result.meta.total).toBe(1);
       expect(prisma.product.findMany).toHaveBeenCalledTimes(1);
+      expect(prisma.product.count).toHaveBeenCalledTimes(1);
     });
 
     it('should find product by id', async () => {
