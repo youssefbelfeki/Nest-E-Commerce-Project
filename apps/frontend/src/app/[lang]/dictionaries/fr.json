@@ -32,7 +32,26 @@
     "viewCart": "Voir le panier",
     "addedToCart": "Ajout de {quantity} x « {name} » à votre panier !",
     "loadFailed": "Échec de la récupération des produits",
-    "addFailed": "Échec de l'ajout de l'article au panier"
+    "addFailed": "Échec de l'ajout de l'article au panier",
+    "pagination": {
+      "showing": "Affichage de {from} à {to} sur {total} produits",
+      "prev": "Précédent",
+      "next": "Suivant"
+    },
+    "detail": {
+      "backToProducts": "Retour aux produits",
+      "quantity": "Quantité",
+      "addingToCart": "Ajout au panier...",
+      "outOfStock": "Rupture de stock",
+      "addToCart": "Ajouter au panier",
+      "id": "ID #",
+      "stock": "Stock :",
+      "notFound": "Produit introuvable",
+      "invalidId": "ID de produit invalide",
+      "invalidQty": "Quantité invalide",
+      "productOutOfStock": "Ce produit est en rupture de stock",
+      "loadFailed": "Échec du chargement du produit"
+    }
   },
   "cart": {
     "title": "Votre Panier",
@@ -97,7 +116,7 @@
     "signIn": "Se connecter",
     "registerFailed": "Échec de l'inscription. Veuillez réessayer.",
     "passwordTooShort": "Le mot de passe doit contenir au moins 6 caractères",
-    "namePlaceholder": "Jean Dupont",
+    "namePlaceholder": "Entrez votre nom complet",
     "emailPlaceholder": "user@example.com"
   },
   "validation": {

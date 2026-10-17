@@ -32,7 +32,26 @@
     "viewCart": "View Cart",
     "addedToCart": "Added {quantity} x \"{name}\" to your cart!",
     "loadFailed": "Failed to fetch products",
-    "addFailed": "Failed to add item to cart"
+    "addFailed": "Failed to add item to cart",
+    "pagination": {
+      "showing": "Showing {from} to {to} of {total} products",
+      "prev": "Previous",
+      "next": "Next"
+    },
+    "detail": {
+      "backToProducts": "Back to Products",
+      "quantity": "Quantity",
+      "addingToCart": "Adding to cart...",
+      "outOfStock": "Out of Stock",
+      "addToCart": "Add to Cart",
+      "id": "ID #",
+      "stock": "Stock:",
+      "notFound": "Product not found",
+      "invalidId": "Invalid product ID",
+      "invalidQty": "Invalid quantity",
+      "productOutOfStock": "This product is out of stock",
+      "loadFailed": "Failed to load product"
+    }
   },
   "cart": {
     "title": "Your Shopping Cart",
@@ -97,7 +116,7 @@
     "signIn": "Sign In",
     "registerFailed": "Registration failed. Please try again.",
     "passwordTooShort": "Password must be at least 6 characters long",
-    "namePlaceholder": "John Doe",
+    "namePlaceholder": "Enter your full name",
     "emailPlaceholder": "user@example.com"
   },
   "validation": {

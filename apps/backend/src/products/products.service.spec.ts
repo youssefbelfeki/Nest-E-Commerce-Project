@@ -10,9 +10,11 @@ describe('ProductsService', () => {
       create: jest.Mock;
       findMany: jest.Mock;
       findUnique: jest.Mock;
+      count: jest.Mock;
       update: jest.Mock;
       delete: jest.Mock;
     };
+    $transaction: jest.Mock;
   };
 
   const mockProduct = {
@@ -28,9 +30,11 @@ describe('ProductsService', () => {
         create: jest.fn(),
         findMany: jest.fn(),
         findUnique: jest.fn(),
+        count: jest.fn(),
         update: jest.fn(),
         delete: jest.fn(),
       },
+      $transaction: jest.fn(async (promises: any[]) => Promise.all(promises)),
     };
 
     const module: TestingModule = await Test.createTestingModule({
@@ -60,25 +64,35 @@ describe('ProductsService', () => {
   });
 
   describe('findAll', () => {
-    it('should return all products', async () => {
-      const products = [
-        mockProduct,
-        { id: 2, name: 'Product 2', price: 39.99, stock: 25 },
-      ];
+    it('should return paginated products', async () => {
+      const products = [mockProduct];
+      const total = 1;
       prisma.product.findMany.mockResolvedValue(products);
+      prisma.product.count.mockResolvedValue(total);
 
-      const result = await service.findAll();
+      const result = await service.findAll(1, 16);
 
-      expect(prisma.product.findMany).toHaveBeenCalled();
-      expect(result).toEqual(products);
+      expect(prisma.product.findMany).toHaveBeenCalledWith({
+        skip: 0,
+        take: 16,
+        orderBy: { id: 'asc' },
+      });
+      expect(result).toEqual({
+        data: products,
+        meta: { total, page: 1, limit: 16, totalPages: 1 },
+      });
     });
 
-    it('should return empty array when no products exist', async () => {
+    it('should return empty paginated result when no products exist', async () => {
       prisma.product.findMany.mockResolvedValue([]);
+      prisma.product.count.mockResolvedValue(0);
 
-      const result = await service.findAll();
+      const result = await service.findAll(1, 16);
 
-      expect(result).toEqual([]);
+      expect(result).toEqual({
+        data: [],
+        meta: { total: 0, page: 1, limit: 16, totalPages: 0 },
+      });
     });
   });
 

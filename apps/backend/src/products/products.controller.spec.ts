@@ -60,13 +60,17 @@ describe('ProductsController', () => {
   });
 
   describe('findAll', () => {
-    it('should delegate to productsService.findAll', async () => {
-      service.findAll.mockResolvedValue([mockProduct]);
+    it('should delegate to productsService.findAll with pagination', async () => {
+      const paginated = {
+        data: [mockProduct],
+        meta: { total: 1, page: 1, limit: 16, totalPages: 1 },
+      };
+      service.findAll.mockResolvedValue(paginated);
 
-      const result = await controller.findAll();
+      const result = await controller.findAll({ page: '1', limit: '16' });
 
-      expect(service.findAll).toHaveBeenCalled();
-      expect(result).toEqual([mockProduct]);
+      expect(service.findAll).toHaveBeenCalledWith(1, 16);
+      expect(result).toEqual(paginated);
     });
   });
 
